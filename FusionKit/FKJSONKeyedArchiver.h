@@ -6,10 +6,17 @@
 //
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
-@interface FKJSONKeyedArchiver : NSCoder
+@interface FKJSONKeyedArchiver : 
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+NSCoder
+#else
+NSArchiver
+#endif
 
-+ (NSData *)JSONDataForObject:(id<NSCoding>)object;
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
++ (NSData *)archivedDataWithRootObject:(id)rootObject;
+#endif
 
 @end

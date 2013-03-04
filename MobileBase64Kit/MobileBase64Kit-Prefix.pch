@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MobileBase64Kit' target in the 'MobileBase64Kit' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
