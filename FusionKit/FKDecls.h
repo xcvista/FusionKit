@@ -36,4 +36,9 @@ static NSString *const FKFalseValue = @"-";
 
 #endif
 
+typedef long long FKTimestamp;
+
+NSTimeInterval NSTimeIntervalFromFKTimestamp(FKTimestamp);
+FKTimestamp FKTimestampFromNSTimeInterval(NSTimeInterval);
+
 #endif
