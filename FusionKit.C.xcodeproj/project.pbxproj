@@ -253,7 +253,7 @@
 		1D7CD13016E5247500F5F3AF /* Places@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Places@2x.png"; sourceTree = "<group>"; };
 		1D7CD13116E5247500F5F3AF /* Posts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Posts.png; sourceTree = "<group>"; };
 		1D7CD13216E5247500F5F3AF /* Posts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Posts@2x.png"; sourceTree = "<group>"; };
-		1D7CD14116E52AF500F5F3AF /* COPYRIGHT */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT; sourceTree = "<group>"; };
+		1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.md; sourceTree = "<group>"; };
 		1D7CD14A16E5326100F5F3AF /* WFNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsViewController.h; sourceTree = "<group>"; };
 		1D7CD14B16E5326200F5F3AF /* WFNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsViewController.m; sourceTree = "<group>"; };
 		1D7CD14C16E5326700F5F3AF /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
@@ -692,7 +692,7 @@
 		1D85891516D7C5820056DB48 = {
 			isa = PBXGroup;
 			children = (
-				1D7CD14116E52AF500F5F3AF /* COPYRIGHT */,
+				1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */,
 				1D7CD17716E53FA300F5F3AF /* README.md */,
 				1D7CD08016E4E17000F5F3AF /* Desktop */,
 				1D7CD08116E4E18400F5F3AF /* Mobile */,
