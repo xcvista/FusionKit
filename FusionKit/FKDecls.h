@@ -29,6 +29,11 @@ if (param)\
 
 #import <Foundation/Foundation.h>
 
+static NSString *const FKErrorDoamin = @"tk.maxius.fusionkit.error";
+
+static NSString *const FKTrueValue = @"+";
+static NSString *const FKFalseValue = @"-";
+
 #endif
 
 #endif

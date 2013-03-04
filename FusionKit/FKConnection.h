@@ -20,11 +20,15 @@
 
 - (id)initWithServerRoot:(NSURL *)serverRoot;
 
-- (NSData *)dataWithPostData:(NSData *)data toMethod:(NSString *)method error:(NSError **)error;
-- (NSData *)dataWithObject:(id<FKConnectionObject>)object error:(NSError **)error;
-- (id)objectWithObject:(id<FKConnectionObject>)object class:(Class)class error:(NSError **)error;
+- (NSData *)dataWithPostData:(NSData *)data
+                    toMethod:(NSString *)method
+                       error:(NSError **)error;
+- (NSData *)dataWithGetFromMethod:(NSString *)method
+                            error:(NSError **)error;
+
+- (NSString *)userAgent;
 
 - (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password error:(NSError **)error;
-- (void)keepAlive;
+- (BOOL)keepAliveWithError:(NSError **)error;
 
 @end

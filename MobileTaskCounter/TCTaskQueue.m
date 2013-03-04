@@ -53,11 +53,6 @@ TCTaskQueue *taskQueue;
     return self;
 }
 
-- (void)dealloc
-{
-    dispatch_release(self.queue);
-    self.queue = nil;
-}
 
 - (void)addTask:(TCTask)task withObject:(id)object completion:(TCCompletionHandler)completion
 {

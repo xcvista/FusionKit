@@ -21,7 +21,8 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    return [aDecoder decodeObjectForKey:@"d"];
+    CFRetain((__bridge CFTypeRef)(aDecoder));
+    return (__bridge id)(CFRetain((__bridge CFTypeRef)([aDecoder decodeObjectForKey:@"d"])));
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder

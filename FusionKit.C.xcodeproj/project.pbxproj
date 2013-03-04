@@ -68,8 +68,6 @@
 		1D7CD07F16E4DFA000F5F3AF /* FKDecls.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD00A16E4DB0D00F5F3AF /* FKDecls.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7CD09316E4E21000F5F3AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD09116E4E21000F5F3AF /* InfoPlist.strings */; };
 		1D7CD0AB16E4E21F00F5F3AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD0A916E4E21F00F5F3AF /* InfoPlist.strings */; };
-		1D7CD0B316E4E25F00F5F3AF /* NSBase64DataEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD0B116E4E25F00F5F3AF /* NSBase64DataEncoder.m */; };
-		1D7CD0B716E4E27400F5F3AF /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD0B516E4E27400F5F3AF /* base64.m */; };
 		1D7CD0B816E4E2BB00F5F3AF /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD0B416E4E27400F5F3AF /* base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7CD0B916E4E2C200F5F3AF /* NSBase64DataEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD0B016E4E25F00F5F3AF /* NSBase64DataEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7CD0BA16E4E2C500F5F3AF /* NSBase64DataEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD0B016E4E25F00F5F3AF /* NSBase64DataEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,11 +94,50 @@
 		1D7CD0FC16E4E78900F5F3AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CD06B16E4DE0E00F5F3AF /* Foundation.framework */; };
 		1D7CD0FF16E4E7C500F5F3AF /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD0FD16E4E7C500F5F3AF /* KeychainItemWrapper.h */; };
 		1D7CD10016E4E7C500F5F3AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD0FE16E4E7C500F5F3AF /* KeychainItemWrapper.m */; };
+		1D7CD10116E4EBAA00F5F3AF /* NSBase64DataEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD0B116E4E25F00F5F3AF /* NSBase64DataEncoder.m */; };
+		1D7CD10216E4EBAA00F5F3AF /* NSBase64DataEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD0B116E4E25F00F5F3AF /* NSBase64DataEncoder.m */; };
+		1D7CD10316E4EBAE00F5F3AF /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD0B516E4E27400F5F3AF /* base64.m */; };
+		1D7CD10416E4EBAF00F5F3AF /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD0B516E4E27400F5F3AF /* base64.m */; };
+		1D7CD10616E4EDA600F5F3AF /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D85892116D7C5900056DB48 /* FusionKit.framework */; };
+		1D7CD10716E4EDA600F5F3AF /* PinyinKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D7CD02F16E4DC0300F5F3AF /* PinyinKit.framework */; };
+		1D7CD10816E4EDA600F5F3AF /* Base64Kit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D7CD08716E4E21000F5F3AF /* Base64Kit.framework */; };
+		1D7CD11916E50B3100F5F3AF /* WFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD11416E50B0F00F5F3AF /* WFMainWindowController.m */; };
+		1D7CD11A16E50B3100F5F3AF /* WFMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD11516E50B0F00F5F3AF /* WFMainWindowController.xib */; };
+		1D7CD12416E517CF00F5F3AF /* WFAppPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD12116E517BE00F5F3AF /* WFAppPaneController.m */; };
+		1D7CD13316E5247500F5F3AF /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12516E5247500F5F3AF /* Camera.png */; };
+		1D7CD13416E5247500F5F3AF /* Camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12616E5247500F5F3AF /* Camera@2x.png */; };
+		1D7CD13516E5247500F5F3AF /* Contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12716E5247500F5F3AF /* Contacts.png */; };
+		1D7CD13616E5247500F5F3AF /* Contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12816E5247500F5F3AF /* Contacts@2x.png */; };
+		1D7CD13716E5247500F5F3AF /* Groove.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12916E5247500F5F3AF /* Groove.png */; };
+		1D7CD13816E5247500F5F3AF /* Groove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12A16E5247500F5F3AF /* Groove@2x.png */; };
+		1D7CD13916E5247500F5F3AF /* Me.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12B16E5247500F5F3AF /* Me.png */; };
+		1D7CD13A16E5247500F5F3AF /* Me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12C16E5247500F5F3AF /* Me@2x.png */; };
+		1D7CD13B16E5247500F5F3AF /* News.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12D16E5247500F5F3AF /* News.png */; };
+		1D7CD13C16E5247500F5F3AF /* News@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12E16E5247500F5F3AF /* News@2x.png */; };
+		1D7CD13D16E5247500F5F3AF /* Places.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD12F16E5247500F5F3AF /* Places.png */; };
+		1D7CD13E16E5247500F5F3AF /* Places@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD13016E5247500F5F3AF /* Places@2x.png */; };
+		1D7CD13F16E5247500F5F3AF /* Posts.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD13116E5247500F5F3AF /* Posts.png */; };
+		1D7CD14016E5247500F5F3AF /* Posts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD13216E5247500F5F3AF /* Posts@2x.png */; };
 		1D85892F16D7C5900056DB48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D85892D16D7C5900056DB48 /* InfoPlist.strings */; };
 		1D85893716D7C5AC0056DB48 /* FusionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893116D7C5900056DB48 /* FusionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D85893A16D7C77C0056DB48 /* FKJSONKeyedArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893816D7C77C0056DB48 /* FKJSONKeyedArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D85893B16D7C77C0056DB48 /* FKJSONKeyedArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85893916D7C77C0056DB48 /* FKJSONKeyedArchiver.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D7CD10516E4ED9000F5F3AF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D7CD10616E4EDA600F5F3AF /* FusionKit.framework in CopyFiles */,
+				1D7CD10716E4EDA600F5F3AF /* PinyinKit.framework in CopyFiles */,
+				1D7CD10816E4EDA600F5F3AF /* Base64Kit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D7CCFBF16E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKJSONKeyedUnarchiver.h; sourceTree = "<group>"; };
@@ -187,6 +224,25 @@
 		1D7CD0F916E4E77D00F5F3AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		1D7CD0FD16E4E7C500F5F3AF /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		1D7CD0FE16E4E7C500F5F3AF /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		1D7CD11316E50B0F00F5F3AF /* WFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainWindowController.h; sourceTree = "<group>"; };
+		1D7CD11416E50B0F00F5F3AF /* WFMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainWindowController.m; sourceTree = "<group>"; };
+		1D7CD11516E50B0F00F5F3AF /* WFMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFMainWindowController.xib; sourceTree = "<group>"; };
+		1D7CD12016E517BE00F5F3AF /* WFAppPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppPaneController.h; sourceTree = "<group>"; };
+		1D7CD12116E517BE00F5F3AF /* WFAppPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppPaneController.m; sourceTree = "<group>"; };
+		1D7CD12516E5247500F5F3AF /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
+		1D7CD12616E5247500F5F3AF /* Camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera@2x.png"; sourceTree = "<group>"; };
+		1D7CD12716E5247500F5F3AF /* Contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacts.png; sourceTree = "<group>"; };
+		1D7CD12816E5247500F5F3AF /* Contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts@2x.png"; sourceTree = "<group>"; };
+		1D7CD12916E5247500F5F3AF /* Groove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Groove.png; sourceTree = "<group>"; };
+		1D7CD12A16E5247500F5F3AF /* Groove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groove@2x.png"; sourceTree = "<group>"; };
+		1D7CD12B16E5247500F5F3AF /* Me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Me.png; sourceTree = "<group>"; };
+		1D7CD12C16E5247500F5F3AF /* Me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Me@2x.png"; sourceTree = "<group>"; };
+		1D7CD12D16E5247500F5F3AF /* News.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = News.png; sourceTree = "<group>"; };
+		1D7CD12E16E5247500F5F3AF /* News@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News@2x.png"; sourceTree = "<group>"; };
+		1D7CD12F16E5247500F5F3AF /* Places.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Places.png; sourceTree = "<group>"; };
+		1D7CD13016E5247500F5F3AF /* Places@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Places@2x.png"; sourceTree = "<group>"; };
+		1D7CD13116E5247500F5F3AF /* Posts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Posts.png; sourceTree = "<group>"; };
+		1D7CD13216E5247500F5F3AF /* Posts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Posts@2x.png"; sourceTree = "<group>"; };
 		1D85892116D7C5900056DB48 /* FusionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FusionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D85892C16D7C5900056DB48 /* FusionKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FusionKit-Info.plist"; sourceTree = "<group>"; };
 		1D85892E16D7C5900056DB48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -304,6 +360,11 @@
 				1D7CCFE616E4C49000F5F3AF /* WFLoginWindowController.h */,
 				1D7CCFE716E4C49000F5F3AF /* WFLoginWindowController.m */,
 				1D7CCFE916E4C53800F5F3AF /* WFLoginWindowController.xib */,
+				1D7CD11316E50B0F00F5F3AF /* WFMainWindowController.h */,
+				1D7CD11416E50B0F00F5F3AF /* WFMainWindowController.m */,
+				1D7CD11516E50B0F00F5F3AF /* WFMainWindowController.xib */,
+				1D7CD12016E517BE00F5F3AF /* WFAppPaneController.h */,
+				1D7CD12116E517BE00F5F3AF /* WFAppPaneController.m */,
 				1D7CCFD216E4C10E00F5F3AF /* Supporting Files */,
 			);
 			path = WebFusion;
@@ -312,6 +373,20 @@
 		1D7CCFD216E4C10E00F5F3AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D7CD12516E5247500F5F3AF /* Camera.png */,
+				1D7CD12616E5247500F5F3AF /* Camera@2x.png */,
+				1D7CD12716E5247500F5F3AF /* Contacts.png */,
+				1D7CD12816E5247500F5F3AF /* Contacts@2x.png */,
+				1D7CD12916E5247500F5F3AF /* Groove.png */,
+				1D7CD12A16E5247500F5F3AF /* Groove@2x.png */,
+				1D7CD12B16E5247500F5F3AF /* Me.png */,
+				1D7CD12C16E5247500F5F3AF /* Me@2x.png */,
+				1D7CD12D16E5247500F5F3AF /* News.png */,
+				1D7CD12E16E5247500F5F3AF /* News@2x.png */,
+				1D7CD12F16E5247500F5F3AF /* Places.png */,
+				1D7CD13016E5247500F5F3AF /* Places@2x.png */,
+				1D7CD13116E5247500F5F3AF /* Posts.png */,
+				1D7CD13216E5247500F5F3AF /* Posts@2x.png */,
 				1D7CCFD316E4C10E00F5F3AF /* WebFusion-Info.plist */,
 				1D7CCFD416E4C10E00F5F3AF /* InfoPlist.strings */,
 				1D7CCFD716E4C10E00F5F3AF /* main.m */,
@@ -697,6 +772,7 @@
 				1D7CCFCB16E4C10D00F5F3AF /* Sources */,
 				1D7CCFCC16E4C10D00F5F3AF /* Frameworks */,
 				1D7CCFCD16E4C10D00F5F3AF /* Resources */,
+				1D7CD10516E4ED9000F5F3AF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -926,6 +1002,21 @@
 				1D7CCFDC16E4C10E00F5F3AF /* Credits.rtf in Resources */,
 				1D7CCFE216E4C10E00F5F3AF /* MainMenu.xib in Resources */,
 				1D7CCFEA16E4C53800F5F3AF /* WFLoginWindowController.xib in Resources */,
+				1D7CD11A16E50B3100F5F3AF /* WFMainWindowController.xib in Resources */,
+				1D7CD13316E5247500F5F3AF /* Camera.png in Resources */,
+				1D7CD13416E5247500F5F3AF /* Camera@2x.png in Resources */,
+				1D7CD13516E5247500F5F3AF /* Contacts.png in Resources */,
+				1D7CD13616E5247500F5F3AF /* Contacts@2x.png in Resources */,
+				1D7CD13716E5247500F5F3AF /* Groove.png in Resources */,
+				1D7CD13816E5247500F5F3AF /* Groove@2x.png in Resources */,
+				1D7CD13916E5247500F5F3AF /* Me.png in Resources */,
+				1D7CD13A16E5247500F5F3AF /* Me@2x.png in Resources */,
+				1D7CD13B16E5247500F5F3AF /* News.png in Resources */,
+				1D7CD13C16E5247500F5F3AF /* News@2x.png in Resources */,
+				1D7CD13D16E5247500F5F3AF /* Places.png in Resources */,
+				1D7CD13E16E5247500F5F3AF /* Places@2x.png in Resources */,
+				1D7CD13F16E5247500F5F3AF /* Posts.png in Resources */,
+				1D7CD14016E5247500F5F3AF /* Posts@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1214,6 +1305,8 @@
 				1D7CCFD816E4C10E00F5F3AF /* main.m in Sources */,
 				1D7CCFDF16E4C10E00F5F3AF /* WFAppDelegate.m in Sources */,
 				1D7CCFE816E4C49000F5F3AF /* WFLoginWindowController.m in Sources */,
+				1D7CD11916E50B3100F5F3AF /* WFMainWindowController.m in Sources */,
+				1D7CD12416E517CF00F5F3AF /* WFAppPaneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,8 +1336,6 @@
 			files = (
 				1D7CD05916E4DC7500F5F3AF /* NSString+Pinyin.m in Sources */,
 				1D7CD05F16E4DCED00F5F3AF /* PYPinyin.m in Sources */,
-				1D7CD0B316E4E25F00F5F3AF /* NSBase64DataEncoder.m in Sources */,
-				1D7CD0B716E4E27400F5F3AF /* base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,6 +1352,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7CD10116E4EBAA00F5F3AF /* NSBase64DataEncoder.m in Sources */,
+				1D7CD10316E4EBAE00F5F3AF /* base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1268,6 +1361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7CD10216E4EBAA00F5F3AF /* NSBase64DataEncoder.m in Sources */,
+				1D7CD10416E4EBAF00F5F3AF /* base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1476,13 +1571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1522,13 +1611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1710,13 +1793,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1756,13 +1833,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1870,13 +1941,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1916,13 +1981,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1955,13 +2014,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -2001,13 +2054,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -2040,13 +2087,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = NO;
@@ -2086,13 +2127,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-					armv7s,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = NO;
