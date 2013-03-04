@@ -243,6 +243,7 @@
 		1D7CD13016E5247500F5F3AF /* Places@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Places@2x.png"; sourceTree = "<group>"; };
 		1D7CD13116E5247500F5F3AF /* Posts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Posts.png; sourceTree = "<group>"; };
 		1D7CD13216E5247500F5F3AF /* Posts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Posts@2x.png"; sourceTree = "<group>"; };
+		1D7CD14116E52AF500F5F3AF /* COPYRIGHT */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT; sourceTree = "<group>"; };
 		1D85892116D7C5900056DB48 /* FusionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FusionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D85892C16D7C5900056DB48 /* FusionKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FusionKit-Info.plist"; sourceTree = "<group>"; };
 		1D85892E16D7C5900056DB48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -614,6 +615,7 @@
 		1D85891516D7C5820056DB48 = {
 			isa = PBXGroup;
 			children = (
+				1D7CD14116E52AF500F5F3AF /* COPYRIGHT */,
 				1D7CD08016E4E17000F5F3AF /* Desktop */,
 				1D7CD08116E4E18400F5F3AF /* Mobile */,
 				1D85892316D7C5900056DB48 /* Frameworks */,
