@@ -13,6 +13,7 @@
 
 @property IBOutlet WFAppPaneController *appPaneController;
 @property IBOutlet NSViewController *detailViewController;
+@property IBOutlet NSView *rightSplitView;
 
 @property NSDictionary *apps;
 
@@ -42,12 +43,20 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     [self.appPaneController configureView];
     
-    
+    self.apps = @{@"News": @"WFNewsViewController"};
 }
 
 - (void)loadAppWithName:(NSString *)name
 {
     NSLog(@"App %@ requested!", name);
+    NSString *className = self.apps[name];
+    if (className)
+    {
+        self.detailViewController = [[NSClassFromString(className) alloc] initWithNibName:className bundle:[NSBundle mainBundle]];
+        [[self.detailViewController view] setFrame:self.rightSplitView.bounds];
+        [[self.detailViewController view] setAutoresizingMask:18];
+        [self.rightSplitView setSubviews:@[[self.detailViewController view]]];
+    }
 }
 
 @end

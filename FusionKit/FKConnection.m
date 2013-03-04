@@ -11,6 +11,7 @@
 #import "FKJSONKeyedUnarchiver.h"
 #import "FKDecls.h"
 #import "FKWrapper.h"
+#import "FKNews.h"
 
 @implementation FKConnection
 
@@ -128,4 +129,49 @@
     }
 }
 
+- (NSArray *)newsAfterEpoch:(NSDate *)epoch count:(NSUInteger)count type:(NSString *)type error:(NSError *__autoreleasing *)error
+{
+    NSMutableDictionary *uplinkObject = [@{@"count": @(count),
+                                           @"lastT": @(FKTimestampFromNSTimeInterval([epoch timeIntervalSince1970]))} mutableCopy];
+    if (type)
+        uplinkObject[@"type"] = type;
+    NSData *uplinkData = [FKJSONKeyedArchiver archivedDataWithRootObject:uplinkObject];
+    
+    NSError *err;
+    NSData *downlinkData = [self dataWithPostData:uplinkData
+                                         toMethod:@"Login"
+                                            error:&err];
+    
+    if (!downlinkData)
+    {
+        FKAssignError(error, err);
+        return NO;
+    }
+    
+    NSString *result = [FKJSONKeyedUnarchiver unarchiveObjectWithData:downlinkData
+                                                                class:[FKNews class]];
+    
+    if ([result isEqualToString:FKTrueValue])
+    {
+        return YES;
+    }
+    else
+    {
+        FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
+                                                 code:403
+                                             userInfo:@{@"response": result}]);
+        return NO;
+    }
+}
+
 @end
+
+NSTimeInterval NSTimeIntervalFromFKTimestamp(FKTimestamp timestamp)
+{
+    return ((NSTimeInterval)timestamp) / 1000.0;
+}
+
+FKTimestamp FKTimestampFromNSTimeInterval(NSTimeInterval timeInterval)
+{
+    return (FKTimestamp)(timeInterval * 1000.0);
+}

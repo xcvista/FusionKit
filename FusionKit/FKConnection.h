@@ -28,7 +28,15 @@
 
 - (NSString *)userAgent;
 
-- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password error:(NSError **)error;
+- (BOOL)loginWithUsername:(NSString *)username
+                 password:(NSString *)password
+                    error:(NSError **)error;
+
 - (BOOL)keepAliveWithError:(NSError **)error;
+
+- (NSArray *)newsAfterEpoch:(NSDate *)epoch
+                      count:(NSUInteger)count
+                       type:(NSString *)type
+                      error:(NSError **)error;
 
 @end
