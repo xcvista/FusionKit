@@ -127,6 +127,7 @@
 		1D7CD17016E5362700F5F3AF /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D85892116D7C5900056DB48 /* FusionKit.framework */; };
 		1D7CD17316E5364300F5F3AF /* FKNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD17216E5364300F5F3AF /* FKNewsController.m */; };
 		1D7CD17616E53CD300F5F3AF /* FKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD17516E53CD300F5F3AF /* FKContact.m */; };
+		1D7CD17816E53FA400F5F3AF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD17716E53FA300F5F3AF /* README.md */; };
 		1D85892F16D7C5900056DB48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D85892D16D7C5900056DB48 /* InfoPlist.strings */; };
 		1D85893716D7C5AC0056DB48 /* FusionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893116D7C5900056DB48 /* FusionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D85893A16D7C77C0056DB48 /* FKJSONKeyedArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893816D7C77C0056DB48 /* FKJSONKeyedArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -273,6 +274,7 @@
 		1D7CD17216E5364300F5F3AF /* FKNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNewsController.m; sourceTree = "<group>"; };
 		1D7CD17416E53CD300F5F3AF /* FKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKContact.h; sourceTree = "<group>"; };
 		1D7CD17516E53CD300F5F3AF /* FKContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKContact.m; sourceTree = "<group>"; };
+		1D7CD17716E53FA300F5F3AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1D85892116D7C5900056DB48 /* FusionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FusionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D85892C16D7C5900056DB48 /* FusionKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FusionKit-Info.plist"; sourceTree = "<group>"; };
 		1D85892E16D7C5900056DB48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -691,6 +693,7 @@
 			isa = PBXGroup;
 			children = (
 				1D7CD14116E52AF500F5F3AF /* COPYRIGHT */,
+				1D7CD17716E53FA300F5F3AF /* README.md */,
 				1D7CD08016E4E17000F5F3AF /* Desktop */,
 				1D7CD08116E4E18400F5F3AF /* Mobile */,
 				1D85892316D7C5900056DB48 /* Frameworks */,
@@ -1128,6 +1131,7 @@
 				1D7CD13F16E5247500F5F3AF /* Posts.png in Resources */,
 				1D7CD14016E5247500F5F3AF /* Posts@2x.png in Resources */,
 				1D7CD14E16E5326E00F5F3AF /* WFNewsViewController.xib in Resources */,
+				1D7CD17816E53FA400F5F3AF /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
