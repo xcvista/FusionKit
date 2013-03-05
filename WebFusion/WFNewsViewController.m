@@ -46,7 +46,7 @@
     NSError *err;
     WFAppDelegate *appDelegate = [NSApp delegate];
     NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
-                                                      count:5
+                                                      count:50
                                                        type:nil
                                                       error:&err];
     
@@ -60,14 +60,7 @@
         [NSApp terminate:self];
     }
     
-    NSMutableArray *controllers = [NSMutableArray arrayWithCapacity:[news count]];
-    
-    for (FKNews *item in news)
-    {
-        [controllers addObject:[FKNewsController controllerWithNews:item]];
-    }
-    
-    [self.collectionView setContent:controllers];
+    [self.collectionView setContent:news];
 }
 
 - (void)scrollerChanged:(id)sender
@@ -87,8 +80,8 @@
                            
                            RUNNING = YES;
                            NSError *err;
-                           NSArray *news = [appDelegate.connection newsBeforeEpoch:[[currentObjects lastObject] news].publishDate
-                                                                             count:5
+                           NSArray *news = [appDelegate.connection newsBeforeEpoch:[[currentObjects lastObject] publishDate]
+                                                                             count:50
                                                                               type:nil
                                                                              error:&err];
                            dispatch_async(dispatch_get_main_queue(),
@@ -104,10 +97,7 @@
                                                   [NSApp terminate:self];
                                               }
                                               
-                                              for (FKNews *item in news)
-                                              {
-                                                  [currentObjects addObject:[FKNewsController controllerWithNews:item]];
-                                              }
+                                              [currentObjects addObjectsFromArray:news];
                                               
                                               [self.collectionView setContent:currentObjects];
                                               

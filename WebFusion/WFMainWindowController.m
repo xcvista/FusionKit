@@ -9,7 +9,7 @@
 #import "WFMainWindowController.h"
 #import "WFAppPaneController.h"
 
-@interface WFMainWindowController () <NSWindowDelegate>
+@interface WFMainWindowController () <NSWindowDelegate, NSSplitViewDelegate>
 
 @property IBOutlet WFAppPaneController *appPaneController;
 @property IBOutlet NSViewController *detailViewController;
@@ -57,6 +57,13 @@
         [[self.detailViewController view] setAutoresizingMask:18];
         [self.rightSplitView setSubviews:@[[self.detailViewController view]]];
     }
+}
+
+- (BOOL)splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)view
+{
+    if ([[splitView subviews] indexOfObject:view] == 0)
+        return NO;
+    return YES;
 }
 
 @end
