@@ -138,9 +138,8 @@
 		1D7CD18E16E55F7D00F5F3AF /* WFNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD18C16E55F7B00F5F3AF /* WFNewsViewController.m */; };
 		1D7CD18F16E55F7D00F5F3AF /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD18D16E55F7C00F5F3AF /* WFNewsViewController.xib */; };
 		1D7CD19016E563C800F5F3AF /* FusionBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD16716E535C200F5F3AF /* FusionBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7CD19116E563EC00F5F3AF /* FKNewsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD17116E5364300F5F3AF /* FKNewsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7CD19216E563F200F5F3AF /* FKNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD17216E5364300F5F3AF /* FKNewsController.m */; };
 		1D7CD19316E5650200F5F3AF /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CD15916E535C100F5F3AF /* FusionBinding.framework */; };
+		1D7CD19616E5768900F5F3AF /* WFNewsItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD19516E5768900F5F3AF /* WFNewsItemViewController.m */; };
 		1D85892F16D7C5900056DB48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D85892D16D7C5900056DB48 /* InfoPlist.strings */; };
 		1D85893716D7C5AC0056DB48 /* FusionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893116D7C5900056DB48 /* FusionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D85893A16D7C77C0056DB48 /* FKJSONKeyedArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893816D7C77C0056DB48 /* FKJSONKeyedArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -278,8 +277,6 @@
 		1D7CD16716E535C200F5F3AF /* FusionBinding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FusionBinding.h; sourceTree = "<group>"; };
 		1D7CD16D16E535E300F5F3AF /* FKNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNews.h; sourceTree = "<group>"; };
 		1D7CD16E16E535E300F5F3AF /* FKNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNews.m; sourceTree = "<group>"; };
-		1D7CD17116E5364300F5F3AF /* FKNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNewsController.h; sourceTree = "<group>"; };
-		1D7CD17216E5364300F5F3AF /* FKNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNewsController.m; sourceTree = "<group>"; };
 		1D7CD17416E53CD300F5F3AF /* FKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKContact.h; sourceTree = "<group>"; };
 		1D7CD17516E53CD300F5F3AF /* FKContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKContact.m; sourceTree = "<group>"; };
 		1D7CD17716E53FA300F5F3AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -290,6 +287,8 @@
 		1D7CD18B16E55F7B00F5F3AF /* WFNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsViewController.h; sourceTree = "<group>"; };
 		1D7CD18C16E55F7B00F5F3AF /* WFNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsViewController.m; sourceTree = "<group>"; };
 		1D7CD18D16E55F7C00F5F3AF /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
+		1D7CD19416E5768900F5F3AF /* WFNewsItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsItemViewController.h; sourceTree = "<group>"; };
+		1D7CD19516E5768900F5F3AF /* WFNewsItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsItemViewController.m; sourceTree = "<group>"; };
 		1D85892116D7C5900056DB48 /* FusionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FusionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D85892C16D7C5900056DB48 /* FusionKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FusionKit-Info.plist"; sourceTree = "<group>"; };
 		1D85892E16D7C5900056DB48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -425,6 +424,8 @@
 				1D7CD18B16E55F7B00F5F3AF /* WFNewsViewController.h */,
 				1D7CD18C16E55F7B00F5F3AF /* WFNewsViewController.m */,
 				1D7CD18D16E55F7C00F5F3AF /* WFNewsViewController.xib */,
+				1D7CD19416E5768900F5F3AF /* WFNewsItemViewController.h */,
+				1D7CD19516E5768900F5F3AF /* WFNewsItemViewController.m */,
 				1D7CD18416E5564900F5F3AF /* NSString+Geometrics.h */,
 				1D7CD18516E5564A00F5F3AF /* NSString+Geometrics.m */,
 				1D7CCFD216E4C10E00F5F3AF /* Supporting Files */,
@@ -688,8 +689,6 @@
 			isa = PBXGroup;
 			children = (
 				1D7CD16716E535C200F5F3AF /* FusionBinding.h */,
-				1D7CD17116E5364300F5F3AF /* FKNewsController.h */,
-				1D7CD17216E5364300F5F3AF /* FKNewsController.m */,
 				1D7CD16116E535C100F5F3AF /* Supporting Files */,
 			);
 			path = FusionBinding;
@@ -862,7 +861,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7CD19016E563C800F5F3AF /* FusionBinding.h in Headers */,
-				1D7CD19116E563EC00F5F3AF /* FKNewsController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1458,6 +1456,7 @@
 				1D7CD12416E517CF00F5F3AF /* WFAppPaneController.m in Sources */,
 				1D7CD18616E5564A00F5F3AF /* NSString+Geometrics.m in Sources */,
 				1D7CD18E16E55F7D00F5F3AF /* WFNewsViewController.m in Sources */,
+				1D7CD19616E5768900F5F3AF /* WFNewsItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1541,7 +1540,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7CD19216E563F200F5F3AF /* FKNewsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2507,6 +2505,7 @@
 				1D7CCFE516E4C10E00F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CCFFE16E4D24C00F5F3AF /* Build configuration list for PBXNativeTarget "MobileFusionKit" */ = {
 			isa = XCConfigurationList;
@@ -2515,6 +2514,7 @@
 				1D7CD00016E4D24C00F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD02716E4DBD900F5F3AF /* Build configuration list for PBXNativeTarget "MobileWebFusion" */ = {
 			isa = XCConfigurationList;
@@ -2523,6 +2523,7 @@
 				1D7CD02916E4DBD900F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD03B16E4DC0300F5F3AF /* Build configuration list for PBXNativeTarget "PinyinKit" */ = {
 			isa = XCConfigurationList;
@@ -2531,6 +2532,7 @@
 				1D7CD03D16E4DC0300F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD04F16E4DC3600F5F3AF /* Build configuration list for PBXNativeTarget "MobilePinyinKit" */ = {
 			isa = XCConfigurationList;
@@ -2539,6 +2541,7 @@
 				1D7CD05116E4DC3600F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD09816E4E21000F5F3AF /* Build configuration list for PBXNativeTarget "Base64Kit" */ = {
 			isa = XCConfigurationList;
@@ -2547,6 +2550,7 @@
 				1D7CD09A16E4E21000F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD0AD16E4E21F00F5F3AF /* Build configuration list for PBXNativeTarget "MobileBase64Kit" */ = {
 			isa = XCConfigurationList;
@@ -2555,6 +2559,7 @@
 				1D7CD0AF16E4E21F00F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD0D216E4E67C00F5F3AF /* Build configuration list for PBXNativeTarget "MobileTaskCounter" */ = {
 			isa = XCConfigurationList;
@@ -2563,6 +2568,7 @@
 				1D7CD0D416E4E67C00F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD0E616E4E69100F5F3AF /* Build configuration list for PBXNativeTarget "MobileKeychainAccess" */ = {
 			isa = XCConfigurationList;
@@ -2571,6 +2577,7 @@
 				1D7CD0E816E4E69100F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D7CD16A16E535C200F5F3AF /* Build configuration list for PBXNativeTarget "FusionBinding" */ = {
 			isa = XCConfigurationList;
@@ -2579,6 +2586,7 @@
 				1D7CD16C16E535C200F5F3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D85891916D7C5820056DB48 /* Build configuration list for PBXProject "FusionKit.C" */ = {
 			isa = XCConfigurationList;

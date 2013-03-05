@@ -10,4 +10,12 @@
 
 @interface WFNewsItemViewController : NSCollectionViewItem
 
+@property NSString *newsTitle;
+@property NSString *author;
+@property NSImage *avatar;
+@property NSString *content;
+@property NSURL *firstMedia;
+@property NSImage *image;
+@property BOOL hasImage;
+
 @end

@@ -76,8 +76,9 @@
 															<reference key="NSNextResponder" ref="111520382"/>
 															<int key="NSvFlags">256</int>
 															<array class="NSMutableArray" key="NSSubviews"/>
-															<string key="NSFrameSize">{162, 560}</string>
+															<string key="NSFrameSize">{157, 560}</string>
 															<reference key="NSSuperview" ref="111520382"/>
+															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="24511319"/>
 															<string key="NSReuseIdentifierKey">_NS:13</string>
 															<bool key="NSEnabled">YES</bool>
@@ -92,7 +93,7 @@
 															<array class="NSMutableArray" key="NSTableColumns">
 																<object class="NSTableColumn" id="425264390">
 																	<string key="NSIdentifier">AutomaticTableColumnIdentifier.0</string>
-																	<double key="NSWidth">159</double>
+																	<double key="NSWidth">154</double>
 																	<double key="NSMinWidth">16</double>
 																	<double key="NSMaxWidth">1000</double>
 																	<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -190,8 +191,9 @@
 															<bool key="NSOutlineViewAutoresizesOutlineColumnKey">NO</bool>
 														</object>
 													</array>
-													<string key="NSFrameSize">{162, 560}</string>
+													<string key="NSFrameSize">{157, 560}</string>
 													<reference key="NSSuperview" ref="727040363"/>
+													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="496241048"/>
 													<string key="NSReuseIdentifierKey">_NS:11</string>
 													<reference key="NSDocView" ref="496241048"/>
@@ -203,6 +205,7 @@
 													<int key="NSvFlags">-2147483392</int>
 													<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 													<reference key="NSSuperview" ref="727040363"/>
+													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="53907658"/>
 													<string key="NSReuseIdentifierKey">_NS:15</string>
 													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -215,6 +218,7 @@
 													<int key="NSvFlags">-2147483392</int>
 													<string key="NSFrame">{{1, 119}, {238, 15}}</string>
 													<reference key="NSSuperview" ref="727040363"/>
+													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="684111317"/>
 													<string key="NSReuseIdentifierKey">_NS:60</string>
 													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -224,8 +228,9 @@
 													<double key="NSPercent">0.99328859060402686</double>
 												</object>
 											</array>
-											<string key="NSFrameSize">{162, 560}</string>
+											<string key="NSFrameSize">{157, 560}</string>
 											<reference key="NSSuperview" ref="1017825169"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="111520382"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<int key="NSsFlags">133680</int>
@@ -238,8 +243,9 @@
 											<double key="NSMagnification">1</double>
 										</object>
 									</array>
-									<string key="NSFrameSize">{162, 560}</string>
+									<string key="NSFrameSize">{157, 560}</string>
 									<reference key="NSSuperview" ref="20526746"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="727040363"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<string key="NSClassName">NSView</string>
@@ -250,9 +256,10 @@
 									<array class="NSMutableArray" key="NSSubviews">
 										<object class="NSTextField" id="633569152">
 											<reference key="NSNextResponder" ref="684111317"/>
-											<int key="NSvFlags">268</int>
+											<int key="NSvFlags">301</int>
 											<string key="NSFrame">{{134, 272}, {174, 17}}</string>
 											<reference key="NSSuperview" ref="684111317"/>
+											<reference key="NSWindow"/>
 											<object class="NSShadow" key="NSViewShadow">
 												<double key="NSShadowHoriz">1</double>
 												<double key="NSShadowVert">1</double>
@@ -290,8 +297,9 @@
 											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 										</object>
 									</array>
-									<string key="NSFrame">{{163, 0}, {443, 560}}</string>
+									<string key="NSFrame">{{158, 0}, {448, 560}}</string>
 									<reference key="NSSuperview" ref="20526746"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="633569152"/>
 									<bool key="NSViewIsLayerTreeHost">YES</bool>
 									<string key="NSReuseIdentifierKey">_NS:13</string>
@@ -300,6 +308,7 @@
 							</array>
 							<string key="NSFrameSize">{606, 560}</string>
 							<reference key="NSSuperview" ref="1006"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1017825169"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSIsVertical">YES</bool>
@@ -308,6 +317,7 @@
 					</array>
 					<string key="NSFrameSize">{606, 560}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="20526746"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 800}}</string>
@@ -351,6 +361,14 @@
 						<reference key="destination" ref="1001"/>
 					</object>
 					<int key="connectionID">4</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="20526746"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">136</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -426,7 +444,7 @@
 								<object class="NSTextField" id="191404507">
 									<reference key="NSNextResponder" ref="548552748"/>
 									<int key="NSvFlags">266</int>
-									<string key="NSFrame">{{25, 0}, {134, 17}}</string>
+									<string key="NSFrame">{{25, 0}, {129, 17}}</string>
 									<reference key="NSSuperview" ref="548552748"/>
 									<reference key="NSNextKeyView" ref="301403656"/>
 									<string key="NSReuseIdentifierKey">_NS:80</string>
@@ -444,7 +462,7 @@
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								</object>
 							</array>
-							<string key="NSFrame">{{1, 14}, {159, 17}}</string>
+							<string key="NSFrame">{{1, 14}, {154, 17}}</string>
 							<reference key="NSNextKeyView" ref="947445543"/>
 							<string key="NSReuseIdentifierKey">DataCell</string>
 						</object>
@@ -570,7 +588,7 @@
 							<object class="NSTextField" id="24511319">
 								<nil key="NSNextResponder"/>
 								<int key="NSvFlags">266</int>
-								<string key="NSFrame">{{1, 0}, {159, 14}}</string>
+								<string key="NSFrame">{{1, 0}, {154, 14}}</string>
 								<reference key="NSNextKeyView" ref="548552748"/>
 								<string key="NSReuseIdentifierKey">_NS:101</string>
 								<bool key="NSEnabled">YES</bool>
@@ -708,9 +726,61 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">116</int>
+			<int key="maxID">136</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">WFAppPaneController</string>
+					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="mainVC">WFMainWindowController</string>
+						<string key="outlineView">NSOutlineView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="mainVC">
+							<string key="name">mainVC</string>
+							<string key="candidateClassName">WFMainWindowController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="outlineView">
+							<string key="name">outlineView</string>
+							<string key="candidateClassName">NSOutlineView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/WFAppPaneController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">WFMainWindowController</string>
+					<string key="superclassName">NSWindowController</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="appPaneController">WFAppPaneController</string>
+						<string key="detailViewController">NSViewController</string>
+						<string key="rightSplitView">NSView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="appPaneController">
+							<string key="name">appPaneController</string>
+							<string key="candidateClassName">WFAppPaneController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="detailViewController">
+							<string key="name">detailViewController</string>
+							<string key="candidateClassName">NSViewController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="rightSplitView">
+							<string key="name">rightSplitView</string>
+							<string key="candidateClassName">NSView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/WFMainWindowController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
