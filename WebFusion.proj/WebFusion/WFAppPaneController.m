@@ -59,7 +59,6 @@
 {
     if ([self.outlineView selectedRow] >= 0)
     {
-        NSLog(@"Row %li selected", [self.outlineView selectedRow]);
         id item = [self.outlineView itemAtRow:[self.outlineView selectedRow]];
         if ([self.outlineView parentForItem:item] != nil)
         {
