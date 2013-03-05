@@ -8,7 +8,7 @@
 
 #import "WFNewsViewController.h"
 
-@interface WFNewsViewController () <NSCollectionViewDelegate>
+@interface WFNewsViewController ()
 
 @end
 
@@ -22,11 +22,6 @@
     }
     
     return self;
-}
-
-- (void)awakeFromNib
-{
-    
 }
 
 @end
