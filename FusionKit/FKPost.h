@@ -29,6 +29,6 @@
 @property bool isprivate;
 @property NSUInteger viewedCount;
 @property NSArray *contacts;
-
+@property NSArray *svrNews;
 
 @end
