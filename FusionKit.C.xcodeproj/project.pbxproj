@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2010C416E61211006A87B1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D2010C316E61211006A87B1 /* MainStoryboard.storyboard */; };
 		1D7CCFC116E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CCFBF16E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7CCFC216E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CCFC016E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.m */; };
 		1D7CCFC516E4BFDD00F5F3AF /* FKWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CCFC316E4BFDD00F5F3AF /* FKWrapper.h */; };
@@ -162,6 +163,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D2010C316E61211006A87B1 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1D7CCFBF16E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKJSONKeyedUnarchiver.h; sourceTree = "<group>"; };
 		1D7CCFC016E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKJSONKeyedUnarchiver.m; sourceTree = "<group>"; };
 		1D7CCFC316E4BFDD00F5F3AF /* FKWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKWrapper.h; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 			children = (
 				1D7CD01E16E4DBD900F5F3AF /* WFAppDelegate.h */,
 				1D7CD01F16E4DBD900F5F3AF /* WFAppDelegate.m */,
+				1D2010C316E61211006A87B1 /* MainStoryboard.storyboard */,
 				1D7CD01616E4DBD900F5F3AF /* Supporting Files */,
 			);
 			path = MobileWebFusion;
@@ -1175,6 +1178,7 @@
 				1D7CD02216E4DBD900F5F3AF /* Default.png in Resources */,
 				1D7CD02416E4DBD900F5F3AF /* Default@2x.png in Resources */,
 				1D7CD02616E4DBD900F5F3AF /* Default-568h@2x.png in Resources */,
+				1D2010C416E61211006A87B1 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
