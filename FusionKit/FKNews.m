@@ -23,7 +23,7 @@
         self.content = [aDecoder decodeObjectForKey:@"content"];
         self.author = [aDecoder decodeObjectOfClass:[FKContact class] forKey:@"authorUC"];
         self.media = [aDecoder decodeObjectOfClass:[FKMedia class] forKey:@"medias"];
-        self.publishDate = [NSDate dateWithTimeIntervalSince1970:NSTimeIntervalFromFKTimestamp([[aDecoder decodeObjectForKey:@"publish"][@"time"] doubleValue])];
+        self.publishDate = [NSDate dateWithTimeIntervalSince1970:NSTimeIntervalFromFKTimestamp([[aDecoder decodeObjectForKey:@"publishTime"] longLongValue])];
         self.ID = [aDecoder decodeObjectForKey:@"id"];
         self.service = [aDecoder decodeObjectForKey:@"svr"];
         self.type = [aDecoder decodeObjectForKey:@"type"];

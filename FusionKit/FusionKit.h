@@ -16,6 +16,7 @@
 #import <MobileFusionKit/FKConnection.h>
 #import <MobileFusionKit/FKNews.h>
 #import <MobileFusionKit/FKContact.h>
+#import <MobileFusionKit/FKPost.h>
 
 #else
 
@@ -26,6 +27,7 @@
 #import <FusionKit/FKNews.h>
 #import <FusionKit/FKContact.h>
 #import <FusionKit/FKMedia.h>
+#import <FusionKit/FKPost.h>
 
 #endif
 
