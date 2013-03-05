@@ -260,6 +260,7 @@
 											<string key="NSFrame">{{134, 272}, {174, 17}}</string>
 											<reference key="NSSuperview" ref="684111317"/>
 											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView"/>
 											<object class="NSShadow" key="NSViewShadow">
 												<double key="NSShadowHoriz">1</double>
 												<double key="NSShadowVert">1</double>
@@ -353,6 +354,14 @@
 						<reference key="destination" ref="684111317"/>
 					</object>
 					<int key="connectionID">108</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">outlineView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="496241048"/>
+					</object>
+					<int key="connectionID">137</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -726,7 +735,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">136</int>
+			<int key="maxID">137</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -758,6 +767,7 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="appPaneController">WFAppPaneController</string>
 						<string key="detailViewController">NSViewController</string>
+						<string key="outlineView">NSOutlineView</string>
 						<string key="rightSplitView">NSView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -768,6 +778,10 @@
 						<object class="IBToOneOutletInfo" key="detailViewController">
 							<string key="name">detailViewController</string>
 							<string key="candidateClassName">NSViewController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="outlineView">
+							<string key="name">outlineView</string>
+							<string key="candidateClassName">NSOutlineView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="rightSplitView">
 							<string key="name">rightSplitView</string>

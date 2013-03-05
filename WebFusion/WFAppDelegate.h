@@ -12,7 +12,10 @@
 
 @interface WFAppDelegate : NSObject <NSApplicationDelegate>
 
-@property NSWindowController *rootWindowController;
+@property NSMutableArray *windowControllers;
 @property FKConnection *connection;
+
+- (void)showWindowController:(NSWindowController *)windowController;
+- (void)releaseWindowController:(NSWindowController *)windowController;
 
 @end

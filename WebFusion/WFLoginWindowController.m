@@ -106,8 +106,8 @@
                                               WFAppDelegate *delegate = [NSApp delegate];
                                               delegate.connection = connection;
                                               [self.window orderOut:self];
-                                              delegate.rootWindowController = [[WFMainWindowController alloc] init];
-                                              [delegate.rootWindowController showWindow:self];
+                                              [delegate showWindowController:[[WFMainWindowController alloc] init]];
+                                              [delegate releaseWindowController:self];
                                           });
                        }
                        else

@@ -45,9 +45,6 @@
     [[NSAnimationContext currentContext] setDuration:0];
     [self.outlineView expandItem:nil expandChildren:YES];
     [NSAnimationContext endGrouping];
-    
-    [self.outlineView selectColumnIndexes:[NSIndexSet indexSetWithIndex:1]
-                     byExtendingSelection:NO];
 }
 
 - (NSArray *)childrenOfItem:(id)item

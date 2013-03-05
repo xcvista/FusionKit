@@ -14,6 +14,7 @@
 @property IBOutlet WFAppPaneController *appPaneController;
 @property IBOutlet NSViewController *detailViewController;
 @property IBOutlet NSView *rightSplitView;
+@property (weak) IBOutlet NSOutlineView *outlineView;
 
 @property NSDictionary *apps;
 
@@ -42,6 +43,8 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     [self.appPaneController configureView];
+    [self.outlineView selectColumnIndexes:[NSIndexSet indexSetWithIndex:1]
+                     byExtendingSelection:NO];
     
     self.apps = @{@"News": @"WFNewsViewController"};
 }

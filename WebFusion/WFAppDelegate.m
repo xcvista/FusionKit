@@ -19,8 +19,19 @@
     [defaults synchronize];
     
     // Show the initial window.
-    self.rootWindowController = [[WFLoginWindowController alloc] init];
-    [self.rootWindowController showWindow:self];
+    self.windowControllers = [NSMutableArray array];
+    [self showWindowController:[[WFLoginWindowController alloc] init]];
+}
+
+- (void)showWindowController:(NSWindowController *)windowController
+{
+    [self.windowControllers addObject:windowController];
+    [windowController showWindow:self];
+}
+
+- (void)releaseWindowController:(NSWindowController *)windowController
+{
+    [self.windowControllers removeObject:windowController];
 }
 
 @end
