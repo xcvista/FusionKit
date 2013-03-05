@@ -53,6 +53,7 @@
                                           {
                                               self.hasImage = YES;
                                               self.image = [[NSImage alloc] initWithData:image];
+                                              [self.contentField setFrameSize:NSMakeSize(207, [self.contentField frame].size.height)];
                                           }
                                       });
                    });
