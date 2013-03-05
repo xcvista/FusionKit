@@ -12,6 +12,7 @@
 
 @interface FKPost : NSObject <NSCoding>
 
+@property id ID;
 @property NSString *title;
 @property NSString *content;
 @property FKContact *author;
@@ -20,5 +21,14 @@
 @property NSUInteger replyCount;
 @property NSDate *lastReplyDate;
 @property FKContact *lastReplyContact;
+@property NSString *aid;
+@property NSArray *tags;
+@property id base;
+@property id root;
+@property bool friendly;
+@property bool isprivate;
+@property NSUInteger viewedCount;
+@property NSArray *contacts;
+
 
 @end
