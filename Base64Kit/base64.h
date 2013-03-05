@@ -40,3 +40,10 @@ char *NewBase64Encode(
 - (NSString *)base64EncodedString;
 
 @end
+
+@interface NSData (DataURL)
+
+- (NSString *)dataURLWithType:(NSString *)type;
++ (NSData *)dataFromDataURL:(NSString *)dataURL type:(NSString **)type;
+
+@end
