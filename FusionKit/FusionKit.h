@@ -14,6 +14,8 @@
 #import <MobileFusionKit/FKJSONKeyedArchiver.h>
 #import <MobileFusionKit/FKJSONKeyedUnarchiver.h>
 #import <MobileFusionKit/FKConnection.h>
+#import <MobileFusionKit/FKNews.h>
+#import <MobileFusionKit/FKContact.h>
 
 #else
 
@@ -21,6 +23,9 @@
 #import <FusionKit/FKJSONKeyedArchiver.h>
 #import <FusionKit/FKJSONKeyedUnarchiver.h>
 #import <FusionKit/FKConnection.h>
+#import <FusionKit/FKNews.h>
+#import <FusionKit/FKContact.h>
+#import <FusionKit/FKMedia.h>
 
 #endif
 

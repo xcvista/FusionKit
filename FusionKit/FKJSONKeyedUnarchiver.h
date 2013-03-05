@@ -15,11 +15,10 @@ NSCoder
 NSUnarchiver
 #endif
 
-#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
 + (id)unarchiveObjectWithData:(NSData *)data;
-#endif
 
-- (id)decodeObjectForKey:(NSString *)key class:(Class)class;
+- (id)decodeObjectForKey:(NSString *)key;
+- (id)decodeObjectOfClass:(Class)aClass forKey:(NSString *)key;
 + (id)unarchiveObjectWithData:(NSData *)data class:(Class)class;
 
 @end

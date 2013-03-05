@@ -71,7 +71,7 @@
 {
     if ([plist isKindOfClass:[NSDictionary class]])
     {
-        FKJSONKeyedUnarchiver *unarchiver = [[FKJSONKeyedUnarchiver alloc] initWithPlist:plist];
+        FKJSONKeyedUnarchiver *unarchiver = (__bridge FKJSONKeyedUnarchiver *)(CFRetain((__bridge CFTypeRef)([[FKJSONKeyedUnarchiver alloc] initWithPlist:plist])));
         id object = [[class alloc] initWithCoder:unarchiver];
         return object;
     }
@@ -101,7 +101,7 @@
     return [[self class] objectFromPlist:self.plist[key]];
 }
 
-- (id)decodeObjectForKey:(NSString *)key class:(Class)class
+- (id)decodeObjectOfClass:(Class)class forKey:(NSString *)key
 {
     return [[self class] objectFromPlist:self.plist[key]
                                    class:class];

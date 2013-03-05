@@ -129,8 +129,16 @@
     }
 }
 
-- (NSArray *)newsAfterEpoch:(NSDate *)epoch count:(NSUInteger)count type:(NSString *)type error:(NSError *__autoreleasing *)error
+- (BOOL)keepAliveWithError:(NSError *__autoreleasing *)error
 {
+    return YES;
+}
+
+- (NSArray *)newsBeforeEpoch:(NSDate *)epoch count:(NSUInteger)count type:(NSString *)type error:(NSError *__autoreleasing *)error
+{
+    if ([epoch isEqualToDate:[NSDate distantFuture]])
+        epoch = [NSDate dateWithTimeIntervalSince1970:-1.0];
+    
     NSMutableDictionary *uplinkObject = [@{@"count": @(count),
                                            @"lastT": @(FKTimestampFromNSTimeInterval([epoch timeIntervalSince1970]))} mutableCopy];
     if (type)
@@ -139,7 +147,7 @@
     
     NSError *err;
     NSData *downlinkData = [self dataWithPostData:uplinkData
-                                         toMethod:@"Login"
+                                         toMethod:@"GetWhatzNew"
                                             error:&err];
     
     if (!downlinkData)
@@ -148,20 +156,17 @@
         return NO;
     }
     
-    NSString *result = [FKJSONKeyedUnarchiver unarchiveObjectWithData:downlinkData
+    NSArray *result = [FKJSONKeyedUnarchiver unarchiveObjectWithData:downlinkData
                                                                 class:[FKNews class]];
     
-    if ([result isEqualToString:FKTrueValue])
-    {
-        return YES;
-    }
-    else
+    if (!result)
     {
         FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
                                                  code:403
                                              userInfo:@{@"response": result}]);
         return NO;
     }
+    return result;
 }
 
 @end

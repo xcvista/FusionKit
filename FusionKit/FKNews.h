@@ -12,15 +12,14 @@
 
 @interface FKNews : NSObject <NSCoding>
 
-@property (nonatomic, readonly) NSURL *link;
-@property (nonatomic, readonly) NSString *locationName;
-@property (nonatomic, readonly) NSArray *actions;
-@property (nonatomic, readonly) FKContact *author;
-@property (nonatomic, readonly) NSArray *mediaList;
-@property (nonatomic, readonly) NSDate *publishDate;
-@property (nonatomic, readonly) FKNews *referrer;
-@property (nonatomic, readonly) FKService *service;
-@property (nonatomic, readonly) id ID;
-@property (nonatomic, readonly) BOOL canReply;
+@property NSString *title;
+@property NSString *content;
+@property NSURL *link;
+@property FKContact *author;
+@property NSArray *media;
+@property NSDate *publishDate;
+@property id service;
+@property id ID;
+@property NSString *type;
 
 @end

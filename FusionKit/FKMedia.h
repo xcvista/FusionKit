@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FKMedia : NSObject
+@interface FKMedia : NSObject <NSCoding>
+
+@property NSURL *link;
+@property NSURL *thumbnail;
 
 @end

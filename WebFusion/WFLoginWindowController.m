@@ -104,6 +104,7 @@
                            dispatch_async(dispatch_get_main_queue(),
                                           ^{
                                               WFAppDelegate *delegate = [NSApp delegate];
+                                              delegate.connection = connection;
                                               [self.window orderOut:self];
                                               delegate.rootWindowController = [[WFMainWindowController alloc] init];
                                               [delegate.rootWindowController showWindow:self];

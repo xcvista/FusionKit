@@ -34,9 +34,9 @@
 
 - (BOOL)keepAliveWithError:(NSError **)error;
 
-- (NSArray *)newsAfterEpoch:(NSDate *)epoch
-                      count:(NSUInteger)count
-                       type:(NSString *)type
-                      error:(NSError **)error;
+- (NSArray *)newsBeforeEpoch:(NSDate *)epoch
+                       count:(NSUInteger)count
+                        type:(NSString *)type
+                       error:(NSError **)error;
 
 @end
