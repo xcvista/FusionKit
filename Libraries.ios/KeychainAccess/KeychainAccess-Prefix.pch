@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'KeychainAccess' target in the 'KeychainAccess' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

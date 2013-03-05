@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D2013C616E65E77006A87B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
+		1D2013D016E65E78006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013CE16E65E78006A87B1 /* InfoPlist.strings */; };
+		1D2013D216E65E78006A87B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2013D116E65E78006A87B1 /* main.m */; };
+		1D2013D616E65E78006A87B1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013D416E65E78006A87B1 /* Credits.rtf */; };
+		1D2013EE16E65E9C006A87B1 /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E016E65E9C006A87B1 /* Camera.png */; };
+		1D2013EF16E65E9C006A87B1 /* Camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E116E65E9C006A87B1 /* Camera@2x.png */; };
+		1D2013F016E65E9C006A87B1 /* Contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E216E65E9C006A87B1 /* Contacts.png */; };
+		1D2013F116E65E9C006A87B1 /* Contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E316E65E9C006A87B1 /* Contacts@2x.png */; };
+		1D2013F216E65E9C006A87B1 /* Groove.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E416E65E9C006A87B1 /* Groove.png */; };
+		1D2013F316E65E9C006A87B1 /* Groove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E516E65E9C006A87B1 /* Groove@2x.png */; };
+		1D2013F416E65E9C006A87B1 /* Me.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E616E65E9C006A87B1 /* Me.png */; };
+		1D2013F516E65E9C006A87B1 /* Me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E716E65E9C006A87B1 /* Me@2x.png */; };
+		1D2013F616E65E9C006A87B1 /* News.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E816E65E9C006A87B1 /* News.png */; };
+		1D2013F716E65E9C006A87B1 /* News@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E916E65E9C006A87B1 /* News@2x.png */; };
+		1D2013F816E65E9C006A87B1 /* Places.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013EA16E65E9C006A87B1 /* Places.png */; };
+		1D2013F916E65E9C006A87B1 /* Places@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013EB16E65E9C006A87B1 /* Places@2x.png */; };
+		1D2013FA16E65E9C006A87B1 /* Posts.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013EC16E65E9C006A87B1 /* Posts.png */; };
+		1D2013FB16E65E9C006A87B1 /* Posts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013ED16E65E9C006A87B1 /* Posts@2x.png */; };
+		1D2013FE16E65EA7006A87B1 /* NSString+Geometrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */; };
+		1D20141216E65EB5006A87B1 /* WFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140016E65EB5006A87B1 /* WFAppDelegate.m */; };
+		1D20141316E65EB5006A87B1 /* WFAppPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140216E65EB5006A87B1 /* WFAppPaneController.m */; };
+		1D20141416E65EB5006A87B1 /* WFLoginWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140416E65EB5006A87B1 /* WFLoginWindowController.m */; };
+		1D20141516E65EB5006A87B1 /* WFLoginWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20140516E65EB5006A87B1 /* WFLoginWindowController.xib */; };
+		1D20141616E65EB5006A87B1 /* WFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140716E65EB5006A87B1 /* WFMainWindowController.m */; };
+		1D20141716E65EB5006A87B1 /* WFMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20140816E65EB5006A87B1 /* WFMainWindowController.xib */; };
+		1D20141816E65EB5006A87B1 /* WFNewsInfoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140A16E65EB5006A87B1 /* WFNewsInfoWindowController.m */; };
+		1D20141916E65EB5006A87B1 /* WFNewsInfoWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20140B16E65EB5006A87B1 /* WFNewsInfoWindowController.xib */; };
+		1D20141A16E65EB5006A87B1 /* WFNewsItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140D16E65EB5006A87B1 /* WFNewsItemViewController.m */; };
+		1D20141B16E65EB5006A87B1 /* WFNewsItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */; };
+		1D20141C16E65EB5006A87B1 /* WFNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20141016E65EB5006A87B1 /* WFNewsViewController.m */; };
+		1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D2013C216E65E77006A87B1 /* WebFusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebFusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D2013C516E65E77006A87B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1D2013C816E65E77006A87B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1D2013C916E65E77006A87B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D2013CA16E65E77006A87B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D2013CD16E65E77006A87B1 /* WebFusion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebFusion-Info.plist"; sourceTree = "<group>"; };
+		1D2013CF16E65E78006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D2013D116E65E78006A87B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D2013D316E65E78006A87B1 /* WebFusion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebFusion-Prefix.pch"; sourceTree = "<group>"; };
+		1D2013D516E65E78006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1D2013E016E65E9C006A87B1 /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
+		1D2013E116E65E9C006A87B1 /* Camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera@2x.png"; sourceTree = "<group>"; };
+		1D2013E216E65E9C006A87B1 /* Contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacts.png; sourceTree = "<group>"; };
+		1D2013E316E65E9C006A87B1 /* Contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts@2x.png"; sourceTree = "<group>"; };
+		1D2013E416E65E9C006A87B1 /* Groove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Groove.png; sourceTree = "<group>"; };
+		1D2013E516E65E9C006A87B1 /* Groove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groove@2x.png"; sourceTree = "<group>"; };
+		1D2013E616E65E9C006A87B1 /* Me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Me.png; sourceTree = "<group>"; };
+		1D2013E716E65E9C006A87B1 /* Me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Me@2x.png"; sourceTree = "<group>"; };
+		1D2013E816E65E9C006A87B1 /* News.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = News.png; sourceTree = "<group>"; };
+		1D2013E916E65E9C006A87B1 /* News@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News@2x.png"; sourceTree = "<group>"; };
+		1D2013EA16E65E9C006A87B1 /* Places.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Places.png; sourceTree = "<group>"; };
+		1D2013EB16E65E9C006A87B1 /* Places@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Places@2x.png"; sourceTree = "<group>"; };
+		1D2013EC16E65E9C006A87B1 /* Posts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Posts.png; sourceTree = "<group>"; };
+		1D2013ED16E65E9C006A87B1 /* Posts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Posts@2x.png"; sourceTree = "<group>"; };
+		1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Geometrics.h"; sourceTree = "<group>"; };
+		1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Geometrics.m"; sourceTree = "<group>"; };
+		1D2013FF16E65EB5006A87B1 /* WFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppDelegate.h; sourceTree = "<group>"; };
+		1D20140016E65EB5006A87B1 /* WFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppDelegate.m; sourceTree = "<group>"; };
+		1D20140116E65EB5006A87B1 /* WFAppPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppPaneController.h; sourceTree = "<group>"; };
+		1D20140216E65EB5006A87B1 /* WFAppPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppPaneController.m; sourceTree = "<group>"; };
+		1D20140316E65EB5006A87B1 /* WFLoginWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLoginWindowController.h; sourceTree = "<group>"; };
+		1D20140416E65EB5006A87B1 /* WFLoginWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLoginWindowController.m; sourceTree = "<group>"; };
+		1D20140516E65EB5006A87B1 /* WFLoginWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFLoginWindowController.xib; sourceTree = "<group>"; };
+		1D20140616E65EB5006A87B1 /* WFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainWindowController.h; sourceTree = "<group>"; };
+		1D20140716E65EB5006A87B1 /* WFMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainWindowController.m; sourceTree = "<group>"; };
+		1D20140816E65EB5006A87B1 /* WFMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFMainWindowController.xib; sourceTree = "<group>"; };
+		1D20140916E65EB5006A87B1 /* WFNewsInfoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsInfoWindowController.h; sourceTree = "<group>"; };
+		1D20140A16E65EB5006A87B1 /* WFNewsInfoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsInfoWindowController.m; sourceTree = "<group>"; };
+		1D20140B16E65EB5006A87B1 /* WFNewsInfoWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsInfoWindowController.xib; sourceTree = "<group>"; };
+		1D20140C16E65EB5006A87B1 /* WFNewsItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsItemViewController.h; sourceTree = "<group>"; };
+		1D20140D16E65EB5006A87B1 /* WFNewsItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsItemViewController.m; sourceTree = "<group>"; };
+		1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsItemViewController.xib; sourceTree = "<group>"; };
+		1D20140F16E65EB5006A87B1 /* WFNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsViewController.h; sourceTree = "<group>"; };
+		1D20141016E65EB5006A87B1 /* WFNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsViewController.m; sourceTree = "<group>"; };
+		1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D2013BF16E65E77006A87B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2013C616E65E77006A87B1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D2010E416E65739006A87B1 = {
+			isa = PBXGroup;
+			children = (
+				1D2013CB16E65E77006A87B1 /* WebFusion */,
+				1D2013C416E65E77006A87B1 /* Frameworks */,
+				1D2013C316E65E77006A87B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D2013C316E65E77006A87B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D2013C216E65E77006A87B1 /* WebFusion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D2013C416E65E77006A87B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D2013C516E65E77006A87B1 /* Cocoa.framework */,
+				1D2013C716E65E77006A87B1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D2013C716E65E77006A87B1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D2013C816E65E77006A87B1 /* AppKit.framework */,
+				1D2013C916E65E77006A87B1 /* CoreData.framework */,
+				1D2013CA16E65E77006A87B1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1D2013CB16E65E77006A87B1 /* WebFusion */ = {
+			isa = PBXGroup;
+			children = (
+				1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */,
+				1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */,
+				1D2013FF16E65EB5006A87B1 /* WFAppDelegate.h */,
+				1D20140016E65EB5006A87B1 /* WFAppDelegate.m */,
+				1D20140116E65EB5006A87B1 /* WFAppPaneController.h */,
+				1D20140216E65EB5006A87B1 /* WFAppPaneController.m */,
+				1D20140316E65EB5006A87B1 /* WFLoginWindowController.h */,
+				1D20140416E65EB5006A87B1 /* WFLoginWindowController.m */,
+				1D20140516E65EB5006A87B1 /* WFLoginWindowController.xib */,
+				1D20140616E65EB5006A87B1 /* WFMainWindowController.h */,
+				1D20140716E65EB5006A87B1 /* WFMainWindowController.m */,
+				1D20140816E65EB5006A87B1 /* WFMainWindowController.xib */,
+				1D20140916E65EB5006A87B1 /* WFNewsInfoWindowController.h */,
+				1D20140A16E65EB5006A87B1 /* WFNewsInfoWindowController.m */,
+				1D20140B16E65EB5006A87B1 /* WFNewsInfoWindowController.xib */,
+				1D20140C16E65EB5006A87B1 /* WFNewsItemViewController.h */,
+				1D20140D16E65EB5006A87B1 /* WFNewsItemViewController.m */,
+				1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */,
+				1D20140F16E65EB5006A87B1 /* WFNewsViewController.h */,
+				1D20141016E65EB5006A87B1 /* WFNewsViewController.m */,
+				1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */,
+				1D2013CC16E65E77006A87B1 /* Supporting Files */,
+			);
+			path = WebFusion;
+			sourceTree = "<group>";
+		};
+		1D2013CC16E65E77006A87B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D2013E016E65E9C006A87B1 /* Camera.png */,
+				1D2013E116E65E9C006A87B1 /* Camera@2x.png */,
+				1D2013E216E65E9C006A87B1 /* Contacts.png */,
+				1D2013E316E65E9C006A87B1 /* Contacts@2x.png */,
+				1D2013E416E65E9C006A87B1 /* Groove.png */,
+				1D2013E516E65E9C006A87B1 /* Groove@2x.png */,
+				1D2013E616E65E9C006A87B1 /* Me.png */,
+				1D2013E716E65E9C006A87B1 /* Me@2x.png */,
+				1D2013E816E65E9C006A87B1 /* News.png */,
+				1D2013E916E65E9C006A87B1 /* News@2x.png */,
+				1D2013EA16E65E9C006A87B1 /* Places.png */,
+				1D2013EB16E65E9C006A87B1 /* Places@2x.png */,
+				1D2013EC16E65E9C006A87B1 /* Posts.png */,
+				1D2013ED16E65E9C006A87B1 /* Posts@2x.png */,
+				1D2013CD16E65E77006A87B1 /* WebFusion-Info.plist */,
+				1D2013CE16E65E78006A87B1 /* InfoPlist.strings */,
+				1D2013D116E65E78006A87B1 /* main.m */,
+				1D2013D316E65E78006A87B1 /* WebFusion-Prefix.pch */,
+				1D2013D416E65E78006A87B1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D2013C116E65E77006A87B1 /* WebFusion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D2013DD16E65E78006A87B1 /* Build configuration list for PBXNativeTarget "WebFusion" */;
+			buildPhases = (
+				1D2013BE16E65E77006A87B1 /* Sources */,
+				1D2013BF16E65E77006A87B1 /* Frameworks */,
+				1D2013C016E65E77006A87B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebFusion;
+			productName = WebFusion;
+			productReference = 1D2013C216E65E77006A87B1 /* WebFusion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D2010E516E65739006A87B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 1D2010E816E65739006A87B1 /* Build configuration list for PBXProject "WebFusion.proj" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D2010E416E65739006A87B1;
+			productRefGroup = 1D2013C316E65E77006A87B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D2013C116E65E77006A87B1 /* WebFusion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D2013C016E65E77006A87B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2013D016E65E78006A87B1 /* InfoPlist.strings in Resources */,
+				1D2013D616E65E78006A87B1 /* Credits.rtf in Resources */,
+				1D2013EE16E65E9C006A87B1 /* Camera.png in Resources */,
+				1D2013EF16E65E9C006A87B1 /* Camera@2x.png in Resources */,
+				1D2013F016E65E9C006A87B1 /* Contacts.png in Resources */,
+				1D2013F116E65E9C006A87B1 /* Contacts@2x.png in Resources */,
+				1D2013F216E65E9C006A87B1 /* Groove.png in Resources */,
+				1D2013F316E65E9C006A87B1 /* Groove@2x.png in Resources */,
+				1D2013F416E65E9C006A87B1 /* Me.png in Resources */,
+				1D2013F516E65E9C006A87B1 /* Me@2x.png in Resources */,
+				1D2013F616E65E9C006A87B1 /* News.png in Resources */,
+				1D2013F716E65E9C006A87B1 /* News@2x.png in Resources */,
+				1D2013F816E65E9C006A87B1 /* Places.png in Resources */,
+				1D2013F916E65E9C006A87B1 /* Places@2x.png in Resources */,
+				1D2013FA16E65E9C006A87B1 /* Posts.png in Resources */,
+				1D2013FB16E65E9C006A87B1 /* Posts@2x.png in Resources */,
+				1D20141516E65EB5006A87B1 /* WFLoginWindowController.xib in Resources */,
+				1D20141716E65EB5006A87B1 /* WFMainWindowController.xib in Resources */,
+				1D20141916E65EB5006A87B1 /* WFNewsInfoWindowController.xib in Resources */,
+				1D20141B16E65EB5006A87B1 /* WFNewsItemViewController.xib in Resources */,
+				1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D2013BE16E65E77006A87B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2013D216E65E78006A87B1 /* main.m in Sources */,
+				1D2013FE16E65EA7006A87B1 /* NSString+Geometrics.m in Sources */,
+				1D20141216E65EB5006A87B1 /* WFAppDelegate.m in Sources */,
+				1D20141316E65EB5006A87B1 /* WFAppPaneController.m in Sources */,
+				1D20141416E65EB5006A87B1 /* WFLoginWindowController.m in Sources */,
+				1D20141616E65EB5006A87B1 /* WFMainWindowController.m in Sources */,
+				1D20141816E65EB5006A87B1 /* WFNewsInfoWindowController.m in Sources */,
+				1D20141A16E65EB5006A87B1 /* WFNewsItemViewController.m in Sources */,
+				1D20141C16E65EB5006A87B1 /* WFNewsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D2013CE16E65E78006A87B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D2013CF16E65E78006A87B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D2013D416E65E78006A87B1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D2013D516E65E78006A87B1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D2010E916E65739006A87B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1D2010EA16E65739006A87B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		1D2013DE16E65E78006A87B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebFusion/WebFusion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebFusion/WebFusion-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D2013DF16E65E78006A87B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebFusion/WebFusion-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebFusion/WebFusion-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D2010E816E65739006A87B1 /* Build configuration list for PBXProject "WebFusion.proj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D2010E916E65739006A87B1 /* Debug */,
+				1D2010EA16E65739006A87B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D2013DD16E65E78006A87B1 /* Build configuration list for PBXNativeTarget "WebFusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D2013DE16E65E78006A87B1 /* Debug */,
+				1D2013DF16E65E78006A87B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D2010E516E65739006A87B1 /* Project object */;
+}

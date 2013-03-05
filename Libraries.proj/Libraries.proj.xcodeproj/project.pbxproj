@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D20131F16E65D07006A87B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20131E16E65D07006A87B1 /* Cocoa.framework */; };
+		1D20132916E65D07006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D20132716E65D07006A87B1 /* InfoPlist.strings */; };
+		1D20133616E65D27006A87B1 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20133116E65D27006A87B1 /* base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20133716E65D27006A87B1 /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20133216E65D27006A87B1 /* base64.m */; };
+		1D20133816E65D27006A87B1 /* Base64Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20133316E65D27006A87B1 /* Base64Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20133916E65D27006A87B1 /* NSBase64DataEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20133416E65D27006A87B1 /* NSBase64DataEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20133A16E65D27006A87B1 /* NSBase64DataEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20133516E65D27006A87B1 /* NSBase64DataEncoder.m */; };
+		1D20134116E65D48006A87B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20131E16E65D07006A87B1 /* Cocoa.framework */; };
+		1D20134716E65D48006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D20134516E65D48006A87B1 /* InfoPlist.strings */; };
+		1D20135816E65D85006A87B1 /* dict.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D20134F16E65D85006A87B1 /* dict.txt */; };
+		1D20135916E65D85006A87B1 /* NSString+Pinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20135016E65D85006A87B1 /* NSString+Pinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20135A16E65D85006A87B1 /* NSString+Pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20135116E65D85006A87B1 /* NSString+Pinyin.m */; };
+		1D20135B16E65D85006A87B1 /* PinyinKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D20135216E65D85006A87B1 /* PinyinKit-Info.plist */; };
+		1D20135D16E65D85006A87B1 /* PinyinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20135416E65D85006A87B1 /* PinyinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20135F16E65D85006A87B1 /* PYPinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20135616E65D85006A87B1 /* PYPinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20136016E65D85006A87B1 /* PYPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20135716E65D85006A87B1 /* PYPinyin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D20131C16E65D07006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base64Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D20131E16E65D07006A87B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1D20132116E65D07006A87B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1D20132216E65D07006A87B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D20132316E65D07006A87B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D20132616E65D07006A87B1 /* Base64Kit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Base64Kit-Info.plist"; sourceTree = "<group>"; };
+		1D20132816E65D07006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D20132A16E65D07006A87B1 /* Base64Kit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Base64Kit-Prefix.pch"; sourceTree = "<group>"; };
+		1D20133116E65D27006A87B1 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		1D20133216E65D27006A87B1 /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
+		1D20133316E65D27006A87B1 /* Base64Kit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Kit.h; sourceTree = "<group>"; };
+		1D20133416E65D27006A87B1 /* NSBase64DataEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBase64DataEncoder.h; sourceTree = "<group>"; };
+		1D20133516E65D27006A87B1 /* NSBase64DataEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBase64DataEncoder.m; sourceTree = "<group>"; };
+		1D20134016E65D48006A87B1 /* PinyinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PinyinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D20134416E65D48006A87B1 /* PinyinKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PinyinKit-Info.plist"; sourceTree = "<group>"; };
+		1D20134616E65D48006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D20134816E65D48006A87B1 /* PinyinKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinyinKit-Prefix.pch"; sourceTree = "<group>"; };
+		1D20134F16E65D85006A87B1 /* dict.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dict.txt; sourceTree = "<group>"; };
+		1D20135016E65D85006A87B1 /* NSString+Pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Pinyin.h"; sourceTree = "<group>"; };
+		1D20135116E65D85006A87B1 /* NSString+Pinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Pinyin.m"; sourceTree = "<group>"; };
+		1D20135216E65D85006A87B1 /* PinyinKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PinyinKit-Info.plist"; sourceTree = "<group>"; };
+		1D20135316E65D85006A87B1 /* PinyinKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PinyinKit-Prefix.pch"; sourceTree = "<group>"; };
+		1D20135416E65D85006A87B1 /* PinyinKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinKit.h; sourceTree = "<group>"; };
+		1D20135616E65D85006A87B1 /* PYPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPinyin.h; sourceTree = "<group>"; };
+		1D20135716E65D85006A87B1 /* PYPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYPinyin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D20131816E65D07006A87B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20131F16E65D07006A87B1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D20133C16E65D48006A87B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20134116E65D48006A87B1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D20115C16E657AB006A87B1 = {
+			isa = PBXGroup;
+			children = (
+				1D20132416E65D07006A87B1 /* Base64Kit */,
+				1D20134216E65D48006A87B1 /* PinyinKit */,
+				1D20131D16E65D07006A87B1 /* Frameworks */,
+				1D20131C16E65D07006A87B1 /* Base64Kit.framework */,
+				1D20134016E65D48006A87B1 /* PinyinKit.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		1D20131D16E65D07006A87B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D20131E16E65D07006A87B1 /* Cocoa.framework */,
+				1D20132016E65D07006A87B1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D20132016E65D07006A87B1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D20132116E65D07006A87B1 /* AppKit.framework */,
+				1D20132216E65D07006A87B1 /* CoreData.framework */,
+				1D20132316E65D07006A87B1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1D20132416E65D07006A87B1 /* Base64Kit */ = {
+			isa = PBXGroup;
+			children = (
+				1D20133116E65D27006A87B1 /* base64.h */,
+				1D20133216E65D27006A87B1 /* base64.m */,
+				1D20133316E65D27006A87B1 /* Base64Kit.h */,
+				1D20133416E65D27006A87B1 /* NSBase64DataEncoder.h */,
+				1D20133516E65D27006A87B1 /* NSBase64DataEncoder.m */,
+				1D20132516E65D07006A87B1 /* Supporting Files */,
+			);
+			path = Base64Kit;
+			sourceTree = "<group>";
+		};
+		1D20132516E65D07006A87B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D20132616E65D07006A87B1 /* Base64Kit-Info.plist */,
+				1D20132716E65D07006A87B1 /* InfoPlist.strings */,
+				1D20132A16E65D07006A87B1 /* Base64Kit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D20134216E65D48006A87B1 /* PinyinKit */ = {
+			isa = PBXGroup;
+			children = (
+				1D20134F16E65D85006A87B1 /* dict.txt */,
+				1D20135016E65D85006A87B1 /* NSString+Pinyin.h */,
+				1D20135116E65D85006A87B1 /* NSString+Pinyin.m */,
+				1D20135216E65D85006A87B1 /* PinyinKit-Info.plist */,
+				1D20135316E65D85006A87B1 /* PinyinKit-Prefix.pch */,
+				1D20135416E65D85006A87B1 /* PinyinKit.h */,
+				1D20135616E65D85006A87B1 /* PYPinyin.h */,
+				1D20135716E65D85006A87B1 /* PYPinyin.m */,
+				1D20134316E65D48006A87B1 /* Supporting Files */,
+			);
+			path = PinyinKit;
+			sourceTree = "<group>";
+		};
+		1D20134316E65D48006A87B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D20134416E65D48006A87B1 /* PinyinKit-Info.plist */,
+				1D20134516E65D48006A87B1 /* InfoPlist.strings */,
+				1D20134816E65D48006A87B1 /* PinyinKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D20131916E65D07006A87B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20133616E65D27006A87B1 /* base64.h in Headers */,
+				1D20133816E65D27006A87B1 /* Base64Kit.h in Headers */,
+				1D20133916E65D27006A87B1 /* NSBase64DataEncoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D20133D16E65D48006A87B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20135916E65D85006A87B1 /* NSString+Pinyin.h in Headers */,
+				1D20135D16E65D85006A87B1 /* PinyinKit.h in Headers */,
+				1D20135F16E65D85006A87B1 /* PYPinyin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D20131B16E65D07006A87B1 /* Base64Kit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D20132E16E65D07006A87B1 /* Build configuration list for PBXNativeTarget "Base64Kit" */;
+			buildPhases = (
+				1D20131716E65D07006A87B1 /* Sources */,
+				1D20131816E65D07006A87B1 /* Frameworks */,
+				1D20131916E65D07006A87B1 /* Headers */,
+				1D20131A16E65D07006A87B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Base64Kit;
+			productName = Base64Kit;
+			productReference = 1D20131C16E65D07006A87B1 /* Base64Kit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1D20133F16E65D48006A87B1 /* PinyinKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D20134C16E65D48006A87B1 /* Build configuration list for PBXNativeTarget "PinyinKit" */;
+			buildPhases = (
+				1D20133B16E65D48006A87B1 /* Sources */,
+				1D20133C16E65D48006A87B1 /* Frameworks */,
+				1D20133D16E65D48006A87B1 /* Headers */,
+				1D20133E16E65D48006A87B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinyinKit;
+			productName = PinyinKit;
+			productReference = 1D20134016E65D48006A87B1 /* PinyinKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D20115D16E657AB006A87B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 1D20116016E657AB006A87B1 /* Build configuration list for PBXProject "Libraries.proj" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D20115C16E657AB006A87B1;
+			productRefGroup = 1D20115C16E657AB006A87B1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D20131B16E65D07006A87B1 /* Base64Kit */,
+				1D20133F16E65D48006A87B1 /* PinyinKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D20131A16E65D07006A87B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20132916E65D07006A87B1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D20133E16E65D48006A87B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20134716E65D48006A87B1 /* InfoPlist.strings in Resources */,
+				1D20135816E65D85006A87B1 /* dict.txt in Resources */,
+				1D20135B16E65D85006A87B1 /* PinyinKit-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D20131716E65D07006A87B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20133716E65D27006A87B1 /* base64.m in Sources */,
+				1D20133A16E65D27006A87B1 /* NSBase64DataEncoder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D20133B16E65D48006A87B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20135A16E65D85006A87B1 /* NSString+Pinyin.m in Sources */,
+				1D20136016E65D85006A87B1 /* PYPinyin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D20132716E65D07006A87B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D20132816E65D07006A87B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D20134516E65D48006A87B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D20134616E65D48006A87B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D20116116E657AB006A87B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1D20116216E657AB006A87B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		1D20132F16E65D07006A87B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Base64Kit/Base64Kit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Base64Kit/Base64Kit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1D20133016E65D07006A87B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Base64Kit/Base64Kit-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Base64Kit/Base64Kit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1D20134D16E65D48006A87B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PinyinKit/PinyinKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PinyinKit/PinyinKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1D20134E16E65D48006A87B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PinyinKit/PinyinKit-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PinyinKit/PinyinKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D20116016E657AB006A87B1 /* Build configuration list for PBXProject "Libraries.proj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D20116116E657AB006A87B1 /* Debug */,
+				1D20116216E657AB006A87B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D20132E16E65D07006A87B1 /* Build configuration list for PBXNativeTarget "Base64Kit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D20132F16E65D07006A87B1 /* Debug */,
+				1D20133016E65D07006A87B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D20134C16E65D48006A87B1 /* Build configuration list for PBXNativeTarget "PinyinKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D20134D16E65D48006A87B1 /* Debug */,
+				1D20134E16E65D48006A87B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D20115D16E657AB006A87B1 /* Project object */;
+}

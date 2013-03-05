@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D2012A016E65AE2006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D20129E16E65AE2006A87B1 /* InfoPlist.strings */; };
+		1D2012A216E65AE2006A87B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2012A116E65AE2006A87B1 /* main.m */; };
+		1D2012A816E65AE3006A87B1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2012A716E65AE3006A87B1 /* Default.png */; };
+		1D2012AA16E65AE3006A87B1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2012A916E65AE3006A87B1 /* Default@2x.png */; };
+		1D2012AC16E65AE3006A87B1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2012AB16E65AE3006A87B1 /* Default-568h@2x.png */; };
+		1D2012B316E65B02006A87B1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D2012B016E65B02006A87B1 /* MainStoryboard.storyboard */; };
+		1D2012B416E65B02006A87B1 /* WFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2012B216E65B02006A87B1 /* WFAppDelegate.m */; };
+		1D20131016E65CA1006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20130916E65CA1006A87B1 /* FusionKit.framework */; };
+		1D20131116E65CA1006A87B1 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20130A16E65CA1006A87B1 /* KeychainAccess.framework */; };
+		1D20131216E65CA1006A87B1 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20130B16E65CA1006A87B1 /* PinyinKit.framework */; };
+		1D20131316E65CA1006A87B1 /* TaskCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20130C16E65CA1006A87B1 /* TaskCounter.framework */; };
+		1D20131416E65CA1006A87B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20130D16E65CA1006A87B1 /* CoreGraphics.framework */; };
+		1D20131516E65CA1006A87B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20130E16E65CA1006A87B1 /* Foundation.framework */; };
+		1D20131616E65CA1006A87B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20130F16E65CA1006A87B1 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D20129216E65AE2006A87B1 /* WebFusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebFusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D20129D16E65AE2006A87B1 /* WebFusion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebFusion-Info.plist"; sourceTree = "<group>"; };
+		1D20129F16E65AE2006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D2012A116E65AE2006A87B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D2012A316E65AE2006A87B1 /* WebFusion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebFusion-Prefix.pch"; sourceTree = "<group>"; };
+		1D2012A716E65AE3006A87B1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1D2012A916E65AE3006A87B1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1D2012AB16E65AE3006A87B1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1D2012B016E65B02006A87B1 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1D2012B116E65B02006A87B1 /* WFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppDelegate.h; sourceTree = "<group>"; };
+		1D2012B216E65B02006A87B1 /* WFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppDelegate.m; sourceTree = "<group>"; };
+		1D20130916E65CA1006A87B1 /* FusionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionKit.framework; path = "../../../../../../../../Documents/开发/FusionKit.C/FusionKit.ios/build/Release-iphoneos/FusionKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D20130A16E65CA1006A87B1 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = "../../../../../../../../Documents/开发/FusionKit.C/Libraries.ios/build/Release-iphoneos/KeychainAccess.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D20130B16E65CA1006A87B1 /* PinyinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinyinKit.framework; path = "../../../../../../../../Documents/开发/FusionKit.C/Libraries.ios/build/Release-iphoneos/PinyinKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D20130C16E65CA1006A87B1 /* TaskCounter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaskCounter.framework; path = "../../../../../../../../Documents/开发/FusionKit.C/Libraries.ios/build/Release-iphoneos/TaskCounter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D20130D16E65CA1006A87B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		1D20130E16E65CA1006A87B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1D20130F16E65CA1006A87B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D20128F16E65AE2006A87B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D20131016E65CA1006A87B1 /* FusionKit.framework in Frameworks */,
+				1D20131116E65CA1006A87B1 /* KeychainAccess.framework in Frameworks */,
+				1D20131216E65CA1006A87B1 /* PinyinKit.framework in Frameworks */,
+				1D20131316E65CA1006A87B1 /* TaskCounter.framework in Frameworks */,
+				1D20131416E65CA1006A87B1 /* CoreGraphics.framework in Frameworks */,
+				1D20131516E65CA1006A87B1 /* Foundation.framework in Frameworks */,
+				1D20131616E65CA1006A87B1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D20120316E65924006A87B1 = {
+			isa = PBXGroup;
+			children = (
+				1D20129B16E65AE2006A87B1 /* WebFusion */,
+				1D20129416E65AE2006A87B1 /* Frameworks */,
+				1D20129316E65AE2006A87B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D20129316E65AE2006A87B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D20129216E65AE2006A87B1 /* WebFusion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D20129416E65AE2006A87B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D20130916E65CA1006A87B1 /* FusionKit.framework */,
+				1D20130A16E65CA1006A87B1 /* KeychainAccess.framework */,
+				1D20130B16E65CA1006A87B1 /* PinyinKit.framework */,
+				1D20130C16E65CA1006A87B1 /* TaskCounter.framework */,
+				1D20130D16E65CA1006A87B1 /* CoreGraphics.framework */,
+				1D20130E16E65CA1006A87B1 /* Foundation.framework */,
+				1D20130F16E65CA1006A87B1 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D20129B16E65AE2006A87B1 /* WebFusion */ = {
+			isa = PBXGroup;
+			children = (
+				1D2012B016E65B02006A87B1 /* MainStoryboard.storyboard */,
+				1D2012B116E65B02006A87B1 /* WFAppDelegate.h */,
+				1D2012B216E65B02006A87B1 /* WFAppDelegate.m */,
+				1D20129C16E65AE2006A87B1 /* Supporting Files */,
+			);
+			path = WebFusion;
+			sourceTree = "<group>";
+		};
+		1D20129C16E65AE2006A87B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D20129D16E65AE2006A87B1 /* WebFusion-Info.plist */,
+				1D20129E16E65AE2006A87B1 /* InfoPlist.strings */,
+				1D2012A116E65AE2006A87B1 /* main.m */,
+				1D2012A316E65AE2006A87B1 /* WebFusion-Prefix.pch */,
+				1D2012A716E65AE3006A87B1 /* Default.png */,
+				1D2012A916E65AE3006A87B1 /* Default@2x.png */,
+				1D2012AB16E65AE3006A87B1 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D20129116E65AE2006A87B1 /* WebFusion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D2012AD16E65AE3006A87B1 /* Build configuration list for PBXNativeTarget "WebFusion" */;
+			buildPhases = (
+				1D20128E16E65AE2006A87B1 /* Sources */,
+				1D20128F16E65AE2006A87B1 /* Frameworks */,
+				1D20129016E65AE2006A87B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebFusion;
+			productName = WebFusion;
+			productReference = 1D20129216E65AE2006A87B1 /* WebFusion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D20120416E65924006A87B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 1D20120716E65924006A87B1 /* Build configuration list for PBXProject "WebFusion.ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D20120316E65924006A87B1;
+			productRefGroup = 1D20129316E65AE2006A87B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D20129116E65AE2006A87B1 /* WebFusion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D20129016E65AE2006A87B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2012A016E65AE2006A87B1 /* InfoPlist.strings in Resources */,
+				1D2012A816E65AE3006A87B1 /* Default.png in Resources */,
+				1D2012AA16E65AE3006A87B1 /* Default@2x.png in Resources */,
+				1D2012AC16E65AE3006A87B1 /* Default-568h@2x.png in Resources */,
+				1D2012B316E65B02006A87B1 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D20128E16E65AE2006A87B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2012A216E65AE2006A87B1 /* main.m in Sources */,
+				1D2012B416E65B02006A87B1 /* WFAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D20129E16E65AE2006A87B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D20129F16E65AE2006A87B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D20120816E65924006A87B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		1D20120916E65924006A87B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		1D2012AE16E65AE3006A87B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebFusion/WebFusion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebFusion/WebFusion-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D2012AF16E65AE3006A87B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebFusion/WebFusion-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebFusion/WebFusion-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D20120716E65924006A87B1 /* Build configuration list for PBXProject "WebFusion.ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D20120816E65924006A87B1 /* Debug */,
+				1D20120916E65924006A87B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D2012AD16E65AE3006A87B1 /* Build configuration list for PBXNativeTarget "WebFusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D2012AE16E65AE3006A87B1 /* Debug */,
+				1D2012AF16E65AE3006A87B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D20120416E65924006A87B1 /* Project object */;
+}
