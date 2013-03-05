@@ -17,8 +17,6 @@
         self.displayName = [aDecoder decodeObjectForKey:@"dispName"];
         self.handle = [aDecoder decodeObjectForKey:@"scrName"];
         self.avatar = [NSURL URLWithString:[aDecoder decodeObjectForKey:@"avatar"]];
-        self.svr = [aDecoder decodeObjectForKey:@"svr"];
-        self.svrId = [aDecoder decodeObjectForKey:@"svrId"];
     }
     return self;
 }

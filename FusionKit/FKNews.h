@@ -22,5 +22,4 @@
 @property id ID;
 @property NSString *type;
 
-
 @end

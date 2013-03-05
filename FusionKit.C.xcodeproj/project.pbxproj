@@ -147,20 +147,6 @@
 		1D85893716D7C5AC0056DB48 /* FusionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893116D7C5900056DB48 /* FusionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D85893A16D7C77C0056DB48 /* FKJSONKeyedArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893816D7C77C0056DB48 /* FKJSONKeyedArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D85893B16D7C77C0056DB48 /* FKJSONKeyedArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85893916D7C77C0056DB48 /* FKJSONKeyedArchiver.m */; };
-		F5269AB516E61D420049EA09 /* FKPost.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AB316E619840049EA09 /* FKPost.m */; };
-		F5269AB616E61D440049EA09 /* FKPost.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AB316E619840049EA09 /* FKPost.m */; };
-		F5269AB716E61D4A0049EA09 /* FKPost.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AB216E619840049EA09 /* FKPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5269AB816E61D4B0049EA09 /* FKPost.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AB216E619840049EA09 /* FKPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5269ABB16E6429E0049EA09 /* FKSvrNews.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AB916E6429D0049EA09 /* FKSvrNews.h */; };
-		F5269ABC16E6429E0049EA09 /* FKSvrNews.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AB916E6429D0049EA09 /* FKSvrNews.h */; };
-		F5269ABD16E6429E0049EA09 /* FKSvrNews.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269ABA16E6429D0049EA09 /* FKSvrNews.m */; };
-		F5269ABE16E6429E0049EA09 /* FKSvrNews.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269ABA16E6429D0049EA09 /* FKSvrNews.m */; };
-		F5269ABF16E6429E0049EA09 /* FKSvrNews.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269ABA16E6429D0049EA09 /* FKSvrNews.m */; };
-		F5269AC216E6434D0049EA09 /* FKUserService.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AC016E6434C0049EA09 /* FKUserService.h */; };
-		F5269AC316E6434D0049EA09 /* FKUserService.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AC016E6434C0049EA09 /* FKUserService.h */; };
-		F5269AC416E6434D0049EA09 /* FKUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AC116E6434D0049EA09 /* FKUserService.m */; };
-		F5269AC516E6434D0049EA09 /* FKUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AC116E6434D0049EA09 /* FKUserService.m */; };
-		F5269AC616E6434D0049EA09 /* FKUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AC116E6434D0049EA09 /* FKUserService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -318,12 +304,6 @@
 		1D85893116D7C5900056DB48 /* FusionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FusionKit.h; sourceTree = "<group>"; };
 		1D85893816D7C77C0056DB48 /* FKJSONKeyedArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKJSONKeyedArchiver.h; sourceTree = "<group>"; };
 		1D85893916D7C77C0056DB48 /* FKJSONKeyedArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKJSONKeyedArchiver.m; sourceTree = "<group>"; };
-		F5269AB216E619840049EA09 /* FKPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPost.h; sourceTree = "<group>"; };
-		F5269AB316E619840049EA09 /* FKPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPost.m; sourceTree = "<group>"; };
-		F5269AB916E6429D0049EA09 /* FKSvrNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSvrNews.h; sourceTree = "<group>"; };
-		F5269ABA16E6429D0049EA09 /* FKSvrNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKSvrNews.m; sourceTree = "<group>"; };
-		F5269AC016E6434C0049EA09 /* FKUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKUserService.h; sourceTree = "<group>"; };
-		F5269AC116E6434D0049EA09 /* FKUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKUserService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -796,13 +776,7 @@
 				1D7CD17516E53CD300F5F3AF /* FKContact.m */,
 				1D7CD18116E54A7400F5F3AF /* FKMedia.h */,
 				1D7CD18216E54A7500F5F3AF /* FKMedia.m */,
-				F5269AB216E619840049EA09 /* FKPost.h */,
-				F5269AB316E619840049EA09 /* FKPost.m */,
 				1D85892B16D7C5900056DB48 /* Supporting Files */,
-				F5269AB916E6429D0049EA09 /* FKSvrNews.h */,
-				F5269ABA16E6429D0049EA09 /* FKSvrNews.m */,
-				F5269AC016E6434C0049EA09 /* FKUserService.h */,
-				F5269AC116E6434D0049EA09 /* FKUserService.m */,
 			);
 			path = FusionKit;
 			sourceTree = "<group>";
@@ -833,9 +807,6 @@
 				1D7CD17D16E5451300F5F3AF /* FKNews.h in Headers */,
 				1D7CD17F16E5451300F5F3AF /* FKContact.h in Headers */,
 				1D7CD18716E556CF00F5F3AF /* FKMedia.h in Headers */,
-				F5269AB816E61D4B0049EA09 /* FKPost.h in Headers */,
-				F5269ABC16E6429E0049EA09 /* FKSvrNews.h in Headers */,
-				F5269AC316E6434D0049EA09 /* FKUserService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,9 +889,6 @@
 				1D7CD17916E5451200F5F3AF /* FKNews.h in Headers */,
 				1D7CD17B16E5451200F5F3AF /* FKContact.h in Headers */,
 				1D7CD18816E556D200F5F3AF /* FKMedia.h in Headers */,
-				F5269AB716E61D4A0049EA09 /* FKPost.h in Headers */,
-				F5269ABB16E6429E0049EA09 /* FKSvrNews.h in Headers */,
-				F5269AC216E6434D0049EA09 /* FKUserService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1504,12 +1472,7 @@
 				1D7CD18616E5564A00F5F3AF /* NSString+Geometrics.m in Sources */,
 				1D7CD18E16E55F7D00F5F3AF /* WFNewsViewController.m in Sources */,
 				1D7CD19616E5768900F5F3AF /* WFNewsItemViewController.m in Sources */,
-<<<<<<< HEAD
 				1D2010CD16E64DC1006A87B1 /* WFNewsInfoWindowController.m in Sources */,
-=======
-				F5269ABD16E6429E0049EA09 /* FKSvrNews.m in Sources */,
-				F5269AC416E6434D0049EA09 /* FKUserService.m in Sources */,
->>>>>>> origin/FusionKit
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1524,9 +1487,6 @@
 				1D7CD17E16E5451300F5F3AF /* FKNews.m in Sources */,
 				1D7CD18016E5451300F5F3AF /* FKContact.m in Sources */,
 				1D7CD18A16E556DB00F5F3AF /* FKMedia.m in Sources */,
-				F5269AB616E61D440049EA09 /* FKPost.m in Sources */,
-				F5269ABF16E6429E0049EA09 /* FKSvrNews.m in Sources */,
-				F5269AC616E6434D0049EA09 /* FKUserService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1610,9 +1570,6 @@
 				1D7CD17A16E5451200F5F3AF /* FKNews.m in Sources */,
 				1D7CD17C16E5451200F5F3AF /* FKContact.m in Sources */,
 				1D7CD18916E556D900F5F3AF /* FKMedia.m in Sources */,
-				F5269AB516E61D420049EA09 /* FKPost.m in Sources */,
-				F5269ABE16E6429E0049EA09 /* FKSvrNews.m in Sources */,
-				F5269AC516E6434D0049EA09 /* FKUserService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

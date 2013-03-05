@@ -10,9 +10,6 @@
 
 @interface FKContact : NSObject <NSCoding>
 
-@property id ID;
-@property NSString *svr;
-@property NSString *svrId;
 @property NSString *displayName;
 @property NSString *handle;
 @property NSURL *avatar;

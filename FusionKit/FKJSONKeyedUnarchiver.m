@@ -34,9 +34,7 @@
 
 + (id)objectFromPlist:(id)plist
 {
-    if ([plist isKindOfClass:[NSNull class]])
-        return nil;
-    else if ([plist isKindOfClass:[NSArray class]])
+    if ([plist isKindOfClass:[NSArray class]])
     {
         NSArray *source = plist;
         NSMutableArray *output = [NSMutableArray arrayWithCapacity:[source count]];
@@ -71,9 +69,7 @@
 
 + (id)objectFromPlist:(id)plist class:(Class)class
 {
-    if ([plist isKindOfClass:[NSNull class]])
-        return nil;
-    else if ([plist isKindOfClass:[NSDictionary class]])
+    if ([plist isKindOfClass:[NSDictionary class]])
     {
         FKJSONKeyedUnarchiver *unarchiver = (__bridge FKJSONKeyedUnarchiver *)(CFRetain((__bridge CFTypeRef)([[FKJSONKeyedUnarchiver alloc] initWithPlist:plist])));
         id object = [[class alloc] initWithCoder:unarchiver];
