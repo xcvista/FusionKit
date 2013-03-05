@@ -15,6 +15,7 @@
 @property IBOutlet NSViewController *detailViewController;
 @property IBOutlet NSView *rightSplitView;
 @property (weak) IBOutlet NSOutlineView *outlineView;
+@property NSString *currentApp;
 
 @property NSDictionary *apps;
 
@@ -55,6 +56,9 @@
     NSString *className = self.apps[name];
     if (className)
     {
+        if ([self.currentApp isEqualToString:className])
+            return;
+        self.currentApp = className;
         self.detailViewController = [[NSClassFromString(className) alloc] initWithNibName:className bundle:[NSBundle mainBundle]];
         [[self.detailViewController view] setFrame:self.rightSplitView.bounds];
         [[self.detailViewController view] setAutoresizingMask:18];

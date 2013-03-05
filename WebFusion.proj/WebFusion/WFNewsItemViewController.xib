@@ -52,7 +52,7 @@
 								<array class="NSMutableArray" key="NSSubviews">
 									<object class="NSTextField" id="224223369">
 										<reference key="NSNextResponder" ref="842495828"/>
-										<int key="NSvFlags">268</int>
+										<int key="NSvFlags">266</int>
 										<string key="NSFrame">{{15, 285}, {315, 24}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
 										<reference key="NSNextKeyView" ref="310064770"/>
@@ -120,7 +120,7 @@
 									</object>
 									<object class="NSTextField" id="394965651">
 										<reference key="NSNextResponder" ref="842495828"/>
-										<int key="NSvFlags">268</int>
+										<int key="NSvFlags">266</int>
 										<string key="NSFrame">{{83, 217}, {313, 60}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
 										<reference key="NSNextKeyView" ref="1046851956"/>
@@ -147,7 +147,6 @@
 										<int key="NSvFlags">289</int>
 										<string key="NSFrame">{{324, 7}, {75, 32}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="420733221">
@@ -270,7 +269,7 @@
 									</object>
 									<object class="NSButton" id="905393854">
 										<reference key="NSNextResponder" ref="842495828"/>
-										<int key="NSvFlags">268</int>
+										<int key="NSvFlags">265</int>
 										<string key="NSFrame">{{369, 285}, {24, 24}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -293,7 +292,7 @@
 									</object>
 									<object class="NSButton" id="621625474">
 										<reference key="NSNextResponder" ref="842495828"/>
-										<int key="NSvFlags">268</int>
+										<int key="NSvFlags">265</int>
 										<string key="NSFrame">{{335, 285}, {24, 24}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>

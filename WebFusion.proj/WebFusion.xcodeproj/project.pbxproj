@@ -155,6 +155,7 @@
 			children = (
 				1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */,
 				1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */,
+				1DD337BD16E661B700BD1E28 /* MainMenu.xib */,
 				1D2013FF16E65EB5006A87B1 /* WFAppDelegate.h */,
 				1D20140016E65EB5006A87B1 /* WFAppDelegate.m */,
 				1D20140116E65EB5006A87B1 /* WFAppPaneController.h */,
@@ -182,7 +183,6 @@
 		1D2013CC16E65E77006A87B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1DD337BD16E661B700BD1E28 /* MainMenu.xib */,
 				1D2013E016E65E9C006A87B1 /* Camera.png */,
 				1D2013E116E65E9C006A87B1 /* Camera@2x.png */,
 				1D2013E216E65E9C006A87B1 /* Contacts.png */,

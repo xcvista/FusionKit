@@ -15,6 +15,7 @@
 
 @property (weak) IBOutlet NSCollectionView *collectionView;
 @property (weak) IBOutlet NSScroller *vertivalScroller;
+@property (weak) IBOutlet NSScrollView *scrollView;
 
 @property (weak) id oldTarget;
 @property SEL oldAction;
@@ -35,14 +36,8 @@
     return self;
 }
 
-- (void)awakeFromNib
+- (void)reload:(id)sender
 {
-    self.oldTarget = self.vertivalScroller.target;
-    self.oldAction = self.vertivalScroller.action;
-    
-    self.vertivalScroller.target = self;
-    self.vertivalScroller.action = @selector(scrollerChanged:);
-    
     NSError *err;
     WFAppDelegate *appDelegate = [NSApp delegate];
     NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
@@ -63,9 +58,23 @@
     [self.collectionView setContent:news];
 }
 
+- (void)awakeFromNib
+{
+    self.oldTarget = self.vertivalScroller.target;
+    self.oldAction = self.vertivalScroller.action;
+    
+    self.vertivalScroller.target = self;
+    self.vertivalScroller.action = @selector(scrollerChanged:);
+    
+    [self reload:self];
+}
+
 - (void)scrollerChanged:(id)sender
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [self.oldTarget performSelector:self.oldAction withObject:sender]; //Redispatch it.
+#pragma clang diagnostic pop
     
     if ([self.vertivalScroller doubleValue] > 0.99)
     {
@@ -100,6 +109,9 @@
                                               [currentObjects addObjectsFromArray:news];
                                               
                                               [self.collectionView setContent:currentObjects];
+                                              
+                                              if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
+                                                  [self.scrollView flashScrollers];
                                               
                                               RUNNING = NO;
                                           });

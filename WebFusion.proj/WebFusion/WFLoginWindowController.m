@@ -54,6 +54,7 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
+    [self.window setDefaultButtonCell:self.loginButton.cell];
 }
 
 - (BOOL)windowShouldClose:(id)sender
@@ -76,8 +77,16 @@
     NSString *username = [self.usernameField stringValue];
     NSString *password = [self.passwordField stringValue];
     
-    if (![username length] || ![password length])
+    if (![username length])
+    {
+        [self.usernameField becomeFirstResponder];
         return;
+    }
+    else if (![password length])
+    {
+        [self.passwordField becomeFirstResponder];
+        return;
+    }
     
     for (NSControl *control in [[self.everythingBox subviews][0] subviews])
     {
@@ -126,6 +135,8 @@
                                                                 modalDelegate:nil
                                                                didEndSelector:nil
                                                                   contextInfo:nil];
+                                              [self.passwordField becomeFirstResponder];
+                                              [self.passwordField selectText:self];
                                           });
                        }
                    });
