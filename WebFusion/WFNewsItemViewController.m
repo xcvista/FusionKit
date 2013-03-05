@@ -93,12 +93,6 @@
 
 }
 
-- (void)loadView
-{
-    [super loadView];
-    NSLog(@"Loading view for %@", [self representedObject]);
-}
-
 - (void)share:(id)sender
 {
     
