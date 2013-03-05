@@ -219,7 +219,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 1D2010E816E65739006A87B1 /* Build configuration list for PBXProject "WebFusion.proj" */;
+			buildConfigurationList = 1D2010E816E65739006A87B1 /* Build configuration list for PBXProject "WebFusion" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -392,7 +392,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D2010E816E65739006A87B1 /* Build configuration list for PBXProject "WebFusion.proj" */ = {
+		1D2010E816E65739006A87B1 /* Build configuration list for PBXProject "WebFusion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D2010E916E65739006A87B1 /* Debug */,

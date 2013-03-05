@@ -6,114 +6,29 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		1D2012B916E65B1B006A87B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D20121416E65938006A87B1 /* Libraries.ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D20121F16E6594D006A87B1;
-			remoteInfo = PinyinKit;
-		};
-		1D2012BB16E65B1B006A87B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D20121416E65938006A87B1 /* Libraries.ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D20123616E65957006A87B1;
-			remoteInfo = Base64Kit;
-		};
-		1D2012BD16E65B1B006A87B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D20121416E65938006A87B1 /* Libraries.ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D20124A16E65962006A87B1;
-			remoteInfo = KeychainAccess;
-		};
-		1D2012BF16E65B1B006A87B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D20121416E65938006A87B1 /* Libraries.ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D20125E16E65971006A87B1;
-			remoteInfo = TaskCounter;
-		};
-		1D2012C216E65B1B006A87B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D20120A16E65924006A87B1 /* WebFusion.ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D20129216E65AE2006A87B1;
-			remoteInfo = WebFusion;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1D2010EB16E65739006A87B1 /* WebFusion.proj.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebFusion.proj.xcodeproj; path = WebFusion.proj/WebFusion.proj.xcodeproj; sourceTree = "<group>"; };
-		1D20113016E6577E006A87B1 /* FusionKit.proj.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FusionKit.proj.xcodeproj; path = FusionKit.proj/FusionKit.proj.xcodeproj; sourceTree = "<group>"; };
-		1D20116316E657AB006A87B1 /* Libraries.proj.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Libraries.proj.xcodeproj; path = Libraries.proj/Libraries.proj.xcodeproj; sourceTree = "<group>"; };
-		1D20120016E65917006A87B1 /* FusionKit.ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FusionKit.ios.xcodeproj; path = FusionKit.ios/FusionKit.ios.xcodeproj; sourceTree = "<group>"; };
-		1D20120A16E65924006A87B1 /* WebFusion.ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebFusion.ios.xcodeproj; path = WebFusion.ios/WebFusion.ios.xcodeproj; sourceTree = "<group>"; };
-		1D20121416E65938006A87B1 /* Libraries.ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Libraries.ios.xcodeproj; path = Libraries.ios/Libraries.ios.xcodeproj; sourceTree = "<group>"; };
+		1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebFusion.xcodeproj; path = WebFusion.proj/WebFusion.xcodeproj; sourceTree = "<group>"; };
+		1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FusionKit.xcodeproj; path = FusionKit.proj/FusionKit.xcodeproj; sourceTree = "<group>"; };
+		1D20116316E657AB006A87B1 /* Libraries.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Libraries.xcodeproj; path = Libraries.proj/Libraries.xcodeproj; sourceTree = "<group>"; };
+		1D20120016E65917006A87B1 /* iFusionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iFusionKit.xcodeproj; path = FusionKit.ios/iFusionKit.xcodeproj; sourceTree = "<group>"; };
+		1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iWebFusion.xcodeproj; path = WebFusion.ios/iWebFusion.xcodeproj; sourceTree = "<group>"; };
+		1D20121416E65938006A87B1 /* iLibraries.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iLibraries.xcodeproj; path = Libraries.ios/iLibraries.xcodeproj; sourceTree = "<group>"; };
 		1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.md; sourceTree = "<group>"; };
 		1D7CD17716E53FA300F5F3AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1D2010EC16E65739006A87B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1D20113116E6577E006A87B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1D20116416E657AB006A87B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1D20120116E65917006A87B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1D20120B16E65924006A87B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1D2012C316E65B1B006A87B1 /* WebFusion.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1D20121516E65938006A87B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1D2012BA16E65B1B006A87B1 /* PinyinKit.framework */,
-				1D2012BC16E65B1B006A87B1 /* Base64Kit.framework */,
-				1D2012BE16E65B1B006A87B1 /* KeychainAccess.framework */,
-				1D2012C016E65B1B006A87B1 /* TaskCounter.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1D85891516D7C5820056DB48 = {
 			isa = PBXGroup;
 			children = (
 				1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */,
 				1D7CD17716E53FA300F5F3AF /* README.md */,
-				1D20121416E65938006A87B1 /* Libraries.ios.xcodeproj */,
-				1D20120A16E65924006A87B1 /* WebFusion.ios.xcodeproj */,
-				1D20120016E65917006A87B1 /* FusionKit.ios.xcodeproj */,
-				1D20116316E657AB006A87B1 /* Libraries.proj.xcodeproj */,
-				1D20113016E6577E006A87B1 /* FusionKit.proj.xcodeproj */,
-				1D2010EB16E65739006A87B1 /* WebFusion.proj.xcodeproj */,
+				1D20121416E65938006A87B1 /* iLibraries.xcodeproj */,
+				1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */,
+				1D20120016E65917006A87B1 /* iFusionKit.xcodeproj */,
+				1D20116316E657AB006A87B1 /* Libraries.xcodeproj */,
+				1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */,
+				1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,75 +50,11 @@
 			mainGroup = 1D85891516D7C5820056DB48;
 			productRefGroup = 1D85891516D7C5820056DB48;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1D20120116E65917006A87B1 /* Products */;
-					ProjectRef = 1D20120016E65917006A87B1 /* FusionKit.ios.xcodeproj */;
-				},
-				{
-					ProductGroup = 1D20113116E6577E006A87B1 /* Products */;
-					ProjectRef = 1D20113016E6577E006A87B1 /* FusionKit.proj.xcodeproj */;
-				},
-				{
-					ProductGroup = 1D20121516E65938006A87B1 /* Products */;
-					ProjectRef = 1D20121416E65938006A87B1 /* Libraries.ios.xcodeproj */;
-				},
-				{
-					ProductGroup = 1D20116416E657AB006A87B1 /* Products */;
-					ProjectRef = 1D20116316E657AB006A87B1 /* Libraries.proj.xcodeproj */;
-				},
-				{
-					ProductGroup = 1D20120B16E65924006A87B1 /* Products */;
-					ProjectRef = 1D20120A16E65924006A87B1 /* WebFusion.ios.xcodeproj */;
-				},
-				{
-					ProductGroup = 1D2010EC16E65739006A87B1 /* Products */;
-					ProjectRef = 1D2010EB16E65739006A87B1 /* WebFusion.proj.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1D2012BA16E65B1B006A87B1 /* PinyinKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework.static;
-			path = PinyinKit.framework;
-			remoteRef = 1D2012B916E65B1B006A87B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1D2012BC16E65B1B006A87B1 /* Base64Kit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework.static;
-			path = Base64Kit.framework;
-			remoteRef = 1D2012BB16E65B1B006A87B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1D2012BE16E65B1B006A87B1 /* KeychainAccess.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework.static;
-			path = KeychainAccess.framework;
-			remoteRef = 1D2012BD16E65B1B006A87B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1D2012C016E65B1B006A87B1 /* TaskCounter.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework.static;
-			path = TaskCounter.framework;
-			remoteRef = 1D2012BF16E65B1B006A87B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1D2012C316E65B1B006A87B1 /* WebFusion.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = WebFusion.app;
-			remoteRef = 1D2012C216E65B1B006A87B1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		1D85891A16D7C5820056DB48 /* Debug */ = {

@@ -268,7 +268,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 1D20112D16E6577E006A87B1 /* Build configuration list for PBXProject "FusionKit.proj" */;
+			buildConfigurationList = 1D20112D16E6577E006A87B1 /* Build configuration list for PBXProject "FusionKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -521,7 +521,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D20112D16E6577E006A87B1 /* Build configuration list for PBXProject "FusionKit.proj" */ = {
+		1D20112D16E6577E006A87B1 /* Build configuration list for PBXProject "FusionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D20112E16E6577E006A87B1 /* Debug */,

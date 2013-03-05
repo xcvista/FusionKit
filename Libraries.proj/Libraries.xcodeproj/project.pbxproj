@@ -222,7 +222,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 1D20116016E657AB006A87B1 /* Build configuration list for PBXProject "Libraries.proj" */;
+			buildConfigurationList = 1D20116016E657AB006A87B1 /* Build configuration list for PBXProject "Libraries" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -471,7 +471,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D20116016E657AB006A87B1 /* Build configuration list for PBXProject "Libraries.proj" */ = {
+		1D20116016E657AB006A87B1 /* Build configuration list for PBXProject "Libraries" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D20116116E657AB006A87B1 /* Debug */,
