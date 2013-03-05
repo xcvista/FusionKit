@@ -25,6 +25,8 @@
 @property (weak) IBOutlet NSButton *starButton;
 @property (weak) IBOutlet NSButton *linkButton;
 
+@property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
+
 @property BOOL spin;
 
 - (IBAction)share:(id)sender;
@@ -81,6 +83,8 @@
         [self.linkButton setHidden:YES];
     }
     
+    [self.loadingIndicator startAnimation:self];
+    
     FKNewsController *newsController = [[FKNewsController alloc] init];
     newsController.news = news;
     
@@ -122,6 +126,7 @@
                                           {
                                               self.imageView.image = [[NSImage alloc] initWithData:image];
                                           }
+                                          [self.loadingIndicator stopAnimation:self];
                                       });
                    });
 

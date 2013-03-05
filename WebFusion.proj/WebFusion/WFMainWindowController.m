@@ -48,6 +48,12 @@
                   byExtendingSelection:NO];
 }
 
+- (void)reload:(id)sender
+{
+    if ([self.detailViewController respondsToSelector:@selector(reload:)])
+        [self.detailViewController performSelector:@selector(reload:) withObject:sender];
+}
+
 - (void)loadAppWithName:(NSString *)name
 {
     if (!self.apps)

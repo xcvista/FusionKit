@@ -17,6 +17,7 @@
 			<string>NSCustomObject</string>
 			<string>NSImageCell</string>
 			<string>NSImageView</string>
+			<string>NSProgressIndicator</string>
 			<string>NSTextField</string>
 			<string>NSTextFieldCell</string>
 			<string>NSView</string>
@@ -151,7 +152,6 @@
 										<string key="NSFrame">{{324, 7}, {75, 32}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="420733221">
@@ -325,6 +325,16 @@
 											<int key="NSPeriodicInterval">75</int>
 										</object>
 										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+									</object>
+									<object class="NSProgressIndicator" id="420639666">
+										<reference key="NSNextResponder" ref="842495828"/>
+										<int key="NSvFlags">268</int>
+										<string key="NSFrame">{{231, 16}, {16, 16}}</string>
+										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
+										<string key="NSReuseIdentifierKey">_NS:945</string>
+										<int key="NSpiFlags">28938</int>
+										<double key="NSMaxValue">100</double>
 									</object>
 								</array>
 								<string key="NSFrame">{{1, 1}, {411, 321}}</string>
@@ -506,6 +516,14 @@
 					</object>
 					<int key="connectionID">79</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">loadingIndicator</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="420639666"/>
+					</object>
+					<int key="connectionID">81</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -555,6 +573,7 @@
 							<reference ref="1046851956"/>
 							<reference ref="905393854"/>
 							<reference ref="621625474"/>
+							<reference ref="420639666"/>
 						</array>
 						<reference key="parent" ref="957512775"/>
 					</object>
@@ -688,6 +707,11 @@
 						<reference key="object" ref="169412140"/>
 						<reference key="parent" ref="621625474"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">80</int>
+						<reference key="object" ref="420639666"/>
+						<reference key="parent" ref="939574360"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -715,16 +739,38 @@
 				<string key="74.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="75.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="80.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">79</int>
+			<int key="maxID">81</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">NSCollectionViewItem</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="imageView">NSImageView</string>
+						<string key="textField">NSTextField</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="imageView">
+							<string key="name">imageView</string>
+							<string key="candidateClassName">NSImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="textField">
+							<string key="name">textField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/NSCollectionViewItem.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">WFNewsItemViewController</string>
 					<string key="superclassName">NSCollectionViewItem</string>
@@ -764,6 +810,7 @@
 						<string key="imageView">NSImageView</string>
 						<string key="infoButton">NSButton</string>
 						<string key="linkButton">NSButton</string>
+						<string key="loadingIndicator">NSProgressIndicator</string>
 						<string key="replyButton">NSButton</string>
 						<string key="shareButton">NSButton</string>
 						<string key="starButton">NSButton</string>
@@ -793,6 +840,10 @@
 						<object class="IBToOneOutletInfo" key="linkButton">
 							<string key="name">linkButton</string>
 							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="loadingIndicator">
+							<string key="name">loadingIndicator</string>
+							<string key="candidateClassName">NSProgressIndicator</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="replyButton">
 							<string key="name">replyButton</string>
