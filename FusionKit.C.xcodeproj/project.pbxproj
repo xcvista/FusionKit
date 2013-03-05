@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D2010C416E61211006A87B1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D2010C316E61211006A87B1 /* MainStoryboard.storyboard */; };
+		1D2010C616E62DFC006A87B1 /* WFNewsItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2010C516E62DFC006A87B1 /* WFNewsItemViewController.xib */; };
+		1D2010C916E62EDC006A87B1 /* WFNewsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2010C816E62EDC006A87B1 /* WFNewsCollectionView.m */; };
 		1D7CCFC116E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CCFBF16E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7CCFC216E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CCFC016E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.m */; };
 		1D7CCFC516E4BFDD00F5F3AF /* FKWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CCFC316E4BFDD00F5F3AF /* FKWrapper.h */; };
@@ -139,7 +141,6 @@
 		1D7CD18E16E55F7D00F5F3AF /* WFNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD18C16E55F7B00F5F3AF /* WFNewsViewController.m */; };
 		1D7CD18F16E55F7D00F5F3AF /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7CD18D16E55F7C00F5F3AF /* WFNewsViewController.xib */; };
 		1D7CD19016E563C800F5F3AF /* FusionBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7CD16716E535C200F5F3AF /* FusionBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7CD19316E5650200F5F3AF /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CD15916E535C100F5F3AF /* FusionBinding.framework */; };
 		1D7CD19616E5768900F5F3AF /* WFNewsItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CD19516E5768900F5F3AF /* WFNewsItemViewController.m */; };
 		1D85892F16D7C5900056DB48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D85892D16D7C5900056DB48 /* InfoPlist.strings */; };
 		1D85893716D7C5AC0056DB48 /* FusionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D85893116D7C5900056DB48 /* FusionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -164,6 +165,9 @@
 
 /* Begin PBXFileReference section */
 		1D2010C316E61211006A87B1 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1D2010C516E62DFC006A87B1 /* WFNewsItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsItemViewController.xib; sourceTree = "<group>"; };
+		1D2010C716E62EDC006A87B1 /* WFNewsCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsCollectionView.h; sourceTree = "<group>"; };
+		1D2010C816E62EDC006A87B1 /* WFNewsCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsCollectionView.m; sourceTree = "<group>"; };
 		1D7CCFBF16E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKJSONKeyedUnarchiver.h; sourceTree = "<group>"; };
 		1D7CCFC016E4B81C00F5F3AF /* FKJSONKeyedUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKJSONKeyedUnarchiver.m; sourceTree = "<group>"; };
 		1D7CCFC316E4BFDD00F5F3AF /* FKWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKWrapper.h; sourceTree = "<group>"; };
@@ -305,7 +309,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7CD19316E5650200F5F3AF /* FusionBinding.framework in Frameworks */,
 				1D7CD0BF16E4E4C300F5F3AF /* Base64Kit.framework in Frameworks */,
 				1D7CD0C016E4E4C300F5F3AF /* PinyinKit.framework in Frameworks */,
 				1D7CD07116E4DE3100F5F3AF /* AppKit.framework in Frameworks */,
@@ -426,8 +429,11 @@
 				1D7CD18B16E55F7B00F5F3AF /* WFNewsViewController.h */,
 				1D7CD18C16E55F7B00F5F3AF /* WFNewsViewController.m */,
 				1D7CD18D16E55F7C00F5F3AF /* WFNewsViewController.xib */,
+				1D2010C716E62EDC006A87B1 /* WFNewsCollectionView.h */,
+				1D2010C816E62EDC006A87B1 /* WFNewsCollectionView.m */,
 				1D7CD19416E5768900F5F3AF /* WFNewsItemViewController.h */,
 				1D7CD19516E5768900F5F3AF /* WFNewsItemViewController.m */,
+				1D2010C516E62DFC006A87B1 /* WFNewsItemViewController.xib */,
 				1D7CD18416E5564900F5F3AF /* NSString+Geometrics.h */,
 				1D7CD18516E5564A00F5F3AF /* NSString+Geometrics.m */,
 				1D7CCFD216E4C10E00F5F3AF /* Supporting Files */,
@@ -1159,6 +1165,7 @@
 				1D7CD14016E5247500F5F3AF /* Posts@2x.png in Resources */,
 				1D7CD17816E53FA400F5F3AF /* README.md in Resources */,
 				1D7CD18F16E55F7D00F5F3AF /* WFNewsViewController.xib in Resources */,
+				1D2010C616E62DFC006A87B1 /* WFNewsItemViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1461,6 +1468,7 @@
 				1D7CD18616E5564A00F5F3AF /* NSString+Geometrics.m in Sources */,
 				1D7CD18E16E55F7D00F5F3AF /* WFNewsViewController.m in Sources */,
 				1D7CD19616E5768900F5F3AF /* WFNewsItemViewController.m in Sources */,
+				1D2010C916E62EDC006A87B1 /* WFNewsCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
