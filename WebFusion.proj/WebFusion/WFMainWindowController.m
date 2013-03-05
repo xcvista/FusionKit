@@ -44,15 +44,16 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     [self.appPaneController configureView];
-    [self.outlineView selectColumnIndexes:[NSIndexSet indexSetWithIndex:1]
-                     byExtendingSelection:NO];
-    
-    self.apps = @{@"News": @"WFNewsViewController"};
+    [self.outlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:1]
+                  byExtendingSelection:NO];
 }
 
 - (void)loadAppWithName:(NSString *)name
 {
-    NSLog(@"App %@ requested!", name);
+    if (!self.apps)
+    {
+        self.apps = @{@"News": @"WFNewsViewController"};
+    }
     NSString *className = self.apps[name];
     if (className)
     {
@@ -63,6 +64,10 @@
         [[self.detailViewController view] setFrame:self.rightSplitView.bounds];
         [[self.detailViewController view] setAutoresizingMask:18];
         [self.rightSplitView setSubviews:@[[self.detailViewController view]]];
+    }
+    else
+    {
+        NSLog(@"Unrecognized class name %@ requested.", name);
     }
 }
 

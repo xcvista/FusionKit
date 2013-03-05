@@ -7,7 +7,7 @@
 //
 
 #import "WFNewsItemViewController.h"
-//#import <FusionBinding/FusionBinding.h>
+#import <FusionBinding/FusionBinding.h>
 #import "NSString+Geometrics.h"
 #import "WFNewsInfoWindowController.h"
 #import "WFAppDelegate.h"
@@ -81,28 +81,14 @@
         [self.linkButton setHidden:YES];
     }
     
+    FKNewsController *newsController = [[FKNewsController alloc] init];
+    newsController.news = news;
+    
     [self.titleField setStringValue:news.title];
     
-    NSTimeInterval timeDifference = fabs([news.publishDate timeIntervalSinceNow]);
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:(timeDifference > 43200) ? NSDateFormatterLongStyle : NSDateFormatterNoStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    [self.authorField setStringValue:[NSString stringWithFormat:@"%@\n%@\n%@", newsController.author, newsController.service, newsController.publishTime]];
     
-    NSString *time =
-    (timeDifference < 60) ? [NSString stringWithFormat:NSLocalizedString(@"%.0lf seconds ago", @""), timeDifference] :
-    (timeDifference < 3600) ? [NSString stringWithFormat:NSLocalizedString(@"%.1lf minutes ago", @""), timeDifference / 60] :
-    (timeDifference < 10800) ? [NSString stringWithFormat:NSLocalizedString(@"%.1lf hours ago", @""), timeDifference / 3600] :
-    [dateFormatter stringFromDate:news.publishDate];
-    
-    NSString *authorName = ([news.author.handle isEqualToString:news.author.displayName]) ? news.author.handle : [NSString stringWithFormat:@"%@ (%@)", news.author.displayName, news.author.handle];
-    
-    NSString *serviceName = NSLocalizedStringFromTable(news.service, @"services", @"");
-    
-    [self.authorField setStringValue:[NSString stringWithFormat:@"%@\n%@\n%@", authorName, serviceName, time]];
-    
-    NSString *content = ([news.content length]) ? news.content : news.title;
-    NSString *html = [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:20pt;}</style></head><body><div>%@</div></body></html>", content];
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithHTML:[html dataUsingEncoding:NSUTF8StringEncoding] documentAttributes:NULL];
+    NSAttributedString *attributedString = newsController.content;
     [self.contentField setAttributedStringValue:attributedString];
     
     CGFloat height = MAX(166, [attributedString heightForWidth:[self.contentField bounds].size.width]);

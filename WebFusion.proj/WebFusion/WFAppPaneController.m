@@ -93,6 +93,11 @@
     return [self.titles containsObject:item];
 }
 
+- (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item
+{
+    return ![self.titles containsObject:item];
+}
+
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
     if ([self.titles containsObject:item])

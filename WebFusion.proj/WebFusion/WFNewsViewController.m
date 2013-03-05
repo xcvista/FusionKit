@@ -38,24 +38,37 @@
 
 - (void)reload:(id)sender
 {
-    NSError *err;
-    WFAppDelegate *appDelegate = [NSApp delegate];
-    NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
-                                                      count:50
-                                                       type:nil
-                                                      error:&err];
-    
-    if (!news)
-    {
-        NSAlert *alert = [NSAlert alertWithError:err];
-        [alert beginSheetModalForWindow:[appDelegate.rootWindowController window]
-                          modalDelegate:nil
-                         didEndSelector:nil
-                            contextInfo:nil];
-        [NSApp terminate:self];
-    }
-    
-    [self.collectionView setContent:news];
+    static BOOL RUNNING;
+    dispatch_async(dispatch_get_main_queue(),
+                   ^{
+                       if (RUNNING)
+                           return;
+                       RUNNING = YES;
+                       
+                       NSError *err;
+                       WFAppDelegate *appDelegate = [NSApp delegate];
+                       
+                       NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
+                                                                         count:50
+                                                                          type:nil
+                                                                         error:&err];
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^{
+                                          if (!news)
+                                          {
+                                              NSAlert *alert = [NSAlert alertWithError:err];
+                                              [alert beginSheetModalForWindow:[appDelegate.rootWindowController window]
+                                                                modalDelegate:nil
+                                                               didEndSelector:nil
+                                                                  contextInfo:nil];
+                                              [NSApp terminate:self];
+                                          }
+                                          
+                                          [self.collectionView setContent:news];
+                                          RUNNING = NO;
+                                      });
+                       
+                   });
 }
 
 - (void)awakeFromNib

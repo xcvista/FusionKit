@@ -55,7 +55,8 @@
 										<int key="NSvFlags">266</int>
 										<string key="NSFrame">{{15, 285}, {315, 24}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
-										<reference key="NSNextKeyView" ref="310064770"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="621625474"/>
 										<string key="NSReuseIdentifierKey">_NS:1535</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSTextFieldCell" key="NSCell" id="880644849">
@@ -103,6 +104,7 @@
 										</set>
 										<string key="NSFrame">{{15, 214}, {66, 66}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="394965651"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
@@ -123,6 +125,7 @@
 										<int key="NSvFlags">266</int>
 										<string key="NSFrame">{{83, 217}, {313, 60}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="1046851956"/>
 										<string key="NSReuseIdentifierKey">_NS:1535</string>
 										<bool key="NSEnabled">YES</bool>
@@ -147,6 +150,8 @@
 										<int key="NSvFlags">289</int>
 										<string key="NSFrame">{{324, 7}, {75, 32}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="420733221">
@@ -170,6 +175,7 @@
 										<int key="NSvFlags">289</int>
 										<string key="NSFrame">{{249, 7}, {75, 32}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="934873211"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
@@ -194,6 +200,7 @@
 										<int key="NSvFlags">-2147483356</int>
 										<string key="NSFrame">{{12, 7}, {77, 32}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="649577295"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
@@ -226,6 +233,7 @@
 										</set>
 										<string key="NSFrame">{{224, 40}, {172, 172}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="1073046853"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
@@ -246,6 +254,7 @@
 										<int key="NSvFlags">274</int>
 										<string key="NSFrame">{{15, 43}, {207, 166}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="523835954"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<string key="NSAntiCompressionPriority">{250, 750}</string>
@@ -272,6 +281,8 @@
 										<int key="NSvFlags">265</int>
 										<string key="NSFrame">{{369, 285}, {24, 24}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="310064770"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="114149303">
@@ -295,6 +306,8 @@
 										<int key="NSvFlags">265</int>
 										<string key="NSFrame">{{335, 285}, {24, 24}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="905393854"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="169412140">
@@ -316,12 +329,14 @@
 								</array>
 								<string key="NSFrame">{{1, 1}, {411, 321}}</string>
 								<reference key="NSSuperview" ref="939574360"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="224223369"/>
 								<string key="NSReuseIdentifierKey">_NS:11</string>
 							</object>
 						</array>
 						<string key="NSFrame">{{17, 16}, {413, 323}}</string>
 						<reference key="NSSuperview" ref="957512775"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="842495828"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSOffsets">{0, 0}</string>
@@ -357,6 +372,7 @@
 				</array>
 				<string key="NSFrameSize">{447, 357}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="939574360"/>
 			</object>
 		</array>
@@ -707,7 +723,101 @@
 			<nil key="sourceID"/>
 			<int key="maxID">79</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">WFNewsItemViewController</string>
+					<string key="superclassName">NSCollectionViewItem</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="info:">id</string>
+						<string key="link:">id</string>
+						<string key="reply:">id</string>
+						<string key="share:">id</string>
+						<string key="star:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="info:">
+							<string key="name">info:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="link:">
+							<string key="name">link:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="reply:">
+							<string key="name">reply:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="share:">
+							<string key="name">share:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="star:">
+							<string key="name">star:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="authorField">NSTextField</string>
+						<string key="avatarView">NSImageView</string>
+						<string key="contentField">NSTextField</string>
+						<string key="imageView">NSImageView</string>
+						<string key="infoButton">NSButton</string>
+						<string key="linkButton">NSButton</string>
+						<string key="replyButton">NSButton</string>
+						<string key="shareButton">NSButton</string>
+						<string key="starButton">NSButton</string>
+						<string key="titleField">NSTextField</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="authorField">
+							<string key="name">authorField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="avatarView">
+							<string key="name">avatarView</string>
+							<string key="candidateClassName">NSImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="contentField">
+							<string key="name">contentField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="imageView">
+							<string key="name">imageView</string>
+							<string key="candidateClassName">NSImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="infoButton">
+							<string key="name">infoButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="linkButton">
+							<string key="name">linkButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="replyButton">
+							<string key="name">replyButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="shareButton">
+							<string key="name">shareButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="starButton">
+							<string key="name">starButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="titleField">
+							<string key="name">titleField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/WFNewsItemViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

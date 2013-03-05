@@ -42,6 +42,7 @@
 		1D20143516E66026006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143216E66026006A87B1 /* FusionKit.framework */; };
 		1D20143616E66026006A87B1 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143316E66026006A87B1 /* PinyinKit.framework */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
+		1DD337E216E6795B00BD1E28 /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E116E6795B00BD1E28 /* FusionBinding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		1D20143216E66026006A87B1 /* FusionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionKit.framework; path = ../FusionKit.proj/build/Release/FusionKit.framework; sourceTree = "<group>"; };
 		1D20143316E66026006A87B1 /* PinyinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinyinKit.framework; path = ../Libraries.proj/build/Release/PinyinKit.framework; sourceTree = "<group>"; };
 		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		1DD337E116E6795B00BD1E28 /* FusionBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = FusionBinding.framework; path = ../FusionKit.proj/build/Release/FusionBinding.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD337E216E6795B00BD1E28 /* FusionBinding.framework in Frameworks */,
 				1D20143416E66026006A87B1 /* Base64Kit.framework in Frameworks */,
 				1D20143516E66026006A87B1 /* FusionKit.framework in Frameworks */,
 				1D20143616E66026006A87B1 /* PinyinKit.framework in Frameworks */,
@@ -131,6 +134,7 @@
 		1D2013C416E65E77006A87B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DD337E116E6795B00BD1E28 /* FusionBinding.framework */,
 				1D20143116E66026006A87B1 /* Base64Kit.framework */,
 				1D20143216E66026006A87B1 /* FusionKit.framework */,
 				1D20143316E66026006A87B1 /* PinyinKit.framework */,

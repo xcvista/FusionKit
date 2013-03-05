@@ -9,4 +9,4 @@
 #import <FusionKit/FusionKit.h>
 #import <Cocoa/Cocoa.h>
 
-//#import <FusionBinding/FKNewsController.h>
+#import <FusionBinding/FKNewsController.h>
