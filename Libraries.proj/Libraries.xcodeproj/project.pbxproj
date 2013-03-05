@@ -79,8 +79,7 @@
 				1D20132416E65D07006A87B1 /* Base64Kit */,
 				1D20134216E65D48006A87B1 /* PinyinKit */,
 				1D20131D16E65D07006A87B1 /* Frameworks */,
-				1D20131C16E65D07006A87B1 /* Base64Kit.framework */,
-				1D20134016E65D48006A87B1 /* PinyinKit.framework */,
+				1D20143016E65FF0006A87B1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +149,15 @@
 				1D20134816E65D48006A87B1 /* PinyinKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D20143016E65FF0006A87B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D20131C16E65D07006A87B1 /* Base64Kit.framework */,
+				1D20134016E65D48006A87B1 /* PinyinKit.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

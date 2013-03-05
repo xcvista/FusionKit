@@ -7,7 +7,7 @@
 //
 
 #import "WFNewsItemViewController.h"
-#import <FusionBinding/FusionBinding.h>
+//#import <FusionBinding/FusionBinding.h>
 #import "NSString+Geometrics.h"
 #import "WFNewsInfoWindowController.h"
 #import "WFAppDelegate.h"

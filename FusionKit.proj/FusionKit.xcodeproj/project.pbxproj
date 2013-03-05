@@ -34,6 +34,8 @@
 		1D2013AE16E65E48006A87B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20136916E65DE2006A87B1 /* Cocoa.framework */; };
 		1D2013B416E65E48006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013B216E65E48006A87B1 /* InfoPlist.strings */; };
 		1D2013BD16E65E64006A87B1 /* FusionBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2013BC16E65E64006A87B1 /* FusionBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20143716E6603C006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20136616E65DE2006A87B1 /* FusionKit.framework */; };
+		1D20143916E66046006A87B1 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143816E66046006A87B1 /* Base64Kit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,7 @@
 		1D2013B316E65E48006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D2013B516E65E48006A87B1 /* FusionBinding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FusionBinding-Prefix.pch"; sourceTree = "<group>"; };
 		1D2013BC16E65E64006A87B1 /* FusionBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FusionBinding.h; sourceTree = "<group>"; };
+		1D20143816E66046006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D20143916E66046006A87B1 /* Base64Kit.framework in Frameworks */,
 				1D20136A16E65DE2006A87B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D20143716E6603C006A87B1 /* FusionKit.framework in Frameworks */,
 				1D2013AE16E65E48006A87B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +121,7 @@
 		1D20136816E65DE2006A87B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D20143816E66046006A87B1 /* Base64Kit.framework */,
 				1D20136916E65DE2006A87B1 /* Cocoa.framework */,
 				1D20136B16E65DE2006A87B1 /* Other Frameworks */,
 			);

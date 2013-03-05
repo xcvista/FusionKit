@@ -6,6 +6,86 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		1DD3379316E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20129216E65AE2006A87B1;
+			remoteInfo = WebFusion;
+		};
+		1DD3379916E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20116316E657AB006A87B1 /* Libraries.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20131C16E65D07006A87B1;
+			remoteInfo = Base64Kit;
+		};
+		1DD3379B16E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20116316E657AB006A87B1 /* Libraries.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20134016E65D48006A87B1;
+			remoteInfo = PinyinKit;
+		};
+		1DD337A116E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20136616E65DE2006A87B1;
+			remoteInfo = FusionKit;
+		};
+		1DD337A316E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D2013AD16E65E48006A87B1;
+			remoteInfo = FusionBinding;
+		};
+		1DD337A816E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D2013C216E65E77006A87B1;
+			remoteInfo = WebFusion;
+		};
+		1DD337AD16E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20120016E65917006A87B1 /* iFusionKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D2012CC16E65B65006A87B1;
+			remoteInfo = FusionKit;
+		};
+		1DD337B516E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20121416E65938006A87B1 /* iLibraries.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20121F16E6594D006A87B1;
+			remoteInfo = PinyinKit;
+		};
+		1DD337B716E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20121416E65938006A87B1 /* iLibraries.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20123616E65957006A87B1;
+			remoteInfo = Base64Kit;
+		};
+		1DD337B916E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20121416E65938006A87B1 /* iLibraries.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20124A16E65962006A87B1;
+			remoteInfo = KeychainAccess;
+		};
+		1DD337BB16E6618600BD1E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D20121416E65938006A87B1 /* iLibraries.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D20125E16E65971006A87B1;
+			remoteInfo = TaskCounter;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebFusion.xcodeproj; path = WebFusion.proj/WebFusion.xcodeproj; sourceTree = "<group>"; };
 		1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FusionKit.xcodeproj; path = FusionKit.proj/FusionKit.xcodeproj; sourceTree = "<group>"; };
@@ -24,12 +104,65 @@
 				1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */,
 				1D7CD17716E53FA300F5F3AF /* README.md */,
 				1D20121416E65938006A87B1 /* iLibraries.xcodeproj */,
-				1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */,
 				1D20120016E65917006A87B1 /* iFusionKit.xcodeproj */,
+				1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */,
 				1D20116316E657AB006A87B1 /* Libraries.xcodeproj */,
 				1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */,
 				1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */,
 			);
+			sourceTree = "<group>";
+		};
+		1DD3379016E6618600BD1E28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD3379416E6618600BD1E28 /* WebFusion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DD3379516E6618600BD1E28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD3379A16E6618600BD1E28 /* Base64Kit.framework */,
+				1DD3379C16E6618600BD1E28 /* PinyinKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DD3379D16E6618600BD1E28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD337A216E6618600BD1E28 /* FusionKit.framework */,
+				1DD337A416E6618600BD1E28 /* FusionBinding.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DD337A516E6618600BD1E28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD337A916E6618600BD1E28 /* WebFusion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DD337AA16E6618600BD1E28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD337AE16E6618600BD1E28 /* FusionKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DD337AF16E6618600BD1E28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD337B616E6618600BD1E28 /* PinyinKit.framework */,
+				1DD337B816E6618600BD1E28 /* Base64Kit.framework */,
+				1DD337BA16E6618600BD1E28 /* KeychainAccess.framework */,
+				1DD337BC16E6618600BD1E28 /* TaskCounter.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -50,11 +183,117 @@
 			mainGroup = 1D85891516D7C5820056DB48;
 			productRefGroup = 1D85891516D7C5820056DB48;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1DD3379D16E6618600BD1E28 /* Products */;
+					ProjectRef = 1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 1DD337AA16E6618600BD1E28 /* Products */;
+					ProjectRef = 1D20120016E65917006A87B1 /* iFusionKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 1DD337AF16E6618600BD1E28 /* Products */;
+					ProjectRef = 1D20121416E65938006A87B1 /* iLibraries.xcodeproj */;
+				},
+				{
+					ProductGroup = 1DD3379016E6618600BD1E28 /* Products */;
+					ProjectRef = 1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */;
+				},
+				{
+					ProductGroup = 1DD3379516E6618600BD1E28 /* Products */;
+					ProjectRef = 1D20116316E657AB006A87B1 /* Libraries.xcodeproj */;
+				},
+				{
+					ProductGroup = 1DD337A516E6618600BD1E28 /* Products */;
+					ProjectRef = 1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1DD3379416E6618600BD1E28 /* WebFusion.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = WebFusion.app;
+			remoteRef = 1DD3379316E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD3379A16E6618600BD1E28 /* Base64Kit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Base64Kit.framework;
+			remoteRef = 1DD3379916E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD3379C16E6618600BD1E28 /* PinyinKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PinyinKit.framework;
+			remoteRef = 1DD3379B16E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337A216E6618600BD1E28 /* FusionKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FusionKit.framework;
+			remoteRef = 1DD337A116E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337A416E6618600BD1E28 /* FusionBinding.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FusionBinding.framework;
+			remoteRef = 1DD337A316E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337A916E6618600BD1E28 /* WebFusion.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = WebFusion.app;
+			remoteRef = 1DD337A816E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337AE16E6618600BD1E28 /* FusionKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = FusionKit.framework;
+			remoteRef = 1DD337AD16E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337B616E6618600BD1E28 /* PinyinKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = PinyinKit.framework;
+			remoteRef = 1DD337B516E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337B816E6618600BD1E28 /* Base64Kit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = Base64Kit.framework;
+			remoteRef = 1DD337B716E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337BA16E6618600BD1E28 /* KeychainAccess.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = KeychainAccess.framework;
+			remoteRef = 1DD337B916E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1DD337BC16E6618600BD1E28 /* TaskCounter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = TaskCounter.framework;
+			remoteRef = 1DD337BB16E6618600BD1E28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		1D85891A16D7C5820056DB48 /* Debug */ = {

@@ -38,6 +38,10 @@
 		1D20141B16E65EB5006A87B1 /* WFNewsItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */; };
 		1D20141C16E65EB5006A87B1 /* WFNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20141016E65EB5006A87B1 /* WFNewsViewController.m */; };
 		1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */; };
+		1D20143416E66026006A87B1 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143116E66026006A87B1 /* Base64Kit.framework */; };
+		1D20143516E66026006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143216E66026006A87B1 /* FusionKit.framework */; };
+		1D20143616E66026006A87B1 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143316E66026006A87B1 /* PinyinKit.framework */; };
+		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		1D20140F16E65EB5006A87B1 /* WFNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsViewController.h; sourceTree = "<group>"; };
 		1D20141016E65EB5006A87B1 /* WFNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsViewController.m; sourceTree = "<group>"; };
 		1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
+		1D20143116E66026006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
+		1D20143216E66026006A87B1 /* FusionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionKit.framework; path = ../FusionKit.proj/build/Release/FusionKit.framework; sourceTree = "<group>"; };
+		1D20143316E66026006A87B1 /* PinyinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinyinKit.framework; path = ../Libraries.proj/build/Release/PinyinKit.framework; sourceTree = "<group>"; };
+		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D20143416E66026006A87B1 /* Base64Kit.framework in Frameworks */,
+				1D20143516E66026006A87B1 /* FusionKit.framework in Frameworks */,
+				1D20143616E66026006A87B1 /* PinyinKit.framework in Frameworks */,
 				1D2013C616E65E77006A87B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +131,9 @@
 		1D2013C416E65E77006A87B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D20143116E66026006A87B1 /* Base64Kit.framework */,
+				1D20143216E66026006A87B1 /* FusionKit.framework */,
+				1D20143316E66026006A87B1 /* PinyinKit.framework */,
 				1D2013C516E65E77006A87B1 /* Cocoa.framework */,
 				1D2013C716E65E77006A87B1 /* Other Frameworks */,
 			);
@@ -168,6 +182,7 @@
 		1D2013CC16E65E77006A87B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1DD337BD16E661B700BD1E28 /* MainMenu.xib */,
 				1D2013E016E65E9C006A87B1 /* Camera.png */,
 				1D2013E116E65E9C006A87B1 /* Camera@2x.png */,
 				1D2013E216E65E9C006A87B1 /* Contacts.png */,
@@ -262,6 +277,7 @@
 				1D20141916E65EB5006A87B1 /* WFNewsInfoWindowController.xib in Resources */,
 				1D20141B16E65EB5006A87B1 /* WFNewsItemViewController.xib in Resources */,
 				1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */,
+				1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +424,7 @@
 				1D2013DF16E65E78006A87B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

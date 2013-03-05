@@ -8,7 +8,7 @@
 
 #import "WFNewsViewController.h"
 #import "WFAppDelegate.h"
-#import <FusionBinding/FusionBinding.h>
+//#import <FusionBinding/FusionBinding.h>
 #import <objc/message.h>
 
 @interface WFNewsViewController ()
