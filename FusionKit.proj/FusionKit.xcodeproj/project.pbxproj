@@ -35,8 +35,8 @@
 		1D2013B416E65E48006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013B216E65E48006A87B1 /* InfoPlist.strings */; };
 		1D2013BD16E65E64006A87B1 /* FusionBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2013BC16E65E64006A87B1 /* FusionBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D20143716E6603C006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20136616E65DE2006A87B1 /* FusionKit.framework */; };
-		1D20143916E66046006A87B1 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143816E66046006A87B1 /* Base64Kit.framework */; };
 		1DA6D9E216E73FBF0004C7F7 /* services.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E116E73FBF0004C7F7 /* services.strings */; };
+		1DA6DA2516E7C3270004C7F7 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */; };
 		1DD337DF16E677EB00BD1E28 /* FKNewsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD337DD16E677EB00BD1E28 /* FKNewsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DD337E016E677EB00BD1E28 /* FKNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD337DE16E677EB00BD1E28 /* FKNewsController.m */; };
 		F5269AEC16E752960049EA09 /* FKUserContact.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AEA16E752960049EA09 /* FKUserContact.h */; };
@@ -81,8 +81,8 @@
 		1D2013B316E65E48006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D2013B516E65E48006A87B1 /* FusionBinding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FusionBinding-Prefix.pch"; sourceTree = "<group>"; };
 		1D2013BC16E65E64006A87B1 /* FusionBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FusionBinding.h; sourceTree = "<group>"; };
-		1D20143816E66046006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
 		1DA6D9E116E73FBF0004C7F7 /* services.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = services.strings; sourceTree = "<group>"; };
+		1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
 		1DD337DD16E677EB00BD1E28 /* FKNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNewsController.h; sourceTree = "<group>"; };
 		1DD337DE16E677EB00BD1E28 /* FKNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNewsController.m; sourceTree = "<group>"; };
 		F5269AEA16E752960049EA09 /* FKUserContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKUserContact.h; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D20143916E66046006A87B1 /* Base64Kit.framework in Frameworks */,
+				1DA6DA2516E7C3270004C7F7 /* Base64Kit.framework in Frameworks */,
 				1D20136A16E65DE2006A87B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +135,7 @@
 		1D20136816E65DE2006A87B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D20143816E66046006A87B1 /* Base64Kit.framework */,
+				1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */,
 				1D20136916E65DE2006A87B1 /* Cocoa.framework */,
 				1D20136B16E65DE2006A87B1 /* Other Frameworks */,
 			);
@@ -432,10 +432,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FusionKit/FusionKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -468,9 +470,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FusionKit/FusionKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -509,10 +513,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FusionBinding/FusionBinding-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -545,9 +551,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FusionBinding/FusionBinding-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

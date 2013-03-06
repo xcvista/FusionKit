@@ -50,29 +50,29 @@
 		1DA6DA0616E786640004C7F7 /* WFIncomingPacketWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */; };
 		1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */; };
 		1DA6DA1A16E7AA870004C7F7 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1616E7AA870004C7F7 /* Base64Kit.framework */; };
-		1DA6DA1B16E7AA870004C7F7 /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
-		1DA6DA1C16E7AA870004C7F7 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1DA6DA1D16E7AA870004C7F7 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
-		1DA6DA1E16E7AA930004C7F7 /* Base64Kit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1616E7AA870004C7F7 /* Base64Kit.framework */; };
-		1DA6DA1F16E7AA930004C7F7 /* FusionBinding.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
-		1DA6DA2016E7AA930004C7F7 /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1DA6DA2116E7AA930004C7F7 /* PinyinKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
 		1DA6DA2316E7B5110004C7F7 /* icon-mac.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */; };
+		1DA6DA2616E7C3E80004C7F7 /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
+		1DA6DA2716E7C3EB0004C7F7 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
+		1DA6DA2816E7C3EE0004C7F7 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
+		1DA6DA2A16E7C4120004C7F7 /* Base64Kit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1616E7AA870004C7F7 /* Base64Kit.framework */; };
+		1DA6DA2B16E7C4120004C7F7 /* FusionBinding.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
+		1DA6DA2C16E7C4120004C7F7 /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
+		1DA6DA2D16E7C4120004C7F7 /* PinyinKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
 		1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1DA6DA1116E7AA360004C7F7 /* CopyFiles */ = {
+		1DA6DA2916E7C3FB0004C7F7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1DA6DA1E16E7AA930004C7F7 /* Base64Kit.framework in CopyFiles */,
-				1DA6DA1F16E7AA930004C7F7 /* FusionBinding.framework in CopyFiles */,
-				1DA6DA2016E7AA930004C7F7 /* FusionKit.framework in CopyFiles */,
-				1DA6DA2116E7AA930004C7F7 /* PinyinKit.framework in CopyFiles */,
+				1DA6DA2A16E7C4120004C7F7 /* Base64Kit.framework in CopyFiles */,
+				1DA6DA2B16E7C4120004C7F7 /* FusionBinding.framework in CopyFiles */,
+				1DA6DA2C16E7C4120004C7F7 /* FusionKit.framework in CopyFiles */,
+				1DA6DA2D16E7C4120004C7F7 /* PinyinKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,11 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA6DA1A16E7AA870004C7F7 /* Base64Kit.framework in Frameworks */,
-				1DA6DA1B16E7AA870004C7F7 /* FusionBinding.framework in Frameworks */,
-				1DA6DA1C16E7AA870004C7F7 /* FusionKit.framework in Frameworks */,
-				1DA6DA1D16E7AA870004C7F7 /* PinyinKit.framework in Frameworks */,
 				1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */,
 				1D2013C616E65E77006A87B1 /* Cocoa.framework in Frameworks */,
+				1DA6DA2616E7C3E80004C7F7 /* FusionBinding.framework in Frameworks */,
+				1DA6DA2716E7C3EB0004C7F7 /* FusionKit.framework in Frameworks */,
+				1DA6DA2816E7C3EE0004C7F7 /* PinyinKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +344,7 @@
 				1D2013BE16E65E77006A87B1 /* Sources */,
 				1D2013BF16E65E77006A87B1 /* Frameworks */,
 				1D2013C016E65E77006A87B1 /* Resources */,
-				1DA6DA1116E7AA360004C7F7 /* CopyFiles */,
+				1DA6DA2916E7C3FB0004C7F7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -512,8 +512,13 @@
 				INFOPLIST_FILE = "WebFusion/WebFusion-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-rpath",
+					..,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -548,8 +553,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "WebFusion/WebFusion-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"-rpath",
+					..,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
