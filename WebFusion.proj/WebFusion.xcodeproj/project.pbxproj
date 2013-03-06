@@ -38,9 +38,6 @@
 		1D20141B16E65EB5006A87B1 /* WFNewsItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */; };
 		1D20141C16E65EB5006A87B1 /* WFNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20141016E65EB5006A87B1 /* WFNewsViewController.m */; };
 		1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */; };
-		1D20143416E66026006A87B1 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143116E66026006A87B1 /* Base64Kit.framework */; };
-		1D20143516E66026006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143216E66026006A87B1 /* FusionKit.framework */; };
-		1D20143616E66026006A87B1 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143316E66026006A87B1 /* PinyinKit.framework */; };
 		1DA6D9E916E7675B0004C7F7 /* WFPacketInspectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */; };
 		1DA6D9EA16E7675B0004C7F7 /* WFPacketInspectorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */; };
 		1DA6D9F016E76D4C0004C7F7 /* WFOutgoingPacketInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */; };
@@ -52,10 +49,34 @@
 		1DA6DA0516E786640004C7F7 /* WFIncomingPacketWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0316E786630004C7F7 /* WFIncomingPacketWindowController.m */; };
 		1DA6DA0616E786640004C7F7 /* WFIncomingPacketWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */; };
 		1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */; };
+		1DA6DA1A16E7AA870004C7F7 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1616E7AA870004C7F7 /* Base64Kit.framework */; };
+		1DA6DA1B16E7AA870004C7F7 /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
+		1DA6DA1C16E7AA870004C7F7 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
+		1DA6DA1D16E7AA870004C7F7 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
+		1DA6DA1E16E7AA930004C7F7 /* Base64Kit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1616E7AA870004C7F7 /* Base64Kit.framework */; };
+		1DA6DA1F16E7AA930004C7F7 /* FusionBinding.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
+		1DA6DA2016E7AA930004C7F7 /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
+		1DA6DA2116E7AA930004C7F7 /* PinyinKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
+		1DA6DA2316E7B5110004C7F7 /* icon-mac.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
-		1DD337E216E6795B00BD1E28 /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E116E6795B00BD1E28 /* FusionBinding.framework */; };
 		1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DA6DA1116E7AA360004C7F7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1DA6DA1E16E7AA930004C7F7 /* Base64Kit.framework in CopyFiles */,
+				1DA6DA1F16E7AA930004C7F7 /* FusionBinding.framework in CopyFiles */,
+				1DA6DA2016E7AA930004C7F7 /* FusionKit.framework in CopyFiles */,
+				1DA6DA2116E7AA930004C7F7 /* PinyinKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D2013C216E65E77006A87B1 /* WebFusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebFusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,9 +124,6 @@
 		1D20140F16E65EB5006A87B1 /* WFNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsViewController.h; sourceTree = "<group>"; };
 		1D20141016E65EB5006A87B1 /* WFNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsViewController.m; sourceTree = "<group>"; };
 		1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
-		1D20143116E66026006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
-		1D20143216E66026006A87B1 /* FusionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionKit.framework; path = ../FusionKit.proj/build/Release/FusionKit.framework; sourceTree = "<group>"; };
-		1D20143316E66026006A87B1 /* PinyinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinyinKit.framework; path = ../Libraries.proj/build/Release/PinyinKit.framework; sourceTree = "<group>"; };
 		1DA6D9E616E7675B0004C7F7 /* WFPacketInspectorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPacketInspectorWindowController.h; sourceTree = "<group>"; };
 		1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPacketInspectorWindowController.m; sourceTree = "<group>"; };
 		1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPacketInspectorWindowController.xib; sourceTree = "<group>"; };
@@ -125,8 +143,12 @@
 		1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIncomingPacketWindowController.xib; sourceTree = "<group>"; };
 		1DA6DA0716E78B290004C7F7 /* NSString+JSONSanitizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSONSanitizer.h"; sourceTree = "<group>"; };
 		1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSONSanitizer.m"; sourceTree = "<group>"; };
+		1DA6DA1616E7AA870004C7F7 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug/Base64Kit.framework"; sourceTree = "<group>"; };
+		1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionBinding.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug/FusionBinding.framework"; sourceTree = "<group>"; };
+		1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug/FusionKit.framework"; sourceTree = "<group>"; };
+		1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinyinKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug/PinyinKit.framework"; sourceTree = "<group>"; };
+		1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "icon-mac.icns"; sourceTree = "<group>"; };
 		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		1DD337E116E6795B00BD1E28 /* FusionBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionBinding.framework; path = ../FusionKit.proj/build/Release/FusionBinding.framework; sourceTree = "<group>"; };
 		1DD337E916E72ED100BD1E28 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -135,11 +157,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA6DA1A16E7AA870004C7F7 /* Base64Kit.framework in Frameworks */,
+				1DA6DA1B16E7AA870004C7F7 /* FusionBinding.framework in Frameworks */,
+				1DA6DA1C16E7AA870004C7F7 /* FusionKit.framework in Frameworks */,
+				1DA6DA1D16E7AA870004C7F7 /* PinyinKit.framework in Frameworks */,
 				1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */,
-				1DD337E216E6795B00BD1E28 /* FusionBinding.framework in Frameworks */,
-				1D20143416E66026006A87B1 /* Base64Kit.framework in Frameworks */,
-				1D20143516E66026006A87B1 /* FusionKit.framework in Frameworks */,
-				1D20143616E66026006A87B1 /* PinyinKit.framework in Frameworks */,
 				1D2013C616E65E77006A87B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,11 +189,11 @@
 		1D2013C416E65E77006A87B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DA6DA1616E7AA870004C7F7 /* Base64Kit.framework */,
+				1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */,
+				1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */,
+				1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */,
 				1DD337E916E72ED100BD1E28 /* WebKit.framework */,
-				1DD337E116E6795B00BD1E28 /* FusionBinding.framework */,
-				1D20143116E66026006A87B1 /* Base64Kit.framework */,
-				1D20143216E66026006A87B1 /* FusionKit.framework */,
-				1D20143316E66026006A87B1 /* PinyinKit.framework */,
 				1D2013C516E65E77006A87B1 /* Cocoa.framework */,
 				1D2013C716E65E77006A87B1 /* Other Frameworks */,
 			);
@@ -207,6 +229,7 @@
 		1D2013CC16E65E77006A87B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */,
 				1D2013E016E65E9C006A87B1 /* Camera.png */,
 				1D2013E116E65E9C006A87B1 /* Camera@2x.png */,
 				1D2013E216E65E9C006A87B1 /* Contacts.png */,
@@ -321,6 +344,7 @@
 				1D2013BE16E65E77006A87B1 /* Sources */,
 				1D2013BF16E65E77006A87B1 /* Frameworks */,
 				1D2013C016E65E77006A87B1 /* Resources */,
+				1DA6DA1116E7AA360004C7F7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -386,6 +410,7 @@
 				1DA6D9EA16E7675B0004C7F7 /* WFPacketInspectorWindowController.xib in Resources */,
 				1DA6DA0116E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib in Resources */,
 				1DA6DA0616E786640004C7F7 /* WFIncomingPacketWindowController.xib in Resources */,
+				1DA6DA2316E7B5110004C7F7 /* icon-mac.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +490,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -505,6 +534,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
