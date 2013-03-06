@@ -60,6 +60,9 @@
 		1DA6DA2D16E7C4120004C7F7 /* PinyinKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
 		1DA6DA3C16E7DAD00004C7F7 /* WFAboutBoxWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3A16E7DAD00004C7F7 /* WFAboutBoxWindowController.m */; };
 		1DA6DA3D16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3B16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib */; };
+		1DA6DA3F16E7EC880004C7F7 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3E16E7EC880004C7F7 /* defaults.plist */; };
+		1DA6DA4416E7EF3F0004C7F7 /* WFPreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA4216E7EF3F0004C7F7 /* WFPreferenceWindowController.m */; };
+		1DA6DA4516E7EF3F0004C7F7 /* WFPreferenceWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA4316E7EF3F0004C7F7 /* WFPreferenceWindowController.xib */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
 		1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -153,6 +156,10 @@
 		1DA6DA3916E7DAD00004C7F7 /* WFAboutBoxWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAboutBoxWindowController.h; sourceTree = "<group>"; };
 		1DA6DA3A16E7DAD00004C7F7 /* WFAboutBoxWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAboutBoxWindowController.m; sourceTree = "<group>"; };
 		1DA6DA3B16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFAboutBoxWindowController.xib; sourceTree = "<group>"; };
+		1DA6DA3E16E7EC880004C7F7 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
+		1DA6DA4116E7EF3F0004C7F7 /* WFPreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPreferenceWindowController.h; sourceTree = "<group>"; };
+		1DA6DA4216E7EF3F0004C7F7 /* WFPreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPreferenceWindowController.m; sourceTree = "<group>"; };
+		1DA6DA4316E7EF3F0004C7F7 /* WFPreferenceWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPreferenceWindowController.xib; sourceTree = "<group>"; };
 		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1DD337E916E72ED100BD1E28 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -226,6 +233,7 @@
 				1DA6DA0D16E797780004C7F7 /* Login Window */,
 				1DA6DA3816E7DAB90004C7F7 /* About box */,
 				1DA6DA0C16E7976B0004C7F7 /* Main Window */,
+				1DA6DA4016E7EF270004C7F7 /* Preference pane */,
 				1DA6DA0F16E797970004C7F7 /* News View */,
 				1D2013CC16E65E77006A87B1 /* Supporting Files */,
 			);
@@ -235,6 +243,7 @@
 		1D2013CC16E65E77006A87B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1DA6DA3E16E7EC880004C7F7 /* defaults.plist */,
 				1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */,
 				1D2013E016E65E9C006A87B1 /* Camera.png */,
 				1D2013E116E65E9C006A87B1 /* Camera@2x.png */,
@@ -350,6 +359,16 @@
 			name = "About box";
 			sourceTree = "<group>";
 		};
+		1DA6DA4016E7EF270004C7F7 /* Preference pane */ = {
+			isa = PBXGroup;
+			children = (
+				1DA6DA4116E7EF3F0004C7F7 /* WFPreferenceWindowController.h */,
+				1DA6DA4216E7EF3F0004C7F7 /* WFPreferenceWindowController.m */,
+				1DA6DA4316E7EF3F0004C7F7 /* WFPreferenceWindowController.xib */,
+			);
+			name = "Preference pane";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +448,8 @@
 				1DA6DA0616E786640004C7F7 /* WFIncomingPacketWindowController.xib in Resources */,
 				1DA6DA2316E7B5110004C7F7 /* icon-mac.icns in Resources */,
 				1DA6DA3D16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib in Resources */,
+				1DA6DA3F16E7EC880004C7F7 /* defaults.plist in Resources */,
+				1DA6DA4516E7EF3F0004C7F7 /* WFPreferenceWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +494,7 @@
 				1DA6DA0516E786640004C7F7 /* WFIncomingPacketWindowController.m in Sources */,
 				1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */,
 				1DA6DA3C16E7DAD00004C7F7 /* WFAboutBoxWindowController.m in Sources */,
+				1DA6DA4416E7EF3F0004C7F7 /* WFPreferenceWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

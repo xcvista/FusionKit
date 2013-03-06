@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>server</key>
+	<string>https://www.shisoft.net/ajax</string>
+	<key>showDeveloperMenu</key>
+	<true/>
+	<key>loadBatchSize</key>
+	<integer>25</integer>
+	<key>historyBatchSize</key>
+	<integer>25</integer>
+	<key>pullFrequency</key>
+	<integer>5</integer>
+	<key>useSavedUsername</key>
+	<true/>
+</dict>
+</plist>

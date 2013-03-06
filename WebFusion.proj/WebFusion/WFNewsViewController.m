@@ -39,6 +39,8 @@
 - (void)reload:(id)sender
 {
     static BOOL RUNNING;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger loadCount = [userDefaults integerForKey:@"loadBatchSize"];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
                        if (RUNNING)
@@ -49,7 +51,7 @@
                        WFAppDelegate *appDelegate = [NSApp delegate];
                        
                        NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
-                                                                         count:25
+                                                                         count:loadCount
                                                                           type:nil
                                                                          error:&err];
                        dispatch_async(dispatch_get_main_queue(),
@@ -88,6 +90,8 @@
     if ([self.vertivalScroller doubleValue] > 0.99)
     {
         static BOOL RUNNING;
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSInteger loadCount = [userDefaults integerForKey:@"historyBatchSize"];
         WFAppDelegate *appDelegate = [NSApp delegate];
         NSMutableArray *currentObjects = [[self.collectionView content] mutableCopy];
         
@@ -99,7 +103,7 @@
                            RUNNING = YES;
                            NSError *err;
                            NSArray *news = [appDelegate.connection newsBeforeEpoch:[[currentObjects lastObject] publishDate]
-                                                                             count:25
+                                                                             count:loadCount
                                                                               type:nil
                                                                              error:&err];
                            dispatch_async(dispatch_get_main_queue(),

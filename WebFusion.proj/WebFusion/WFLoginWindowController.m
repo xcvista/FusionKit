@@ -50,9 +50,16 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *oldUsername = [userDefaults objectForKey:@"username"];
-    if ([oldUsername length])
-        [self.usernameField setStringValue:oldUsername];
+    if ([userDefaults boolForKey:@"useSavedUsername"])
+    {
+        NSString *oldUsername = [userDefaults objectForKey:@"username"];
+        if ([oldUsername length])
+            [self.usernameField setStringValue:oldUsername];
+    }
+    else
+    {
+        [userDefaults removeObjectForKey:@"username"];
+    }
     
     NSString *username = [self.usernameField stringValue];
     NSString *password = [self.passwordField stringValue];
@@ -126,7 +133,14 @@
                                               [delegate finishLoginWithConnection:connection];
                                               [self.window close];
                                               NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-                                              [userDefaults setObject:username forKey:@"username"];
+                                              if ([userDefaults boolForKey:@"useSavedUsername"])
+                                              {
+                                                  [userDefaults setObject:username forKey:@"username"];
+                                              }
+                                              else
+                                              {
+                                                  [userDefaults removeObjectForKey:@"username"];
+                                              }
                                               [delegate showMainWindow:self];
                                               [delegate releaseWindowController:self];
                                           });

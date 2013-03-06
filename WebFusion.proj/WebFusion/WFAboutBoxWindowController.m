@@ -7,8 +7,9 @@
 //
 
 #import "WFAboutBoxWindowController.h"
+#import "WFAppDelegate.h"
 
-@interface WFAboutBoxWindowController ()
+@interface WFAboutBoxWindowController () <NSWindowDelegate>
 
 @property (weak) IBOutlet NSTextField *aboutTextField;
 
@@ -33,6 +34,11 @@
     NSString *mainVersion = [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleVersionKey];
     NSString *gitVersion = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"git-version" withExtension:@"plist"]][@"git-version"];
     [self.aboutTextField setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Version %@ (git %@)", @""), mainVersion, gitVersion]];
+}
+
+- (void)windowWillClose:(NSNotification *)notification
+{
+    [[NSApp delegate] releaseWindowController:self];
 }
 
 @end

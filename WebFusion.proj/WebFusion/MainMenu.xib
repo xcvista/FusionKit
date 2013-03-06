@@ -14,6 +14,7 @@
 			<string>NSCustomObject</string>
 			<string>NSMenu</string>
 			<string>NSMenuItem</string>
+			<string>NSUserDefaultsController</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -684,15 +685,6 @@
 									<reference key="NSOnImage" ref="229763992"/>
 									<reference key="NSMixedImage" ref="909111550"/>
 								</object>
-								<object class="NSMenuItem" id="454657183">
-									<reference key="NSMenu" ref="835318025"/>
-									<string key="NSTitle">Packet Inspector</string>
-									<string key="NSKeyEquiv">2</string>
-									<int key="NSKeyEquivModMask">1179648</int>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="229763992"/>
-									<reference key="NSMixedImage" ref="909111550"/>
-								</object>
 								<object class="NSMenuItem" id="299356726">
 									<reference key="NSMenu" ref="835318025"/>
 									<bool key="NSIsDisabled">YES</bool>
@@ -713,6 +705,46 @@
 								</object>
 							</array>
 							<string key="NSName">_NSWindowsMenu</string>
+						</object>
+					</object>
+					<object class="NSMenuItem" id="1063350703">
+						<reference key="NSMenu" ref="649796088"/>
+						<string key="NSTitle">Developer</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="229763992"/>
+						<reference key="NSMixedImage" ref="909111550"/>
+						<string key="NSAction">submenuAction:</string>
+						<object class="NSMenu" key="NSSubmenu" id="189298880">
+							<string key="NSTitle">Developer</string>
+							<array class="NSMutableArray" key="NSMenuItems">
+								<object class="NSMenuItem" id="101350375">
+									<reference key="NSMenu" ref="189298880"/>
+									<string key="NSTitle">Reset Session</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="229763992"/>
+									<reference key="NSMixedImage" ref="909111550"/>
+								</object>
+								<object class="NSMenuItem" id="641339053">
+									<reference key="NSMenu" ref="189298880"/>
+									<bool key="NSIsDisabled">YES</bool>
+									<bool key="NSIsSeparator">YES</bool>
+									<string key="NSTitle"/>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="229763992"/>
+									<reference key="NSMixedImage" ref="909111550"/>
+								</object>
+								<object class="NSMenuItem" id="454657183">
+									<reference key="NSMenu" ref="189298880"/>
+									<string key="NSTitle">Packet Inspector</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="229763992"/>
+									<reference key="NSMixedImage" ref="909111550"/>
+								</object>
+							</array>
 						</object>
 					</object>
 					<object class="NSMenuItem" id="391199113">
@@ -741,6 +773,9 @@
 					</object>
 				</array>
 				<string key="NSName">_NSMainMenu</string>
+			</object>
+			<object class="NSUserDefaultsController" id="969365123">
+				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -1115,6 +1150,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
+						<string key="label">showAbout:</string>
+						<reference key="source" ref="838927158"/>
+						<reference key="destination" ref="238522557"/>
+					</object>
+					<int key="connectionID">813</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
 						<string key="label">showPacketInspector:</string>
 						<reference key="source" ref="838927158"/>
 						<reference key="destination" ref="454657183"/>
@@ -1131,11 +1174,31 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">showAbout:</string>
+						<string key="label">showPreferences:</string>
 						<reference key="source" ref="838927158"/>
-						<reference key="destination" ref="238522557"/>
+						<reference key="destination" ref="609285721"/>
 					</object>
-					<int key="connectionID">813</int>
+					<int key="connectionID">825</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">hidden: values.showDeveloperMenu</string>
+						<reference key="source" ref="1063350703"/>
+						<reference key="destination" ref="969365123"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="1063350703"/>
+							<reference key="NSDestination" ref="969365123"/>
+							<string key="NSLabel">hidden: values.showDeveloperMenu</string>
+							<string key="NSBinding">hidden</string>
+							<string key="NSKeyPath">values.showDeveloperMenu</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSValueTransformerName</string>
+								<string key="NS.object.0">NSNegateBoolean</string>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">824</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1173,6 +1236,7 @@
 							<reference ref="391199113"/>
 							<reference ref="586577488"/>
 							<reference ref="343661369"/>
+							<reference ref="1063350703"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1305,7 +1369,6 @@
 							<reference ref="575023229"/>
 							<reference ref="1011231497"/>
 							<reference ref="140418852"/>
-							<reference ref="454657183"/>
 							<reference ref="314156389"/>
 							<reference ref="470634389"/>
 						</array>
@@ -1691,11 +1754,6 @@
 						<reference key="parent" ref="835318025"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">802</int>
-						<reference key="object" ref="454657183"/>
-						<reference key="parent" ref="835318025"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">803</int>
 						<reference key="object" ref="314156389"/>
 						<reference key="parent" ref="835318025"/>
@@ -1714,6 +1772,44 @@
 						<int key="objectID">811</int>
 						<reference key="object" ref="570977500"/>
 						<reference key="parent" ref="110575045"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">814</int>
+						<reference key="object" ref="1063350703"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="189298880"/>
+						</array>
+						<reference key="parent" ref="649796088"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">815</int>
+						<reference key="object" ref="189298880"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="454657183"/>
+							<reference ref="101350375"/>
+							<reference ref="641339053"/>
+						</array>
+						<reference key="parent" ref="1063350703"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">802</int>
+						<reference key="object" ref="454657183"/>
+						<reference key="parent" ref="189298880"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">817</int>
+						<reference key="object" ref="101350375"/>
+						<reference key="parent" ref="189298880"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">818</int>
+						<reference key="object" ref="641339053"/>
+						<reference key="parent" ref="189298880"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">819</int>
+						<reference key="object" ref="969365123"/>
+						<reference key="parent" ref="0"/>
 					</object>
 				</array>
 			</object>
@@ -1805,13 +1901,18 @@
 				<string key="808.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="810.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="811.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="814.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="815.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="817.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="818.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="819.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">813</int>
+			<int key="maxID">825</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1819,12 +1920,18 @@
 					<string key="className">WFAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="clearSession:">id</string>
 						<string key="delegateSignOut:">id</string>
 						<string key="showAbout:">id</string>
 						<string key="showMainWindow:">id</string>
 						<string key="showPacketInspector:">id</string>
+						<string key="showPreferences:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="clearSession:">
+							<string key="name">clearSession:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="delegateSignOut:">
 							<string key="name">delegateSignOut:</string>
 							<string key="candidateClassName">id</string>
@@ -1839,6 +1946,10 @@
 						</object>
 						<object class="IBActionInfo" key="showPacketInspector:">
 							<string key="name">showPacketInspector:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showPreferences:">
+							<string key="name">showPreferences:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>

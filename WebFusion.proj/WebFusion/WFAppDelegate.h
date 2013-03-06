@@ -26,6 +26,9 @@
 
 - (IBAction)delegateSignOut:(id)sender;
 - (IBAction)showAbout:(id)sender;
+- (IBAction)showPreferences:(id)sender;
+
+- (IBAction)clearSession:(id)sender;
 
 - (IBAction)showMainWindow:(id)sender;
 - (void)startMainWindow;

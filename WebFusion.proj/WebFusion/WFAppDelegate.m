@@ -10,6 +10,7 @@
 #import "WFMainWindowController.h"
 #import "WFPacketInspectorWindowController.h"
 #import "WFAboutBoxWindowController.h"
+#import "WFPreferenceWindowController.h"
 
 @interface WFAppDelegate ()
 
@@ -23,10 +24,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![[defaults objectForKey:@"server"] length])
-        [defaults setObject:@"https://www.shisoft.net/ajax" forKey:@"server"];
-    [defaults synchronize];
+    NSDictionary *defaults = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"defaults" withExtension:@"plist"]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults registerDefaults:defaults];
+    [userDefaults synchronize];
     
     // Show the initial window.
     self.windowControllers = [NSMutableArray array];
@@ -78,12 +79,12 @@
     return YES;
 }
 
-- (void)showMainWindow:(id)sender
+- (void)callUpWindowController:(Class)class sender:(id)sender
 {
     NSWindowController *mainWindowController = nil;
     
     for (id object in self.windowControllers)
-        if ([object isKindOfClass:[WFMainWindowController class]])
+        if ([object isKindOfClass:class])
         {
             mainWindowController = object;
             break;
@@ -91,13 +92,19 @@
     
     if (!mainWindowController)
     {
-        mainWindowController = [[WFMainWindowController alloc] init];
+        mainWindowController = [[class alloc] init];
         [self showWindowController:mainWindowController];
     }
     else
     {
         [[mainWindowController window] orderFront:sender];
     }
+}
+
+- (void)showMainWindow:(id)sender
+{
+    [self callUpWindowController:[WFMainWindowController class]
+                          sender:sender];
 }
 
 - (void)startMainWindow
@@ -112,24 +119,8 @@
 
 - (void)showPacketInspector:(id)sender
 {
-    NSWindowController *mainWindowController = nil;
-    
-    for (id object in self.windowControllers)
-        if ([object isKindOfClass:[WFPacketInspectorWindowController class]])
-        {
-            mainWindowController = object;
-            break;
-        }
-    
-    if (!mainWindowController)
-    {
-        mainWindowController = [[WFPacketInspectorWindowController alloc] init];
-        [self showWindowController:mainWindowController];
-    }
-    else
-    {
-        [[mainWindowController window] orderFront:sender];
-    }
+    [self callUpWindowController:[WFPacketInspectorWindowController class]
+                          sender:sender];
 }
 
 - (void)startPacketInspector
@@ -151,24 +142,14 @@
 
 - (void)showAbout:(id)sender
 {
-    NSWindowController *mainWindowController = nil;
-    
-    for (id object in self.windowControllers)
-        if ([object isKindOfClass:[WFAboutBoxWindowController class]])
-        {
-            mainWindowController = object;
-            break;
-        }
-    
-    if (!mainWindowController)
-    {
-        mainWindowController = [[WFAboutBoxWindowController alloc] init];
-        [self showWindowController:mainWindowController];
-    }
-    else
-    {
-        [[mainWindowController window] orderFront:sender];
-    }
+    [self callUpWindowController:[WFAboutBoxWindowController class]
+                          sender:sender];
+}
+
+- (void)showPreferences:(id)sender
+{
+    [self callUpWindowController:[WFPreferenceWindowController class]
+                          sender:self];
 }
 
 @end
