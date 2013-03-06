@@ -76,6 +76,9 @@
 
 - (void)link:(id)sender
 {
+    if (![[self.news.link absoluteString] length])
+        return;
+    
     [[NSWorkspace sharedWorkspace] openURL:self.news.link];
 }
 
