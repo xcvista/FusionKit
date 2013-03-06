@@ -73,6 +73,15 @@
     return !self.blockExit;
 }
 
+- (void)windowWillClose:(NSNotification *)notification
+{
+    if (![[notification object] isEqual:self.window])
+        return;
+    WFAppDelegate *delegate = [NSApp delegate];
+    if (!delegate.connection)
+        [[NSApplication sharedApplication] terminate:self];
+}
+
 - (void)login:(id)sender
 {
     NSString *username = [self.usernameField stringValue];
