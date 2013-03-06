@@ -7,6 +7,7 @@
 //
 
 #import "FKJSONKeyedUnarchiver.h"
+#import "FKWrapper.h"
 
 @interface FKJSONKeyedUnarchiver ()
 
@@ -52,6 +53,9 @@
         {
             FKJSONKeyedUnarchiver *unarchiver = [[FKJSONKeyedUnarchiver alloc] initWithPlist:source];
             id object = [[class alloc] initWithCoder:unarchiver];
+            CFRetain((__bridge CFTypeRef)(unarchiver));
+            if ([object isKindOfClass:[FKWrapper class]])
+                object = [object object];
             return object;
         }
         else
@@ -75,8 +79,13 @@
         return nil;
     else if ([plist isKindOfClass:[NSDictionary class]])
     {
-        FKJSONKeyedUnarchiver *unarchiver = (__bridge FKJSONKeyedUnarchiver *)(CFRetain((__bridge CFTypeRef)([[FKJSONKeyedUnarchiver alloc] initWithPlist:plist])));
+        FKJSONKeyedUnarchiver *unarchiver = [[FKJSONKeyedUnarchiver alloc] initWithPlist:plist];
         id object = [[class alloc] initWithCoder:unarchiver];
+        CFRetain((__bridge CFTypeRef)(unarchiver));
+        if ([object isKindOfClass:[FKWrapper class]])
+        {
+            object = [object object];
+        }
         return object;
     }
     else if ([plist isKindOfClass:[NSArray class]])
