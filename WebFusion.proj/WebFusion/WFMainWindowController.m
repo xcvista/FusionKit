@@ -8,6 +8,7 @@
 
 #import "WFMainWindowController.h"
 #import "WFAppPaneController.h"
+#import "WFAppDelegate.h"
 
 @interface WFMainWindowController () <NSWindowDelegate, NSSplitViewDelegate>
 
@@ -19,14 +20,11 @@
 
 @property NSDictionary *apps;
 
+- (IBAction)signOut:(id)sender;
+
 @end
 
 @implementation WFMainWindowController
-
-- (id)init
-{
-    return [self initWithWindowNibName:NSStringFromClass([self class])];
-}
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -46,6 +44,13 @@
     [self.appPaneController configureView];
     [self.outlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:1]
                   byExtendingSelection:NO];
+    [self.window setExcludedFromWindowsMenu:YES];
+    [[NSApp delegate] startMainWindow];
+}
+
+- (void)windowWillClose:(NSNotification *)notification
+{
+    [[NSApp delegate] stopMainWindow];
 }
 
 - (void)reload:(id)sender
@@ -82,6 +87,12 @@
     if ([[splitView subviews] indexOfObject:view] == 0)
         return NO;
     return YES;
+}
+
+- (void)signOut:(id)sender
+{
+    [self.window close];
+    [[NSApp delegate] delegateSignOut:sender];
 }
 
 @end

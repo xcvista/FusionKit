@@ -7,6 +7,15 @@
 //
 
 #import "WFAppDelegate.h"
+#import "WFMainWindowController.h"
+#import "WFPacketInspectorWindowController.h"
+
+@interface WFAppDelegate ()
+
+@property (weak) IBOutlet NSMenuItem *mainWindowItem;
+@property (weak) IBOutlet NSMenuItem *packetInspectorItem;
+
+@end
 
 @implementation WFAppDelegate
 
@@ -25,7 +34,8 @@
 
 - (void)showWindowController:(NSWindowController *)windowController
 {
-    [self.windowControllers addObject:windowController];
+    if (![self.windowControllers containsObject:windowController])
+        [self.windowControllers addObject:windowController];
     [windowController showWindow:self];
 }
 
@@ -37,6 +47,105 @@
 - (NSWindowController *)rootWindowController
 {
     return self.windowControllers[0];
+}
+
+- (void)closeAllWindowControllerWithClass:(Class)class
+{
+    NSArray *currentVC = [self.windowControllers copy];
+    for (NSWindowController *object in currentVC)
+        if ([object isKindOfClass:class])
+            [object.window close];
+}
+
+- (void)finishLoginWithConnection:(FKConnection *)connection
+{
+    self.connection = connection;
+    [self showMainWindow:self];
+    [self.mainWindowItem setTarget:self];
+    [self.mainWindowItem setAction:@selector(showMainWindow:)];
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+    return !self.connection;
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
+{
+    if (!flag)
+        [self showMainWindow:self];
+    return YES;
+}
+
+- (void)showMainWindow:(id)sender
+{
+    NSWindowController *mainWindowController = nil;
+    
+    for (id object in self.windowControllers)
+        if ([object isKindOfClass:[WFMainWindowController class]])
+        {
+            mainWindowController = object;
+            break;
+        }
+    
+    if (!mainWindowController)
+    {
+        mainWindowController = [[WFMainWindowController alloc] init];
+        [self showWindowController:mainWindowController];
+    }
+    else
+    {
+        [[mainWindowController window] orderFront:sender];
+    }
+}
+
+- (void)startMainWindow
+{
+    [self.mainWindowItem setState:NSOnState];
+}
+
+- (void)stopMainWindow
+{
+    [self.mainWindowItem setState:NSOffState];
+}
+
+- (void)showPacketInspector:(id)sender
+{
+    NSWindowController *mainWindowController = nil;
+    
+    for (id object in self.windowControllers)
+        if ([object isKindOfClass:[WFPacketInspectorWindowController class]])
+        {
+            mainWindowController = object;
+            break;
+        }
+    
+    if (!mainWindowController)
+    {
+        mainWindowController = [[WFPacketInspectorWindowController alloc] init];
+        [self showWindowController:mainWindowController];
+    }
+    else
+    {
+        [[mainWindowController window] orderFront:sender];
+    }
+}
+
+- (void)startPacketInspector
+{
+    [self.packetInspectorItem setState:NSOnState];
+}
+
+- (void)stopPacketInspector
+{
+    [self.packetInspectorItem setState:NSOffState];
+}
+
+- (void)delegateSignOut:(id)sender
+{
+    [self.connection logoutWithError:nil];
+    self.connection = nil;
+    [self showWindowController:[[WFLoginWindowController alloc] init]];
 }
 
 @end

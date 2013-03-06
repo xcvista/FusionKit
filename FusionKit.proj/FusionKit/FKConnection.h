@@ -37,6 +37,8 @@ FKExtern NSString *const FKDidReceivePackageNotification;
 
 - (BOOL)keepAliveWithError:(NSError **)error;
 
+- (BOOL)logoutWithError:(NSError **)error;
+
 - (NSArray *)newsBeforeEpoch:(NSDate *)epoch
                        count:(NSUInteger)count
                         type:(NSString *)type

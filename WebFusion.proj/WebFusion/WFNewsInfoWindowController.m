@@ -25,11 +25,6 @@
 
 @implementation WFNewsInfoWindowController
 
-- (id)init
-{
-    return [self initWithWindowNibName:NSStringFromClass([self class])];
-}
-
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -65,6 +60,8 @@
     
     [self.authorField setStringValue:self.newsController.subnote];
     
+    [[self.webView mainFrame] loadHTMLString:self.newsController.fullHTMLContent
+                                     baseURL:nil];
     // Load images with a subthread - speed issue.
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
