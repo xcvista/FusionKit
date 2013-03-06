@@ -9,6 +9,7 @@
 #import "WFAppDelegate.h"
 #import "WFMainWindowController.h"
 #import "WFPacketInspectorWindowController.h"
+#import "WFAboutBoxWindowController.h"
 
 @interface WFAppDelegate ()
 
@@ -146,6 +147,28 @@
     [self.connection logoutWithError:nil];
     self.connection = nil;
     [self showWindowController:[[WFLoginWindowController alloc] init]];
+}
+
+- (void)showAbout:(id)sender
+{
+    NSWindowController *mainWindowController = nil;
+    
+    for (id object in self.windowControllers)
+        if ([object isKindOfClass:[WFAboutBoxWindowController class]])
+        {
+            mainWindowController = object;
+            break;
+        }
+    
+    if (!mainWindowController)
+    {
+        mainWindowController = [[WFAboutBoxWindowController alloc] init];
+        [self showWindowController:mainWindowController];
+    }
+    else
+    {
+        [[mainWindowController window] orderFront:sender];
+    }
 }
 
 @end

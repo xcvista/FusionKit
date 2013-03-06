@@ -25,6 +25,7 @@
 - (void)closeAllWindowControllerWithClass:(Class)class;
 
 - (IBAction)delegateSignOut:(id)sender;
+- (IBAction)showAbout:(id)sender;
 
 - (IBAction)showMainWindow:(id)sender;
 - (void)startMainWindow;

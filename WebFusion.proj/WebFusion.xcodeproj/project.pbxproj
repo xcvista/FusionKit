@@ -58,6 +58,9 @@
 		1DA6DA2B16E7C4120004C7F7 /* FusionBinding.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
 		1DA6DA2C16E7C4120004C7F7 /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
 		1DA6DA2D16E7C4120004C7F7 /* PinyinKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */; };
+		1DA6DA3716E7DA020004C7F7 /* git-version.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3616E7DA020004C7F7 /* git-version.plist */; };
+		1DA6DA3C16E7DAD00004C7F7 /* WFAboutBoxWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3A16E7DAD00004C7F7 /* WFAboutBoxWindowController.m */; };
+		1DA6DA3D16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3B16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
 		1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -148,6 +151,10 @@
 		1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug/FusionKit.framework"; sourceTree = "<group>"; };
 		1DA6DA1916E7AA870004C7F7 /* PinyinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinyinKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug/PinyinKit.framework"; sourceTree = "<group>"; };
 		1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "icon-mac.icns"; sourceTree = "<group>"; };
+		1DA6DA3616E7DA020004C7F7 /* git-version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "git-version.plist"; sourceTree = "<group>"; };
+		1DA6DA3916E7DAD00004C7F7 /* WFAboutBoxWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAboutBoxWindowController.h; sourceTree = "<group>"; };
+		1DA6DA3A16E7DAD00004C7F7 /* WFAboutBoxWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAboutBoxWindowController.m; sourceTree = "<group>"; };
+		1DA6DA3B16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFAboutBoxWindowController.xib; sourceTree = "<group>"; };
 		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1DD337E916E72ED100BD1E28 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -219,6 +226,7 @@
 				1D20140016E65EB5006A87B1 /* WFAppDelegate.m */,
 				1DA6DA0A16E797410004C7F7 /* Packet Inspector */,
 				1DA6DA0D16E797780004C7F7 /* Login Window */,
+				1DA6DA3816E7DAB90004C7F7 /* About box */,
 				1DA6DA0C16E7976B0004C7F7 /* Main Window */,
 				1DA6DA0F16E797970004C7F7 /* News View */,
 				1D2013CC16E65E77006A87B1 /* Supporting Files */,
@@ -249,6 +257,7 @@
 				1D2013D116E65E78006A87B1 /* main.m */,
 				1D2013D316E65E78006A87B1 /* WebFusion-Prefix.pch */,
 				1D2013D416E65E78006A87B1 /* Credits.rtf */,
+				1DA6DA3616E7DA020004C7F7 /* git-version.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -334,6 +343,16 @@
 			name = "News Info";
 			sourceTree = "<group>";
 		};
+		1DA6DA3816E7DAB90004C7F7 /* About box */ = {
+			isa = PBXGroup;
+			children = (
+				1DA6DA3916E7DAD00004C7F7 /* WFAboutBoxWindowController.h */,
+				1DA6DA3A16E7DAD00004C7F7 /* WFAboutBoxWindowController.m */,
+				1DA6DA3B16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib */,
+			);
+			name = "About box";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,6 +360,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D2013DD16E65E78006A87B1 /* Build configuration list for PBXNativeTarget "WebFusion" */;
 			buildPhases = (
+				1DA6DA3516E7D82E0004C7F7 /* ShellScript */,
 				1D2013BE16E65E77006A87B1 /* Sources */,
 				1D2013BF16E65E77006A87B1 /* Frameworks */,
 				1D2013C016E65E77006A87B1 /* Resources */,
@@ -411,10 +431,28 @@
 				1DA6DA0116E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib in Resources */,
 				1DA6DA0616E786640004C7F7 /* WFIncomingPacketWindowController.xib in Resources */,
 				1DA6DA2316E7B5110004C7F7 /* icon-mac.icns in Resources */,
+				1DA6DA3716E7DA020004C7F7 /* git-version.plist in Resources */,
+				1DA6DA3D16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DA6DA3516E7D82E0004C7F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/..\nprintf \"{ \\\"git-version\\\" = \\\"%s\\\"; }\\n\" `git describe --always --tag` > $SRCROOT/WebFusion/git-version.plist\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D2013BE16E65E77006A87B1 /* Sources */ = {
@@ -438,6 +476,7 @@
 				1DA6DA0016E780ED0004C7F7 /* WFOutgoingPacketWindowController.m in Sources */,
 				1DA6DA0516E786640004C7F7 /* WFIncomingPacketWindowController.m in Sources */,
 				1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */,
+				1DA6DA3C16E7DAD00004C7F7 /* WFAboutBoxWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
