@@ -21,6 +21,7 @@
 @property id service;
 @property id ID;
 @property NSString *type;
+@property FKNews *refer;
 
 
 @end

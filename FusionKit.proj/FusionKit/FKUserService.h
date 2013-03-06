@@ -14,7 +14,7 @@
 @property id user;
 @property NSString *gate;
 @property NSString *account;
-@property NSString *key;
+// @property NSString *key; //this should not appear in client.
 @property NSDate *time;
 @property NSDate *update;
 

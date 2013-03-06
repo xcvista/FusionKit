@@ -27,6 +27,7 @@
         self.ID = [aDecoder decodeObjectForKey:@"id"];
         self.service = [aDecoder decodeObjectForKey:@"svr"];
         self.type = [aDecoder decodeObjectForKey:@"type"];
+        self.refer = [aDecoder decodeObjectOfClass:[FKNews class] forKey:@"refer"];
     }
     return self;
 }

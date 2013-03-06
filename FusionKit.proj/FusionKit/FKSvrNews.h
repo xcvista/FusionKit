@@ -15,7 +15,10 @@
 /*
  @interface FKServiceNews : NSObject <NSCoding>
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 @interface FKSvrNews : NSObject <NSCoding>
 
 @property NSString *svr;

@@ -11,10 +11,14 @@
                           // This is C, not Java. (Although Objective-C have features
                           // that looks a lot like Java.)
 
+<<<<<<< HEAD
 @implementation FKSvrNews // FIXME: Why did you renamed the class interface here?
                           // You added a colon which is also a troublemaker there.
                           // If you are really intended for that class, move code
                           // over to that file.
+=======
+@implementation FKSvrNews
+>>>>>>> master
                           // I assumed the code was not intended to be moved thinking
                           // the properties that existed matches.
                           // However I think you need to rename the classes to a better
@@ -22,9 +26,13 @@
                           // Xcode have strong code completion with clang powering it.
                           // Uncomment the following line (and the one in the header
                           // header file) to accept this change.
+<<<<<<< HEAD
 /*
  @implementation FKServiceNews
  */
+=======
+
+>>>>>>> master
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
