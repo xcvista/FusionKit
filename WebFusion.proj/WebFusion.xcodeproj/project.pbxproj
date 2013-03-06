@@ -191,47 +191,14 @@
 		1D2013CB16E65E77006A87B1 /* WebFusion */ = {
 			isa = PBXGroup;
 			children = (
-				1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */,
-				1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */,
-				1DA6D9F416E774E80004C7F7 /* NSWindowController+Autoload.h */,
-				1DA6D9F516E774E80004C7F7 /* NSWindowController+Autoload.m */,
-				1DA6D9F716E775340004C7F7 /* NSViewController+Autoload.h */,
-				1DA6D9F816E775350004C7F7 /* NSViewController+Autoload.m */,
-				1DA6DA0716E78B290004C7F7 /* NSString+JSONSanitizer.h */,
-				1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */,
+				1DA6DA0B16E797560004C7F7 /* Categories */,
 				1DD337BD16E661B700BD1E28 /* MainMenu.xib */,
 				1D2013FF16E65EB5006A87B1 /* WFAppDelegate.h */,
 				1D20140016E65EB5006A87B1 /* WFAppDelegate.m */,
-				1DA6D9E616E7675B0004C7F7 /* WFPacketInspectorWindowController.h */,
-				1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */,
-				1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */,
-				1DA6D9EE16E76D4B0004C7F7 /* WFOutgoingPacketInspector.h */,
-				1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */,
-				1DA6D9FD16E780EC0004C7F7 /* WFOutgoingPacketWindowController.h */,
-				1DA6D9FE16E780EC0004C7F7 /* WFOutgoingPacketWindowController.m */,
-				1DA6D9FF16E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib */,
-				1DA6D9F116E76E890004C7F7 /* WFIncomingPacketInspector.h */,
-				1DA6D9F216E76E890004C7F7 /* WFIncomingPacketInspector.m */,
-				1DA6DA0216E786630004C7F7 /* WFIncomingPacketWindowController.h */,
-				1DA6DA0316E786630004C7F7 /* WFIncomingPacketWindowController.m */,
-				1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */,
-				1D20140116E65EB5006A87B1 /* WFAppPaneController.h */,
-				1D20140216E65EB5006A87B1 /* WFAppPaneController.m */,
-				1D20140316E65EB5006A87B1 /* WFLoginWindowController.h */,
-				1D20140416E65EB5006A87B1 /* WFLoginWindowController.m */,
-				1D20140516E65EB5006A87B1 /* WFLoginWindowController.xib */,
-				1D20140616E65EB5006A87B1 /* WFMainWindowController.h */,
-				1D20140716E65EB5006A87B1 /* WFMainWindowController.m */,
-				1D20140816E65EB5006A87B1 /* WFMainWindowController.xib */,
-				1D20140916E65EB5006A87B1 /* WFNewsInfoWindowController.h */,
-				1D20140A16E65EB5006A87B1 /* WFNewsInfoWindowController.m */,
-				1D20140B16E65EB5006A87B1 /* WFNewsInfoWindowController.xib */,
-				1D20140C16E65EB5006A87B1 /* WFNewsItemViewController.h */,
-				1D20140D16E65EB5006A87B1 /* WFNewsItemViewController.m */,
-				1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */,
-				1D20140F16E65EB5006A87B1 /* WFNewsViewController.h */,
-				1D20141016E65EB5006A87B1 /* WFNewsViewController.m */,
-				1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */,
+				1DA6DA0A16E797410004C7F7 /* Packet Inspector */,
+				1DA6DA0D16E797780004C7F7 /* Login Window */,
+				1DA6DA0C16E7976B0004C7F7 /* Main Window */,
+				1DA6DA0F16E797970004C7F7 /* News View */,
 				1D2013CC16E65E77006A87B1 /* Supporting Files */,
 			);
 			path = WebFusion;
@@ -261,6 +228,87 @@
 				1D2013D416E65E78006A87B1 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DA6DA0A16E797410004C7F7 /* Packet Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				1DA6D9E616E7675B0004C7F7 /* WFPacketInspectorWindowController.h */,
+				1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */,
+				1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */,
+				1DA6D9EE16E76D4B0004C7F7 /* WFOutgoingPacketInspector.h */,
+				1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */,
+				1DA6D9FD16E780EC0004C7F7 /* WFOutgoingPacketWindowController.h */,
+				1DA6D9FE16E780EC0004C7F7 /* WFOutgoingPacketWindowController.m */,
+				1DA6D9FF16E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib */,
+				1DA6D9F116E76E890004C7F7 /* WFIncomingPacketInspector.h */,
+				1DA6D9F216E76E890004C7F7 /* WFIncomingPacketInspector.m */,
+				1DA6DA0216E786630004C7F7 /* WFIncomingPacketWindowController.h */,
+				1DA6DA0316E786630004C7F7 /* WFIncomingPacketWindowController.m */,
+				1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */,
+			);
+			name = "Packet Inspector";
+			sourceTree = "<group>";
+		};
+		1DA6DA0B16E797560004C7F7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */,
+				1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */,
+				1DA6D9F416E774E80004C7F7 /* NSWindowController+Autoload.h */,
+				1DA6D9F516E774E80004C7F7 /* NSWindowController+Autoload.m */,
+				1DA6D9F716E775340004C7F7 /* NSViewController+Autoload.h */,
+				1DA6D9F816E775350004C7F7 /* NSViewController+Autoload.m */,
+				1DA6DA0716E78B290004C7F7 /* NSString+JSONSanitizer.h */,
+				1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		1DA6DA0C16E7976B0004C7F7 /* Main Window */ = {
+			isa = PBXGroup;
+			children = (
+				1D20140616E65EB5006A87B1 /* WFMainWindowController.h */,
+				1D20140716E65EB5006A87B1 /* WFMainWindowController.m */,
+				1D20140816E65EB5006A87B1 /* WFMainWindowController.xib */,
+				1D20140116E65EB5006A87B1 /* WFAppPaneController.h */,
+				1D20140216E65EB5006A87B1 /* WFAppPaneController.m */,
+			);
+			name = "Main Window";
+			sourceTree = "<group>";
+		};
+		1DA6DA0D16E797780004C7F7 /* Login Window */ = {
+			isa = PBXGroup;
+			children = (
+				1D20140316E65EB5006A87B1 /* WFLoginWindowController.h */,
+				1D20140416E65EB5006A87B1 /* WFLoginWindowController.m */,
+				1D20140516E65EB5006A87B1 /* WFLoginWindowController.xib */,
+			);
+			name = "Login Window";
+			sourceTree = "<group>";
+		};
+		1DA6DA0F16E797970004C7F7 /* News View */ = {
+			isa = PBXGroup;
+			children = (
+				1D20140F16E65EB5006A87B1 /* WFNewsViewController.h */,
+				1D20141016E65EB5006A87B1 /* WFNewsViewController.m */,
+				1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */,
+				1D20140C16E65EB5006A87B1 /* WFNewsItemViewController.h */,
+				1D20140D16E65EB5006A87B1 /* WFNewsItemViewController.m */,
+				1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */,
+				1DA6DA1016E797A10004C7F7 /* News Info */,
+			);
+			name = "News View";
+			sourceTree = "<group>";
+		};
+		1DA6DA1016E797A10004C7F7 /* News Info */ = {
+			isa = PBXGroup;
+			children = (
+				1D20140916E65EB5006A87B1 /* WFNewsInfoWindowController.h */,
+				1D20140A16E65EB5006A87B1 /* WFNewsInfoWindowController.m */,
+				1D20140B16E65EB5006A87B1 /* WFNewsInfoWindowController.xib */,
+			);
+			name = "News Info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

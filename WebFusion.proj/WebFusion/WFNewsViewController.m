@@ -54,18 +54,14 @@
                                                                          error:&err];
                        dispatch_async(dispatch_get_main_queue(),
                                       ^{
+                                          RUNNING = NO;
                                           if (!news)
                                           {
-                                              NSAlert *alert = [NSAlert alertWithError:err];
-                                              [alert beginSheetModalForWindow:[appDelegate.rootWindowController window]
-                                                                modalDelegate:nil
-                                                               didEndSelector:nil
-                                                                  contextInfo:nil];
-                                              [NSApp terminate:self];
+                                              return ;
                                           }
                                           
                                           [self.collectionView setContent:news];
-                                          RUNNING = NO;
+                                          
                                       });
                        
                    });
@@ -108,15 +104,10 @@
                                                                              error:&err];
                            dispatch_async(dispatch_get_main_queue(),
                                           ^{
-                                              
+                                              RUNNING = NO;
                                               if (!news)
                                               {
-                                                  NSAlert *alert = [NSAlert alertWithError:err];
-                                                  [alert beginSheetModalForWindow:[appDelegate.rootWindowController window]
-                                                                    modalDelegate:nil
-                                                                   didEndSelector:nil
-                                                                      contextInfo:nil];
-                                                  [NSApp terminate:self];
+                                                  return;
                                               }
                                               
                                               [currentObjects addObjectsFromArray:news];
@@ -126,7 +117,7 @@
                                               if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
                                                   [self.scrollView flashScrollers];
                                               
-                                              RUNNING = NO;
+                                              
                                           });
                        });
         

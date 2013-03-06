@@ -161,7 +161,7 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
         uplinkObject[@"type"] = type;
     NSData *uplinkData = [FKJSONKeyedArchiver archivedDataWithRootObject:uplinkObject];
     
-    NSError *err;
+    NSError *err = nil;
     NSData *downlinkData = [self dataWithPostData:uplinkData
                                          toMethod:@"GetWhatzNew"
                                             error:&err];
@@ -179,7 +179,7 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     {
         FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
                                                  code:403
-                                             userInfo:@{@"response": result}]);
+                                             userInfo:nil]);
         return nil;
     }
     return result;
