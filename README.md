@@ -12,3 +12,4 @@ This SDK is brought to you by xcvista, Jack Shi as project founder, supervisor a
 * Client does not need to do any additional security process for server request or response.
 * Most of the rich-context is HTML format, you have to use a webbrowser component or parse it on your own.
 * Contacts contains avatar for quick identification. It is a URL string or a base64 encoded string like `data:image/gif;base64,/9j/...`
+* For security reason, you *MUST* use HTTP with secure socket layer to get access to the server (like https://www.shisoft.net/ajax/Login). Any insecure HTTP request will redirect to HTTPS with the same address.
