@@ -7,8 +7,24 @@
 //
 
 #import "FKSvrNews.h"
+#import "FKUserService.h" // NOTE: You always need to #import the used headers here.
+                          // This is C, not Java. (Although Objective-C have features
+                          // that looks a lot like Java.)
 
-@implementation FKUserService;
+@implementation FKSvrNews // FIXME: Why did you renamed the class interface here?
+                          // You added a colon which is also a troublemaker there.
+                          // If you are really intended for that class, move code
+                          // over to that file.
+                          // I assumed the code was not intended to be moved thinking
+                          // the properties that existed matches.
+                          // However I think you need to rename the classes to a better
+                          // name - In Objective-C we don't use abbrevisions since
+                          // Xcode have strong code completion with clang powering it.
+                          // Uncomment the following line (and the one in the header
+                          // header file) to accept this change.
+/*
+ @implementation FKServiceNews
+ */
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -17,7 +33,7 @@
         self.svr = [aDecoder decodeObjectForKey:@"svr"];
         self.svrId = [aDecoder decodeObjectForKey:@"svrId"];
         self.us = [aDecoder decodeObjectOfClass:[FKUserService class]
-                                           forKey:@"us"];
+                                         forKey:@"us"];
     }
     return self;
 }

@@ -17,7 +17,7 @@
 {
     if (self = [super init])
     {
-        self.id = [aDecoder decodeObjectForKey:@"id"];
+        self.ID = [aDecoder decodeObjectForKey:@"id"]; //FIXED: This property should be ID in CAPS.
         self.title = [aDecoder decodeObjectForKey:@"title"];
         self.content = [aDecoder decodeObjectForKey:@"content"];
         
@@ -30,14 +30,20 @@
         self.lastReplyDate =  [NSDate dateWithTimeIntervalSince1970:NSTimeIntervalFromFKTimestamp([[aDecoder decodeObjectForKey:@"datereply"] longLongValue])];
         self.lastReplyContact =  [aDecoder decodeObjectOfClass:[FKContact class]
                                                         forKey:@"replyAuthorUC"];
-        self.aid = [aDecoder decodeObject:@"aid"];
-        self.tags = [aDecoder de];
+        self.aid = [aDecoder decodeObjectForKey:@"aid"];
+        self.tags = [aDecoder decodeObjectForKey:@"tags"]; // Array of NSString can be directly decoded.
+                                                           // FIXME: I guessed the key.
         self.base = [aDecoder decodeObjectForKey:@"base"];
         self.root = [aDecoder decodeObjectForKey:@"root"];
-        self.friendly = [aDecoder decodeObjectForKey:@"isfriendly"];
-        self.isprivate = [aDecoder decodeObjectForKey:@"isprivate"];
-        self.viewedCount = [aDecoder decodeObjectForKey:@"viewed"];
-        //self.contacts =
+        self.friendly = [[aDecoder decodeObjectForKey:@"isfriendly"] boolValue];
+        self.private = [[aDecoder decodeObjectForKey:@"isprivate"] boolValue];
+        self.viewedCount = [[aDecoder decodeObjectForKey:@"viewed"] unsignedIntegerValue];
+        self.contacts = [aDecoder decodeObjectOfClass:[FKContact class]
+                                               forKey:@"contacts"]; // NOTE: Then decoding array of user-defined
+                                                                    // objects, use the class of its members as
+                                                                    // the class parameter. The decoder can detect
+                                                                    // if the objects are enclosed in an array.
+                                                                    // FIXME: I guessed the key.
     }
     return self;
 }
