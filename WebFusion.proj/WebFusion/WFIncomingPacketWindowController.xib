@@ -44,7 +44,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{120, 68}, {338, 471}}</string>
 				<int key="NSWTFlags">-1535638528</int>
-				<string key="NSWindowTitle">Incoming Packet</string>
+				<string key="NSWindowTitle"/>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -330,6 +330,7 @@
 									<string key="NSFrame">{{281, 1}, {16, 279}}</string>
 									<reference key="NSSuperview" ref="884260525"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:83</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="884260525"/>
@@ -422,7 +423,7 @@
 							<string key="NSFrame">{{17, 334}, {59, 17}}</string>
 							<reference key="NSSuperview" ref="390772817"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="14255878"/>
+							<reference key="NSNextKeyView" ref="482957707"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="258033651">
@@ -443,6 +444,7 @@
 							<string key="NSFrame">{{78, 334}, {243, 17}}</string>
 							<reference key="NSSuperview" ref="390772817"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="14255878"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="2575018">
