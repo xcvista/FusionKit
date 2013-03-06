@@ -15,7 +15,6 @@
 /*
  @interface FKServiceNews : NSObject <NSCoding>
  */
-
 @interface FKSvrNews : NSObject <NSCoding>
 
 @property NSString *svr;
