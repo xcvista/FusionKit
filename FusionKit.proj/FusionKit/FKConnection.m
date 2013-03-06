@@ -13,6 +13,9 @@
 #import "FKWrapper.h"
 #import "FKNews.h"
 
+NSString *const FKWillUploadPackageNotification = @"tk.maxius.fusionkit.packageup";
+NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packagedown";
+
 @implementation FKConnection
 
 - (id)initWithServerRoot:(NSURL *)serverRoot
@@ -49,11 +52,17 @@
     [request setHTTPShouldHandleCookies:YES];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:[self userAgent] forHTTPHeaderField:@"User-Agent"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:FKWillUploadPackageNotification
+                                                        object:self
+                                                      userInfo:@{@"package": request}];
     NSError *err = nil;
     NSHTTPURLResponse *response = nil;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request
                                                  returningResponse:&response
                                                              error:&err];
+    [[NSNotificationCenter defaultCenter] postNotificationName:FKDidReceivePackageNotification
+                                                        object:self
+                                                      userInfo:@{@"response": response, @"package": responseData, @"error": (err) ? err : [NSNull null]}];
     if (!responseData)
     {
         FKAssignError(error, err);
@@ -80,6 +89,9 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request
                                                  returningResponse:&response
                                                              error:&err];
+    [[NSNotificationCenter defaultCenter] postNotificationName:FKDidReceivePackageNotification
+                                                        object:self
+                                                      userInfo:@{@"response": response, @"package": responseData, @"error": (err) ? err : [NSNull null]}];
     if (!responseData)
     {
         FKAssignError(error, err);

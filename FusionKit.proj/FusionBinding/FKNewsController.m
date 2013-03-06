@@ -26,6 +26,20 @@
     return [[NSAttributedString alloc] initWithHTML:[self.HTMLContent dataUsingEncoding:NSUTF8StringEncoding] documentAttributes:NULL];
 }
 
+- (NSString *)fullHTMLContentNoSurronding
+{
+    NSString *content = ([self.news.content length]) ? self.news.content : self.news.title;
+    NSString *images = @"";
+    for (FKMedia *media in self.news.media)
+        images = [images stringByAppendingFormat:@"<div style=\"text-align: center;\"><img src=\"%@\" /></div>", media.link];
+    return [NSString stringWithFormat:@"<div>%@</div>%@", content, images];
+}
+
+- (NSString *)fullHTMLContent
+{
+    return [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:20pt;}</style></head><body>%@</body></html>", [self fullHTMLContentNoSurronding]];
+}
+
 - (NSString *)author
 {
     return
@@ -51,7 +65,7 @@
 
 - (NSString *)service
 {
-    return NSLocalizedStringFromTable(self.news.service, @"services", @"");
+    return NSLocalizedStringFromTableInBundle(self.news.service, @"services", [NSBundle bundleForClass:[self class]], @"");
 }
 
 - (NSString *)subnote

@@ -6,7 +6,10 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import <FusionKit/FKDecls.h>
+
+FKExtern NSString *const FKWillUploadPackageNotification;
+FKExtern NSString *const FKDidReceivePackageNotification;
 
 @protocol FKConnectionObject <NSCoding, NSObject>
 
