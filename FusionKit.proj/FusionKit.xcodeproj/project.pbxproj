@@ -82,7 +82,7 @@
 		1D2013B516E65E48006A87B1 /* FusionBinding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FusionBinding-Prefix.pch"; sourceTree = "<group>"; };
 		1D2013BC16E65E64006A87B1 /* FusionBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FusionBinding.h; sourceTree = "<group>"; };
 		1DA6D9E116E73FBF0004C7F7 /* services.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = services.strings; sourceTree = "<group>"; };
-		1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
+		1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
 		1DD337DD16E677EB00BD1E28 /* FKNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNewsController.h; sourceTree = "<group>"; };
 		1DD337DE16E677EB00BD1E28 /* FKNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNewsController.m; sourceTree = "<group>"; };
 		F5269AEA16E752960049EA09 /* FKUserContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKUserContact.h; sourceTree = "<group>"; };
