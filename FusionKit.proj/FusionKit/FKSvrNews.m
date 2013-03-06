@@ -8,6 +8,23 @@
 
 #import "FKSvrNews.h"
 
-@implementation FKSvrNews
+@implementation FKUserService;
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init])
+    {
+        self.svr = [aDecoder decodeObjectForKey:@"svr"];
+        self.svrId = [aDecoder decodeObjectForKey:@"svrId"];
+        self.us = [aDecoder decodeObjectOfClass:[FKUserService class]
+                                           forKey:@"us"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [self doesNotRecognizeSelector:_cmd];
+}
 
 @end
