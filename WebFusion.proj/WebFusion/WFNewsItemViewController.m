@@ -31,20 +31,11 @@
 
 @property BOOL spin;
 
-- (IBAction)share:(id)sender;
-- (IBAction)reply:(id)sender;
 - (IBAction)info:(id)sender;
-- (IBAction)star:(id)sender;
-- (IBAction)link:(id)sender;
 
 @end
 
 @implementation WFNewsItemViewController
-
-- (id)init
-{
-    return [self initWithNibName:NSStringFromClass([self class]) bundle:nil];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -105,7 +96,7 @@
     BOOL longTitle = width > 24;
     BOOL longContent = height > [self.contentField frame].size.height;
     
-    if (longContent || longTitle || [news.media count] > 0)
+    if (longContent || longTitle || [news.media count] > 0 || [news refer])
     {
         [self.infoButton setHidden:NO];
     }

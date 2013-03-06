@@ -33,11 +33,6 @@
 
 @implementation WFLoginWindowController
 
-- (id)init
-{
-    return [self initWithWindowNibName:NSStringFromClass([self class])];
-}
-
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -76,16 +71,6 @@
 - (BOOL)windowShouldClose:(id)sender
 {
     return !self.blockExit;
-}
-
-- (void)windowWillClose:(NSNotification *)notification
-{
-    if ([notification object] == self.window)
-    {
-        WFAppDelegate *delegate = [NSApp delegate];
-        if (!delegate.connection)
-            [NSApp terminate:self];
-    }
 }
 
 - (void)login:(id)sender
@@ -129,11 +114,11 @@
                            dispatch_async(dispatch_get_main_queue(),
                                           ^{
                                               WFAppDelegate *delegate = [NSApp delegate];
-                                              delegate.connection = connection;
-                                              [self.window orderOut:self];
+                                              [delegate finishLoginWithConnection:connection];
+                                              [self.window close];
                                               NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
                                               [userDefaults setObject:username forKey:@"username"];
-                                              [delegate showWindowController:[[WFMainWindowController alloc] init]];
+                                              [delegate showMainWindow:self];
                                               [delegate releaseWindowController:self];
                                           });
                        }
