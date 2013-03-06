@@ -59,7 +59,12 @@
                                           RUNNING = NO;
                                           if (!news)
                                           {
-                                              return ;
+                                              NSAlert *alert = [NSAlert alertWithError:err];
+                                              [alert beginSheetModalForWindow:self.window
+                                                                modalDelegate:nil
+                                                               didEndSelector:nil
+                                                                  contextInfo:nil];
+                                              return;
                                           }
                                           
                                           [self.collectionView setContent:news];
@@ -111,6 +116,11 @@
                                               RUNNING = NO;
                                               if (!news)
                                               {
+                                                  NSAlert *alert = [NSAlert alertWithError:err];
+                                                  [alert beginSheetModalForWindow:self.window
+                                                                    modalDelegate:nil
+                                                                   didEndSelector:nil
+                                                                      contextInfo:nil];
                                                   return;
                                               }
                                               

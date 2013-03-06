@@ -138,7 +138,12 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     }
     else
     {
-        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: NSLocalizedStringFromTableInBundle(@"User authentication failed.", @"error", [NSBundle bundleForClass:[self class]], @""), @"response": result, NSLocalizedRecoverySuggestionErrorKey: NSLocalizedStringFromTableInBundle(@"Check your handle and password.", @"error", [NSBundle bundleForClass:[self class]], @"")};
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                       NSLocalizedStringFromTableInBundle(@"User authentication failed.", @"error", [NSBundle bundleForClass:[self class]], @""),
+                                   @"response":
+                                       (result) ? result : [NSNull null],
+                                   NSLocalizedRecoverySuggestionErrorKey:
+                                       NSLocalizedStringFromTableInBundle(@"Check your handle and password.", @"error", [NSBundle bundleForClass:[self class]], @"")};
         FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
                                                  code:403
                                              userInfo:userInfo]);
@@ -178,9 +183,13 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     
     if (!result)
     {
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                       NSLocalizedStringFromTableInBundle(@"No data returned from news request.", @"error", [NSBundle bundleForClass:[self class]], @""),
+                                   NSLocalizedRecoverySuggestionErrorKey:
+                                       NSLocalizedStringFromTableInBundle(@"Retry later, or maybe you hvae depleted all your old messages.", @"error", [NSBundle bundleForClass:[self class]], @"")};
         FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
-                                                 code:403
-                                             userInfo:nil]);
+                                                 code:404
+                                             userInfo:userInfo]);
         return nil;
     }
     return result;

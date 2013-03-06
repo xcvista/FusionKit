@@ -10,4 +10,6 @@
 
 @interface WFNewsViewController : NSViewController
 
+@property (weak) IBOutlet NSWindow *window;
+
 @end

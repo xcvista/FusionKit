@@ -72,6 +72,8 @@
             return;
         self.currentApp = className;
         self.detailViewController = [[NSClassFromString(className) alloc] initWithNibName:className bundle:[NSBundle mainBundle]];
+        if ([self.detailViewController respondsToSelector:@selector(setWindow:)])
+            [self.detailViewController performSelector:@selector(setWindow:) withObject:self.window];
         [[self.detailViewController view] setFrame:self.rightSplitView.bounds];
         [[self.detailViewController view] setAutoresizingMask:18];
         [self.rightSplitView setSubviews:@[[self.detailViewController view]]];
