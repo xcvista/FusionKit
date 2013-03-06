@@ -25,8 +25,8 @@
 @property NSArray *tags;
 @property id base;
 @property id root;
-@property bool friendly;
-@property bool isprivate;
+@property BOOL friendly; // NOTE: Objective-C use BOOL in all CAPS.
+@property BOOL private;  // NOTE: It is okay to use C++ keywords as names in Objective-C.
 @property NSUInteger viewedCount;
 @property NSArray *contacts;
 @property NSArray *svrNews;

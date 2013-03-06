@@ -10,6 +10,12 @@
 
 @class FKUserService;
 
+// Change point if you intended to change the class name.
+
+/*
+ @interface FKServiceNews : NSObject <NSCoding>
+ */
+
 @interface FKSvrNews : NSObject <NSCoding>
 
 @property NSString *svr;
