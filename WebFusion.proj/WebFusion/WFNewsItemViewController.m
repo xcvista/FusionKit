@@ -14,6 +14,8 @@
 
 @interface WFNewsItemViewController ()
 
+@property IBOutlet FKNewsController *newsController;
+
 @property (weak) IBOutlet NSTextField *contentField;
 @property (weak) IBOutlet NSTextField *titleField;
 @property (weak) IBOutlet NSTextField *authorField;
@@ -85,14 +87,16 @@
     
     [self.loadingIndicator startAnimation:self];
     
-    FKNewsController *newsController = [[FKNewsController alloc] init];
-    newsController.news = news;
+    if (self.newsController)
+        self.newsController.news = news;
+    else
+        return;
     
     [self.titleField setStringValue:news.title];
     
-    [self.authorField setStringValue:[NSString stringWithFormat:@"%@\n%@\n%@", newsController.author, newsController.service, newsController.publishTime]];
+    [self.authorField setStringValue:self.newsController.subnote];
     
-    NSAttributedString *attributedString = newsController.content;
+    NSAttributedString *attributedString = self.newsController.content;
     [self.contentField setAttributedStringValue:attributedString];
     
     CGFloat height = MAX(166, [attributedString heightForWidth:[self.contentField bounds].size.width]);
@@ -132,33 +136,12 @@
 
 }
 
-- (void)share:(id)sender
-{
-    
-}
-
-- (void)reply:(id)sender
-{
-    
-}
-
 - (void)info:(id)sender
 {
     WFNewsInfoWindowController *newsInfo = [[WFNewsInfoWindowController alloc] init];
     WFAppDelegate *delegate = [NSApp delegate];
     newsInfo.news = [self representedObject];
     [delegate showWindowController:newsInfo];
-}
-
-- (void)star:(id)sender
-{
-    
-}
-
-- (void)link:(id)sender
-{
-    FKNews *news = [self representedObject];
-    [[NSWorkspace sharedWorkspace] openURL:news.link];
 }
 
 @end

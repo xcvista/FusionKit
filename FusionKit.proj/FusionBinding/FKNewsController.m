@@ -15,11 +15,15 @@
     return self.news.title;
 }
 
-- (NSAttributedString *)content
+- (NSString *)HTMLContent
 {
     NSString *content = ([self.news.content length]) ? self.news.content : self.news.title;
-    NSString *html = [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:20pt;}</style></head><body><div>%@</div></body></html>", content];
-    return [[NSAttributedString alloc] initWithHTML:[html dataUsingEncoding:NSUTF8StringEncoding] documentAttributes:NULL];
+    return [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:20pt;}</style></head><body><div>%@</div></body></html>", content];
+}
+
+- (NSAttributedString *)content
+{
+    return [[NSAttributedString alloc] initWithHTML:[self.HTMLContent dataUsingEncoding:NSUTF8StringEncoding] documentAttributes:NULL];
 }
 
 - (NSString *)author
@@ -48,6 +52,31 @@
 - (NSString *)service
 {
     return NSLocalizedStringFromTable(self.news.service, @"services", @"");
+}
+
+- (NSString *)subnote
+{
+    return [NSString stringWithFormat:@"%@\n%@\n%@", self.author, self.service, self.publishTime];
+}
+
+- (void)share:(id)sender
+{
+    
+}
+
+- (void)reply:(id)sender
+{
+    
+}
+
+- (void)star:(id)sender
+{
+    
+}
+
+- (void)link:(id)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:self.news.link];
 }
 
 @end

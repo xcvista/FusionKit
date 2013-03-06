@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <FusionKit/FusionKit.h>
+#import <WebKit/WebKit.h>
 
 @interface WFNewsInfoWindowController : NSWindowController
 
