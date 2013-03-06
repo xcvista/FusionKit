@@ -46,7 +46,7 @@
 			<object class="NSWindowTemplate" id="1005">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{196, 240}, {606, 560}}</string>
+				<string key="NSWindowRect">{{196, 240}, {864, 580}}</string>
 				<int key="NSWTFlags">544735232</int>
 				<string key="NSWindowTitle">WebFusion</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -76,7 +76,7 @@
 															<reference key="NSNextResponder" ref="111520382"/>
 															<int key="NSvFlags">256</int>
 															<array class="NSMutableArray" key="NSSubviews"/>
-															<string key="NSFrameSize">{157, 560}</string>
+															<string key="NSFrameSize">{147, 580}</string>
 															<reference key="NSSuperview" ref="111520382"/>
 															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="24511319"/>
@@ -93,7 +93,7 @@
 															<array class="NSMutableArray" key="NSTableColumns">
 																<object class="NSTableColumn" id="425264390">
 																	<string key="NSIdentifier">AutomaticTableColumnIdentifier.0</string>
-																	<double key="NSWidth">154</double>
+																	<double key="NSWidth">144</double>
 																	<double key="NSMinWidth">16</double>
 																	<double key="NSMaxWidth">1000</double>
 																	<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -191,7 +191,7 @@
 															<bool key="NSOutlineViewAutoresizesOutlineColumnKey">NO</bool>
 														</object>
 													</array>
-													<string key="NSFrameSize">{157, 560}</string>
+													<string key="NSFrameSize">{147, 580}</string>
 													<reference key="NSSuperview" ref="727040363"/>
 													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="496241048"/>
@@ -228,7 +228,7 @@
 													<double key="NSPercent">0.99328859060402686</double>
 												</object>
 											</array>
-											<string key="NSFrameSize">{157, 560}</string>
+											<string key="NSFrameSize">{147, 580}</string>
 											<reference key="NSSuperview" ref="1017825169"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="111520382"/>
@@ -243,7 +243,7 @@
 											<double key="NSMagnification">1</double>
 										</object>
 									</array>
-									<string key="NSFrameSize">{157, 560}</string>
+									<string key="NSFrameSize">{147, 580}</string>
 									<reference key="NSSuperview" ref="20526746"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="727040363"/>
@@ -257,10 +257,9 @@
 										<object class="NSTextField" id="633569152">
 											<reference key="NSNextResponder" ref="684111317"/>
 											<int key="NSvFlags">301</int>
-											<string key="NSFrame">{{134, 272}, {174, 17}}</string>
+											<string key="NSFrame">{{265, 282}, {174, 17}}</string>
 											<reference key="NSSuperview" ref="684111317"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView"/>
 											<object class="NSShadow" key="NSViewShadow">
 												<double key="NSShadowHoriz">1</double>
 												<double key="NSShadowVert">1</double>
@@ -298,7 +297,7 @@
 											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 										</object>
 									</array>
-									<string key="NSFrame">{{158, 0}, {448, 560}}</string>
+									<string key="NSFrame">{{148, 0}, {716, 580}}</string>
 									<reference key="NSSuperview" ref="20526746"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="633569152"/>
@@ -307,7 +306,7 @@
 									<string key="NSClassName">NSView</string>
 								</object>
 							</array>
-							<string key="NSFrameSize">{606, 560}</string>
+							<string key="NSFrameSize">{864, 580}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1017825169"/>
@@ -316,7 +315,7 @@
 							<int key="NSDividerStyle">2</int>
 						</object>
 					</array>
-					<string key="NSFrameSize">{606, 560}</string>
+					<string key="NSFrameSize">{864, 580}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="20526746"/>
@@ -453,7 +452,7 @@
 								<object class="NSTextField" id="191404507">
 									<reference key="NSNextResponder" ref="548552748"/>
 									<int key="NSvFlags">266</int>
-									<string key="NSFrame">{{25, 0}, {129, 17}}</string>
+									<string key="NSFrame">{{25, 0}, {119, 17}}</string>
 									<reference key="NSSuperview" ref="548552748"/>
 									<reference key="NSNextKeyView" ref="301403656"/>
 									<string key="NSReuseIdentifierKey">_NS:80</string>
@@ -471,7 +470,7 @@
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								</object>
 							</array>
-							<string key="NSFrame">{{1, 14}, {154, 17}}</string>
+							<string key="NSFrame">{{1, 14}, {144, 17}}</string>
 							<reference key="NSNextKeyView" ref="947445543"/>
 							<string key="NSReuseIdentifierKey">DataCell</string>
 						</object>
@@ -597,7 +596,7 @@
 							<object class="NSTextField" id="24511319">
 								<nil key="NSNextResponder"/>
 								<int key="NSvFlags">266</int>
-								<string key="NSFrame">{{1, 0}, {154, 14}}</string>
+								<string key="NSFrame">{{1, 0}, {144, 14}}</string>
 								<reference key="NSNextKeyView" ref="548552748"/>
 								<string key="NSReuseIdentifierKey">_NS:101</string>
 								<bool key="NSEnabled">YES</bool>

@@ -19,7 +19,6 @@
 		1D20135816E65D85006A87B1 /* dict.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D20134F16E65D85006A87B1 /* dict.txt */; };
 		1D20135916E65D85006A87B1 /* NSString+Pinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20135016E65D85006A87B1 /* NSString+Pinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D20135A16E65D85006A87B1 /* NSString+Pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20135116E65D85006A87B1 /* NSString+Pinyin.m */; };
-		1D20135B16E65D85006A87B1 /* PinyinKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D20135216E65D85006A87B1 /* PinyinKit-Info.plist */; };
 		1D20135D16E65D85006A87B1 /* PinyinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20135416E65D85006A87B1 /* PinyinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D20135F16E65D85006A87B1 /* PYPinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20135616E65D85006A87B1 /* PYPinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D20136016E65D85006A87B1 /* PYPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20135716E65D85006A87B1 /* PYPinyin.m */; };
@@ -263,7 +262,6 @@
 			files = (
 				1D20134716E65D48006A87B1 /* InfoPlist.strings in Resources */,
 				1D20135816E65D85006A87B1 /* dict.txt in Resources */,
-				1D20135B16E65D85006A87B1 /* PinyinKit-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +493,7 @@
 				1D20133016E65D07006A87B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D20134C16E65D48006A87B1 /* Build configuration list for PBXNativeTarget "PinyinKit" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +502,7 @@
 				1D20134E16E65D48006A87B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

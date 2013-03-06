@@ -7,12 +7,14 @@
 //
 
 #import "WFNewsItemViewController.h"
-//#import <FusionBinding/FusionBinding.h>
+#import <FusionBinding/FusionBinding.h>
 #import "NSString+Geometrics.h"
 #import "WFNewsInfoWindowController.h"
 #import "WFAppDelegate.h"
 
 @interface WFNewsItemViewController ()
+
+@property IBOutlet FKNewsController *newsController;
 
 @property (weak) IBOutlet NSTextField *contentField;
 @property (weak) IBOutlet NSTextField *titleField;
@@ -24,6 +26,8 @@
 @property (weak) IBOutlet NSButton *infoButton;
 @property (weak) IBOutlet NSButton *starButton;
 @property (weak) IBOutlet NSButton *linkButton;
+
+@property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
 
 @property BOOL spin;
 
@@ -81,10 +85,18 @@
         [self.linkButton setHidden:YES];
     }
     
+    [self.loadingIndicator startAnimation:self];
+    
+    if (self.newsController)
+        self.newsController.news = news;
+    else
+        return;
+    
     [self.titleField setStringValue:news.title];
-    NSString *content = ([news.content length]) ? news.content : news.title;
-    NSString *html = [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:20pt;}</style></head><body><div>%@</div></body></html>", content];
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithHTML:[html dataUsingEncoding:NSUTF8StringEncoding] documentAttributes:NULL];
+    
+    [self.authorField setStringValue:self.newsController.subnote];
+    
+    NSAttributedString *attributedString = self.newsController.content;
     [self.contentField setAttributedStringValue:attributedString];
     
     CGFloat height = MAX(166, [attributedString heightForWidth:[self.contentField bounds].size.width]);
@@ -118,19 +130,10 @@
                                           {
                                               self.imageView.image = [[NSImage alloc] initWithData:image];
                                           }
+                                          [self.loadingIndicator stopAnimation:self];
                                       });
                    });
 
-}
-
-- (void)share:(id)sender
-{
-    
-}
-
-- (void)reply:(id)sender
-{
-    
 }
 
 - (void)info:(id)sender
@@ -139,17 +142,6 @@
     WFAppDelegate *delegate = [NSApp delegate];
     newsInfo.news = [self representedObject];
     [delegate showWindowController:newsInfo];
-}
-
-- (void)star:(id)sender
-{
-    
-}
-
-- (void)link:(id)sender
-{
-    FKNews *news = [self representedObject];
-    [[NSWorkspace sharedWorkspace] openURL:news.link];
 }
 
 @end
