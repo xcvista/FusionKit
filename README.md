@@ -9,7 +9,9 @@ This SDK is brought to you by xcvista, Jack Shi as project founder, supervisor a
 
 * WebFusion does not use any practical authorize mechanism. Client can get access to the user private server data by  sending request with acceptable user cookies. Clients can only get user cookies by calling the `Login` with user name and password.
 * The client API form server does not need cache to get it working, you can get everyting you need form the server response. Cache is recommend for better user experience to preload when the internet is jammed or blocked.
-* Client does not need to do any additional security process for server request or response.
+* Client does not need to do any additional security process for server request or response data. That means you don't need to remove unexpected scripts or code from server or remove them before send to the server.
 * Most of the rich-context is HTML format, you have to use a webbrowser component or parse it on your own.
 * Contacts contains avatar for quick identification. It is a URL string or a base64 encoded string like `data:image/gif;base64,/9j/...`
 * For security reason, you *MUST* use HTTP with secure socket layer to get access to the server (like https://www.shisoft.net/ajax/Login). Any insecure HTTP request will redirect to HTTPS with the same address.
+* For security reason, you *MUST* use POST method. Any other method will be ignored.
+* Cookie should be delivered in any request after user logged in. Store user cookies for next startup will keep user online without authorization.
