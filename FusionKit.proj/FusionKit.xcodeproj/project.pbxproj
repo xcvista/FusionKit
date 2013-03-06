@@ -36,6 +36,8 @@
 		1D2013BD16E65E64006A87B1 /* FusionBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2013BC16E65E64006A87B1 /* FusionBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D20143716E6603C006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20136616E65DE2006A87B1 /* FusionKit.framework */; };
 		1D20143916E66046006A87B1 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143816E66046006A87B1 /* Base64Kit.framework */; };
+		1DD337DF16E677EB00BD1E28 /* FKNewsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD337DD16E677EB00BD1E28 /* FKNewsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DD337E016E677EB00BD1E28 /* FKNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD337DE16E677EB00BD1E28 /* FKNewsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,7 +76,9 @@
 		1D2013B316E65E48006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D2013B516E65E48006A87B1 /* FusionBinding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FusionBinding-Prefix.pch"; sourceTree = "<group>"; };
 		1D2013BC16E65E64006A87B1 /* FusionBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FusionBinding.h; sourceTree = "<group>"; };
-		1D20143816E66046006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
+		1D20143816E66046006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
+		1DD337DD16E677EB00BD1E28 /* FKNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNewsController.h; sourceTree = "<group>"; };
+		1DD337DE16E677EB00BD1E28 /* FKNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNewsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				1D2013BC16E65E64006A87B1 /* FusionBinding.h */,
+				1DD337DD16E677EB00BD1E28 /* FKNewsController.h */,
+				1DD337DE16E677EB00BD1E28 /* FKNewsController.m */,
 				1D2013B016E65E48006A87B1 /* Supporting Files */,
 			);
 			path = FusionBinding;
@@ -224,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D2013BD16E65E64006A87B1 /* FusionBinding.h in Headers */,
+				1DD337DF16E677EB00BD1E28 /* FKNewsController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD337E016E677EB00BD1E28 /* FKNewsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +551,7 @@
 				1D20137B16E65DE2006A87B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D2013B916E65E48006A87B1 /* Build configuration list for PBXNativeTarget "FusionBinding" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +560,7 @@
 				1D2013BB16E65E48006A87B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

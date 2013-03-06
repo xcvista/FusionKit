@@ -54,6 +54,23 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *oldUsername = [userDefaults objectForKey:@"username"];
+    if ([oldUsername length])
+        [self.usernameField setStringValue:oldUsername];
+    
+    NSString *username = [self.usernameField stringValue];
+    NSString *password = [self.passwordField stringValue];
+    if (![username length])
+    {
+        [self.usernameField becomeFirstResponder];
+    }
+    else if (![password length])
+    {
+        [self.passwordField becomeFirstResponder];
+    }
+    
+    [self.window setDefaultButtonCell:self.loginButton.cell];
 }
 
 - (BOOL)windowShouldClose:(id)sender
@@ -76,8 +93,16 @@
     NSString *username = [self.usernameField stringValue];
     NSString *password = [self.passwordField stringValue];
     
-    if (![username length] || ![password length])
+    if (![username length])
+    {
+        [self.usernameField becomeFirstResponder];
         return;
+    }
+    else if (![password length])
+    {
+        [self.passwordField becomeFirstResponder];
+        return;
+    }
     
     for (NSControl *control in [[self.everythingBox subviews][0] subviews])
     {
@@ -106,6 +131,8 @@
                                               WFAppDelegate *delegate = [NSApp delegate];
                                               delegate.connection = connection;
                                               [self.window orderOut:self];
+                                              NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+                                              [userDefaults setObject:username forKey:@"username"];
                                               [delegate showWindowController:[[WFMainWindowController alloc] init]];
                                               [delegate releaseWindowController:self];
                                           });
@@ -126,6 +153,8 @@
                                                                 modalDelegate:nil
                                                                didEndSelector:nil
                                                                   contextInfo:nil];
+                                              [self.passwordField becomeFirstResponder];
+                                              [self.passwordField selectText:self];
                                           });
                        }
                    });

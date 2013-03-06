@@ -15,6 +15,7 @@
 
 @property (weak) IBOutlet NSCollectionView *collectionView;
 @property (weak) IBOutlet NSScroller *vertivalScroller;
+@property (weak) IBOutlet NSScrollView *scrollView;
 
 @property (weak) id oldTarget;
 @property SEL oldAction;
@@ -35,6 +36,41 @@
     return self;
 }
 
+- (void)reload:(id)sender
+{
+    static BOOL RUNNING;
+    dispatch_async(dispatch_get_main_queue(),
+                   ^{
+                       if (RUNNING)
+                           return;
+                       RUNNING = YES;
+                       
+                       NSError *err;
+                       WFAppDelegate *appDelegate = [NSApp delegate];
+                       
+                       NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
+                                                                         count:50
+                                                                          type:nil
+                                                                         error:&err];
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^{
+                                          if (!news)
+                                          {
+                                              NSAlert *alert = [NSAlert alertWithError:err];
+                                              [alert beginSheetModalForWindow:[appDelegate.rootWindowController window]
+                                                                modalDelegate:nil
+                                                               didEndSelector:nil
+                                                                  contextInfo:nil];
+                                              [NSApp terminate:self];
+                                          }
+                                          
+                                          [self.collectionView setContent:news];
+                                          RUNNING = NO;
+                                      });
+                       
+                   });
+}
+
 - (void)awakeFromNib
 {
     self.oldTarget = self.vertivalScroller.target;
@@ -43,29 +79,15 @@
     self.vertivalScroller.target = self;
     self.vertivalScroller.action = @selector(scrollerChanged:);
     
-    NSError *err;
-    WFAppDelegate *appDelegate = [NSApp delegate];
-    NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
-                                                      count:50
-                                                       type:nil
-                                                      error:&err];
-    
-    if (!news)
-    {
-        NSAlert *alert = [NSAlert alertWithError:err];
-        [alert beginSheetModalForWindow:[appDelegate.rootWindowController window]
-                          modalDelegate:nil
-                         didEndSelector:nil
-                            contextInfo:nil];
-        [NSApp terminate:self];
-    }
-    
-    [self.collectionView setContent:news];
+    [self reload:self];
 }
 
 - (void)scrollerChanged:(id)sender
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [self.oldTarget performSelector:self.oldAction withObject:sender]; //Redispatch it.
+#pragma clang diagnostic pop
     
     if ([self.vertivalScroller doubleValue] > 0.99)
     {
@@ -100,6 +122,9 @@
                                               [currentObjects addObjectsFromArray:news];
                                               
                                               [self.collectionView setContent:currentObjects];
+                                              
+                                              if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
+                                                  [self.scrollView flashScrollers];
                                               
                                               RUNNING = NO;
                                           });

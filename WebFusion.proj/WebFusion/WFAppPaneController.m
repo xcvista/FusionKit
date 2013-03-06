@@ -59,7 +59,6 @@
 {
     if ([self.outlineView selectedRow] >= 0)
     {
-        NSLog(@"Row %li selected", [self.outlineView selectedRow]);
         id item = [self.outlineView itemAtRow:[self.outlineView selectedRow]];
         if ([self.outlineView parentForItem:item] != nil)
         {
@@ -91,6 +90,11 @@
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
 {
     return [self.titles containsObject:item];
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item
+{
+    return ![self.titles containsObject:item];
 }
 
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item
