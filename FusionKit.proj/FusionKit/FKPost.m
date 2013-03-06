@@ -33,11 +33,6 @@
                                                         forKey:@"replyAuthorUC"];
         self.aid = [aDecoder decodeObjectForKey:@"aid"];
         self.tags = [aDecoder decodeObjectForKey:@"tags"]; // Array of NSString can be directly decoded.
-<<<<<<< HEAD
-                                                           // FIXME: I guessed the key.
-=======
-                                                           
->>>>>>> master
         self.base = [aDecoder decodeObjectForKey:@"base"];
         self.root = [aDecoder decodeObjectForKey:@"root"];
         self.friendly = [[aDecoder decodeObjectForKey:@"isfriendly"] boolValue];
@@ -48,12 +43,8 @@
                                                                     // objects, use the class of its members as
                                                                     // the class parameter. The decoder can detect
                                                                     // if the objects are enclosed in an array.
-<<<<<<< HEAD
-                                                                    // FIXME: I guessed the key.
-=======
         self.svrNews = [aDecoder decodeObjectOfClass:[FKSvrNews class]
                                                forKey:@"svrNews"];
->>>>>>> master
     }
     return self;
 }
