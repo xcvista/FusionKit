@@ -138,9 +138,10 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     }
     else
     {
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: NSLocalizedStringFromTableInBundle(@"User authentication failed.", @"error", [NSBundle bundleForClass:[self class]], @""), @"response": result, NSLocalizedRecoverySuggestionErrorKey: NSLocalizedStringFromTableInBundle(@"Check your handle and password.", @"error", [NSBundle bundleForClass:[self class]], @"")};
         FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
                                                  code:403
-                                             userInfo:@{@"response": result}]);
+                                             userInfo:userInfo]);
         return NO;
     }
 }
