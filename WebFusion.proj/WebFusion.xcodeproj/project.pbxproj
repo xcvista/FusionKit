@@ -41,6 +41,17 @@
 		1D20143416E66026006A87B1 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143116E66026006A87B1 /* Base64Kit.framework */; };
 		1D20143516E66026006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143216E66026006A87B1 /* FusionKit.framework */; };
 		1D20143616E66026006A87B1 /* PinyinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20143316E66026006A87B1 /* PinyinKit.framework */; };
+		1DA6D9E916E7675B0004C7F7 /* WFPacketInspectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */; };
+		1DA6D9EA16E7675B0004C7F7 /* WFPacketInspectorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */; };
+		1DA6D9F016E76D4C0004C7F7 /* WFOutgoingPacketInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */; };
+		1DA6D9F316E76E8A0004C7F7 /* WFIncomingPacketInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9F216E76E890004C7F7 /* WFIncomingPacketInspector.m */; };
+		1DA6D9F616E774E80004C7F7 /* NSWindowController+Autoload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9F516E774E80004C7F7 /* NSWindowController+Autoload.m */; };
+		1DA6D9F916E775350004C7F7 /* NSViewController+Autoload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9F816E775350004C7F7 /* NSViewController+Autoload.m */; };
+		1DA6DA0016E780ED0004C7F7 /* WFOutgoingPacketWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9FE16E780EC0004C7F7 /* WFOutgoingPacketWindowController.m */; };
+		1DA6DA0116E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9FF16E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib */; };
+		1DA6DA0516E786640004C7F7 /* WFIncomingPacketWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0316E786630004C7F7 /* WFIncomingPacketWindowController.m */; };
+		1DA6DA0616E786640004C7F7 /* WFIncomingPacketWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */; };
+		1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
 		1DD337E216E6795B00BD1E28 /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E116E6795B00BD1E28 /* FusionBinding.framework */; };
 		1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
@@ -95,6 +106,25 @@
 		1D20143116E66026006A87B1 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
 		1D20143216E66026006A87B1 /* FusionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionKit.framework; path = ../FusionKit.proj/build/Release/FusionKit.framework; sourceTree = "<group>"; };
 		1D20143316E66026006A87B1 /* PinyinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinyinKit.framework; path = ../Libraries.proj/build/Release/PinyinKit.framework; sourceTree = "<group>"; };
+		1DA6D9E616E7675B0004C7F7 /* WFPacketInspectorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPacketInspectorWindowController.h; sourceTree = "<group>"; };
+		1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPacketInspectorWindowController.m; sourceTree = "<group>"; };
+		1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPacketInspectorWindowController.xib; sourceTree = "<group>"; };
+		1DA6D9EE16E76D4B0004C7F7 /* WFOutgoingPacketInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFOutgoingPacketInspector.h; sourceTree = "<group>"; };
+		1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFOutgoingPacketInspector.m; sourceTree = "<group>"; };
+		1DA6D9F116E76E890004C7F7 /* WFIncomingPacketInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIncomingPacketInspector.h; sourceTree = "<group>"; };
+		1DA6D9F216E76E890004C7F7 /* WFIncomingPacketInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIncomingPacketInspector.m; sourceTree = "<group>"; };
+		1DA6D9F416E774E80004C7F7 /* NSWindowController+Autoload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindowController+Autoload.h"; sourceTree = "<group>"; };
+		1DA6D9F516E774E80004C7F7 /* NSWindowController+Autoload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindowController+Autoload.m"; sourceTree = "<group>"; };
+		1DA6D9F716E775340004C7F7 /* NSViewController+Autoload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+Autoload.h"; sourceTree = "<group>"; };
+		1DA6D9F816E775350004C7F7 /* NSViewController+Autoload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+Autoload.m"; sourceTree = "<group>"; };
+		1DA6D9FD16E780EC0004C7F7 /* WFOutgoingPacketWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFOutgoingPacketWindowController.h; sourceTree = "<group>"; };
+		1DA6D9FE16E780EC0004C7F7 /* WFOutgoingPacketWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFOutgoingPacketWindowController.m; sourceTree = "<group>"; };
+		1DA6D9FF16E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFOutgoingPacketWindowController.xib; sourceTree = "<group>"; };
+		1DA6DA0216E786630004C7F7 /* WFIncomingPacketWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIncomingPacketWindowController.h; sourceTree = "<group>"; };
+		1DA6DA0316E786630004C7F7 /* WFIncomingPacketWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIncomingPacketWindowController.m; sourceTree = "<group>"; };
+		1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIncomingPacketWindowController.xib; sourceTree = "<group>"; };
+		1DA6DA0716E78B290004C7F7 /* NSString+JSONSanitizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSONSanitizer.h"; sourceTree = "<group>"; };
+		1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSONSanitizer.m"; sourceTree = "<group>"; };
 		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1DD337E116E6795B00BD1E28 /* FusionBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FusionBinding.framework; path = ../FusionKit.proj/build/Release/FusionBinding.framework; sourceTree = "<group>"; };
 		1DD337E916E72ED100BD1E28 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -163,9 +193,28 @@
 			children = (
 				1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */,
 				1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */,
+				1DA6D9F416E774E80004C7F7 /* NSWindowController+Autoload.h */,
+				1DA6D9F516E774E80004C7F7 /* NSWindowController+Autoload.m */,
+				1DA6D9F716E775340004C7F7 /* NSViewController+Autoload.h */,
+				1DA6D9F816E775350004C7F7 /* NSViewController+Autoload.m */,
+				1DA6DA0716E78B290004C7F7 /* NSString+JSONSanitizer.h */,
+				1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */,
 				1DD337BD16E661B700BD1E28 /* MainMenu.xib */,
 				1D2013FF16E65EB5006A87B1 /* WFAppDelegate.h */,
 				1D20140016E65EB5006A87B1 /* WFAppDelegate.m */,
+				1DA6D9E616E7675B0004C7F7 /* WFPacketInspectorWindowController.h */,
+				1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */,
+				1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */,
+				1DA6D9EE16E76D4B0004C7F7 /* WFOutgoingPacketInspector.h */,
+				1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */,
+				1DA6D9FD16E780EC0004C7F7 /* WFOutgoingPacketWindowController.h */,
+				1DA6D9FE16E780EC0004C7F7 /* WFOutgoingPacketWindowController.m */,
+				1DA6D9FF16E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib */,
+				1DA6D9F116E76E890004C7F7 /* WFIncomingPacketInspector.h */,
+				1DA6D9F216E76E890004C7F7 /* WFIncomingPacketInspector.m */,
+				1DA6DA0216E786630004C7F7 /* WFIncomingPacketWindowController.h */,
+				1DA6DA0316E786630004C7F7 /* WFIncomingPacketWindowController.m */,
+				1DA6DA0416E786630004C7F7 /* WFIncomingPacketWindowController.xib */,
 				1D20140116E65EB5006A87B1 /* WFAppPaneController.h */,
 				1D20140216E65EB5006A87B1 /* WFAppPaneController.m */,
 				1D20140316E65EB5006A87B1 /* WFLoginWindowController.h */,
@@ -286,6 +335,9 @@
 				1D20141B16E65EB5006A87B1 /* WFNewsItemViewController.xib in Resources */,
 				1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */,
 				1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */,
+				1DA6D9EA16E7675B0004C7F7 /* WFPacketInspectorWindowController.xib in Resources */,
+				1DA6DA0116E780ED0004C7F7 /* WFOutgoingPacketWindowController.xib in Resources */,
+				1DA6DA0616E786640004C7F7 /* WFIncomingPacketWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +357,14 @@
 				1D20141816E65EB5006A87B1 /* WFNewsInfoWindowController.m in Sources */,
 				1D20141A16E65EB5006A87B1 /* WFNewsItemViewController.m in Sources */,
 				1D20141C16E65EB5006A87B1 /* WFNewsViewController.m in Sources */,
+				1DA6D9E916E7675B0004C7F7 /* WFPacketInspectorWindowController.m in Sources */,
+				1DA6D9F016E76D4C0004C7F7 /* WFOutgoingPacketInspector.m in Sources */,
+				1DA6D9F316E76E8A0004C7F7 /* WFIncomingPacketInspector.m in Sources */,
+				1DA6D9F616E774E80004C7F7 /* NSWindowController+Autoload.m in Sources */,
+				1DA6D9F916E775350004C7F7 /* NSViewController+Autoload.m in Sources */,
+				1DA6DA0016E780ED0004C7F7 /* WFOutgoingPacketWindowController.m in Sources */,
+				1DA6DA0516E786640004C7F7 /* WFIncomingPacketWindowController.m in Sources */,
+				1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

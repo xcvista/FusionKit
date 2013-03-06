@@ -18,7 +18,7 @@
 - (NSString *)HTMLContent
 {
     NSString *content = ([self.news.content length]) ? self.news.content : self.news.title;
-    return [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:20pt;}</style></head><body><div>%@</div></body></html>", content];
+    return [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:13px;}</style></head><body><div>%@</div></body></html>", content];
 }
 
 - (NSAttributedString *)content
@@ -37,7 +37,25 @@
 
 - (NSString *)fullHTMLContent
 {
-    return [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:20pt;}</style></head><body>%@</body></html>", [self fullHTMLContentNoSurronding]];
+    NSString *content = [self fullHTMLContentNoSurronding];
+    if (self.news.refer)
+    {
+        content = [content stringByAppendingString:@"<hr /><div>In reply to:</div>"];
+        FKNews *refer = self.news.refer;
+        do
+        {
+            FKNewsController *newsController = [[FKNewsController alloc] init];
+            newsController.news = refer;
+            content = [content stringByAppendingFormat:@"<div><img src=\"%@\" style=\"max-height: 60px;float: left; margin: 4px;\"><div style=\"font-weight: bold; size:20px;\">%@</div><blockquote><div>%@</div><div>%@</div><div>%@</div></blockquote>%@</div>", refer.author.avatar, newsController.title, newsController.author, newsController.service, newsController.publishTime, [newsController fullHTMLContentNoSurronding]];
+        }
+        while ((refer = refer.refer));
+    }
+    return [NSString stringWithFormat:@"<html><head><meta charset=\"utf-8\" /><style>body{font-family:\"Lucida Grande\";size:13px;}img{max-width: 60%% !important}</style></head><body>%@</body></html>", content];
+}
+
+- (NSAttributedString *)fullContent
+{
+    return [[NSAttributedString alloc] initWithHTML:[self.fullHTMLContent dataUsingEncoding:NSUTF8StringEncoding] documentAttributes:NULL];
 }
 
 - (NSString *)author

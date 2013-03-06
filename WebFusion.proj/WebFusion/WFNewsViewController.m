@@ -39,7 +39,7 @@
 - (void)reload:(id)sender
 {
     static BOOL RUNNING;
-    dispatch_async(dispatch_get_main_queue(),
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
                        if (RUNNING)
                            return;
@@ -49,7 +49,7 @@
                        WFAppDelegate *appDelegate = [NSApp delegate];
                        
                        NSArray *news = [appDelegate.connection newsBeforeEpoch:[NSDate distantFuture]
-                                                                         count:50
+                                                                         count:25
                                                                           type:nil
                                                                          error:&err];
                        dispatch_async(dispatch_get_main_queue(),
@@ -103,7 +103,7 @@
                            RUNNING = YES;
                            NSError *err;
                            NSArray *news = [appDelegate.connection newsBeforeEpoch:[[currentObjects lastObject] publishDate]
-                                                                             count:50
+                                                                             count:25
                                                                               type:nil
                                                                              error:&err];
                            dispatch_async(dispatch_get_main_queue(),
