@@ -34,6 +34,7 @@
 		1D74A6D416E83021002132D4 /* Places.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6CD16E83021002132D4 /* Places.pdf */; };
 		1D74A6D516E83021002132D4 /* Posts.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6CE16E83021002132D4 /* Posts.pdf */; };
 		1D74A6D816E83122002132D4 /* SidebarTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74A6D716E83122002132D4 /* SidebarTableCellView.m */; };
+		1D74A6DE16E84112002132D4 /* Refresh.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6DD16E84112002132D4 /* Refresh.pdf */; };
 		1DA6D9E916E7675B0004C7F7 /* WFPacketInspectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */; };
 		1DA6D9EA16E7675B0004C7F7 /* WFPacketInspectorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */; };
 		1DA6D9F016E76D4C0004C7F7 /* WFOutgoingPacketInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */; };
@@ -129,6 +130,7 @@
 		1D74A6CE16E83021002132D4 /* Posts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Posts.pdf; sourceTree = "<group>"; };
 		1D74A6D616E83122002132D4 /* SidebarTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableCellView.h; sourceTree = "<group>"; };
 		1D74A6D716E83122002132D4 /* SidebarTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableCellView.m; sourceTree = "<group>"; };
+		1D74A6DD16E84112002132D4 /* Refresh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Refresh.pdf; sourceTree = "<group>"; };
 		1DA6D9E616E7675B0004C7F7 /* WFPacketInspectorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPacketInspectorWindowController.h; sourceTree = "<group>"; };
 		1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPacketInspectorWindowController.m; sourceTree = "<group>"; };
 		1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPacketInspectorWindowController.xib; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				1D74A6CC16E83021002132D4 /* News.pdf */,
 				1D74A6CD16E83021002132D4 /* Places.pdf */,
 				1D74A6CE16E83021002132D4 /* Posts.pdf */,
+				1D74A6DD16E84112002132D4 /* Refresh.pdf */,
 				1D2013CD16E65E77006A87B1 /* WebFusion-Info.plist */,
 				1D2013CE16E65E78006A87B1 /* InfoPlist.strings */,
 				1D2013D116E65E78006A87B1 /* main.m */,
@@ -471,6 +474,7 @@
 				1D74A6D316E83021002132D4 /* News.pdf in Resources */,
 				1D74A6D416E83021002132D4 /* Places.pdf in Resources */,
 				1D74A6D516E83021002132D4 /* Posts.pdf in Resources */,
+				1D74A6DE16E84112002132D4 /* Refresh.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

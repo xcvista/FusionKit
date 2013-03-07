@@ -322,7 +322,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="20526746"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1280, 800}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">NO</bool>
 			</object>
@@ -422,7 +422,7 @@
 								<object class="NSProgressIndicator" id="708231180">
 									<reference key="NSNextResponder" ref="491395706"/>
 									<int key="NSvFlags">297</int>
-									<string key="NSFrame">{{123, 5}, {16, 16}}</string>
+									<string key="NSFrame">{{128, 5}, {16, 16}}</string>
 									<reference key="NSSuperview" ref="491395706"/>
 									<reference key="NSNextKeyView" ref="301403656"/>
 									<string key="NSReuseIdentifierKey">_NS:945</string>

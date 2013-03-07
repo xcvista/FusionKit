@@ -101,7 +101,9 @@
     [self stopLoading];
     [self.button setHidden:NO];
     [self.button setTitle:nil];
-    [self.button setImage:[NSImage imageNamed:NSImageNameRefreshTemplate]];
+    NSImage *image = [NSImage imageNamed:@"Refresh"];
+    [image setTemplate:YES];
+    [self.button setImage:image];
     [self.button sizeToFit];
     // Make it appear as a normal label and not a button
     // [[self.button cell] setHighlightsBy:0];
@@ -111,6 +113,11 @@
 - (NSString *)badge
 {
     return [self.button isHidden] ? nil : [self.button title];
+}
+
+- (BOOL)isRefreshBadge
+{
+    return ![self.button isHidden] && ![[self.button title] length];
 }
 
 - (void)beginLoading

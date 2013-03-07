@@ -63,7 +63,7 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
                                                              error:&err];
     [[NSNotificationCenter defaultCenter] postNotificationName:FKDidReceivePackageNotification
                                                         object:self
-                                                      userInfo:@{@"request": request, @"response": response, @"packet": responseData, @"error": (err) ? err : [NSNull null], @"date": [NSDate date], @"requestDate": sendDate}];
+                                                      userInfo:@{@"request": request, @"response": response, @"packet": responseData ? responseData : [NSNull null], @"error": (err) ? err : [NSNull null], @"date": [NSDate date], @"requestDate": sendDate}];
     if (!responseData)
     {
         FKAssignError(error, err);
@@ -85,9 +85,10 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:methodURL];
     [request setHTTPShouldHandleCookies:YES];
     [request setValue:[self userAgent] forHTTPHeaderField:@"User-Agent"];
+    NSDate *sendDate = [NSDate date];
     [[NSNotificationCenter defaultCenter] postNotificationName:FKWillUploadPackageNotification
                                                         object:self
-                                                      userInfo:@{@"packet": request, @"date": [NSDate date]}];
+                                                      userInfo:@{@"packet": request, @"date": sendDate}];
     NSError *err = nil;
     NSHTTPURLResponse *response = nil;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request
@@ -95,7 +96,7 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
                                                              error:&err];
     [[NSNotificationCenter defaultCenter] postNotificationName:FKDidReceivePackageNotification
                                                         object:self
-                                                      userInfo:@{@"request": request, @"response": response, @"packet": responseData, @"error": (err) ? err : [NSNull null], @"date": [NSDate date]}];
+                                                      userInfo:@{@"request": request, @"response": response, @"packet": responseData, @"error": (err) ? err : [NSNull null], @"date": [NSDate date], @"requestDate": sendDate}];
     if (!responseData)
     {
         FKAssignError(error, err);
@@ -198,7 +199,7 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
 - (BOOL)logoutWithError:(NSError *__autoreleasing *)error
 {
     NSError *err = nil;
-    if ([self dataWithGetFromMethod:@"logOut" error:&err])
+    if ([self dataWithGetFromMethod:@"../logout" error:&err])
     {
         return YES;
     }

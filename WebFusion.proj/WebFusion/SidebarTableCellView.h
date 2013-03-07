@@ -57,6 +57,7 @@
 - (void)setBadge:(NSString *)badge;
 - (void)setBadgeAsRefreshButton;
 - (NSString *)badge;
+- (BOOL)isRefreshBadge;
 - (void)beginLoading;
 - (void)stopLoading;
 

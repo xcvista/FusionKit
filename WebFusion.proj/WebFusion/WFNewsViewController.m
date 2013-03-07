@@ -17,6 +17,8 @@
 @property (weak) IBOutlet NSScroller *vertivalScroller;
 @property (weak) IBOutlet NSScrollView *scrollView;
 
+@property BOOL running;
+
 @property (weak) id oldTarget;
 @property SEL oldAction;
 
@@ -38,15 +40,14 @@
 
 - (void)reload:(id)sender
 {
-    static BOOL RUNNING;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSInteger loadCount = [userDefaults integerForKey:@"loadBatchSize"];
     [self.sidebarItem beginLoading];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
-                       if (RUNNING)
+                       if (self.running)
                            return;
-                       RUNNING = YES;
+                       self.running = YES;
                        
                        NSError *err;
                        WFAppDelegate *appDelegate = [NSApp delegate];
@@ -57,7 +58,7 @@
                                                                          error:&err];
                        dispatch_async(dispatch_get_main_queue(),
                                       ^{
-                                          RUNNING = NO;
+                                          self.running = NO;
                                           if (!news)
                                           {
                                               NSAlert *alert = [NSAlert alertWithError:err];
@@ -98,7 +99,6 @@
     
     if ([self.vertivalScroller doubleValue] > 0.99)
     {
-        static BOOL RUNNING;
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSInteger loadCount = [userDefaults integerForKey:@"historyBatchSize"];
         WFAppDelegate *appDelegate = [NSApp delegate];
@@ -106,10 +106,10 @@
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                        ^{
-                           if (RUNNING)
+                           if (self.running)
                                return;
                            
-                           RUNNING = YES;
+                           self.running = YES;
                            NSError *err;
                            NSArray *news = [appDelegate.connection newsBeforeEpoch:[[currentObjects lastObject] publishDate]
                                                                              count:loadCount
@@ -117,7 +117,7 @@
                                                                              error:&err];
                            dispatch_async(dispatch_get_main_queue(),
                                           ^{
-                                              RUNNING = NO;
+                                              self.running = NO;
                                               if (!news)
                                               {
                                                   NSAlert *alert = [NSAlert alertWithError:err];
@@ -141,6 +141,22 @@
         
         
     }
+}
+
+- (void)viewWillAppear
+{
+    if (self.running)
+        [self.sidebarItem beginLoading];
+    else if (![[self.sidebarItem badge] length])
+        [self.sidebarItem setBadgeAsRefreshButton];
+    else
+        [self reload:self];
+}
+
+- (void)viewWillDisappear
+{
+    if (![[self.sidebarItem badge] length])
+        [self.sidebarItem setBadge:nil];
 }
 
 @end

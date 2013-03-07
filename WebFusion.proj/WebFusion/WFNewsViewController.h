@@ -14,4 +14,7 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet SidebarTableCellView *sidebarItem;
 
+- (void)viewWillAppear;
+- (void)viewWillDisappear;
+
 @end
