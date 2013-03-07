@@ -8,6 +8,7 @@
 
 #import "WFAppPaneController.h"
 #import "WFMainWindowController.h"
+#import "SidebarTableCellView.h"
 
 @interface WFAppPaneController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
 
@@ -108,9 +109,11 @@
     }
     else
     {
-        NSTableCellView *dataCell = [outlineView makeViewWithIdentifier:@"DataCell"
-                                                                  owner:self];
-        [[dataCell imageView] setImage:[NSImage imageNamed:item]];
+        SidebarTableCellView *dataCell = [outlineView makeViewWithIdentifier:@"MainCell"
+                                                                       owner:self];
+        NSImage *template = [NSImage imageNamed:item];
+        [template setTemplate:YES];
+        [[dataCell imageView] setImage:template];
         [[dataCell textField] setStringValue:NSLocalizedString(item, @"")];
         return dataCell;
     }

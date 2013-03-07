@@ -11,20 +11,6 @@
 		1D2013D016E65E78006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013CE16E65E78006A87B1 /* InfoPlist.strings */; };
 		1D2013D216E65E78006A87B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2013D116E65E78006A87B1 /* main.m */; };
 		1D2013D616E65E78006A87B1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013D416E65E78006A87B1 /* Credits.rtf */; };
-		1D2013EE16E65E9C006A87B1 /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E016E65E9C006A87B1 /* Camera.png */; };
-		1D2013EF16E65E9C006A87B1 /* Camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E116E65E9C006A87B1 /* Camera@2x.png */; };
-		1D2013F016E65E9C006A87B1 /* Contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E216E65E9C006A87B1 /* Contacts.png */; };
-		1D2013F116E65E9C006A87B1 /* Contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E316E65E9C006A87B1 /* Contacts@2x.png */; };
-		1D2013F216E65E9C006A87B1 /* Groove.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E416E65E9C006A87B1 /* Groove.png */; };
-		1D2013F316E65E9C006A87B1 /* Groove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E516E65E9C006A87B1 /* Groove@2x.png */; };
-		1D2013F416E65E9C006A87B1 /* Me.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E616E65E9C006A87B1 /* Me.png */; };
-		1D2013F516E65E9C006A87B1 /* Me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E716E65E9C006A87B1 /* Me@2x.png */; };
-		1D2013F616E65E9C006A87B1 /* News.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E816E65E9C006A87B1 /* News.png */; };
-		1D2013F716E65E9C006A87B1 /* News@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013E916E65E9C006A87B1 /* News@2x.png */; };
-		1D2013F816E65E9C006A87B1 /* Places.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013EA16E65E9C006A87B1 /* Places.png */; };
-		1D2013F916E65E9C006A87B1 /* Places@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013EB16E65E9C006A87B1 /* Places@2x.png */; };
-		1D2013FA16E65E9C006A87B1 /* Posts.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013EC16E65E9C006A87B1 /* Posts.png */; };
-		1D2013FB16E65E9C006A87B1 /* Posts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013ED16E65E9C006A87B1 /* Posts@2x.png */; };
 		1D2013FE16E65EA7006A87B1 /* NSString+Geometrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */; };
 		1D20141216E65EB5006A87B1 /* WFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140016E65EB5006A87B1 /* WFAppDelegate.m */; };
 		1D20141316E65EB5006A87B1 /* WFAppPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20140216E65EB5006A87B1 /* WFAppPaneController.m */; };
@@ -40,6 +26,14 @@
 		1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */; };
 		1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */; };
 		1D74A6C716E82A7C002132D4 /* WFLinkWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */; };
+		1D74A6CF16E83021002132D4 /* Camera.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6C816E83021002132D4 /* Camera.pdf */; };
+		1D74A6D016E83021002132D4 /* Contacts.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6C916E83021002132D4 /* Contacts.pdf */; };
+		1D74A6D116E83021002132D4 /* Groove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6CA16E83021002132D4 /* Groove.pdf */; };
+		1D74A6D216E83021002132D4 /* Me.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6CB16E83021002132D4 /* Me.pdf */; };
+		1D74A6D316E83021002132D4 /* News.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6CC16E83021002132D4 /* News.pdf */; };
+		1D74A6D416E83021002132D4 /* Places.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6CD16E83021002132D4 /* Places.pdf */; };
+		1D74A6D516E83021002132D4 /* Posts.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6CE16E83021002132D4 /* Posts.pdf */; };
+		1D74A6D816E83122002132D4 /* SidebarTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74A6D716E83122002132D4 /* SidebarTableCellView.m */; };
 		1DA6D9E916E7675B0004C7F7 /* WFPacketInspectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */; };
 		1DA6D9EA16E7675B0004C7F7 /* WFPacketInspectorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */; };
 		1DA6D9F016E76D4C0004C7F7 /* WFOutgoingPacketInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9EF16E76D4B0004C7F7 /* WFOutgoingPacketInspector.m */; };
@@ -102,20 +96,6 @@
 		1D2013D116E65E78006A87B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D2013D316E65E78006A87B1 /* WebFusion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebFusion-Prefix.pch"; sourceTree = "<group>"; };
 		1D2013D516E65E78006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1D2013E016E65E9C006A87B1 /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
-		1D2013E116E65E9C006A87B1 /* Camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera@2x.png"; sourceTree = "<group>"; };
-		1D2013E216E65E9C006A87B1 /* Contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacts.png; sourceTree = "<group>"; };
-		1D2013E316E65E9C006A87B1 /* Contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts@2x.png"; sourceTree = "<group>"; };
-		1D2013E416E65E9C006A87B1 /* Groove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Groove.png; sourceTree = "<group>"; };
-		1D2013E516E65E9C006A87B1 /* Groove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groove@2x.png"; sourceTree = "<group>"; };
-		1D2013E616E65E9C006A87B1 /* Me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Me.png; sourceTree = "<group>"; };
-		1D2013E716E65E9C006A87B1 /* Me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Me@2x.png"; sourceTree = "<group>"; };
-		1D2013E816E65E9C006A87B1 /* News.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = News.png; sourceTree = "<group>"; };
-		1D2013E916E65E9C006A87B1 /* News@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News@2x.png"; sourceTree = "<group>"; };
-		1D2013EA16E65E9C006A87B1 /* Places.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Places.png; sourceTree = "<group>"; };
-		1D2013EB16E65E9C006A87B1 /* Places@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Places@2x.png"; sourceTree = "<group>"; };
-		1D2013EC16E65E9C006A87B1 /* Posts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Posts.png; sourceTree = "<group>"; };
-		1D2013ED16E65E9C006A87B1 /* Posts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Posts@2x.png"; sourceTree = "<group>"; };
 		1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Geometrics.h"; sourceTree = "<group>"; };
 		1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Geometrics.m"; sourceTree = "<group>"; };
 		1D2013FF16E65EB5006A87B1 /* WFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +120,15 @@
 		1D74A6C316E82A7C002132D4 /* WFLinkWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLinkWindowController.h; sourceTree = "<group>"; };
 		1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLinkWindowController.m; sourceTree = "<group>"; };
 		1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFLinkWindowController.xib; sourceTree = "<group>"; };
+		1D74A6C816E83021002132D4 /* Camera.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Camera.pdf; sourceTree = "<group>"; };
+		1D74A6C916E83021002132D4 /* Contacts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Contacts.pdf; sourceTree = "<group>"; };
+		1D74A6CA16E83021002132D4 /* Groove.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Groove.pdf; sourceTree = "<group>"; };
+		1D74A6CB16E83021002132D4 /* Me.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Me.pdf; sourceTree = "<group>"; };
+		1D74A6CC16E83021002132D4 /* News.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = News.pdf; sourceTree = "<group>"; };
+		1D74A6CD16E83021002132D4 /* Places.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Places.pdf; sourceTree = "<group>"; };
+		1D74A6CE16E83021002132D4 /* Posts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Posts.pdf; sourceTree = "<group>"; };
+		1D74A6D616E83122002132D4 /* SidebarTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableCellView.h; sourceTree = "<group>"; };
+		1D74A6D716E83122002132D4 /* SidebarTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableCellView.m; sourceTree = "<group>"; };
 		1DA6D9E616E7675B0004C7F7 /* WFPacketInspectorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPacketInspectorWindowController.h; sourceTree = "<group>"; };
 		1DA6D9E716E7675B0004C7F7 /* WFPacketInspectorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPacketInspectorWindowController.m; sourceTree = "<group>"; };
 		1DA6D9E816E7675B0004C7F7 /* WFPacketInspectorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPacketInspectorWindowController.xib; sourceTree = "<group>"; };
@@ -266,20 +255,13 @@
 			children = (
 				1DA6DA3E16E7EC880004C7F7 /* defaults.plist */,
 				1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */,
-				1D2013E016E65E9C006A87B1 /* Camera.png */,
-				1D2013E116E65E9C006A87B1 /* Camera@2x.png */,
-				1D2013E216E65E9C006A87B1 /* Contacts.png */,
-				1D2013E316E65E9C006A87B1 /* Contacts@2x.png */,
-				1D2013E416E65E9C006A87B1 /* Groove.png */,
-				1D2013E516E65E9C006A87B1 /* Groove@2x.png */,
-				1D2013E616E65E9C006A87B1 /* Me.png */,
-				1D2013E716E65E9C006A87B1 /* Me@2x.png */,
-				1D2013E816E65E9C006A87B1 /* News.png */,
-				1D2013E916E65E9C006A87B1 /* News@2x.png */,
-				1D2013EA16E65E9C006A87B1 /* Places.png */,
-				1D2013EB16E65E9C006A87B1 /* Places@2x.png */,
-				1D2013EC16E65E9C006A87B1 /* Posts.png */,
-				1D2013ED16E65E9C006A87B1 /* Posts@2x.png */,
+				1D74A6C816E83021002132D4 /* Camera.pdf */,
+				1D74A6C916E83021002132D4 /* Contacts.pdf */,
+				1D74A6CA16E83021002132D4 /* Groove.pdf */,
+				1D74A6CB16E83021002132D4 /* Me.pdf */,
+				1D74A6CC16E83021002132D4 /* News.pdf */,
+				1D74A6CD16E83021002132D4 /* Places.pdf */,
+				1D74A6CE16E83021002132D4 /* Posts.pdf */,
 				1D2013CD16E65E77006A87B1 /* WebFusion-Info.plist */,
 				1D2013CE16E65E78006A87B1 /* InfoPlist.strings */,
 				1D2013D116E65E78006A87B1 /* main.m */,
@@ -329,6 +311,8 @@
 			children = (
 				1D20140616E65EB5006A87B1 /* WFMainWindowController.h */,
 				1D20140716E65EB5006A87B1 /* WFMainWindowController.m */,
+				1D74A6D616E83122002132D4 /* SidebarTableCellView.h */,
+				1D74A6D716E83122002132D4 /* SidebarTableCellView.m */,
 				1D20140816E65EB5006A87B1 /* WFMainWindowController.xib */,
 				1D20140116E65EB5006A87B1 /* WFAppPaneController.h */,
 				1D20140216E65EB5006A87B1 /* WFAppPaneController.m */,
@@ -463,20 +447,6 @@
 			files = (
 				1D2013D016E65E78006A87B1 /* InfoPlist.strings in Resources */,
 				1D2013D616E65E78006A87B1 /* Credits.rtf in Resources */,
-				1D2013EE16E65E9C006A87B1 /* Camera.png in Resources */,
-				1D2013EF16E65E9C006A87B1 /* Camera@2x.png in Resources */,
-				1D2013F016E65E9C006A87B1 /* Contacts.png in Resources */,
-				1D2013F116E65E9C006A87B1 /* Contacts@2x.png in Resources */,
-				1D2013F216E65E9C006A87B1 /* Groove.png in Resources */,
-				1D2013F316E65E9C006A87B1 /* Groove@2x.png in Resources */,
-				1D2013F416E65E9C006A87B1 /* Me.png in Resources */,
-				1D2013F516E65E9C006A87B1 /* Me@2x.png in Resources */,
-				1D2013F616E65E9C006A87B1 /* News.png in Resources */,
-				1D2013F716E65E9C006A87B1 /* News@2x.png in Resources */,
-				1D2013F816E65E9C006A87B1 /* Places.png in Resources */,
-				1D2013F916E65E9C006A87B1 /* Places@2x.png in Resources */,
-				1D2013FA16E65E9C006A87B1 /* Posts.png in Resources */,
-				1D2013FB16E65E9C006A87B1 /* Posts@2x.png in Resources */,
 				1D20141516E65EB5006A87B1 /* WFLoginWindowController.xib in Resources */,
 				1D20141716E65EB5006A87B1 /* WFMainWindowController.xib in Resources */,
 				1D20141916E65EB5006A87B1 /* WFNewsInfoWindowController.xib in Resources */,
@@ -494,6 +464,13 @@
 				1DA6DA5D16E825340004C7F7 /* WFPostWindowController.xib in Resources */,
 				1DA6DA6216E826A30004C7F7 /* WFImageWindowController.xib in Resources */,
 				1D74A6C716E82A7C002132D4 /* WFLinkWindowController.xib in Resources */,
+				1D74A6CF16E83021002132D4 /* Camera.pdf in Resources */,
+				1D74A6D016E83021002132D4 /* Contacts.pdf in Resources */,
+				1D74A6D116E83021002132D4 /* Groove.pdf in Resources */,
+				1D74A6D216E83021002132D4 /* Me.pdf in Resources */,
+				1D74A6D316E83021002132D4 /* News.pdf in Resources */,
+				1D74A6D416E83021002132D4 /* Places.pdf in Resources */,
+				1D74A6D516E83021002132D4 /* Posts.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +520,7 @@
 				1DA6DA5C16E825340004C7F7 /* WFPostWindowController.m in Sources */,
 				1DA6DA6116E826A30004C7F7 /* WFImageWindowController.m in Sources */,
 				1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */,
+				1D74A6D816E83122002132D4 /* SidebarTableCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

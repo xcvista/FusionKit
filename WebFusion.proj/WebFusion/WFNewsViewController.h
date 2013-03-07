@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SidebarTableCellView.h"
 
 @interface WFNewsViewController : NSViewController
 
 @property (weak) IBOutlet NSWindow *window;
+@property (weak) IBOutlet SidebarTableCellView *sidebarItem;
 
 @end

@@ -41,6 +41,7 @@
     static BOOL RUNNING;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSInteger loadCount = [userDefaults integerForKey:@"loadBatchSize"];
+    [self.sidebarItem beginLoading];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
                        if (RUNNING)
@@ -68,7 +69,7 @@
                                           }
                                           
                                           [self.collectionView setContent:news];
-                                          
+                                          [self.sidebarItem setBadgeAsRefreshButton];
                                       });
                        
                    });
@@ -81,6 +82,9 @@
     
     self.vertivalScroller.target = self;
     self.vertivalScroller.action = @selector(scrollerChanged:);
+    
+    [self.sidebarItem.button setTarget:self];
+    [self.sidebarItem.button setAction:@selector(reload:)];
     
     [self reload:self];
 }
