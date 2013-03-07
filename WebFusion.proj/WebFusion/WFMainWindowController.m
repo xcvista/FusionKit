@@ -54,6 +54,10 @@
                   byExtendingSelection:NO];
     [self.window setExcludedFromWindowsMenu:YES];
     [[NSApp delegate] startMainWindow];
+    if ([[NSApp delegate] override])
+    {
+        [self.window setTitle:NSLocalizedString(@"WebFusion (Override)", @"")];
+    }
 }
 
 - (void)windowWillClose:(NSNotification *)notification

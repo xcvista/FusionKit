@@ -31,7 +31,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:defaults];
     NSUserDefaultsController *userDefaultsController = [NSUserDefaultsController sharedUserDefaultsController];
-    self.bootTimePrefs = [userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];
+    self.bootTimePrefs = [[userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]] copy];
     [userDefaultsController setInitialValues:defaults];
     [userDefaults synchronize];
     
@@ -50,6 +50,20 @@
     // Show the initial window.
     self.windowControllers = [NSMutableArray array];
     [self showWindowController:[[WFLoginWindowController alloc] init]]; 
+}
+
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+    if (self.override)
+    {
+        // Nuke all preferences and reload boot-time copy.
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSDictionary *currentPrefs = [[userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]] copy];
+        for (id key in currentPrefs)
+            [userDefaults removeObjectForKey:key];
+        for (id key in self.bootTimePrefs)
+            [userDefaults setObject:self.bootTimePrefs[key] forKey:key];
+    }
 }
 
 - (void)showWindowController:(NSWindowController *)windowController
@@ -171,22 +185,8 @@
 
 - (void)showPreferences:(id)sender
 {
-    if (self.override)
-    {
-        // Preference pane is disabled in Override mode.
-        NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Preferences is disabled in override mode.", @"")
-                                         defaultButton:NSLocalizedString(@"OK", @"")
-                                       alternateButton:nil
-                                           otherButton:nil
-                             informativeTextWithFormat:@"Please disable Override mode to enable preferences."];
-        [alert setAlertStyle:NSCriticalAlertStyle];
-        [alert runModal];
-    }
-    else
-    {
-        [self callUpWindowController:[WFPreferenceWindowController class]
-                              sender:self];
-    }
+    [self callUpWindowController:[WFPreferenceWindowController class]
+                          sender:self];
 }
 
 @end
