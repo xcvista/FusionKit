@@ -19,15 +19,8 @@
 @property (weak) IBOutlet NSButton *loginButton;
 @property BOOL blockExit;
 
-@property IBOutlet NSPanel *advancedSheet;
-@property (weak) IBOutlet NSUserDefaultsController *sharedUDC;
-
 - (IBAction)login:(id)sender;
 - (IBAction)signUp:(id)sender;
-- (IBAction)advanced:(id)sender;
-
-- (IBAction)acceptChanges:(id)sender;
-- (IBAction)rejectChanges:(id)sender;
 
 @end
 
@@ -171,31 +164,6 @@
 - (void)signUp:(id)sender
 {
     
-}
-
-- (void)advanced:(id)sender
-{    
-    [NSApp beginSheet:self.advancedSheet
-       modalForWindow:self.window
-        modalDelegate:nil
-       didEndSelector:nil
-          contextInfo:nil];
-    [NSApp runModalForWindow:self.advancedSheet];
-    
-    [NSApp endSheet:self.advancedSheet];
-    [self.advancedSheet orderOut:self];
-}
-
-- (void)acceptChanges:(id)sender
-{
-    [self.sharedUDC save:sender];
-    [NSApp stopModal];
-}
-
-- (void)rejectChanges:(id)sender
-{
-    [self.sharedUDC revert:sender];
-    [NSApp stopModal];
 }
 
 @end
