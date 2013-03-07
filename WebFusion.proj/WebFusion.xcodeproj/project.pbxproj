@@ -149,7 +149,7 @@
 		1D74A6D716E83122002132D4 /* SidebarTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableCellView.m; sourceTree = "<group>"; };
 		1D74A6DD16E84112002132D4 /* Refresh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Refresh.pdf; sourceTree = "<group>"; };
 		1DA1DF3616E8A31D0074ABCB /* WebFusionCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WebFusionCLI; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DA1DF3716E8A31D0074ABCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DA1DF3716E8A31D0074ABCB /* Foundation.framework */ = {isa = PBXFileReference; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DA1DF3A16E8A31E0074ABCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DA1DF3D16E8A31E0074ABCB /* WebFusionCLI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebFusionCLI-Prefix.pch"; sourceTree = "<group>"; };
 		1DA1DF3E16E8A31E0074ABCB /* WebFusionCLI.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = WebFusionCLI.1; sourceTree = "<group>"; };
