@@ -63,7 +63,7 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
                                                              error:&err];
     [[NSNotificationCenter defaultCenter] postNotificationName:FKDidReceivePackageNotification
                                                         object:self
-                                                      userInfo:@{@"request": request, @"response": response, @"packet": responseData ? responseData : [NSNull null], @"error": (err) ? err : [NSNull null], @"date": [NSDate date], @"requestDate": sendDate}];
+                                                      userInfo:@{@"request": request, @"response": response ? response : [NSNull null], @"packet": responseData ? responseData : [NSNull null], @"error": (err) ? err : [NSNull null], @"date": [NSDate date], @"requestDate": sendDate}];
     if (!responseData)
     {
         FKAssignError(error, err);

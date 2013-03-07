@@ -35,8 +35,10 @@
 		1D2013B416E65E48006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013B216E65E48006A87B1 /* InfoPlist.strings */; };
 		1D2013BD16E65E64006A87B1 /* FusionBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2013BC16E65E64006A87B1 /* FusionBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D20143716E6603C006A87B1 /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20136616E65DE2006A87B1 /* FusionKit.framework */; };
+		1DA1DF4916E8B7CC0074ABCB /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA1DF4816E8B7CC0074ABCB /* Base64Kit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1DA1DF4B16E8B7E10074ABCB /* Base64Kit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA1DF4816E8B7CC0074ABCB /* Base64Kit.framework */; };
+		1DA1DF4D16E8B7F10074ABCB /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D20136616E65DE2006A87B1 /* FusionKit.framework */; };
 		1DA6D9E216E73FBF0004C7F7 /* services.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E116E73FBF0004C7F7 /* services.strings */; };
-		1DA6DA2516E7C3270004C7F7 /* Base64Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */; };
 		1DD337DF16E677EB00BD1E28 /* FKNewsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD337DD16E677EB00BD1E28 /* FKNewsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DD337E016E677EB00BD1E28 /* FKNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD337DE16E677EB00BD1E28 /* FKNewsController.m */; };
 		F5269AEC16E752960049EA09 /* FKUserContact.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AEA16E752960049EA09 /* FKUserContact.h */; };
@@ -44,6 +46,29 @@
 		F5269AF016E752B50049EA09 /* FKUserContactLink.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AEE16E752B50049EA09 /* FKUserContactLink.h */; };
 		F5269AF116E752B50049EA09 /* FKUserContactLink.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AEF16E752B50049EA09 /* FKUserContactLink.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DA1DF4A16E8B7D10074ABCB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1DA1DF4B16E8B7E10074ABCB /* Base64Kit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA1DF4C16E8B7E80074ABCB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1DA1DF4D16E8B7F10074ABCB /* FusionKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D20136616E65DE2006A87B1 /* FusionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FusionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,8 +106,8 @@
 		1D2013B316E65E48006A87B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D2013B516E65E48006A87B1 /* FusionBinding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FusionBinding-Prefix.pch"; sourceTree = "<group>"; };
 		1D2013BC16E65E64006A87B1 /* FusionBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FusionBinding.h; sourceTree = "<group>"; };
+		1DA1DF4816E8B7CC0074ABCB /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug/Base64Kit.framework"; sourceTree = "<group>"; };
 		1DA6D9E116E73FBF0004C7F7 /* services.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = services.strings; sourceTree = "<group>"; };
-		1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64Kit.framework; path = ../Libraries.proj/build/Release/Base64Kit.framework; sourceTree = "<group>"; };
 		1DD337DD16E677EB00BD1E28 /* FKNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNewsController.h; sourceTree = "<group>"; };
 		1DD337DE16E677EB00BD1E28 /* FKNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNewsController.m; sourceTree = "<group>"; };
 		F5269AEA16E752960049EA09 /* FKUserContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKUserContact.h; sourceTree = "<group>"; };
@@ -96,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DA6DA2516E7C3270004C7F7 /* Base64Kit.framework in Frameworks */,
+				1DA1DF4916E8B7CC0074ABCB /* Base64Kit.framework in Frameworks */,
 				1D20136A16E65DE2006A87B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +160,7 @@
 		1D20136816E65DE2006A87B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1DA6DA2416E7C3270004C7F7 /* Base64Kit.framework */,
+				1DA1DF4816E8B7CC0074ABCB /* Base64Kit.framework */,
 				1D20136916E65DE2006A87B1 /* Cocoa.framework */,
 				1D20136B16E65DE2006A87B1 /* Other Frameworks */,
 			);
@@ -262,6 +287,7 @@
 				1D20136216E65DE2006A87B1 /* Frameworks */,
 				1D20136316E65DE2006A87B1 /* Headers */,
 				1D20136416E65DE2006A87B1 /* Resources */,
+				1DA1DF4A16E8B7D10074ABCB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -280,6 +306,7 @@
 				1D2013A916E65E48006A87B1 /* Frameworks */,
 				1D2013AA16E65E48006A87B1 /* Headers */,
 				1D2013AB16E65E48006A87B1 /* Resources */,
+				1DA1DF4C16E8B7E80074ABCB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -415,6 +442,10 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -460,6 +491,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/FusionKit.C-fpikyloheduupggyuzobmmgdhdtu/Build/Products/Debug\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;

@@ -14,6 +14,7 @@
 
 @property NSMutableArray *windowControllers;
 @property FKConnection *connection;
+@property BOOL override;
 
 - (void)showWindowController:(NSWindowController *)windowController;
 - (void)releaseWindowController:(NSWindowController *)windowController;

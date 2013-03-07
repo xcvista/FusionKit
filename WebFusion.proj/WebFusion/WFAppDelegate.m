@@ -18,6 +18,8 @@
 @property (weak) IBOutlet NSMenuItem *dockMainWindowItem;
 @property (weak) IBOutlet NSMenuItem *packetInspectorItem;
 
+@property NSDictionary *bootTimePrefs;
+
 @end
 
 @implementation WFAppDelegate
@@ -28,12 +30,25 @@
     NSDictionary *defaults = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"defaults" withExtension:@"plist"]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:defaults];
-    [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:defaults];
+    NSUserDefaultsController *userDefaultsController = [NSUserDefaultsController sharedUserDefaultsController];
+    self.bootTimePrefs = [userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];
+    [userDefaultsController setInitialValues:defaults];
     [userDefaults synchronize];
+    
+    if ([userDefaults boolForKey:@"override"])
+    {
+        NSLog(@"App started in Override mode, behavior will drastically change.");
+        self.override = YES;
+    }
+    
+    if ([userDefaults boolForKey:@"launchWithPacketInspector"])
+    {
+        [userDefaults setBool:YES forKey:@"showDeveloperMenu"];
+    }
     
     // Show the initial window.
     self.windowControllers = [NSMutableArray array];
-    [self showWindowController:[[WFLoginWindowController alloc] init]];
+    [self showWindowController:[[WFLoginWindowController alloc] init]]; 
 }
 
 - (void)showWindowController:(NSWindowController *)windowController
@@ -155,8 +170,22 @@
 
 - (void)showPreferences:(id)sender
 {
-    [self callUpWindowController:[WFPreferenceWindowController class]
-                          sender:self];
+    if (self.override)
+    {
+        // Preference pane is disabled in Override mode.
+        NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Preferences is disabled in override mode.", @"")
+                                         defaultButton:NSLocalizedString(@"OK", @"")
+                                       alternateButton:nil
+                                           otherButton:nil
+                             informativeTextWithFormat:@"Please disable Override mode to enable preferences."];
+        [alert setAlertStyle:NSCriticalAlertStyle];
+        [alert runModal];
+    }
+    else
+    {
+        [self callUpWindowController:[WFPreferenceWindowController class]
+                              sender:self];
+    }
 }
 
 @end
