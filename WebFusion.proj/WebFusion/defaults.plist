@@ -5,7 +5,7 @@
 	<key>server</key>
 	<string>https://www.shisoft.net/ajax</string>
 	<key>showDeveloperMenu</key>
-	<true/>
+	<false/>
 	<key>loadBatchSize</key>
 	<integer>25</integer>
 	<key>historyBatchSize</key>

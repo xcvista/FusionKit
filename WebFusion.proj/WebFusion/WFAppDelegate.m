@@ -15,6 +15,7 @@
 @interface WFAppDelegate ()
 
 @property (weak) IBOutlet NSMenuItem *mainWindowItem;
+@property (weak) IBOutlet NSMenuItem *dockMainWindowItem;
 @property (weak) IBOutlet NSMenuItem *packetInspectorItem;
 
 @end
@@ -46,11 +47,6 @@
     [self.windowControllers removeObject:windowController];
 }
 
-- (NSWindowController *)rootWindowController
-{
-    return self.windowControllers[0];
-}
-
 - (void)closeAllWindowControllerWithClass:(Class)class
 {
     NSArray *currentVC = [self.windowControllers copy];
@@ -64,7 +60,9 @@
     self.connection = connection;
     [self showMainWindow:self];
     [self.mainWindowItem setTarget:self];
+    [self.dockMainWindowItem setTarget:self];
     [self.mainWindowItem setAction:@selector(showMainWindow:)];
+    [self.dockMainWindowItem setAction:@selector(showMainWindow:)];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
@@ -110,11 +108,13 @@
 - (void)startMainWindow
 {
     [self.mainWindowItem setState:NSOnState];
+    [self.dockMainWindowItem setState:NSOnState];
 }
 
 - (void)stopMainWindow
 {
     [self.mainWindowItem setState:NSOffState];
+    [self.dockMainWindowItem setState:NSOffState];
 }
 
 - (void)showPacketInspector:(id)sender
@@ -136,6 +136,12 @@
 - (void)delegateSignOut:(id)sender
 {
     [self.connection logoutWithError:nil];
+    self.connection = nil;
+    [self showWindowController:[[WFLoginWindowController alloc] init]];
+}
+
+- (void)delegateClearSession:(id)sender
+{
     self.connection = nil;
     [self showWindowController:[[WFLoginWindowController alloc] init]];
 }

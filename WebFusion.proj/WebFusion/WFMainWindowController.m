@@ -21,6 +21,12 @@
 @property NSDictionary *apps;
 
 - (IBAction)signOut:(id)sender;
+- (IBAction)clearSession:(id)sender;
+
+- (IBAction)tweet:(id)sender;
+- (IBAction)blog:(id)sender;
+- (IBAction)image:(id)sender;
+- (IBAction)link:(id)sender;
 
 @end
 
@@ -95,6 +101,32 @@
 {
     [self.window close];
     [[NSApp delegate] delegateSignOut:sender];
+}
+
+- (void)clearSession:(id)sender
+{
+    [self.window close];
+    [[NSApp delegate] delegateClearSession:sender];
+}
+
+- (void)blog:(id)sender
+{
+    
+}
+
+- (void)tweet:(id)sender
+{
+    
+}
+
+- (void)link:(id)sender
+{
+    
+}
+
+- (void)image:(id)sender
+{
+    
 }
 
 @end

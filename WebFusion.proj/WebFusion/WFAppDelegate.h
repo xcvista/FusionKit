@@ -20,15 +20,12 @@
 
 - (void)finishLoginWithConnection:(FKConnection *)connection;
 
-- (NSWindowController *)rootWindowController;
-
 - (void)closeAllWindowControllerWithClass:(Class)class;
 
 - (IBAction)delegateSignOut:(id)sender;
+- (IBAction)delegateClearSession:(id)sender;
 - (IBAction)showAbout:(id)sender;
 - (IBAction)showPreferences:(id)sender;
-
-- (IBAction)clearSession:(id)sender;
 
 - (IBAction)showMainWindow:(id)sender;
 - (void)startMainWindow;
