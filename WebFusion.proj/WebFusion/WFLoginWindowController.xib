@@ -140,6 +140,7 @@
 											<string key="NSFrame">{{240, 7}, {82, 32}}</string>
 											<reference key="NSSuperview" ref="360975343"/>
 											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="1039130122">
@@ -164,7 +165,7 @@
 											<string key="NSFrame">{{97, 16}, {16, 16}}</string>
 											<reference key="NSSuperview" ref="360975343"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="684428461"/>
+											<reference key="NSNextKeyView" ref="423833385"/>
 											<string key="NSReuseIdentifierKey">_NS:945</string>
 											<int key="NSpiFlags">28938</int>
 											<double key="NSMaxValue">100</double>
@@ -192,31 +193,6 @@
 												<array key="NSAllowedInputLocales">
 													<string>NSAllRomanInputSourcesLocaleIdentifier</string>
 												</array>
-											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-										</object>
-										<object class="NSButton" id="684428461">
-											<reference key="NSNextResponder" ref="360975343"/>
-											<int key="NSvFlags">268</int>
-											<string key="NSFrame">{{138, 7}, {102, 32}}</string>
-											<reference key="NSSuperview" ref="360975343"/>
-											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="423833385"/>
-											<string key="NSReuseIdentifierKey">_NS:9</string>
-											<bool key="NSEnabled">YES</bool>
-											<object class="NSButtonCell" key="NSCell" id="114014717">
-												<int key="NSCellFlags">67108864</int>
-												<int key="NSCellFlags2">134217728</int>
-												<string key="NSContents">Advanced</string>
-												<reference key="NSSupport" ref="530102259"/>
-												<string key="NSCellIdentifier">_NS:9</string>
-												<reference key="NSControlView" ref="684428461"/>
-												<int key="NSButtonFlags">-2038284288</int>
-												<int key="NSButtonFlags2">129</int>
-												<string key="NSAlternateContents"/>
-												<string key="NSKeyEquivalent"/>
-												<int key="NSPeriodicDelay">200</int>
-												<int key="NSPeriodicInterval">25</int>
 											</object>
 											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 										</object>
@@ -404,14 +380,6 @@
 					<int key="connectionID">45</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">advanced:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="684428461"/>
-					</object>
-					<int key="connectionID">52</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="29118806"/>
@@ -479,7 +447,6 @@
 							<reference ref="34748625"/>
 							<reference ref="135276931"/>
 							<reference ref="423833385"/>
-							<reference ref="684428461"/>
 							<reference ref="762908374"/>
 							<reference ref="824260324"/>
 						</array>
@@ -543,19 +510,6 @@
 						<reference key="parent" ref="135276931"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">48</int>
-						<reference key="object" ref="684428461"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="114014717"/>
-						</array>
-						<reference key="parent" ref="487762914"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">49</int>
-						<reference key="object" ref="114014717"/>
-						<reference key="parent" ref="684428461"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">89</int>
 						<reference key="object" ref="532185062"/>
 						<array class="NSMutableArray" key="children">
@@ -599,8 +553,6 @@
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="42.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="43.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="49.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
