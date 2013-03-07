@@ -41,6 +41,11 @@
 {
     NSUInteger colNumber = [[tableView tableColumns] indexOfObject:tableColumn];
     NSHTTPURLResponse *response = self.incomingPackets[row][@"response"];
+    NSDate *date = self.incomingPackets[row][@"date"];
+    NSTimeInterval timeout = [date timeIntervalSinceDate:self.incomingPackets[row][@"requestDate"]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSTimeInterval timeoutDeadline = [userDefaults doubleForKey:@"requestStallTimeout"];
+    BOOL dead = (timeout > timeoutDeadline);
     
     switch (colNumber)
     {
@@ -48,11 +53,13 @@
         {
             NSTableCellView *tableCell = [tableView makeViewWithIdentifier:@"Date"
                                                                      owner:self];
-            NSDate *date = self.incomingPackets[row][@"date"];
             
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateStyle:NSDateFormatterNoStyle];
             [formatter setTimeStyle:NSDateFormatterMediumStyle];
+            
+            if (dead)
+                [[tableCell textField] setTextColor:[NSColor redColor]];
             
             [[tableCell textField] setStringValue:[formatter stringFromDate:date]];
             
@@ -63,6 +70,10 @@
             NSTableCellView *tableCell = [tableView makeViewWithIdentifier:@"Status"
                                                                      owner:self];
             [[tableCell textField] setIntegerValue:[response statusCode]];
+            
+            if (dead)
+                [[tableCell textField] setTextColor:[NSColor redColor]];
+            
             return tableCell;
         }
         case 2:
@@ -70,6 +81,10 @@
             NSTableCellView *tableCell = [tableView makeViewWithIdentifier:@"Target"
                                                                      owner:self];
             [[tableCell textField] setStringValue:[[response URL] lastPathComponent]];
+            
+            if (dead)
+                [[tableCell textField] setTextColor:[NSColor redColor]];
+            
             return tableCell;
         }
         case 3:
@@ -77,6 +92,7 @@
             NSButton *button = [tableView makeViewWithIdentifier:@"Data"
                                                            owner:self];
             [button setTag:row];
+            
             return button;
         }
         default:

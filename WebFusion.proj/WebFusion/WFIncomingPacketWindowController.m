@@ -39,8 +39,10 @@
 {
     [super windowDidLoad];
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSHTTPURLResponse *response = self.userInfo[@"response"];
     NSDate *date = self.userInfo[@"date"];
+    NSTimeInterval timeout = [date timeIntervalSinceDate:self.userInfo[@"requestDate"]];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterNoStyle];
@@ -49,9 +51,10 @@
     [self.dateField setStringValue:[formatter stringFromDate:date]];
     [self.methodField setIntegerValue:[response statusCode]];
     [self.targetField setStringValue:[[response URL] absoluteString]];
-    [self.durationField setStringValue:[NSString stringWithFormat:NSLocalizedString(@"%.1f seconds", @""), [date timeIntervalSinceDate:self.userInfo[@"requestDate"]]]];
-    [self.dataField setString:[[[NSString alloc] initWithData:self.userInfo[@"packet"]
-                                                     encoding:NSUTF8StringEncoding] sanitizedString]];
+    [self.durationField setStringValue:[NSString stringWithFormat:NSLocalizedString(@"%.1f seconds%@", @""), timeout, (timeout > [userDefaults doubleForKey:@"requestStallTimeout"]) ? NSLocalizedString(@", Stalled", @"") : @""]];
+    NSString *dataString = [[NSString alloc] initWithData:self.userInfo[@"packet"]
+                                                 encoding:NSUTF8StringEncoding];
+    [self.dataField setString:[userDefaults boolForKey:@"prettyPrintJSON"] ? [dataString sanitizedString] : dataString];
 }
 
 - (void)revealRequest:(id)sender

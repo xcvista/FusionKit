@@ -28,6 +28,7 @@
     NSDictionary *defaults = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"defaults" withExtension:@"plist"]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:defaults];
+    [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:defaults];
     [userDefaults synchronize];
     
     // Show the initial window.

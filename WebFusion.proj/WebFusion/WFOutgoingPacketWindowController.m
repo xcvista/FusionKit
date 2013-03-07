@@ -47,8 +47,10 @@
     [self.dateField setStringValue:[formatter stringFromDate:date]];
     [self.methodField setStringValue:[request HTTPMethod]];
     [self.targetField setStringValue:[[request URL] absoluteString]];
-    [self.dataField setString:[[[NSString alloc] initWithData:[request HTTPBody]
-                                                     encoding:NSUTF8StringEncoding] sanitizedString]];
+    NSString *dataString = [[NSString alloc] initWithData:[request HTTPBody]
+                                                 encoding:NSUTF8StringEncoding];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [self.dataField setString:[userDefaults boolForKey:@"prettyPrintJSON"] ? [dataString sanitizedString] : dataString];
 }
 
 - (void)windowWillClose:(NSNotification *)notification
