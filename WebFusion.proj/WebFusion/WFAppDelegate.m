@@ -38,6 +38,7 @@
     if ([userDefaults boolForKey:@"override"])
     {
         NSLog(@"App started in Override mode, behavior will drastically change.");
+        [userDefaults setBool:NO forKey:@"showDeveloperMenu"];
         self.override = YES;
     }
     

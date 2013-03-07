@@ -54,8 +54,10 @@
         NSString *username = [userDefaults objectForKey:@"username"];
         NSString *password = [userDefaults objectForKey:@"password"];
         
-        [self.usernameField setStringValue:username];
-        [self.passwordField setStringValue:password];
+        if (username)
+            [self.usernameField setStringValue:username];
+        if (password)
+            [self.passwordField setStringValue:password];
         
         [self.window setTitle:NSLocalizedString(@"WebFusion (Override)", @"")];
         
