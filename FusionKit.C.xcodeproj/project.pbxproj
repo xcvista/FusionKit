@@ -103,13 +103,29 @@
 			children = (
 				1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */,
 				1D7CD17716E53FA300F5F3AF /* README.md */,
+				1DA6DA4616E823C50004C7F7 /* iOS */,
+				1DA6DA5216E823CE0004C7F7 /* OS X */,
+			);
+			sourceTree = "<group>";
+		};
+		1DA6DA4616E823C50004C7F7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
 				1D20121416E65938006A87B1 /* iLibraries.xcodeproj */,
 				1D20120016E65917006A87B1 /* iFusionKit.xcodeproj */,
 				1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1DA6DA5216E823CE0004C7F7 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
 				1D20116316E657AB006A87B1 /* Libraries.xcodeproj */,
 				1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */,
 				1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */,
 			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 		1DD3379016E6618600BD1E28 /* Products */ = {
