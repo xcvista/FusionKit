@@ -55,15 +55,20 @@
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if (self.override)
     {
         // Nuke all preferences and reload boot-time copy.
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        
         NSDictionary *currentPrefs = [[userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]] copy];
         for (id key in currentPrefs)
             [userDefaults removeObjectForKey:key];
         for (id key in self.bootTimePrefs)
             [userDefaults setObject:self.bootTimePrefs[key] forKey:key];
+    }
+    else
+    {
+        [userDefaults synchronize];
     }
 }
 

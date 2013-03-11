@@ -13,6 +13,7 @@
 @interface WFPreferenceWindowController () <NSWindowDelegate>
 
 @property (weak) IBOutlet NSUserDefaultsController *userDefaultsController;
+@property (weak) IBOutlet NSTextField *cacheSize;
 
 @property NSDictionary *bootTimePrefs;
 
@@ -41,6 +42,31 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.bootTimePrefs = [[userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]] copy];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       long double size = 0;
+                       NSUInteger unit = 0; // bytes;
+                       NSFileManager *fileManager = [NSFileManager defaultManager];
+                       NSArray *paths = [fileManager subpathsAtPath:[NSData cacheFolderLocation]];
+                       for (NSString *path in paths)
+                       {
+                           NSDictionary *property = [fileManager attributesOfItemAtPath:[[NSData cacheFolderLocation] stringByAppendingPathComponent:path]
+                                                                                  error:NULL];
+                           size += [property fileSize];
+                       }
+                       while (size > 2048)
+                       {
+                           size /= 1024.0;
+                           unit++;
+                       }
+                       NSNumber *sizeNumber = @((double)size);
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^{
+                                          NSArray *units = @[NSLocalizedString(@"bytes", @""), @"KiB", @"MiB", @"GiB", @"TiB", @"YiB", @"ZiB"];
+                                          [self.cacheSize setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Current cache size is approx. %.2lf%@.", @""), [sizeNumber doubleValue], units[unit]]];
+                                      });
+                   });
 }
 
 - (void)windowWillClose:(NSNotification *)notification
@@ -70,6 +96,7 @@
 - (void)clearCache:(id)sender
 {
     [NSData clearCache];
+    [self.cacheSize setStringValue:NSLocalizedString(@"Cache cleared.", @"")];
 }
 
 @end

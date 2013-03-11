@@ -156,7 +156,7 @@
                                                   NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
                                                   if ([userDefaults boolForKey:WFSaveUsername])
                                                   {
-                                                      [userDefaults setObject:username forKey:WFSaveUsername];
+                                                      [userDefaults setObject:username forKey:WFUsername];
                                                   }
                                                   else
                                                   {

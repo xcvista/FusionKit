@@ -97,7 +97,7 @@
                 [self buildCacheBackground:link];
             }
 
-            content = [content stringByAppendingFormat:@"<div><img src=\"%@\" style=\"max-height: 60px;float: left; margin: 4px;\"><div style=\"font-weight: bold; size:20px;\">%@</div><blockquote><div>%@</div><div>%@</div><div>%@</div></blockquote>%@</div>", [cacheURL absoluteString], newsController.title, newsController.author, newsController.service, newsController.publishTime, [self fullHTMLContentNoSurronding:news]];
+            content = [content stringByAppendingFormat:@"<div><img src=\"%@\" style=\"max-height: 60px;float: left; margin: 4px;\"><div style=\"font-weight: bold; size:20px;\">%@</div><blockquote><div>%@</div><div>%@</div><div>%@</div></blockquote>%@</div>", [cacheURL absoluteString], newsController.title, newsController.author, newsController.service, newsController.publishTime, [self fullHTMLContentNoSurronding:refer]];
         }
         while ((refer = refer.refer));
     }

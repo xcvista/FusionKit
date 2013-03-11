@@ -187,7 +187,7 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
         NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
                                        NSLocalizedStringFromTableInBundle(@"No data returned from news request.", @"error", [NSBundle bundleForClass:[self class]], @""),
                                    NSLocalizedRecoverySuggestionErrorKey:
-                                       NSLocalizedStringFromTableInBundle(@"Retry later, or maybe you hvae depleted all your old messages.", @"error", [NSBundle bundleForClass:[self class]], @"")};
+                                       NSLocalizedStringFromTableInBundle(@"Retry later, or maybe you have depleted all your old messages.", @"error", [NSBundle bundleForClass:[self class]], @"")};
         FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
                                                  code:404
                                              userInfo:userInfo]);

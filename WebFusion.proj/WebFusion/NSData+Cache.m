@@ -39,6 +39,12 @@ NSString *UIImageCacheFolderName;
     return [[self alloc] initWithCachedDataAtURL:location];
 }
 
++ (NSString *)cacheFolderLocation
+{
+    NSArray *folders = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    return [NSString stringWithFormat:@"%@/%@/%@", [folders lastObject], [[NSBundle mainBundle] bundleIdentifier], [[self class] cacheFolderName]];
+}
+
 + (NSURL *)cachedURLForURL:(NSURL *)location buildCache:(BOOL)buildCache
 {
     // mkdir -p ~/Library/Caches/UIImageCache
