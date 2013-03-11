@@ -17,6 +17,7 @@ static NSString *const NSDataCacheDefaultFolderName = @"NSDataCache";
 + (void)setCacheFolderName:(NSString *)folderName;
 
 + (NSData *)cachedDataAtURL:(NSURL *)location;
++ (NSURL *)cachedURLForURL:(NSURL *)location buildCache:(BOOL)buildCache;
 - (id)initWithCachedDataAtURL:(NSURL *)location;
 
 @end

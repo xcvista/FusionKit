@@ -8,6 +8,7 @@
 
 #import "WFPreferenceWindowController.h"
 #import "WFAppDelegate.h"
+#import "NSData+Cache.h"
 
 @interface WFPreferenceWindowController () <NSWindowDelegate>
 
@@ -17,6 +18,7 @@
 
 - (IBAction)reset:(id)sender;
 - (IBAction)revert:(id)sender;
+- (IBAction)clearCache:(id)sender;
 
 @end
 
@@ -63,6 +65,11 @@
         [userDefaults removeObjectForKey:key];
     for (id key in self.bootTimePrefs)
         [userDefaults setObject:self.bootTimePrefs[key] forKey:key];
+}
+
+- (void)clearCache:(id)sender
+{
+    [NSData clearCache];
 }
 
 @end

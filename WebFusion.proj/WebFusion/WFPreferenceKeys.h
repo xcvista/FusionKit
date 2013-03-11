@@ -24,3 +24,4 @@ WFStringKey(BOOL)           WFStallTimeout;
 WFStringKey(BOOL)           WFAllowServerChange;
 WFStringKey(NSString *)     WFCacheRoot;
 WFStringKey(BOOL)           WFShowPacketInspectorAtLaunch;
+WFStringKey(BOOL)           WFUseServerPush;

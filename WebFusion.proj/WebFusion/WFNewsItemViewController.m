@@ -11,6 +11,7 @@
 #import "NSString+Geometrics.h"
 #import "WFNewsInfoWindowController.h"
 #import "WFAppDelegate.h"
+#import "NSData+Cache.h"
 
 @interface WFNewsItemViewController ()
 
@@ -108,11 +109,11 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
                        
-                       NSData *avatar = [NSData dataWithContentsOfURL:news.author.avatar];
+                       NSData *avatar = [NSData cachedDataAtURL:news.author.avatar];
                        NSData *image = nil;
                        if ([news.media count] > 0)
                        {
-                           image = [NSData dataWithContentsOfURL:[news.media[0] thumbnail]];
+                           image = [NSData cachedDataAtURL:[news.media[0] thumbnail]];
                        }
                        dispatch_async(dispatch_get_main_queue(),
                                       ^{

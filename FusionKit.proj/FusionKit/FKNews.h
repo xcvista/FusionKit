@@ -23,5 +23,4 @@
 @property NSString *type;
 @property FKNews *refer;
 
-
 @end

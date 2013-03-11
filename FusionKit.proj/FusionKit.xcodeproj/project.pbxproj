@@ -41,9 +41,9 @@
 		1DA6D9E216E73FBF0004C7F7 /* services.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6D9E116E73FBF0004C7F7 /* services.strings */; };
 		1DD337DF16E677EB00BD1E28 /* FKNewsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD337DD16E677EB00BD1E28 /* FKNewsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DD337E016E677EB00BD1E28 /* FKNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD337DE16E677EB00BD1E28 /* FKNewsController.m */; };
-		F5269AEC16E752960049EA09 /* FKUserContact.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AEA16E752960049EA09 /* FKUserContact.h */; };
+		F5269AEC16E752960049EA09 /* FKUserContact.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AEA16E752960049EA09 /* FKUserContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5269AED16E752960049EA09 /* FKUserContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AEB16E752960049EA09 /* FKUserContact.m */; };
-		F5269AF016E752B50049EA09 /* FKUserContactLink.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AEE16E752B50049EA09 /* FKUserContactLink.h */; };
+		F5269AF016E752B50049EA09 /* FKUserContactLink.h in Headers */ = {isa = PBXBuildFile; fileRef = F5269AEE16E752B50049EA09 /* FKUserContactLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5269AF116E752B50049EA09 /* FKUserContactLink.m in Sources */ = {isa = PBXBuildFile; fileRef = F5269AEF16E752B50049EA09 /* FKUserContactLink.m */; };
 /* End PBXBuildFile section */
 

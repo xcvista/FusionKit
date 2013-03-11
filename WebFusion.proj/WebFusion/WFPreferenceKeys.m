@@ -24,3 +24,4 @@ WFStringKeyValue WFStallTimeout = @"requestStallTimeout";
 WFStringKeyValue WFAllowServerChange = @"allowAlternativeServer";
 WFStringKeyValue WFCacheRoot = @"cacheRoot";
 WFStringKeyValue WFShowPacketInspectorAtLaunch = @"launchWithPacketInspector";
+WFStringKeyValue WFUseServerPush = @"push";

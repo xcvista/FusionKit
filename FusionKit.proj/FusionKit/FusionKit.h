@@ -26,6 +26,11 @@
 #import <FusionKit/FKNews.h>
 #import <FusionKit/FKContact.h>
 #import <FusionKit/FKMedia.h>
+#import <FusionKit/FKPost.h>
+#import <FusionKit/FKSvrNews.h>
+#import <FusionKit/FKUserService.h>
+#import <FusionKit/FKUserContact.h>
+#import <FusionKit/FKuserContactLink.h>
 
 #endif
 
