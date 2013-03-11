@@ -16,7 +16,7 @@
 	<integer>25</integer>
 	<key>pullFrequency</key>
 	<integer>5</integer>
-	<key>useSavedUsername</key>
+	<key>saveUsername</key>
 	<true/>
 </dict>
 </plist>

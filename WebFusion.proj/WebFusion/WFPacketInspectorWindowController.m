@@ -11,6 +11,7 @@
 #import "WFOutgoingPacketInspector.h"
 #import "WFIncomingPacketInspector.h"
 #import "WFOutgoingPacketWindowController.h"
+#import <FusionKit/FusionKit.h>
 
 @interface WFPacketInspectorWindowController () <NSWindowDelegate>
 

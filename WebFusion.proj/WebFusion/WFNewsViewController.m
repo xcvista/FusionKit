@@ -115,6 +115,12 @@
                                                                              count:loadCount
                                                                               type:nil
                                                                              error:&err];
+                           
+                           if (news)
+                           {
+                               [currentObjects addObjectsFromArray:news];
+                           }
+                           
                            dispatch_async(dispatch_get_main_queue(),
                                           ^{
                                               self.running = NO;
@@ -127,8 +133,6 @@
                                                                       contextInfo:nil];
                                                   return;
                                               }
-                                              
-                                              [currentObjects addObjectsFromArray:news];
                                               
                                               [self.collectionView setContent:currentObjects];
                                               

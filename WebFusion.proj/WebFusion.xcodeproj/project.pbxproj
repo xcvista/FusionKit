@@ -24,6 +24,8 @@
 		1D20141B16E65EB5006A87B1 /* WFNewsItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20140E16E65EB5006A87B1 /* WFNewsItemViewController.xib */; };
 		1D20141C16E65EB5006A87B1 /* WFNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20141016E65EB5006A87B1 /* WFNewsViewController.m */; };
 		1D20141D16E65EB5006A87B1 /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */; };
+		1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */; };
+		1D58DC5416EE507E006D0401 /* WFPreferenceKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DC5316EE507E006D0401 /* WFPreferenceKeys.m */; };
 		1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */; };
 		1D74A6C716E82A7C002132D4 /* WFLinkWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */; };
 		1D74A6CF16E83021002132D4 /* Camera.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6C816E83021002132D4 /* Camera.pdf */; };
@@ -135,6 +137,10 @@
 		1D20140F16E65EB5006A87B1 /* WFNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsViewController.h; sourceTree = "<group>"; };
 		1D20141016E65EB5006A87B1 /* WFNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsViewController.m; sourceTree = "<group>"; };
 		1D20141116E65EB5006A87B1 /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
+		1D58DC4E16EE4FC2006D0401 /* NSData+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cache.h"; sourceTree = "<group>"; };
+		1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cache.m"; sourceTree = "<group>"; };
+		1D58DC5216EE507E006D0401 /* WFPreferenceKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPreferenceKeys.h; sourceTree = "<group>"; };
+		1D58DC5316EE507E006D0401 /* WFPreferenceKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPreferenceKeys.m; sourceTree = "<group>"; };
 		1D74A6C316E82A7C002132D4 /* WFLinkWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLinkWindowController.h; sourceTree = "<group>"; };
 		1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLinkWindowController.m; sourceTree = "<group>"; };
 		1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFLinkWindowController.xib; sourceTree = "<group>"; };
@@ -149,7 +155,7 @@
 		1D74A6D716E83122002132D4 /* SidebarTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableCellView.m; sourceTree = "<group>"; };
 		1D74A6DD16E84112002132D4 /* Refresh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Refresh.pdf; sourceTree = "<group>"; };
 		1DA1DF3616E8A31D0074ABCB /* WebFusionCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WebFusionCLI; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DA1DF3716E8A31D0074ABCB /* Foundation.framework */ = {isa = PBXFileReference; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DA1DF3716E8A31D0074ABCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DA1DF3A16E8A31E0074ABCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DA1DF3D16E8A31E0074ABCB /* WebFusionCLI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebFusionCLI-Prefix.pch"; sourceTree = "<group>"; };
 		1DA1DF3E16E8A31E0074ABCB /* WebFusionCLI.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = WebFusionCLI.1; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 			children = (
 				1DA6DA0B16E797560004C7F7 /* Categories */,
 				1DD337BD16E661B700BD1E28 /* MainMenu.xib */,
+				1D58DC5216EE507E006D0401 /* WFPreferenceKeys.h */,
+				1D58DC5316EE507E006D0401 /* WFPreferenceKeys.m */,
 				1D2013FF16E65EB5006A87B1 /* WFAppDelegate.h */,
 				1D20140016E65EB5006A87B1 /* WFAppDelegate.m */,
 				1DA6DA0A16E797410004C7F7 /* Packet Inspector */,
@@ -354,6 +362,8 @@
 		1DA6DA0B16E797560004C7F7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1D58DC4E16EE4FC2006D0401 /* NSData+Cache.h */,
+				1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */,
 				1D2013FC16E65EA7006A87B1 /* NSString+Geometrics.h */,
 				1D2013FD16E65EA7006A87B1 /* NSString+Geometrics.m */,
 				1DA6D9F416E774E80004C7F7 /* NSWindowController+Autoload.h */,
@@ -600,6 +610,8 @@
 				1DA6DA6116E826A30004C7F7 /* WFImageWindowController.m in Sources */,
 				1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */,
 				1D74A6D816E83122002132D4 /* SidebarTableCellView.m in Sources */,
+				1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */,
+				1D58DC5416EE507E006D0401 /* WFPreferenceKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +839,7 @@
 				1DA1DF4116E8A31E0074ABCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

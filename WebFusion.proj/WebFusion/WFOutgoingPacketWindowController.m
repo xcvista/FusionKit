@@ -9,6 +9,7 @@
 #import "WFOutgoingPacketWindowController.h"
 #import "WFAppDelegate.h"
 #import "NSString+JSONSanitizer.h"
+#import "WFPreferenceKeys.h"
 
 @interface WFOutgoingPacketWindowController () <NSWindowDelegate>
 
@@ -50,7 +51,7 @@
     NSString *dataString = [[NSString alloc] initWithData:[request HTTPBody]
                                                  encoding:NSUTF8StringEncoding];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [self.dataField setString:[userDefaults boolForKey:@"prettyPrintJSON"] ? [dataString sanitizedString] : dataString];
+    [self.dataField setString:[userDefaults boolForKey:WFPrettyPrintJSON] ? [dataString sanitizedString] : dataString];
 }
 
 - (void)windowWillClose:(NSNotification *)notification

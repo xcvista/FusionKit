@@ -9,6 +9,7 @@
 #import "WFIncomingPacketInspector.h"
 #import "WFAppDelegate.h"
 #import "WFIncomingPacketWindowController.h"
+#import "WFPreferenceKeys.h"
 
 @interface WFIncomingPacketInspector ()
 
@@ -44,7 +45,7 @@
     NSDate *date = self.incomingPackets[row][@"date"];
     NSTimeInterval timeout = [date timeIntervalSinceDate:self.incomingPackets[row][@"requestDate"]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSTimeInterval timeoutDeadline = [userDefaults doubleForKey:@"requestStallTimeout"];
+    NSTimeInterval timeoutDeadline = [userDefaults doubleForKey:WFStallTimeout];
     BOOL dead = (timeout > timeoutDeadline);
     
     switch (colNumber)

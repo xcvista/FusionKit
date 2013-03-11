@@ -9,6 +9,7 @@
 #import "WFLoginWindowController.h"
 #import "WFAppDelegate.h"
 #import "WFMainWindowController.h"
+#import "WFPreferenceKeys.h"
 
 @interface WFLoginWindowController () <NSWindowDelegate>
 
@@ -45,14 +46,14 @@
     
     [self.window setDefaultButtonCell:self.loginButton.cell];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults boolForKey:@"launchWithPacketInspector"])
+    if ([userDefaults boolForKey:WFShowPacketInspectorAtLaunch])
     {
         [[NSApp delegate] showPacketInspector:self];
     }
     if ([[NSApp delegate] override])
     {
-        NSString *username = [userDefaults objectForKey:@"username"];
-        NSString *password = [userDefaults objectForKey:@"password"];
+        NSString *username = [userDefaults objectForKey:WFUsername];
+        NSString *password = [userDefaults objectForKey:WFPassword];
         
         if (username)
             [self.usernameField setStringValue:username];
@@ -69,15 +70,15 @@
     }
     else
     {
-        if ([userDefaults boolForKey:@"useSavedUsername"])
+        if ([userDefaults boolForKey:WFSaveUsername])
         {
-            NSString *oldUsername = [userDefaults objectForKey:@"username"];
+            NSString *oldUsername = [userDefaults objectForKey:WFUsername];
             if ([oldUsername length])
                 [self.usernameField setStringValue:oldUsername];
         }
         else
         {
-            [userDefaults removeObjectForKey:@"username"];
+            [userDefaults removeObjectForKey:WFUsername];
         }
         
         NSString *username = [self.usernameField stringValue];
@@ -132,7 +133,7 @@
     [self.progressIndicator startAnimation:self];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
-                       NSString *serverRoot = [[NSUserDefaults standardUserDefaults] objectForKey:@"server"];
+                       NSString *serverRoot = [[NSUserDefaults standardUserDefaults] objectForKey:WFServerRoot];
                        
                        if (![serverRoot hasSuffix:@"/"])
                            serverRoot = [serverRoot stringByAppendingString:@"/"];
@@ -153,13 +154,13 @@
                                               if (!delegate.override)
                                               {
                                                   NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-                                                  if ([userDefaults boolForKey:@"useSavedUsername"])
+                                                  if ([userDefaults boolForKey:WFSaveUsername])
                                                   {
-                                                      [userDefaults setObject:username forKey:@"username"];
+                                                      [userDefaults setObject:username forKey:WFSaveUsername];
                                                   }
                                                   else
                                                   {
-                                                      [userDefaults removeObjectForKey:@"username"];
+                                                      [userDefaults removeObjectForKey:WFSaveUsername];
                                                   }
                                               }
                                               [delegate showMainWindow:self];

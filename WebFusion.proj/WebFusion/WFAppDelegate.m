@@ -11,6 +11,7 @@
 #import "WFPacketInspectorWindowController.h"
 #import "WFAboutBoxWindowController.h"
 #import "WFPreferenceWindowController.h"
+#import "WFPreferenceKeys.h"
 
 @interface WFAppDelegate ()
 
@@ -35,16 +36,16 @@
     [userDefaultsController setInitialValues:defaults];
     [userDefaults synchronize];
     
-    if ([userDefaults boolForKey:@"override"])
+    if ([userDefaults boolForKey:WFOverrideMode])
     {
         NSLog(@"App started in Override mode, behavior will drastically change.");
-        [userDefaults setBool:NO forKey:@"showDeveloperMenu"];
+        [userDefaults setBool:NO forKey:WFDeveloperMode];
         self.override = YES;
     }
     
-    if ([userDefaults boolForKey:@"launchWithPacketInspector"])
+    if ([userDefaults boolForKey:WFShowPacketInspectorAtLaunch])
     {
-        [userDefaults setBool:YES forKey:@"showDeveloperMenu"];
+        [userDefaults setBool:YES forKey:WFDeveloperMode];
     }
     
     // Show the initial window.

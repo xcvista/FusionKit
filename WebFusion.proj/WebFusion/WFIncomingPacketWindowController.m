@@ -10,6 +10,7 @@
 #import "WFOutgoingPacketWindowController.h"
 #import "WFAppDelegate.h"
 #import "NSString+JSONSanitizer.h"
+#import "WFPreferenceKeys.h"
 
 @interface WFIncomingPacketWindowController ()
 
@@ -51,7 +52,7 @@
     [self.dateField setStringValue:[formatter stringFromDate:date]];
     [self.methodField setIntegerValue:[response statusCode]];
     [self.targetField setStringValue:[[response URL] absoluteString]];
-    [self.durationField setStringValue:[NSString stringWithFormat:NSLocalizedString(@"%.1f seconds%@", @""), timeout, (timeout > [userDefaults doubleForKey:@"requestStallTimeout"]) ? NSLocalizedString(@", Stalled", @"") : @""]];
+    [self.durationField setStringValue:[NSString stringWithFormat:NSLocalizedString(@"%.1f seconds%@", @""), timeout, (timeout > [userDefaults doubleForKey:WFStallTimeout]) ? NSLocalizedString(@", Stalled", @"") : @""]];
     NSString *dataString = [[NSString alloc] initWithData:self.userInfo[@"packet"]
                                                  encoding:NSUTF8StringEncoding];
     [self.dataField setString:[userDefaults boolForKey:@"prettyPrintJSON"] ? [dataString sanitizedString] : dataString];
