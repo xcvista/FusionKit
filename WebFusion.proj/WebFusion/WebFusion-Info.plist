@@ -4,6 +4,29 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>wfapp</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>wfapp</string>
+			<key>CFBundleTypeName</key>
+			<string>WebFusion Application</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>tk.maxius.webfusion.appbundle</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<true/>
+			<key>NSDocumentClass</key>
+			<string>WFAppBundleInstaller</string>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
@@ -28,5 +51,27 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>com.apple.plugin</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>WebFusion Application</string>
+			<key>UTTypeIconFile</key>
+			<string>wfapp</string>
+			<key>UTTypeIdentifier</key>
+			<string>tk.maxius.webfusion.appbundle</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>wfapp</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

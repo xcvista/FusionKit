@@ -202,11 +202,11 @@
 				1D20138F16E65E0C006A87B1 /* FKWrapper.h */,
 				1D20139016E65E0C006A87B1 /* FKWrapper.m */,
 				1D20139116E65E0C006A87B1 /* FusionKit.h */,
-				1D20137016E65DE2006A87B1 /* Supporting Files */,
 				F5269AEA16E752960049EA09 /* FKUserContact.h */,
 				F5269AEB16E752960049EA09 /* FKUserContact.m */,
 				F5269AEE16E752B50049EA09 /* FKUserContactLink.h */,
 				F5269AEF16E752B50049EA09 /* FKUserContactLink.m */,
+				1D20137016E65DE2006A87B1 /* Supporting Files */,
 			);
 			path = FusionKit;
 			sourceTree = "<group>";
