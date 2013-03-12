@@ -6,14 +6,10 @@
 	<false/>
 	<key>cacheRoot</key>
 	<string>dataCache</string>
-	<key>requestStallTimeout</key>
-	<integer>3</integer>
 	<key>prettyPrintJSON</key>
 	<true/>
 	<key>server</key>
 	<string>https://www.shisoft.net/ajax</string>
-	<key>showDeveloperMenu</key>
-	<false/>
 	<key>loadBatchSize</key>
 	<integer>25</integer>
 	<key>historyBatchSize</key>
