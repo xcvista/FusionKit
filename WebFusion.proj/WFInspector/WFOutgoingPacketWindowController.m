@@ -7,9 +7,8 @@
 //
 
 #import "WFOutgoingPacketWindowController.h"
-#import "WFAppDelegate.h"
+#import <FusionApps/FusionApps.h>
 #import "NSString+JSONSanitizer.h"
-#import "WFPreferenceKeys.h"
 
 @interface WFOutgoingPacketWindowController () <NSWindowDelegate>
 
@@ -56,7 +55,7 @@
 
 - (void)windowWillClose:(NSNotification *)notification
 {
-    [[NSApp delegate] releaseWindowController:self];
+    [[WFApplicationServices applicationServices] releaseWindowController:self];
 }
 
 @end

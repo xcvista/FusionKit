@@ -7,9 +7,8 @@
 //
 
 #import "WFIncomingPacketInspector.h"
-#import "WFAppDelegate.h"
+#import <FusionApps/FusionApps.h>
 #import "WFIncomingPacketWindowController.h"
-#import "WFPreferenceKeys.h"
 
 @interface WFIncomingPacketInspector ()
 
@@ -106,7 +105,7 @@
     NSDictionary *userData = self.incomingPackets[[sender tag]];
     WFIncomingPacketWindowController *outWC = [[WFIncomingPacketWindowController alloc] init];
     outWC.userInfo = userData;
-    [[NSApp delegate] showWindowController:outWC];
+    [[WFApplicationServices applicationServices] showWindowController:outWC];
 }
 
 @end

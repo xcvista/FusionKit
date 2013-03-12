@@ -12,12 +12,24 @@
 
 - (NSString *)appName
 {
-    return @"Developer Portal";
+    return @"Dev Portal";
 }
 
 - (NSString *)appCategory
 {
     return @"Developer";
+}
+
+- (NSImage *)appIcon
+{
+    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[self class]] URLForResource:@"Developer" withExtension:@"pdf"]];
+    [image setTemplate:YES];
+    return image;
+}
+
+- (NSInteger)sortOrder
+{
+    return -1;
 }
 
 @end

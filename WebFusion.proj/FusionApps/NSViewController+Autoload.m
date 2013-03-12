@@ -12,7 +12,7 @@
 
 - (id)init
 {
-    return [self initWithNibName:NSStringFromClass([self class]) bundle:nil];
+    return [self initWithNibName:NSStringFromClass([self class]) bundle:[NSBundle bundleForClass:[self class]]];
 }
 
 @end

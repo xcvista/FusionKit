@@ -46,10 +46,6 @@
     
     [self.window setDefaultButtonCell:self.loginButton.cell];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults boolForKey:WFShowPacketInspectorAtLaunch])
-    {
-        [[NSApp delegate] showPacketInspector:self];
-    }
     if ([[NSApp delegate] override])
     {
         NSString *username = [userDefaults objectForKey:WFUsername];

@@ -101,7 +101,7 @@
     [self stopLoading];
     [self.button setHidden:NO];
     [self.button setTitle:nil];
-    NSImage *image = [NSImage imageNamed:@"Refresh"];
+    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[self class]] URLForResource:@"Refresh" withExtension:@"pdf"]];
     [image setTemplate:YES];
     [self.button setImage:image];
     [self.button sizeToFit];

@@ -1,52 +1,46 @@
 //
-//  WFIncomingPacketInspector.m
+//  WFOutgoingPacketInspector.m
 //  WebFusion
 //
 //  Created by Maxthon Chan on 13-3-6.
 //
 //
 
-#import "WFIncomingPacketInspector.h"
-#import "WFAppDelegate.h"
-#import "WFIncomingPacketWindowController.h"
-#import "WFPreferenceKeys.h"
+#import "WFOutgoingPacketInspector.h"
+#import <FusionApps/FusionApps.h>
+#import "WFOutgoingPacketWindowController.h"
 
-@interface WFIncomingPacketInspector ()
+@interface WFOutgoingPacketInspector ()
 
-@property NSMutableArray *incomingPackets;
+@property NSMutableArray *outgoingPackets;
 
 @end
 
-@implementation WFIncomingPacketInspector 
+@implementation WFOutgoingPacketInspector
 
-- (void)incomingPacket:(NSNotification *)aNotification
+- (void)outgoingPacket:(NSNotification *)aNotification
 {
-    if (!self.incomingPackets)
-        self.incomingPackets = [NSMutableArray array];
-    [self.incomingPackets addObject:[aNotification userInfo]];
+    if (!self.outgoingPackets)
+        self.outgoingPackets = [NSMutableArray array];
+    [self.outgoingPackets addObject:[aNotification userInfo]];
     [self.tableView reloadData];
     [self.tableView scrollToEndOfDocument:self];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return [self.incomingPackets count];
+    return [self.outgoingPackets count];
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    return self.incomingPackets[row];
+    return self.outgoingPackets[row];
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     NSUInteger colNumber = [[tableView tableColumns] indexOfObject:tableColumn];
-    NSHTTPURLResponse *response = self.incomingPackets[row][@"response"];
-    NSDate *date = self.incomingPackets[row][@"date"];
-    NSTimeInterval timeout = [date timeIntervalSinceDate:self.incomingPackets[row][@"requestDate"]];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSTimeInterval timeoutDeadline = [userDefaults doubleForKey:WFStallTimeout];
-    BOOL dead = (timeout > timeoutDeadline);
+    NSURLRequest *request = self.outgoingPackets[row][@"packet"];
     
     switch (colNumber)
     {
@@ -54,13 +48,11 @@
         {
             NSTableCellView *tableCell = [tableView makeViewWithIdentifier:@"Date"
                                                                      owner:self];
+            NSDate *date = self.outgoingPackets[row][@"date"];
             
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateStyle:NSDateFormatterNoStyle];
             [formatter setTimeStyle:NSDateFormatterMediumStyle];
-            
-            if (dead)
-                [[tableCell textField] setTextColor:[NSColor redColor]];
             
             [[tableCell textField] setStringValue:[formatter stringFromDate:date]];
             
@@ -68,24 +60,16 @@
         }
         case 1:
         {
-            NSTableCellView *tableCell = [tableView makeViewWithIdentifier:@"Status"
+            NSTableCellView *tableCell = [tableView makeViewWithIdentifier:@"Method"
                                                                      owner:self];
-            [[tableCell textField] setIntegerValue:[response statusCode]];
-            
-            if (dead)
-                [[tableCell textField] setTextColor:[NSColor redColor]];
-            
+            [[tableCell textField] setStringValue:[request HTTPMethod]];
             return tableCell;
         }
         case 2:
         {
             NSTableCellView *tableCell = [tableView makeViewWithIdentifier:@"Target"
                                                                      owner:self];
-            [[tableCell textField] setStringValue:[[response URL] lastPathComponent]];
-            
-            if (dead)
-                [[tableCell textField] setTextColor:[NSColor redColor]];
-            
+            [[tableCell textField] setStringValue:[[request URL] lastPathComponent]];
             return tableCell;
         }
         case 3:
@@ -93,7 +77,6 @@
             NSButton *button = [tableView makeViewWithIdentifier:@"Data"
                                                            owner:self];
             [button setTag:row];
-            
             return button;
         }
         default:
@@ -103,10 +86,10 @@
 
 - (IBAction)openJSONView:(id)sender
 {
-    NSDictionary *userData = self.incomingPackets[[sender tag]];
-    WFIncomingPacketWindowController *outWC = [[WFIncomingPacketWindowController alloc] init];
+    NSDictionary *userData = self.outgoingPackets[[sender tag]];
+    WFOutgoingPacketWindowController *outWC = [[WFOutgoingPacketWindowController alloc] init];
     outWC.userInfo = userData;
-    [[NSApp delegate] showWindowController:outWC];
+    [[WFApplicationServices applicationServices] showWindowController:outWC];
 }
 
 @end

@@ -10,6 +10,8 @@
 
 WFAppLoader *appLoader;
 
+NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.loadbundle";
+
 @interface WFAppLoader ()
 
 @property NSMutableDictionary *loadedBundles;
@@ -39,9 +41,20 @@ WFAppLoader *appLoader;
     }
     else
     {
-        [bundle unload]; // Bad bundles are not used.
+        //[bundle unload]; // Bad bundles are not used.
         return NO;
     }
+}
+
+- (BOOL)loadAppBundle:(NSURL *)bundleURL
+{
+    if ([self loadBundle:[NSBundle bundleWithURL:bundleURL]])
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:WFAppLoaderLoadedBundleNotification
+                                                            object:self];
+        return YES;
+    }
+    return NO;
 }
 
 - (BOOL)unloadAllApps
@@ -73,7 +86,12 @@ WFAppLoader *appLoader;
         for (NSString *path in paths)
         {
             NSString *bundleLocation = [dest stringByAppendingPathComponent:path];
-            [self loadBundle:[NSBundle bundleWithPath:bundleLocation]];
+            NSBundle *bundle = [NSBundle bundleWithPath:bundleLocation];
+            if (bundle)
+            {
+                NSLog(@"Loading bundle %@", bundle);
+                [self loadBundle:bundle];
+            }
         }
     }
     return self;

@@ -34,8 +34,4 @@
 - (void)startMainWindow;
 - (void)stopMainWindow;
 
-- (IBAction)showPacketInspector:(id)sender;
-- (void)startPacketInspector;
-- (void)stopPacketInspector;
-
 @end

@@ -8,9 +8,8 @@
 
 #import "WFIncomingPacketWindowController.h"
 #import "WFOutgoingPacketWindowController.h"
-#import "WFAppDelegate.h"
+#import <FusionApps/FusionApps.h>
 #import "NSString+JSONSanitizer.h"
-#import "WFPreferenceKeys.h"
 
 @interface WFIncomingPacketWindowController ()
 
@@ -62,7 +61,7 @@
 {
     WFOutgoingPacketWindowController *outVC = [[WFOutgoingPacketWindowController alloc] init];
     outVC.userInfo = @{@"packet": self.userInfo[@"request"], @"date": self.userInfo[@"requestDate"]};
-    [[NSApp delegate] showWindowController:outVC];
+    [[WFApplicationServices applicationServices] showWindowController:outVC];
 }
 
 @end

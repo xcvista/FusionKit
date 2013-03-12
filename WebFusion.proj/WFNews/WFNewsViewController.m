@@ -50,9 +50,14 @@
 
 - (NSImage *)appIcon
 {
-    NSImage *image = [NSImage imageNamed:@"News"];
+    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[self class]] URLForResource:@"News" withExtension:@"pdf"]];
     [image setTemplate:YES];
     return image;
+}
+
+- (NSUInteger)sortOrder
+{
+    return 0;
 }
 
 - (void)reload:(id)sender
@@ -83,10 +88,11 @@
                                                                 modalDelegate:nil
                                                                didEndSelector:nil
                                                                   contextInfo:nil];
-                                              return;
                                           }
-                                          
-                                          [self.collectionView setContent:news];
+                                          else
+                                          {
+                                              [self.collectionView setContent:news];
+                                          }
                                           [self.sidebarItem setBadgeAsRefreshButton];
                                       });
                        

@@ -25,6 +25,10 @@
 
 - (void)awakeFromNib
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reload:)
+                                                 name:WFAppLoaderLoadedBundleNotification
+                                               object:nil];
     [self reload:nil];
 }
 
@@ -86,6 +90,10 @@
     if ([self.outlineView selectedRow] >= 0)
     {
         id item = [self.outlineView itemAtRow:[self.outlineView selectedRow]];
+        SidebarTableCellView *view = [self.outlineView viewAtColumn:0
+                                                                row:[self.outlineView selectedRow]
+                                                    makeIfNecessary:NO];
+        [view setNeedsDisplay:YES];
         if ([self.outlineView parentForItem:item] != nil)
         {
             [self.mainVC loadAppWithName:item];

@@ -14,6 +14,11 @@
 
 @implementation WFViewController
 
+- (id)init
+{
+    return [self initWithNibName:NSStringFromClass([self class]) bundle:[NSBundle bundleForClass:[self class]]];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,15 +36,17 @@
 
 - (NSString *)appCategory
 {
-    return nil;
+    return @"Misc";
 }
 
 - (NSImage *)appIcon
 {
-    return nil;
+    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[WFViewController class]] URLForResource:@"Apps" withExtension:@"pdf"]];
+    [image setTemplate:YES];
+    return image;
 }
 
-- (NSUInteger)sortOrder
+- (NSInteger)sortOrder
 {
     return 0;
 }
@@ -54,8 +61,8 @@
     NSComparisonResult catergoryCmp = [self.appCategory compare:other.appCategory options:NSNumericSearch | NSDiacriticInsensitiveSearch | NSCaseInsensitiveSearch];
     if (catergoryCmp == NSOrderedSame)
     {
-        NSUInteger order1 = [self sortOrder];
-        NSUInteger order2 = [self sortOrder];
+        NSInteger order1 = [self sortOrder];
+        NSInteger order2 = [other sortOrder];
         if (order1 < order2)
             return NSOrderedAscending;
         else if (order1 > order2)

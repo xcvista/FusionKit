@@ -7,9 +7,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>wfapp.icns</string>
+	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>tk.maxius.webfusion.developer</string>
+	<string>tk.maxius.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -23,6 +23,6 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSPrincipalClass</key>
-	<string>WFDeveloper</string>
+	<string>WFInspector</string>
 </dict>
 </plist>

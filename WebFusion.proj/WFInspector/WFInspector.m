@@ -1,30 +1,32 @@
 //
-//  WFPacketInspectorWindowController.m
+//  WFInspector.m
 //  WebFusion
 //
-//  Created by Maxthon Chan on 13-3-6.
+//  Created by Maxthon Chan on 13-3-13.
 //
 //
 
-#import "WFPacketInspectorWindowController.h"
-#import "WFAppDelegate.h"
+#import "WFInspector.h"
 #import "WFOutgoingPacketInspector.h"
 #import "WFIncomingPacketInspector.h"
 #import "WFOutgoingPacketWindowController.h"
-#import <FusionKit/FusionKit.h>
 
-@interface WFPacketInspectorWindowController () <NSWindowDelegate>
+@interface WFInspector ()
 
 @property IBOutlet WFOutgoingPacketInspector *outgoingInspector;
 @property IBOutlet WFIncomingPacketInspector *incomingInspector;
+@property IBOutlet NSTableView *incomingTable;
+@property IBOutlet NSTableView *outgoingTable;
+
+- (IBAction)reload:(id)sender;
 
 @end
 
-@implementation WFPacketInspectorWindowController
+@implementation WFInspector
 
-- (id)initWithWindow:(NSWindow *)window
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithWindow:window];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.
     }
@@ -32,13 +34,25 @@
     return self;
 }
 
-- (void)windowDidLoad
+- (void)awakeFromNib
 {
-    [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    [[NSApp delegate] startPacketInspector];
-    [self.window setExcludedFromWindowsMenu:YES];
+    [self.sidebarItem.button setTarget:self];
+    [self.sidebarItem.button setAction:@selector(reload:)];
+}
+
+- (NSString *)appName
+{
+    return @"Inspector";
+}
+
+- (NSString *)appCategory
+{
+    return @"Developer";
+}
+
+- (void)applicatinDidLoad
+{
+    [self view];
     [[NSNotificationCenter defaultCenter] addObserver:self.outgoingInspector
                                              selector:@selector(outgoingPacket:)
                                                  name:FKWillUploadPackageNotification
@@ -49,13 +63,28 @@
                                                object:nil];
 }
 
-- (void)windowWillClose:(NSNotification *)notification
+- (void)reload:(id)sender
+{
+    [self.incomingTable reloadData];
+    [self.outgoingTable reloadData];
+}
+
+- (void)viewWillAppear
+{
+    [self.sidebarItem setBadgeAsRefreshButton];
+    
+    [self reload:self];
+}
+
+- (void)viewWillDisappear
+{
+    [self.sidebarItem setBadge:nil];
+}
+
+- (void)applicationWillUnload
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self.outgoingInspector];
     [[NSNotificationCenter defaultCenter] removeObserver:self.incomingInspector];
-    [[NSApp delegate] closeAllWindowControllerWithClass:[WFOutgoingPacketWindowController class]];
-    [[NSApp delegate] stopPacketInspector];
-    [[NSApp delegate] releaseWindowController:self];
 }
 
 @end

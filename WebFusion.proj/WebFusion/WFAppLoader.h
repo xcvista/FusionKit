@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <FusionApps/FusionApps.h>
 
+extern NSString *const WFAppLoaderLoadedBundleNotification;
+
 @interface WFAppLoader : NSObject
 
 + (WFAppLoader *)appLoader;

@@ -8,7 +8,6 @@
 
 #import "WFAppDelegate.h"
 #import "WFMainWindowController.h"
-#import "WFPacketInspectorWindowController.h"
 #import "WFAboutBoxWindowController.h"
 #import "WFPreferenceWindowController.h"
 #import "WFPreferenceKeys.h"
@@ -154,22 +153,6 @@
 {
     [self.mainWindowItem setState:NSOffState];
     [self.dockMainWindowItem setState:NSOffState];
-}
-
-- (void)showPacketInspector:(id)sender
-{
-    [self callUpWindowController:[WFPacketInspectorWindowController class]
-                          sender:sender];
-}
-
-- (void)startPacketInspector
-{
-    [self.packetInspectorItem setState:NSOnState];
-}
-
-- (void)stopPacketInspector
-{
-    [self.packetInspectorItem setState:NSOffState];
 }
 
 - (void)delegateSignOut:(id)sender
