@@ -19,6 +19,8 @@
 - (NSImage *)appIcon;
 - (NSString *)appCategory;
 
+- (NSComparisonResult)compare:(WFViewController *)other;
+
 - (void)applicatinDidLoad;
 - (void)viewWillAppear;
 - (void)viewWillDisappear;

@@ -11,5 +11,6 @@
 @interface WFAppPaneController : NSObject
 
 - (void)configureView;
+- (void)reload:(id)notification;
 
 @end

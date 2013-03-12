@@ -8,7 +8,7 @@
 
 #import "WFViewController.h"
 
-@interface WFViewController ()
+@interface WFViewController () <NSCopying>
 
 @end
 
@@ -39,6 +39,41 @@
     return nil;
 }
 
+- (NSUInteger)sortOrder
+{
+    return 0;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
+- (NSComparisonResult)compare:(WFViewController *)other
+{
+    NSComparisonResult catergoryCmp = [self.appCategory compare:other.appCategory options:NSNumericSearch | NSDiacriticInsensitiveSearch | NSCaseInsensitiveSearch];
+    if (catergoryCmp == NSOrderedSame)
+    {
+        NSUInteger order1 = [self sortOrder];
+        NSUInteger order2 = [self sortOrder];
+        if (order1 < order2)
+            return NSOrderedAscending;
+        else if (order1 > order2)
+            return NSOrderedDescending;
+        else
+            return [self.appName compare:other.appName options:NSNumericSearch | NSDiacriticInsensitiveSearch | NSCaseInsensitiveSearch];
+    }
+    else
+    {
+        if ([self.appCategory isEqualToString:@"WebFusion"])
+            return NSOrderedAscending;
+        else if ([other.appCategory isEqualToString:@"WebFusion"])
+            return NSOrderedDescending;
+        else
+            return catergoryCmp;
+    }
+}
+
 - (void)applicatinDidLoad
 {
     // eh
@@ -55,6 +90,11 @@
 }
 
 - (void)viewWillDisappear
+{
+    // eh
+}
+
+- (void)pull
 {
     // eh
 }

@@ -10,4 +10,14 @@
 
 @implementation WFDeveloper
 
+- (NSString *)appName
+{
+    return @"Developer Portal";
+}
+
+- (NSString *)appCategory
+{
+    return @"Developer";
+}
+
 @end

@@ -103,6 +103,16 @@
     
     [self.sidebarItem.button setTarget:self];
     [self.sidebarItem.button setAction:@selector(reload:)];
+}
+
+- (void)viewWillAppear
+{
+    if (self.running)
+        [self.sidebarItem beginLoading];
+    else if (![[self.sidebarItem badge] length])
+        [self.sidebarItem setBadgeAsRefreshButton];
+    else
+        [self reload:self];
     
     [self reload:self];
 }
@@ -162,16 +172,6 @@
         
         
     }
-}
-
-- (void)viewWillAppear
-{
-    if (self.running)
-        [self.sidebarItem beginLoading];
-    else if (![[self.sidebarItem badge] length])
-        [self.sidebarItem setBadgeAsRefreshButton];
-    else
-        [self reload:self];
 }
 
 - (void)viewWillDisappear

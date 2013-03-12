@@ -8,15 +8,16 @@
 
 #import "WFAppPaneController.h"
 #import "WFMainWindowController.h"
-#import "SidebarTableCellView.h"
+#import <FusionApps/FusionApps.h>
+#import "WFAppLoader.h"
 
 @interface WFAppPaneController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
 
 @property (weak) IBOutlet WFMainWindowController *mainVC;
 @property (weak) IBOutlet NSOutlineView *outlineView;
 
-@property NSArray *titles;
-@property NSDictionary *contents;
+@property NSMutableArray *titles;
+@property NSMutableDictionary *contents;
 
 @end
 
@@ -24,14 +25,38 @@
 
 - (void)awakeFromNib
 {
-    self.titles = @[@"WebFusion", @"Apps"];
-    self.contents = @{@"WebFusion": @[@"News",
-                                      @"Posts",
-                                      @"Me",
-                                      @"Contacts"],
-                      @"Apps": @[@"Places",
-                                 @"Camera",
-                                 @"Groove"]};
+    [self reload:nil];
+}
+
+- (void)reload:(id)notification
+{
+    NSArray *objects = [[WFAppLoader appLoader] loadedApps];
+    self.titles = [NSMutableArray array];
+    self.contents = [NSMutableDictionary dictionary];
+    
+    for (WFViewController *app in objects)
+    {
+        if (![self.titles containsObject:app.appCategory])
+            [self.titles addObject:app.appCategory];
+        if (!self.contents[app.appCategory])
+            self.contents[app.appCategory] = [NSMutableArray array];
+        [self.contents[app.appCategory] addObject:app];
+    }
+    
+    [self.titles sortUsingComparator:
+     ^NSComparisonResult(NSString *key1, NSString *key2) {
+         if ([key1 isEqualToString:@"WebFusion"])
+             return NSOrderedAscending;
+         else if ([key2 isEqualToString:@"WebFusion"])
+             return NSOrderedDescending;
+         else
+             return [key1 compare:key2];
+     }];
+    for (id key in self.contents)
+    {
+        [self.contents[key] sortUsingSelector:@selector(compare:)];
+    }
+    [self.outlineView reloadData];
 }
 
 - (void)configureView
@@ -103,7 +128,7 @@
     if ([self.titles containsObject:item])
     {
         NSTextField *headerCell = [outlineView makeViewWithIdentifier:@"HeaderText"
-                                                                    owner:self];
+                                                                owner:self];
         [headerCell setStringValue:[NSLocalizedString(item, @"") uppercaseString]];
         return headerCell;
     }
@@ -111,10 +136,10 @@
     {
         SidebarTableCellView *dataCell = [outlineView makeViewWithIdentifier:@"MainCell"
                                                                        owner:self];
-        NSImage *template = [NSImage imageNamed:item];
-        [template setTemplate:YES];
-        [[dataCell imageView] setImage:template];
-        [[dataCell textField] setStringValue:NSLocalizedString(item, @"")];
+        WFViewController *vc = item;
+        [[dataCell imageView] setImage:vc.appIcon];
+        [[dataCell textField] setStringValue:vc.appName];
+        vc.sidebarItem = dataCell;
         return dataCell;
     }
 }

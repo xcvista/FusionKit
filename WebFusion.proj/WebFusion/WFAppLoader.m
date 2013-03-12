@@ -32,8 +32,32 @@ WFAppLoader *appLoader;
     [bundle load];
     if ([[bundle principalClass] isSubclassOfClass:[WFViewController class]])
     {
-        
+        WFViewController *object = [[[bundle principalClass] alloc] init];
+        [object applicatinDidLoad];
+        self.loadedBundles[(id<NSCopying>)object] = bundle;
+        return YES;
     }
+    else
+    {
+        [bundle unload]; // Bad bundles are not used.
+        return NO;
+    }
+}
+
+- (BOOL)unloadAllApps
+{
+    NSArray *apps = [self.loadedApps copy];
+    for (WFViewController *app in apps)
+    {
+        [app applicationWillUnload];
+        [self.loadedBundles removeObjectForKey:app];
+    }
+    return YES;
+}
+
+- (NSArray *)loadedApps
+{
+    return [self.loadedBundles allKeys];
 }
 
 - (id)init

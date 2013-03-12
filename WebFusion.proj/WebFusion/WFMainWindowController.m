@@ -9,18 +9,16 @@
 #import "WFMainWindowController.h"
 #import "WFAppPaneController.h"
 #import "WFAppDelegate.h"
-#import "SidebarTableCellView.h"
+#import <FusionApps/FusionApps.h>
 #import "WFNewsViewController.h"
+#import <FusionApps/FusionApps.h>
 
 @interface WFMainWindowController () <NSWindowDelegate, NSSplitViewDelegate>
 
 @property IBOutlet WFAppPaneController *appPaneController;
-@property IBOutlet NSViewController *detailViewController;
+@property IBOutlet WFViewController *detailViewController;
 @property IBOutlet NSView *rightSplitView;
 @property (weak) IBOutlet NSOutlineView *outlineView;
-@property NSString *currentApp;
-
-@property NSDictionary *apps;
 
 - (IBAction)signOut:(id)sender;
 - (IBAction)clearSession:(id)sender;
@@ -71,44 +69,17 @@
         [self.detailViewController performSelector:@selector(reload:) withObject:sender];
 }
 
-- (void)loadAppWithName:(NSString *)name
+- (void)loadAppWithName:(WFViewController *)viewController
 {
-    if (!self.apps)
-    {
-        self.apps = @{@"News": @"WFNewsViewController"};
-    }
-    NSString *className = self.apps[name];
-    if ([self.detailViewController respondsToSelector:@selector(viewWillDisappear)])
-        [self.detailViewController performSelector:@selector(viewWillDisappear)];
-    if (![self.currentApp isEqualToString:className])
-    {
-        self.currentApp = className;
-        if (className)
-        {
-            if (![self.detailViewController isKindOfClass:NSClassFromString(className)])
-            {
-                self.detailViewController = [[NSClassFromString(className) alloc] initWithNibName:className
-                                                                                           bundle:[NSBundle mainBundle]];
-                if ([self.detailViewController respondsToSelector:@selector(setWindow:)])
-                    [self.detailViewController performSelector:@selector(setWindow:)
-                                                    withObject:self.window];
-                if ([self.detailViewController respondsToSelector:@selector(setSidebarItem:)])
-                    [self.detailViewController performSelector:@selector(setSidebarItem:)
-                                                    withObject:[self.outlineView viewAtColumn:0
-                                                                                          row:[self.outlineView rowForItem:name]
-                                                                              makeIfNecessary:NO]];
-                [[self.detailViewController view] setFrame:self.rightSplitView.bounds];
-                [[self.detailViewController view] setAutoresizingMask:18];
-                [self.rightSplitView setSubviews:@[[self.detailViewController view]]];
-            }
-            if ([self.detailViewController respondsToSelector:@selector(viewWillAppear)])
-                [self.detailViewController performSelector:@selector(viewWillAppear)];
-        }
-        else
-        {
-            NSLog(@"Unrecognized class name %@ requested.", name);
-        }
-    }
+    if (self.detailViewController == viewController)
+        return;
+    [self.detailViewController viewWillDisappear];
+    self.detailViewController = viewController;
+    [self.detailViewController setWindow:self.window];
+    [[self.detailViewController view] setFrame:self.rightSplitView.bounds];
+    [[self.detailViewController view] setAutoresizingMask:18];
+    [self.rightSplitView setSubviews:@[[self.detailViewController view]]];
+    [self.detailViewController viewWillAppear];
 }
 
 - (BOOL)splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)view

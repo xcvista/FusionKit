@@ -48,6 +48,8 @@
         [userDefaults setBool:YES forKey:WFDeveloperMode];
     }
     
+    [WFApplicationServices applicationServices].delegate = self;
+    
     // Show the initial window.
     self.windowControllers = [NSMutableArray array];
     [self showWindowController:[[WFLoginWindowController alloc] init]]; 
