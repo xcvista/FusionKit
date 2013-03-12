@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FusionApps : NSObject
-
-@end
+#import <FusionApps/SidebarTableCellView.h>
+#import <FusionApps/WFPreferenceKeys.h>
+#import <FusionApps/WFViewController.h>
+#import <FusionApps/NSViewController+Autoload.h>
+#import <FusionApps/NSWindowController+Autoload.h>
+#import <FusionApps/WFApplicationServices.h>

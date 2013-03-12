@@ -65,7 +65,6 @@
         if ([username length] && [password length])
         {
             self.overrideAutologon = YES;
-            [self login:self];
         }
     }
     else
@@ -92,6 +91,20 @@
             [self.passwordField becomeFirstResponder];
         }
     }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       // Load bundles
+                       [WFAppLoader appLoader];
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^{
+                                          [self.loginButton setEnabled:YES];
+                                          if (self.overrideAutologon)
+                                          {
+                                              [self login:self];
+                                          }
+                                      });
+                   });
 }
 
 - (BOOL)windowShouldClose:(id)sender

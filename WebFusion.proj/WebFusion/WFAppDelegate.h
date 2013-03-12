@@ -9,8 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import <FusionKit/FusionKit.h>
 #import "WFLoginWindowController.h"
+#import <FusionApps/FusionApps.h>
+#import "WFAppLoader.h"
 
-@interface WFAppDelegate : NSObject <NSApplicationDelegate>
+@interface WFAppDelegate : NSObject <NSApplicationDelegate, WFApplicationServicesDelegate>
 
 @property NSMutableArray *windowControllers;
 @property FKConnection *connection;

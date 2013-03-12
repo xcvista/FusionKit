@@ -6,8 +6,8 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import <FusionApps/FusionApps.h>
 
-@interface WFDeveloper : NSObject
+@interface WFDeveloper : WFViewController
 
 @end

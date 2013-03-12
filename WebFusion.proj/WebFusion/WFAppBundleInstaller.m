@@ -26,7 +26,7 @@
         return NO;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *localRoot = [[NSBundle mainBundle] bundleURL];
-    NSURL *dest = [localRoot URLByAppendingPathComponent:@"Contents/Bundles"];
+    NSURL *dest = [localRoot URLByAppendingPathComponent:@"Contents/PlugIns"];
     dest = [dest URLByAppendingPathComponent:[url lastPathComponent]];
     [fileManager copyItemAtURL:url toURL:dest error:nil];
     return YES;
