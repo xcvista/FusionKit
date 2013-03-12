@@ -24,5 +24,13 @@
 	<string>1</string>
 	<key>NSPrincipalClass</key>
 	<string>WFNewsViewController</string>
+	<key>WFAppCategory</key>
+	<string>WebFusion</string>
+	<key>WFAppIcon</key>
+	<string>News.pdf</string>
+	<key>WFAppIconTemplate</key>
+	<true/>
+	<key>WFAppName</key>
+	<string>News</string>
 </dict>
 </plist>

@@ -24,23 +24,6 @@
     return self;
 }
 
-- (NSString *)appName
-{
-    return @"App Catalog";
-}
-
-- (NSString *)appCategory
-{
-    return @"WebFusion";
-}
-
-- (NSImage *)appIcon
-{
-    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[self class]] URLForResource:@"Store" withExtension:@"pdf"]];
-    [image setTemplate:YES];
-    return image;
-}
-
 - (NSInteger)sortOrder
 {
     return 5;

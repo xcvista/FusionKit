@@ -35,7 +35,7 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
     if ([[bundle principalClass] isSubclassOfClass:[WFViewController class]])
     {
         WFViewController *object = [[[bundle principalClass] alloc] init];
-        [object applicatinDidLoad];
+        [object applicationDidLoad];
         self.loadedBundles[(id<NSCopying>)object] = bundle;
         return YES;
     }

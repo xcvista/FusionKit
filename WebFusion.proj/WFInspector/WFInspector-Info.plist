@@ -24,5 +24,11 @@
 	<string>1</string>
 	<key>NSPrincipalClass</key>
 	<string>WFInspector</string>
+	<key>WFAppCategory</key>
+	<string>Developer</string>
+	<key>WFAppName</key>
+	<string>Inspector</string>
+	<key>WFLongAppName</key>
+	<string>Packet Inspector</string>
 </dict>
 </plist>

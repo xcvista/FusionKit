@@ -120,6 +120,11 @@
     return ![self.button isHidden] && ![[self.button title] length];
 }
 
+- (BOOL)isLoading
+{
+    return ![self.indicator isHidden];
+}
+
 - (void)beginLoading
 {
     [self setBadge:nil];

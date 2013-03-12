@@ -52,10 +52,6 @@
                   byExtendingSelection:NO];
     [self.window setExcludedFromWindowsMenu:YES];
     [[NSApp delegate] startMainWindow];
-    if ([[NSApp delegate] override])
-    {
-        [self.window setTitle:NSLocalizedString(@"WebFusion (Override)", @"")];
-    }
 }
 
 - (void)windowWillClose:(NSNotification *)notification
@@ -80,6 +76,7 @@
     [[self.detailViewController view] setAutoresizingMask:18];
     [self.rightSplitView setSubviews:@[[self.detailViewController view]]];
     [self.detailViewController viewWillAppear];
+    [self.window setTitle:[NSString stringWithFormat:NSLocalizedString(@"WebFusion - %@%@", @""), [viewController longAppName], [[NSApp delegate] override] ? NSLocalizedString(@" (Override)", @"") : @""]];
 }
 
 - (BOOL)splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)view

@@ -15,6 +15,7 @@
 - (void)releaseWindowController:(NSWindowController *)windowController;
 
 - (FKConnection *)connection;
+- (void)setDefaults:(NSDictionary *)defaults;
 
 @end
 
@@ -27,5 +28,6 @@
 - (void)showWindowController:(NSWindowController *)windowController;
 - (void)releaseWindowController:(NSWindowController *)windowController;
 - (FKConnection *)connection;
+- (void)setDefaults:(NSDictionary *)defaults;
 
 @end

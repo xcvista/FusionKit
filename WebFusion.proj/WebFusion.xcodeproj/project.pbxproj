@@ -92,6 +92,8 @@
 		1D30E40D16EFCB28006315EA /* WFAppCatalog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E40B16EFCB28006315EA /* WFAppCatalog.xib */; };
 		1D30E41016EFCB79006315EA /* WebFusion App Catalog.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E3F716EFCAE0006315EA /* WebFusion App Catalog.wfapp */; };
 		1D30E41216EFCB8E006315EA /* Store.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E41116EFCB8E006315EA /* Store.pdf */; };
+		1D30E41316EFD529006315EA /* WebFusion Developer.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D58DC5B16EE829E006D0401 /* WebFusion Developer.wfapp */; };
+		1D30E41416EFD529006315EA /* WebFusion Inspector.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E39016EFB742006315EA /* WebFusion Inspector.wfapp */; };
 		1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */; };
 		1D58DC5616EE8270006D0401 /* wfapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DC5516EE8270006D0401 /* wfapp.icns */; };
 		1D58DC5C16EE829E006D0401 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
@@ -176,6 +178,8 @@
 			files = (
 				1D30E35516EF8C3F006315EA /* WebFusion News.wfapp in CopyFiles */,
 				1D30E41016EFCB79006315EA /* WebFusion App Catalog.wfapp in CopyFiles */,
+				1D30E41316EFD529006315EA /* WebFusion Developer.wfapp in CopyFiles */,
+				1D30E41416EFD529006315EA /* WebFusion Inspector.wfapp in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

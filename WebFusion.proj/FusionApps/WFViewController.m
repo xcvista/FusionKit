@@ -7,6 +7,7 @@
 //
 
 #import "WFViewController.h"
+#import "WFApplicationServices.h"
 
 @interface WFViewController () <NSCopying>
 
@@ -31,19 +32,48 @@
 
 - (NSString *)appName
 {
-    return nil;
+    NSString *string = [[self appBundle] infoDictionary][@"WFAppName"];
+    return string ? string : [[NSBundle bundleForClass:[self class]] infoDictionary][(NSString *)kCFBundleNameKey];
+}
+
+- (NSString *)longAppName
+{
+    NSString *string = [[self appBundle] infoDictionary][@"WFLongAppName"];
+    return string ? string : [self appName];
+}
+
+- (NSBundle *)appBundle
+{
+    return [NSBundle bundleForClass:[self class]];
 }
 
 - (NSString *)appCategory
 {
-    return @"Misc";
+    NSString *string = [[self appBundle] infoDictionary][@"WFAppCategory"];
+    return string ? string : @"Misc";
 }
 
 - (NSImage *)appIcon
 {
-    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[WFViewController class]] URLForResource:@"Apps" withExtension:@"pdf"]];
-    [image setTemplate:YES];
+    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[self appBundle] URLForResource:[[self appBundle] infoDictionary][@"WFAppIcon"] withExtension:@""]];
+    if (image)
+    {
+        NSNumber *number = [[self appBundle] infoDictionary][@"WFAppIconTemplate"];
+        [image setTemplate:number ? [number boolValue] : YES];
+    }
+    else
+    {
+        image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[WFViewController class]] URLForResource:@"Apps" withExtension:@"pdf"]];
+        [image setTemplate:YES];
+    }
     return image;
+}
+
+- (NSDictionary *)appVersion
+{
+    NSDictionary *dictionsry = [NSDictionary dictionaryWithContentsOfURL:[[self appBundle] URLForResource:@"version"
+                                                                                            withExtension:@"plist"]];
+    return dictionsry ? dictionsry : [[[self appBundle] infoDictionary] dictionaryWithValuesForKeys:@[(NSString *)kCFBundleVersionKey]];
 }
 
 - (NSInteger)sortOrder
@@ -81,8 +111,9 @@
     }
 }
 
-- (void)applicatinDidLoad
+- (void)applicationDidLoad
 {
+    [[WFApplicationServices applicationServices] setDefaults:[NSDictionary dictionaryWithContentsOfURL:[[self appBundle] URLForResource:@"defaults" withExtension:@"plist"]]];
     // eh
 }
 

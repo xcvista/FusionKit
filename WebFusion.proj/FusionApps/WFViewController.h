@@ -16,12 +16,15 @@
 @property (weak) IBOutlet SidebarTableCellView *sidebarItem;
 
 - (NSString *)appName;
+- (NSString *)longAppName;
+- (NSBundle *)appBundle;
 - (NSImage *)appIcon;
 - (NSString *)appCategory;
+- (NSDictionary *)appVersion;
 
 - (NSComparisonResult)compare:(WFViewController *)other;
 
-- (void)applicatinDidLoad;
+- (void)applicationDidLoad;
 - (void)viewWillAppear;
 - (void)viewWillDisappear;
 - (void)applicationWillUnload;

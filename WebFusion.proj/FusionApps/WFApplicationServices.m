@@ -34,4 +34,9 @@ WFApplicationServices *applicationServices;
     return [self.delegate connection];
 }
 
+- (void)setDefaults:(NSDictionary *)defaults
+{
+    [self.delegate setDefaults:defaults];
+}
+
 @end

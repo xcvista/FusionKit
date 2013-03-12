@@ -16,9 +16,8 @@
 
 @property (weak) IBOutlet NSMenuItem *mainWindowItem;
 @property (weak) IBOutlet NSMenuItem *dockMainWindowItem;
-@property (weak) IBOutlet NSMenuItem *packetInspectorItem;
 
-@property NSDictionary *bootTimePrefs;
+@property NSMutableDictionary *bootTimePrefs;
 
 @end
 
@@ -26,13 +25,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-    NSDictionary *defaults = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"defaults" withExtension:@"plist"]];
+    [WFApplicationServices applicationServices].delegate = self;
+    
+    self.bootTimePrefs = [NSMutableDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"defaults" withExtension:@"plist"]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults registerDefaults:defaults];
+    [WFAppLoader appLoader];
+    [userDefaults registerDefaults:self.bootTimePrefs];
     NSUserDefaultsController *userDefaultsController = [NSUserDefaultsController sharedUserDefaultsController];
-    self.bootTimePrefs = [[userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]] copy];
-    [userDefaultsController setInitialValues:defaults];
+    [userDefaultsController setInitialValues:self.bootTimePrefs];
+    self.bootTimePrefs = (NSMutableDictionary *)[[userDefaults persistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]] copy];
     [userDefaults synchronize];
     
     if ([userDefaults boolForKey:WFOverrideMode])
@@ -47,11 +48,15 @@
         [userDefaults setBool:YES forKey:WFDeveloperMode];
     }
     
-    [WFApplicationServices applicationServices].delegate = self;
-    
     // Show the initial window.
     self.windowControllers = [NSMutableArray array];
     [self showWindowController:[[WFLoginWindowController alloc] init]]; 
+}
+
+- (void)setDefaults:(NSDictionary *)defaults
+{
+    if (defaults)
+        [self.bootTimePrefs addEntriesFromDictionary:defaults];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification

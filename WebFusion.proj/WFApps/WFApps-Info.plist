@@ -24,5 +24,15 @@
 	<string>1</string>
 	<key>NSPrincipalClass</key>
 	<string>WFAppCatalog</string>
+	<key>WFAppCategory</key>
+	<string>WebFusion</string>
+	<key>WFAppIcon</key>
+	<string>Store.pdf</string>
+	<key>WFAppIconTemplate</key>
+	<true/>
+	<key>WFAppName</key>
+	<string>App Catalog</string>
+	<key>WFLongAppName</key>
+	<string>Application Catalog</string>
 </dict>
 </plist>

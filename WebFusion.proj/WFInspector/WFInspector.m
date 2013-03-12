@@ -40,18 +40,9 @@
     [self.sidebarItem.button setAction:@selector(reload:)];
 }
 
-- (NSString *)appName
+- (void)applicationDidLoad
 {
-    return @"Inspector";
-}
-
-- (NSString *)appCategory
-{
-    return @"Developer";
-}
-
-- (void)applicatinDidLoad
-{
+    [super applicationDidLoad];
     [self view];
     [[NSNotificationCenter defaultCenter] addObserver:self.outgoingInspector
                                              selector:@selector(outgoingPacket:)
@@ -71,6 +62,7 @@
 
 - (void)viewWillAppear
 {
+    [super viewWillAppear];
     [self.sidebarItem setBadgeAsRefreshButton];
     
     [self reload:self];
@@ -79,12 +71,14 @@
 - (void)viewWillDisappear
 {
     [self.sidebarItem setBadge:nil];
+    [super viewWillDisappear];
 }
 
 - (void)applicationWillUnload
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self.outgoingInspector];
     [[NSNotificationCenter defaultCenter] removeObserver:self.incomingInspector];
+    [super applicationWillUnload];
 }
 
 @end

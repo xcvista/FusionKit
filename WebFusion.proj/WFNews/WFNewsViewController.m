@@ -38,23 +38,6 @@
     return self;
 }
 
-- (NSString *)appName
-{
-    return NSLocalizedStringFromTableInBundle(@"News", @"ui", [NSBundle bundleForClass:[self class]], @"");
-}
-
-- (NSString *)appCategory
-{
-    return @"WebFusion";
-}
-
-- (NSImage *)appIcon
-{
-    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[self class]] URLForResource:@"News" withExtension:@"pdf"]];
-    [image setTemplate:YES];
-    return image;
-}
-
 - (NSUInteger)sortOrder
 {
     return 0;
@@ -92,6 +75,10 @@
                                           else
                                           {
                                               [self.collectionView setContent:news];
+                                              [self.scrollView.contentView scrollToPoint:NSPointFromCGPoint(CGPointZero)];
+                                              [self.vertivalScroller setDoubleValue:0];
+                                              if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
+                                                  [self.scrollView flashScrollers];
                                           }
                                           [self.sidebarItem setBadgeAsRefreshButton];
                                       });
@@ -113,6 +100,7 @@
 
 - (void)viewWillAppear
 {
+    [super viewWillAppear];
     if (self.running)
         [self.sidebarItem beginLoading];
     else if (![[self.sidebarItem badge] length])
@@ -136,6 +124,10 @@
         NSInteger loadCount = [userDefaults integerForKey:@"historyBatchSize"];
         WFApplicationServices *appServices = [WFApplicationServices applicationServices];
         NSMutableArray *currentObjects = [[self.collectionView content] mutableCopy];
+        NSString *currentBadge = [self.sidebarItem badge];
+        NSNumber *badgeIsRefresh = @([self.sidebarItem isRefreshBadge]);
+        if ([self.sidebarItem isLoading])
+            [self.sidebarItem beginLoading];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                        ^{
@@ -166,12 +158,18 @@
                                                                       contextInfo:nil];
                                                   return;
                                               }
+                                              else
+                                              {
+                                                  [self.collectionView setContent:currentObjects];
+                                                  
+                                                  if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
+                                                      [self.scrollView flashScrollers];
+                                              }
                                               
-                                              [self.collectionView setContent:currentObjects];
-                                              
-                                              if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
-                                                  [self.scrollView flashScrollers];
-                                              
+                                              if ([badgeIsRefresh boolValue])
+                                                  [self.sidebarItem setBadgeAsRefreshButton];
+                                              else
+                                                  [self.sidebarItem setBadge:currentBadge];
                                               
                                           });
                        });
@@ -184,6 +182,7 @@
 {
     if (![[self.sidebarItem badge] length])
         [self.sidebarItem setBadge:nil];
+    [super viewWillDisappear];
 }
 
 @end
