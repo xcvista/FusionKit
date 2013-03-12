@@ -25,8 +25,6 @@
 		1D30E2E416EE84FB006315EA /* FusionApps.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E2E516EE8509006315EA /* FusionApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E2E616EE8509006315EA /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1D30E2E816EE851E006315EA /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1D30E2E916EE851E006315EA /* FusionApps.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E2F016EE8548006315EA /* NSViewController+Autoload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D30E2EC16EE8548006315EA /* NSViewController+Autoload.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D30E2F116EE8548006315EA /* NSViewController+Autoload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E2ED16EE8548006315EA /* NSViewController+Autoload.m */; };
 		1D30E2F216EE8548006315EA /* NSWindowController+Autoload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D30E2EE16EE8548006315EA /* NSWindowController+Autoload.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,9 +54,6 @@
 		1D30E37416EF90FD006315EA /* FusionApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E37916EF910C006315EA /* FusionBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
 		1D30E37A16EF910C006315EA /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1D30E37C16EF9125006315EA /* FusionBinding.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1716E7AA870004C7F7 /* FusionBinding.framework */; };
-		1D30E37D16EF9125006315EA /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1D30E37E16EF9125006315EA /* FusionApps.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E38116EF91E3006315EA /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
 		1D30E38316EF91EF006315EA /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
 		1D30E38616EF9799006315EA /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E38516EF9798006315EA /* NSData+Cache.m */; };
@@ -75,8 +70,6 @@
 		1D30E3B316EFB818006315EA /* NSString+JSONSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E3B216EFB818006315EA /* NSString+JSONSanitizer.m */; };
 		1D30E3B416EFB82E006315EA /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
 		1D30E3B516EFB835006315EA /* FusionApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
-		1D30E3B716EFB84A006315EA /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1D30E3B816EFB84A006315EA /* FusionApps.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E3BC16EFB89A006315EA /* WFInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E3BA16EFB89A006315EA /* WFInspector.m */; };
 		1D30E3BD16EFB89A006315EA /* WFInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E3BB16EFB89A006315EA /* WFInspector.xib */; };
 		1D30E3C316EFBF4E006315EA /* Developer.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E3C216EFBF4E006315EA /* Developer.pdf */; };
@@ -86,8 +79,6 @@
 		1D30E40316EFCAF5006315EA /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
 		1D30E40416EFCAF5006315EA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
 		1D30E40516EFCAF5006315EA /* FusionApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
-		1D30E40716EFCB0A006315EA /* FusionKit.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
-		1D30E40816EFCB0A006315EA /* FusionApps.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E40C16EFCB28006315EA /* WFAppCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E40A16EFCB28006315EA /* WFAppCatalog.m */; };
 		1D30E40D16EFCB28006315EA /* WFAppCatalog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E40B16EFCB28006315EA /* WFAppCatalog.xib */; };
 		1D30E41016EFCB79006315EA /* WebFusion App Catalog.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E3F716EFCAE0006315EA /* WebFusion App Catalog.wfapp */; };
@@ -159,17 +150,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1D30E2E716EE850D006315EA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1D30E2E816EE851E006315EA /* FusionKit.framework in CopyFiles */,
-				1D30E2E916EE851E006315EA /* FusionApps.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D30E35416EF8C31006315EA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,18 +163,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D30E37B16EF9115006315EA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1D30E37C16EF9125006315EA /* FusionBinding.framework in CopyFiles */,
-				1D30E37D16EF9125006315EA /* FusionKit.framework in CopyFiles */,
-				1D30E37E16EF9125006315EA /* FusionApps.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D30E38216EF91E7006315EA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,29 +171,6 @@
 			files = (
 				1D30E38316EF91EF006315EA /* FusionKit.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D30E3B616EFB83C006315EA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1D30E3B716EFB84A006315EA /* FusionKit.framework in CopyFiles */,
-				1D30E3B816EFB84A006315EA /* FusionApps.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D30E40616EFCAF9006315EA /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1D30E40716EFCB0A006315EA /* FusionKit.framework in Copy Files */,
-				1D30E40816EFCB0A006315EA /* FusionApps.framework in Copy Files */,
-			);
-			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1DA6DA2916E7C3FB0004C7F7 /* CopyFiles */ = {
@@ -836,7 +781,6 @@
 				1D30E34416EF8C1D006315EA /* Sources */,
 				1D30E34516EF8C1D006315EA /* Frameworks */,
 				1D30E34616EF8C1D006315EA /* Resources */,
-				1D30E37B16EF9115006315EA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -854,7 +798,6 @@
 				1D30E38C16EFB742006315EA /* Sources */,
 				1D30E38D16EFB742006315EA /* Frameworks */,
 				1D30E38E16EFB742006315EA /* Resources */,
-				1D30E3B616EFB83C006315EA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -872,7 +815,6 @@
 				1D30E3F316EFCAE0006315EA /* Sources */,
 				1D30E3F416EFCAE0006315EA /* Frameworks */,
 				1D30E3F516EFCAE0006315EA /* Resources */,
-				1D30E40616EFCAF9006315EA /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -890,7 +832,6 @@
 				1D58DC5716EE829E006D0401 /* Sources */,
 				1D58DC5816EE829E006D0401 /* Frameworks */,
 				1D58DC5916EE829E006D0401 /* Resources */,
-				1D30E2E716EE850D006315EA /* CopyFiles */,
 			);
 			buildRules = (
 			);
