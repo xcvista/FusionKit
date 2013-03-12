@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'WebFusionCLI' target in the 'WebFusionCLI' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
