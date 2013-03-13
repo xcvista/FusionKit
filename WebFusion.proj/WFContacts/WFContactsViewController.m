@@ -8,12 +8,15 @@
 
 #import "WFContactsViewController.h"
 #import <FusionApps/FusionApps.h>
+#import "NSData+Cache.h"
 
-@interface WFContactsViewController () <NSTextFieldDelegate>
+@interface WFContactsViewController () <NSTableViewDataSource, NSTableViewDelegate>
 
 @property (weak) IBOutlet NSSearchField *searchField;
-@property (weak) IBOutlet NSCollectionView *collectionView;
 @property (weak) IBOutlet NSScrollView *scrollView;
+@property (weak) IBOutlet NSTableView *tableView;
+
+@property NSArray *contacts;
 
 @property NSUInteger currentLastPage;
 @property BOOL running;
@@ -45,8 +48,11 @@
 
 - (void)awakeFromNib
 {
-    self.oldTarget = self.scrollView.verticalScroller.target;
-    self.oldAction = self.scrollView.verticalScroller.action;
+    if (!self.oldTarget)
+    {
+        self.oldTarget = self.scrollView.verticalScroller.target;
+        self.oldAction = self.scrollView.verticalScroller.action;
+    }
     
     self.scrollView.verticalScroller.target = self;
     self.scrollView.verticalScroller.action = @selector(scrollerChanged:);
@@ -99,11 +105,13 @@
                                                              inGroup:@""
                                                                 page:self.currentLastPage
                                                                error:&err];
+                       
                        dispatch_async(dispatch_get_main_queue(),
                                       ^{
                                           if (contacts)
                                           {
-                                              [self.collectionView setContent:contacts];
+                                              self.contacts = contacts;
+                                              [self.tableView reloadData];
                                           }
                                           else
                                           {
@@ -150,12 +158,14 @@
                                                                  inGroup:@""
                                                                     page:self.currentLastPage
                                                                    error:&err];
-                           NSArray *everything = [[self.collectionView content] arrayByAddingObjectsFromArray:contacts];
+                           NSArray *everything = [self.contacts arrayByAddingObjectsFromArray:contacts];
+                           
                            dispatch_async(dispatch_get_main_queue(),
                                           ^{
                                               if (contacts)
                                               {
-                                                  [self.collectionView setContent:everything];
+                                                  self.contacts = everything;
+                                                  [self.tableView reloadData];
                                               }
                                               else
                                               {
@@ -169,6 +179,58 @@
                                           });
                        });
 
+    }
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return [self.contacts count];
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    FKUserContact *userContact = self.contacts[row];
+    
+    switch ([[tableView tableColumns] indexOfObject:tableColumn])
+    {
+        case 0:
+        {
+            NSImageView *imageView = [tableView makeViewWithIdentifier:@"Avatar"
+                                                                 owner:self];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                           ^{
+                               NSData *data = [NSData cachedDataAtURL:userContact.avatar.avatar];
+                               if (data)
+                               {
+                                   dispatch_async(dispatch_get_main_queue(),
+                                                  ^{
+                                                      NSImageView *imageView = [self.tableView viewAtColumn:0
+                                                                                                        row:row
+                                                                                            makeIfNecessary:NO];
+                                                      [imageView setImage:[[NSImage alloc] initWithData:data]];
+                                                  });
+                               }
+                           });
+            return imageView;
+        }
+        case 1:
+        {
+            NSView *view = [tableView makeViewWithIdentifier:@"Name"
+                                                       owner:self];
+            NSTextField *textField = [view subviews][0];
+            [textField setStringValue:userContact.name];
+            return view;
+        }
+        case 2:
+        {
+            NSView *view = [tableView makeViewWithIdentifier:@"Details"
+                                                       owner:self];
+            NSButton *button = [view subviews][0];
+            [button setTag:row];
+            return view;
+        }
+        default:
+            return nil;
     }
 }
 
