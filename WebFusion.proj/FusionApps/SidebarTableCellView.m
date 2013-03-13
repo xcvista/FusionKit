@@ -85,6 +85,7 @@
     {
         [self.button setHidden:NO];
         [self.button setTitle:badge];
+        [self.button setImage:nil];
         [self.button sizeToFit];
         // Make it appear as a normal label and not a button
         // [[self.button cell] setHighlightsBy:0];
@@ -128,6 +129,7 @@
 - (void)beginLoading
 {
     [self setBadge:nil];
+    [self.indicator setHidden:NO];
     [self.indicator startAnimation:self];
     [self setNeedsDisplay:YES];
 }
@@ -135,6 +137,7 @@
 - (void)stopLoading
 {
     [self.indicator stopAnimation:self];
+    [self.indicator setHidden:YES];
     [self setNeedsDisplay:YES];
 }
 

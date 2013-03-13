@@ -12,6 +12,7 @@
 #import "FKDecls.h"
 #import "FKWrapper.h"
 #import "FKNews.h"
+#import "FKUserContact.h"
 
 NSString *const FKWillUploadPackageNotification = @"tk.maxius.fusionkit.packageup";
 NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packagedown";
@@ -208,6 +209,88 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
         FKAssignError(error, err);
         return NO;
     }
+}
+
+- (NSDictionary *)poll:(NSDictionary *)request interval:(NSTimeInterval)interval wait:(NSTimeInterval)wait error:(NSError *__autoreleasing *)error
+{
+    NSMutableArray *pollData = [NSMutableArray arrayWithCapacity:[request count]];
+    for (id key in request)
+    {
+        NSDictionary *requestItem = request[key];
+        NSMutableDictionary *pollItem = [NSMutableDictionary dictionaryWithCapacity:[requestItem count] + 1];
+        [pollItem addEntriesFromDictionary:requestItem];
+        pollItem[@"t"] = key;
+        [pollData addObject:pollItem];
+    }
+    NSDictionary *uplinkObject = @{@"d": pollData,
+                                   @"i": @(FKTimestampFromNSTimeInterval(interval)),
+                                   @"w": @(FKTimestampFromNSTimeInterval(wait))};
+    NSData *uplinkData = [FKJSONKeyedArchiver archivedDataWithRootObject:uplinkObject];
+    
+    NSError *err = nil;
+    NSData *downlinkData = [self dataWithPostData:uplinkData
+                                         toMethod:@"Poll"
+                                            error:&err];
+    
+    if (!downlinkData)
+    {
+        FKAssignError(error, err);
+        return nil;
+    }
+    
+    NSDictionary *result = [FKJSONKeyedUnarchiver unarchiveObjectWithData:downlinkData
+                                                                    class:[FKWrapper class]];
+    
+    if (!result)
+    {
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                       NSLocalizedStringFromTableInBundle(@"Polling failed.", @"error", [NSBundle bundleForClass:[self class]], @"")};
+        FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
+                                                 code:404
+                                             userInfo:userInfo]);
+        return nil;
+    }
+    return result;
+}
+
+- (NSArray *)searchContact:(NSString *)query inGroup:(NSString *)group page:(NSUInteger)page error:(NSError *__autoreleasing *)error
+{
+    if (!query)
+        query = @"";
+    if (!group)
+        group = @"";
+    NSDictionary *uplinkObject = @{@"query": query,
+                                   @"group": group,
+                                   @"page": @(page)};
+    NSData *uplinkData = [FKJSONKeyedArchiver archivedDataWithRootObject:uplinkObject];
+    
+    NSError *err = nil;
+    NSData *downlinkData = [self dataWithPostData:uplinkData
+                                         toMethod:@"GetContactNames"
+                                            error:&err];
+    
+    if (!downlinkData)
+    {
+        FKAssignError(error, err);
+        return nil;
+    }
+    
+    NSArray *result = [FKJSONKeyedUnarchiver unarchiveObjectWithData:downlinkData
+                                                               class:[FKUserContact class]];
+    
+    if (!result)
+    {
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                       NSLocalizedStringFromTableInBundle(@"No data returned from contact request.", @"error", [NSBundle bundleForClass:[self class]], @""),
+                                   NSLocalizedRecoverySuggestionErrorKey:
+                                       NSLocalizedStringFromTableInBundle(@"Retry later, or maybe you really need some more friends. Get up and socialize.", @"error", [NSBundle bundleForClass:[self class]], @"")};
+        FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
+                                                 code:404
+                                             userInfo:userInfo]);
+        return nil;
+    }
+    return result;
+
 }
 
 @end

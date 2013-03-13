@@ -44,4 +44,14 @@ FKExtern NSString *const FKDidReceivePackageNotification;
                         type:(NSString *)type
                        error:(NSError **)error;
 
+- (NSDictionary *)poll:(NSDictionary *)request
+              interval:(NSTimeInterval)interval
+                  wait:(NSTimeInterval)wait
+                 error:(NSError **)error;
+
+- (NSArray *)searchContact:(NSString *)query
+                   inGroup:(NSString *)group
+                      page:(NSUInteger)page
+                     error:(NSError **)error;
+
 @end

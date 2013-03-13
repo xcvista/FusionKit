@@ -9,7 +9,11 @@
 #import "WFViewController.h"
 #import "WFApplicationServices.h"
 
+NSString *const WFPollNotification = @"tk.maxius.webfusion.poll";
+
 @interface WFViewController () <NSCopying>
+
+@property (getter = isActive) BOOL active;
 
 @end
 
@@ -111,28 +115,54 @@
     }
 }
 
+- (BOOL)showInSidebar
+{
+    return YES;
+}
+
 - (void)applicationDidLoad
 {
     [[WFApplicationServices applicationServices] setDefaults:[NSDictionary dictionaryWithContentsOfURL:[[self appBundle] URLForResource:@"defaults" withExtension:@"plist"]]];
-    // eh
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(pollDidFinish:)
+                                                 name:WFPollNotification
+                                               object:nil];
 }
 
 - (void)applicationWillUnload
 {
-    // eh
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewWillAppear
 {
-    // eh
+    self.active = YES;
 }
 
 - (void)viewWillDisappear
+{
+    self.active = NO;
+}
+
+#pragma mark - Compiler pacifiers
+
+- (NSDictionary *)registerPoll
+{
+    // eh
+    return nil;
+}
+
+- (void)pollDidFinish:(NSNotification *)aNotification
 {
     // eh
 }
 
 - (void)pull
+{
+    // eh
+}
+
+- (void)userDidLogin
 {
     // eh
 }

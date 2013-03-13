@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>tk.maxius.webfusion.developer.inspector</string>
+	<string>tk.maxius.webfusion.contacts</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -23,12 +23,14 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSPrincipalClass</key>
-	<string>WFInspector</string>
+	<string>WFContactsViewController</string>
 	<key>WFAppCategory</key>
-	<string>Developer</string>
+	<string>WebFusion</string>
+	<key>WFAppIcon</key>
+	<string>Contacts.pdf</string>
+	<key>WFAppIconTemplate</key>
+	<true/>
 	<key>WFAppName</key>
-	<string>Inspector</string>
-	<key>WFLongAppName</key>
-	<string>Packet Inspector</string>
+	<string>Contacts</string>
 </dict>
 </plist>

@@ -11,7 +11,6 @@
 #import "WFAppDelegate.h"
 #import <FusionApps/FusionApps.h>
 #import "WFNewsViewController.h"
-#import <FusionApps/FusionApps.h>
 
 @interface WFMainWindowController () <NSWindowDelegate, NSSplitViewDelegate>
 
@@ -19,6 +18,7 @@
 @property IBOutlet WFViewController *detailViewController;
 @property IBOutlet NSView *rightSplitView;
 @property (weak) IBOutlet NSOutlineView *outlineView;
+@property BOOL polling;
 
 - (IBAction)signOut:(id)sender;
 - (IBAction)clearSession:(id)sender;
@@ -52,10 +52,58 @@
                   byExtendingSelection:NO];
     [self.window setExcludedFromWindowsMenu:YES];
     [[NSApp delegate] startMainWindow];
+    for (WFViewController *app in [[WFAppLoader appLoader] loadedApps])
+    {
+        [app userDidLogin];
+    }
+}
+
+- (void)windowDidBecomeKey:(NSNotification *)notification
+{
+    if (!self.polling)
+    {
+        self.polling = YES;
+        [self performSelectorInBackground:@selector(poll:) withObject:nil];
+    }
+}
+
+- (void)poll:(id)object
+{
+    @autoreleasepool
+    {
+        while (self.polling)
+        {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            NSTimeInterval pollTime = [defaults doubleForKey:WFPullFrequency];
+            WFAppLoader *appLoader = [WFAppLoader appLoader];
+            NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithCapacity:[[appLoader loadedApps] count]];
+            for (WFViewController *app in [appLoader loadedApps])
+            {
+                NSDictionary *pollItems = [app registerPoll];
+                if (pollItems)
+                    [dictionary addEntriesFromDictionary:pollItems];
+            }
+            FKConnection *connection = [(WFAppDelegate *)[NSApp delegate] connection];
+            NSDictionary *pollResult = [connection poll:dictionary
+                                               interval:0.5
+                                                   wait:pollTime
+                                                  error:NULL];
+            if (pollResult)
+            {
+                NSMutableDictionary *rdictionary = [NSMutableDictionary dictionary];
+                [rdictionary addEntriesFromDictionary:pollResult];
+                rdictionary[@"request"] = dictionary;
+                [[NSNotificationCenter defaultCenter] postNotificationName:WFPollNotification
+                                                                    object:self
+                                                                  userInfo:rdictionary];
+            }
+        }
+    }
 }
 
 - (void)windowWillClose:(NSNotification *)notification
 {
+    self.polling = NO;
     [[NSApp delegate] stopMainWindow];
 }
 

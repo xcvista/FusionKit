@@ -30,8 +30,10 @@
     if (!bundle)
         return NO;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *localRoot = [[NSBundle mainBundle] bundleURL];
-    NSURL *dest = [localRoot URLByAppendingPathComponent:@"Contents/PlugIns"];
+    NSString *localRoot = [[NSBundle mainBundle] bundlePath];
+    NSString *integratedRoot = [localRoot stringByAppendingPathComponent:@"Contents/PlugIns"];
+    NSURL *dest = [NSURL URLWithString:[NSString stringWithFormat:@"file://localhost%@", integratedRoot]];
+    // TODO: Install at somewhere else: [[fileManager URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask][0] URLByAppendingPathComponent:[NSString stringWithFormat:@"PlugIns/%@", [[NSBundle mainBundle] bundleIdentifier]]];
     dest = [dest URLByAppendingPathComponent:[url lastPathComponent]];
     NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"Installing %@", @""), [url lastPathComponent]]
                                      defaultButton:NSLocalizedString(@"Yes", @"")
@@ -40,6 +42,10 @@
                          informativeTextWithFormat:NSLocalizedString(@"Apps from untrusted sources may compromise your security and privacy. Are you sure?", @"")];
     if ([alert runModal] == NSAlertDefaultReturn)
     {
+        [fileManager createDirectoryAtURL:dest
+              withIntermediateDirectories:YES
+                               attributes:nil
+                                    error:NULL];
         [fileManager copyItemAtURL:url toURL:dest error:nil];
         NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Install succeed.", @"")
                                 defaultButton:NSLocalizedString(@"OK", @"")
@@ -48,12 +54,9 @@
                     informativeTextWithFormat:@""];
         [alert runModal];
         [[WFAppLoader appLoader] loadAppBundle:dest];
-        return YES;
     }
-    else
-    {
-        return NO;
-    }
+    [[NSDocumentController sharedDocumentController] clearRecentDocuments:self];
+    return YES;
 }
 
 - (void)presentError:(NSError *)error modalForWindow:(NSWindow *)window delegate:(id)delegate didPresentSelector:(SEL)didPresentSelector contextInfo:(void *)contextInfo

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FKContact.h"
+#import <FusionKit/FKContact.h>
 
 @interface FKUserContact :  NSObject <NSCoding>
 @property id ID;

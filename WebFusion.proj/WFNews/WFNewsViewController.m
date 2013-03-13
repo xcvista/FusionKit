@@ -45,15 +45,16 @@
 
 - (void)reload:(id)sender
 {
+    if (self.running)
+        return;
+    
+    self.running = YES;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSInteger loadCount = [userDefaults integerForKey:@"loadBatchSize"];
-    [self.sidebarItem beginLoading];
+    if (![self.sidebarItem isLoading])
+        [self.sidebarItem beginLoading];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
-                       if (self.running)
-                           return;
-                       self.running = YES;
-                       
                        NSError *err;
                        WFApplicationServices *appServices = [WFApplicationServices applicationServices];
                        
@@ -80,7 +81,10 @@
                                               if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
                                                   [self.scrollView flashScrollers];
                                           }
-                                          [self.sidebarItem setBadgeAsRefreshButton];
+                                          if ([self isActive])
+                                              [self.sidebarItem setBadgeAsRefreshButton];
+                                          else
+                                              [self.sidebarItem setBadge:nil];
                                       });
                        
                    });
@@ -88,14 +92,18 @@
 
 - (void)awakeFromNib
 {
+    [self view];
     self.oldTarget = self.vertivalScroller.target;
     self.oldAction = self.vertivalScroller.action;
     
     self.vertivalScroller.target = self;
     self.vertivalScroller.action = @selector(scrollerChanged:);
-    
-    [self.sidebarItem.button setTarget:self];
-    [self.sidebarItem.button setAction:@selector(reload:)];
+}
+
+- (void)userDidLogin
+{
+    [self view];
+    [self reload:self];
 }
 
 - (void)viewWillAppear
@@ -106,9 +114,10 @@
     else if (![[self.sidebarItem badge] length])
         [self.sidebarItem setBadgeAsRefreshButton];
     else
-        [self reload:self];
+        ; // eh
     
-    [self reload:self];
+    [self.sidebarItem.button setTarget:self];
+    [self.sidebarItem.button setAction:@selector(reload:)];
 }
 
 - (void)scrollerChanged:(id)sender
@@ -120,21 +129,21 @@
     
     if ([self.vertivalScroller doubleValue] > 0.99)
     {
+        if (self.running)
+            return;
+        
+        self.running = YES;
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSInteger loadCount = [userDefaults integerForKey:@"historyBatchSize"];
         WFApplicationServices *appServices = [WFApplicationServices applicationServices];
         NSMutableArray *currentObjects = [[self.collectionView content] mutableCopy];
         NSString *currentBadge = [self.sidebarItem badge];
         NSNumber *badgeIsRefresh = @([self.sidebarItem isRefreshBadge]);
-        if ([self.sidebarItem isLoading])
+        if (![self.sidebarItem isLoading])
             [self.sidebarItem beginLoading];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                        ^{
-                           if (self.running)
-                               return;
-                           
-                           self.running = YES;
                            NSError *err;
                            NSArray *news = [appServices.connection newsBeforeEpoch:[[currentObjects lastObject] publishDate]
                                                                              count:loadCount
@@ -167,7 +176,12 @@
                                               }
                                               
                                               if ([badgeIsRefresh boolValue])
-                                                  [self.sidebarItem setBadgeAsRefreshButton];
+                                              {
+                                                  if ([self isActive])
+                                                      [self.sidebarItem setBadgeAsRefreshButton];
+                                                  else
+                                                      [self.sidebarItem setBadge:nil];
+                                              }
                                               else
                                                   [self.sidebarItem setBadge:currentBadge];
                                               
@@ -178,10 +192,43 @@
     }
 }
 
+- (NSDictionary *)registerPoll
+{
+    if (![[self.collectionView content] count])
+        return nil;
+    NSNumber *timestamp = @(FKTimestampFromNSTimeInterval([[(FKNews *)[self.collectionView content][0] publishDate] timeIntervalSince1970]));
+    NSMutableDictionary *request = [@{@"dvt": @([[self.sidebarItem badge] integerValue]), @"exceptions": @"", @"lt": timestamp, @"type": @""} mutableCopy];;
+    return @{@"newsc": request};
+}
+
+- (void)pollDidFinish:(NSNotification *)aNotification
+{
+    NSDictionary *data = [aNotification userInfo];
+    NSDictionary *source = data[@"request"][@"newsc"];
+    if (source)
+    {
+        NSTimeInterval reqTime = NSTimeIntervalFromFKTimestamp([source[@"lt"] longValue]);
+        NSTimeInterval curTime = [[(FKNews *)[self.collectionView content][0] publishDate] timeIntervalSince1970];
+        if (curTime - reqTime >= 1000)
+            return;
+    }
+    else
+    {
+        return;
+    }
+    NSNumber *number = data[@"newsc"];
+    if (number)
+        [self.sidebarItem setBadge:[number stringValue]];
+}
+
 - (void)viewWillDisappear
 {
     if (![[self.sidebarItem badge] length])
         [self.sidebarItem setBadge:nil];
+    
+    [self.sidebarItem.button setTarget:nil];
+    [self.sidebarItem.button setAction:nil];
+    
     [super viewWillDisappear];
 }
 

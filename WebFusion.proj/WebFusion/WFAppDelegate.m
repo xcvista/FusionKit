@@ -27,6 +27,8 @@
 {
     [WFApplicationServices applicationServices].delegate = self;
     
+    [[NSDocumentController sharedDocumentController] clearRecentDocuments:self];
+    
     self.bootTimePrefs = [NSMutableDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"defaults" withExtension:@"plist"]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [WFAppLoader appLoader];
@@ -76,6 +78,11 @@
     {
         [userDefaults synchronize];
     }
+}
+
+- (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename
+{
+    return YES;
 }
 
 - (void)showWindowController:(NSWindowController *)windowController
@@ -135,10 +142,14 @@
     {
         mainWindowController = [[class alloc] init];
         [self showWindowController:mainWindowController];
+        if ([mainWindowController respondsToSelector:@selector(windowDidBecomeKey:)])
+            [mainWindowController performSelector:@selector(windowDidBecomeKey:) withObject:nil];
     }
     else
     {
         [[mainWindowController window] orderFront:sender];
+        if ([mainWindowController respondsToSelector:@selector(windowDidBecomeKey:)])
+            [mainWindowController performSelector:@selector(windowDidBecomeKey:) withObject:nil];
     }
 }
 

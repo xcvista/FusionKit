@@ -24,7 +24,6 @@
         self.outgoingPackets = [NSMutableArray array];
     [self.outgoingPackets addObject:[aNotification userInfo]];
     [self.tableView reloadData];
-    [self.tableView scrollToEndOfDocument:self];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView

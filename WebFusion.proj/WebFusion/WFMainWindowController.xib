@@ -262,6 +262,7 @@
 											<string key="NSFrame">{{259, 282}, {174, 17}}</string>
 											<reference key="NSSuperview" ref="684111317"/>
 											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView"/>
 											<object class="NSShadow" key="NSViewShadow">
 												<double key="NSShadowHoriz">1</double>
 												<double key="NSShadowVert">1</double>
@@ -432,7 +433,7 @@
 								<object class="NSButton" id="461170833">
 									<reference key="NSNextResponder" ref="491395706"/>
 									<int key="NSvFlags">-2147483351</int>
-									<string key="NSFrame">{{43, 4}, {104, 17}}</string>
+									<string key="NSFrame">{{52, 4}, {104, 17}}</string>
 									<reference key="NSSuperview" ref="491395706"/>
 									<reference key="NSNextKeyView" ref="708231180"/>
 									<string key="NSReuseIdentifierKey">_NS:1667</string>
@@ -442,8 +443,8 @@
 										<int key="NSCellFlags2">134348800</int>
 										<string key="NSContents">Unread indicator</string>
 										<object class="NSFont" key="NSSupport">
-											<string key="NSName">LucidaGrande-Bold</string>
-											<double key="NSSize">10</double>
+											<string key="NSName">Helvetica-Bold</string>
+											<double key="NSSize">11</double>
 											<int key="NSfFlags">16</int>
 										</object>
 										<string key="NSCellIdentifier">_NS:1667</string>
@@ -719,9 +720,9 @@
 						<reference key="object" ref="491395706"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="270565224"/>
-							<reference ref="461170833"/>
 							<reference ref="219231577"/>
 							<reference ref="708231180"/>
+							<reference ref="461170833"/>
 						</array>
 						<reference key="parent" ref="425264390"/>
 						<string key="objectName">MainCell</string>

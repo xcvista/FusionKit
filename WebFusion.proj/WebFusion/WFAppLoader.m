@@ -31,17 +31,23 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
 {
     if (!bundle)
         return NO;
-    [bundle load];
+    if (![bundle load])
+    {
+        NSLog(@"Failed to load %@", bundle);
+        return NO;
+    }
     if ([[bundle principalClass] isSubclassOfClass:[WFViewController class]])
     {
         WFViewController *object = [[[bundle principalClass] alloc] init];
         [object applicationDidLoad];
         self.loadedBundles[(id<NSCopying>)object] = bundle;
+        NSLog(@"Loaded bundle %@", bundle);
         return YES;
     }
     else
     {
         //[bundle unload]; // Bad bundles are not used.
+        NSLog(@"Refused bundle %@", bundle);
         return NO;
     }
 }
@@ -78,19 +84,24 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
     if (self = [super init])
     {
         NSString *localRoot = [[NSBundle mainBundle] bundlePath];
-        NSString *dest = [localRoot stringByAppendingPathComponent:@"Contents/PlugIns"];
+        NSString *integratedRoot = [localRoot stringByAppendingPathComponent:@"Contents/PlugIns"];
+        //NSString *installedRoot = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:[NSString stringWithFormat:@"PlugIns/%@", [[NSBundle mainBundle] bundleIdentifier]]];
+        NSArray *paths = @[integratedRoot]; //, installedRoot];
         NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSArray *paths = [fileManager contentsOfDirectoryAtPath:dest
-                                                          error:NULL];
-        self.loadedBundles = [NSMutableDictionary dictionaryWithCapacity:[paths count]];
-        for (NSString *path in paths)
+        for (NSString *dest in paths)
         {
-            NSString *bundleLocation = [dest stringByAppendingPathComponent:path];
-            NSBundle *bundle = [NSBundle bundleWithPath:bundleLocation];
-            if (bundle)
+            NSArray *paths = [fileManager contentsOfDirectoryAtPath:dest
+                                                              error:NULL];
+            self.loadedBundles = [NSMutableDictionary dictionaryWithCapacity:[paths count]];
+            for (NSString *path in paths)
             {
-                NSLog(@"Loading bundle %@", bundle);
-                [self loadBundle:bundle];
+                NSString *bundleLocation = [dest stringByAppendingPathComponent:path];
+                NSBundle *bundle = [NSBundle bundleWithPath:bundleLocation];
+                if (bundle)
+                {
+                    NSLog(@"Loading bundle %@", bundle);
+                    [self loadBundle:bundle];
+                }
             }
         }
     }

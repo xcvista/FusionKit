@@ -40,6 +40,8 @@
     
     for (WFViewController *app in objects)
     {
+        if (![app showInSidebar])
+            continue;
         if (![self.titles containsObject:app.appCategory])
             [self.titles addObject:app.appCategory];
         if (!self.contents[app.appCategory])
