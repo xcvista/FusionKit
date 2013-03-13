@@ -271,7 +271,7 @@
 									<object class="NSButton" id="905393854">
 										<reference key="NSNextResponder" ref="842495828"/>
 										<int key="NSvFlags">265</int>
-										<string key="NSFrame">{{369, 285}, {24, 24}}</string>
+										<string key="NSFrame">{{369, 284}, {25, 25}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
 										<reference key="NSNextKeyView" ref="310064770"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -279,12 +279,16 @@
 										<object class="NSButtonCell" key="NSCell" id="114149303">
 											<int key="NSCellFlags">67108864</int>
 											<int key="NSCellFlags2">134217728</int>
-											<string key="NSContents">S</string>
+											<string key="NSContents"/>
 											<reference key="NSSupport" ref="1012003666"/>
 											<string key="NSCellIdentifier">_NS:9</string>
 											<reference key="NSControlView" ref="905393854"/>
-											<int key="NSButtonFlags">-2038153216</int>
-											<int key="NSButtonFlags2">134</int>
+											<int key="NSButtonFlags">-2033958912</int>
+											<int key="NSButtonFlags2">163</int>
+											<object class="NSCustomResource" key="NSNormalImage">
+												<string key="NSClassName">NSImage</string>
+												<string key="NSResourceName">Star</string>
+											</object>
 											<string key="NSAlternateContents"/>
 											<string key="NSKeyEquivalent"/>
 											<int key="NSPeriodicDelay">400</int>
@@ -295,7 +299,7 @@
 									<object class="NSButton" id="621625474">
 										<reference key="NSNextResponder" ref="842495828"/>
 										<int key="NSvFlags">265</int>
-										<string key="NSFrame">{{335, 285}, {24, 24}}</string>
+										<string key="NSFrame">{{336, 284}, {25, 25}}</string>
 										<reference key="NSSuperview" ref="842495828"/>
 										<reference key="NSNextKeyView" ref="905393854"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -303,12 +307,16 @@
 										<object class="NSButtonCell" key="NSCell" id="169412140">
 											<int key="NSCellFlags">67108864</int>
 											<int key="NSCellFlags2">134217728</int>
-											<string key="NSContents">L</string>
+											<string key="NSContents"/>
 											<reference key="NSSupport" ref="1012003666"/>
 											<string key="NSCellIdentifier">_NS:9</string>
 											<reference key="NSControlView" ref="621625474"/>
-											<int key="NSButtonFlags">-2038153216</int>
-											<int key="NSButtonFlags2">134</int>
+											<int key="NSButtonFlags">-2033958912</int>
+											<int key="NSButtonFlags2">163</int>
+											<object class="NSCustomResource" key="NSNormalImage">
+												<string key="NSClassName">NSImage</string>
+												<string key="NSResourceName">Link</string>
+											</object>
 											<string key="NSAlternateContents"/>
 											<string key="NSKeyEquivalent"/>
 											<int key="NSPeriodicDelay">400</int>
@@ -570,8 +578,8 @@
 							<reference ref="224223369"/>
 							<reference ref="1046851956"/>
 							<reference ref="905393854"/>
-							<reference ref="621625474"/>
 							<reference ref="420639666"/>
+							<reference ref="621625474"/>
 						</array>
 						<reference key="parent" ref="957512775"/>
 					</object>
@@ -757,5 +765,9 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="Link">{32, 32}</string>
+			<string key="Star">{32, 32}</string>
+		</dictionary>
 	</data>
 </archive>

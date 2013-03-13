@@ -27,6 +27,8 @@ extern NSString *const WFPollNotification;
 - (void)pollDidFinish:(NSNotification *)aNotification;
 - (BOOL)showInSidebar;
 - (BOOL)isActive;
+- (BOOL)hasPreferences;
+- (void)showPreferences;
 
 - (NSComparisonResult)compare:(WFViewController *)other;
 

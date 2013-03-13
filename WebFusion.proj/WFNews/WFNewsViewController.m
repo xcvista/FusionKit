@@ -43,6 +43,11 @@
     return 0;
 }
 
+- (BOOL)canUnload
+{
+    return NO;
+}
+
 - (void)reload:(id)sender
 {
     if (self.running)

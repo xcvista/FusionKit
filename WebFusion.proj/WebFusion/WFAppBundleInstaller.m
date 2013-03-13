@@ -7,7 +7,7 @@
 //
 
 #import "WFAppBundleInstaller.h"
-#import "WFAppLoader.h"
+#import <FusionApps/FusionApps.h>
 
 @interface WFAppBundleInstaller ()
 

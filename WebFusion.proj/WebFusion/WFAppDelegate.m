@@ -63,6 +63,10 @@
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
+    for (WFViewController *app in [[WFAppLoader appLoader] loadedApps])
+    {
+        [app applicationWillUnload];
+    }
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if (self.override)
     {

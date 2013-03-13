@@ -14,3 +14,4 @@
 #import <FusionApps/NSViewController+Autoload.h>
 #import <FusionApps/NSWindowController+Autoload.h>
 #import <FusionApps/WFApplicationServices.h>
+#import <FusionApps/WFAppLoader.h>

@@ -33,7 +33,6 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
         return NO;
     if (![bundle load])
     {
-        NSLog(@"Failed to load %@", bundle);
         return NO;
     }
     if ([[bundle principalClass] isSubclassOfClass:[WFViewController class]])
@@ -41,13 +40,11 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
         WFViewController *object = [[[bundle principalClass] alloc] init];
         [object applicationDidLoad];
         self.loadedBundles[(id<NSCopying>)object] = bundle;
-        NSLog(@"Loaded bundle %@", bundle);
         return YES;
     }
     else
     {
         //[bundle unload]; // Bad bundles are not used.
-        NSLog(@"Refused bundle %@", bundle);
         return NO;
     }
 }
@@ -99,13 +96,22 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
                 NSBundle *bundle = [NSBundle bundleWithPath:bundleLocation];
                 if (bundle)
                 {
-                    NSLog(@"Loading bundle %@", bundle);
                     [self loadBundle:bundle];
                 }
             }
         }
     }
     return self;
+}
+
+- (BOOL)unloadApp:(WFViewController *)app
+{
+    [app applicationWillUnload];
+    NSBundle *deadBundle = self.loadedBundles[app];
+    [self.loadedBundles removeObjectForKey:app];
+    [[NSNotificationCenter defaultCenter] postNotificationName:WFAppLoaderLoadedBundleNotification
+                                                        object:self];
+    return YES;
 }
 
 @end

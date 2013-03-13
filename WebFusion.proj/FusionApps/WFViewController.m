@@ -85,6 +85,11 @@ NSString *const WFPollNotification = @"tk.maxius.webfusion.poll";
     return 0;
 }
 
+- (BOOL)canUnload
+{
+    return YES;
+}
+
 - (id)copyWithZone:(NSZone *)zone
 {
     return self;
@@ -163,6 +168,16 @@ NSString *const WFPollNotification = @"tk.maxius.webfusion.poll";
 }
 
 - (void)userDidLogin
+{
+    // eh
+}
+
+- (BOOL)hasPreferences
+{
+    return NO; // eh
+}
+
+- (void)showPreferences
 {
     // eh
 }

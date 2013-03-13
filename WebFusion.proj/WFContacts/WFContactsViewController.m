@@ -46,6 +46,11 @@
     return 2;
 }
 
+- (BOOL)canUnload
+{
+    return NO;
+}
+
 - (void)awakeFromNib
 {
     if (!self.oldTarget)

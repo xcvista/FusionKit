@@ -41,7 +41,6 @@
 		1D30E34916EF8C1D006315EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
 		1D30E34F16EF8C1E006315EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E34D16EF8C1E006315EA /* InfoPlist.strings */; };
 		1D30E35516EF8C3F006315EA /* WebFusion News.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E34816EF8C1D006315EA /* WebFusion News.wfapp */; };
-		1D30E35A16EF8DC8006315EA /* WFAppLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E35916EF8DC8006315EA /* WFAppLoader.m */; };
 		1D30E36116EF8F60006315EA /* WFApplicationServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D30E35F16EF8F60006315EA /* WFApplicationServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D30E36216EF8F60006315EA /* WFApplicationServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E36016EF8F60006315EA /* WFApplicationServices.m */; };
 		1D30E36D16EF90B2006315EA /* News.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E36316EF90B2006315EA /* News.pdf */; };
@@ -104,6 +103,12 @@
 		1D30E45916F0B019006315EA /* WebFusion Developer.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D58DC5B16EE829E006D0401 /* WebFusion Developer.wfapp */; };
 		1D30E45A16F0B019006315EA /* WebFusion Inspector.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E39016EFB742006315EA /* WebFusion Inspector.wfapp */; };
 		1D30E45D16F0BF0C006315EA /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E45C16F0BF0C006315EA /* NSData+Cache.m */; };
+		1D30E46016F10162006315EA /* WFAppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E45F16F10162006315EA /* WFAppInfoViewController.m */; };
+		1D30E46216F10173006315EA /* WFAppInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E46116F10173006315EA /* WFAppInfoViewController.xib */; };
+		1D30E46516F1032A006315EA /* WFAppLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D30E46316F1032A006315EA /* WFAppLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D30E46616F1032A006315EA /* WFAppLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E46416F1032A006315EA /* WFAppLoader.m */; };
+		1D30E46916F1049A006315EA /* Link.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E46716F1049A006315EA /* Link.pdf */; };
+		1D30E46A16F1049A006315EA /* Star.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E46816F1049A006315EA /* Star.pdf */; };
 		1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */; };
 		1D58DC5616EE8270006D0401 /* wfapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DC5516EE8270006D0401 /* wfapp.icns */; };
 		1D58DC5C16EE829E006D0401 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
@@ -293,8 +298,6 @@
 		1D30E34C16EF8C1E006315EA /* WFNews-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WFNews-Info.plist"; sourceTree = "<group>"; };
 		1D30E34E16EF8C1E006315EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D30E35016EF8C1E006315EA /* WFNews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WFNews-Prefix.pch"; sourceTree = "<group>"; };
-		1D30E35816EF8DC8006315EA /* WFAppLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppLoader.h; sourceTree = "<group>"; };
-		1D30E35916EF8DC8006315EA /* WFAppLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppLoader.m; sourceTree = "<group>"; };
 		1D30E35F16EF8F60006315EA /* WFApplicationServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFApplicationServices.h; sourceTree = "<group>"; };
 		1D30E36016EF8F60006315EA /* WFApplicationServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFApplicationServices.m; sourceTree = "<group>"; };
 		1D30E36316EF90B2006315EA /* News.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = News.pdf; sourceTree = "<group>"; };
@@ -356,6 +359,13 @@
 		1D30E44D16F0A4FD006315EA /* WFInfrastructure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFInfrastructure.m; sourceTree = "<group>"; };
 		1D30E45B16F0BF0C006315EA /* NSData+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cache.h"; sourceTree = "<group>"; };
 		1D30E45C16F0BF0C006315EA /* NSData+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cache.m"; sourceTree = "<group>"; };
+		1D30E45E16F10162006315EA /* WFAppInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppInfoViewController.h; sourceTree = "<group>"; };
+		1D30E45F16F10162006315EA /* WFAppInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppInfoViewController.m; sourceTree = "<group>"; };
+		1D30E46116F10173006315EA /* WFAppInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFAppInfoViewController.xib; sourceTree = "<group>"; };
+		1D30E46316F1032A006315EA /* WFAppLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppLoader.h; sourceTree = "<group>"; };
+		1D30E46416F1032A006315EA /* WFAppLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppLoader.m; sourceTree = "<group>"; };
+		1D30E46716F1049A006315EA /* Link.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Link.pdf; sourceTree = "<group>"; };
+		1D30E46816F1049A006315EA /* Star.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Star.pdf; sourceTree = "<group>"; };
 		1D58DC4E16EE4FC2006D0401 /* NSData+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cache.h"; sourceTree = "<group>"; };
 		1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cache.m"; sourceTree = "<group>"; };
 		1D58DC5516EE8270006D0401 /* wfapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = wfapp.icns; sourceTree = "<group>"; };
@@ -583,6 +593,8 @@
 			children = (
 				1D30E35F16EF8F60006315EA /* WFApplicationServices.h */,
 				1D30E36016EF8F60006315EA /* WFApplicationServices.m */,
+				1D30E46316F1032A006315EA /* WFAppLoader.h */,
+				1D30E46416F1032A006315EA /* WFAppLoader.m */,
 				1D30E30216EF2E75006315EA /* SidebarTableCellView.h */,
 				1D30E30316EF2E75006315EA /* SidebarTableCellView.m */,
 				1D30E2F416EE8581006315EA /* WFPreferenceKeys.h */,
@@ -616,8 +628,6 @@
 			children = (
 				1D30E2F916EE8601006315EA /* WFAppBundleInstaller.h */,
 				1D30E2FA16EE8601006315EA /* WFAppBundleInstaller.m */,
-				1D30E35816EF8DC8006315EA /* WFAppLoader.h */,
-				1D30E35916EF8DC8006315EA /* WFAppLoader.m */,
 			);
 			name = "Apps architecture";
 			sourceTree = "<group>";
@@ -645,6 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				1D30E36316EF90B2006315EA /* News.pdf */,
+				1D30E46716F1049A006315EA /* Link.pdf */,
+				1D30E46816F1049A006315EA /* Star.pdf */,
 				1D30E34C16EF8C1E006315EA /* WFNews-Info.plist */,
 				1D30E34D16EF8C1E006315EA /* InfoPlist.strings */,
 				1D30E35016EF8C1E006315EA /* WFNews-Prefix.pch */,
@@ -692,6 +704,9 @@
 				1D30E40916EFCB28006315EA /* WFAppCatalog.h */,
 				1D30E40A16EFCB28006315EA /* WFAppCatalog.m */,
 				1D30E40B16EFCB28006315EA /* WFAppCatalog.xib */,
+				1D30E45E16F10162006315EA /* WFAppInfoViewController.h */,
+				1D30E45F16F10162006315EA /* WFAppInfoViewController.m */,
+				1D30E46116F10173006315EA /* WFAppInfoViewController.xib */,
 				1D30E3FA16EFCAE0006315EA /* Supporting Files */,
 			);
 			path = WFApps;
@@ -866,6 +881,7 @@
 				1D30E30416EF2E75006315EA /* SidebarTableCellView.h in Headers */,
 				1D30E30616EF2E89006315EA /* FusionApps.h in Headers */,
 				1D30E36116EF8F60006315EA /* WFApplicationServices.h in Headers */,
+				1D30E46516F1032A006315EA /* WFAppLoader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1094,6 +1110,8 @@
 				1D30E36F16EF90B2006315EA /* WFNewsInfoWindowController.xib in Resources */,
 				1D30E37116EF90B2006315EA /* WFNewsItemViewController.xib in Resources */,
 				1D30E37316EF90B2006315EA /* WFNewsViewController.xib in Resources */,
+				1D30E46916F1049A006315EA /* Link.pdf in Resources */,
+				1D30E46A16F1049A006315EA /* Star.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,6 +1134,7 @@
 				1D30E3FE16EFCAE0006315EA /* InfoPlist.strings in Resources */,
 				1D30E40D16EFCB28006315EA /* WFAppCatalog.xib in Resources */,
 				1D30E41216EFCB8E006315EA /* Store.pdf in Resources */,
+				1D30E46216F10173006315EA /* WFAppInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,7 +1206,6 @@
 				1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */,
 				1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */,
 				1D30E2FC16EE8601006315EA /* WFAppBundleInstaller.m in Sources */,
-				1D30E35A16EF8DC8006315EA /* WFAppLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1201,6 +1219,7 @@
 				1D30E30116EF2E5F006315EA /* WFViewController.m in Sources */,
 				1D30E30516EF2E75006315EA /* SidebarTableCellView.m in Sources */,
 				1D30E36216EF8F60006315EA /* WFApplicationServices.m in Sources */,
+				1D30E46616F1032A006315EA /* WFAppLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,6 +1252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D30E40C16EFCB28006315EA /* WFAppCatalog.m in Sources */,
+				1D30E46016F10162006315EA /* WFAppInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -68,12 +68,12 @@
     
     if ([[news.link absoluteString] length])
     {
-        [self.titleField setFrameSize:NSMakeSize(315, 24)];
+        //[self.titleField setFrameSize:NSMakeSize(315, 24)];
         [self.linkButton setHidden:NO];
     }
     else
     {
-        [self.titleField setFrameSize:NSMakeSize(347, 24)];
+        //[self.titleField setFrameSize:NSMakeSize(347, 24)];
         [self.linkButton setHidden:YES];
     }
     

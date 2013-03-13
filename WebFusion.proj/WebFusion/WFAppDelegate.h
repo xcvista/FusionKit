@@ -10,7 +10,6 @@
 #import <FusionKit/FusionKit.h>
 #import "WFLoginWindowController.h"
 #import <FusionApps/FusionApps.h>
-#import "WFAppLoader.h"
 
 @interface WFAppDelegate : NSObject <NSApplicationDelegate, WFApplicationServicesDelegate>
 

@@ -133,7 +133,7 @@
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">272630784</int>
 								<string key="NSContents"/>
-								<object class="NSFont" key="NSSupport">
+								<object class="NSFont" key="NSSupport" id="375837033">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
 									<int key="NSfFlags">1044</int>
@@ -149,7 +149,7 @@
 						<object class="NSButton" id="144355909">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">265</int>
-							<string key="NSFrame">{{561, 389}, {37, 19}}</string>
+							<string key="NSFrame">{{573, 387}, {25, 25}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSNextKeyView" ref="125788650"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -158,15 +158,15 @@
 								<int key="NSCellFlags">-2080374784</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Star</string>
-								<object class="NSFont" key="NSSupport" id="349268397">
-									<string key="NSName">LucidaGrande</string>
-									<double key="NSSize">12</double>
-									<int key="NSfFlags">16</int>
-								</object>
+								<reference key="NSSupport" ref="375837033"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="144355909"/>
-								<int key="NSButtonFlags">-2038153216</int>
-								<int key="NSButtonFlags2">164</int>
+								<int key="NSButtonFlags">-2033958912</int>
+								<int key="NSButtonFlags2">163</int>
+								<object class="NSCustomResource" key="NSNormalImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">Star</string>
+								</object>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">400</int>
@@ -177,7 +177,7 @@
 						<object class="NSButton" id="610578898">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">265</int>
-							<string key="NSFrame">{{514, 389}, {39, 19}}</string>
+							<string key="NSFrame">{{540, 387}, {25, 25}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSNextKeyView" ref="144355909"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -186,11 +186,15 @@
 								<int key="NSCellFlags">-2080374784</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Link</string>
-								<reference key="NSSupport" ref="349268397"/>
+								<reference key="NSSupport" ref="375837033"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="610578898"/>
-								<int key="NSButtonFlags">-2038153216</int>
-								<int key="NSButtonFlags2">164</int>
+								<int key="NSButtonFlags">-2033958912</int>
+								<int key="NSButtonFlags2">163</int>
+								<object class="NSCustomResource" key="NSNormalImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">Link</string>
+								</object>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">400</int>
@@ -210,7 +214,11 @@
 								<int key="NSCellFlags">-2080374784</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Reply</string>
-								<reference key="NSSupport" ref="349268397"/>
+								<object class="NSFont" key="NSSupport" id="349268397">
+									<string key="NSName">LucidaGrande</string>
+									<double key="NSSize">12</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="464900265"/>
 								<int key="NSButtonFlags">-2038153216</int>
@@ -460,11 +468,11 @@
 							<reference ref="615515765"/>
 							<reference ref="125788650"/>
 							<reference ref="583283395"/>
-							<reference ref="144355909"/>
 							<reference ref="464900265"/>
 							<reference ref="700804471"/>
-							<reference ref="610578898"/>
 							<reference ref="540533796"/>
+							<reference ref="144355909"/>
+							<reference ref="610578898"/>
 						</array>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -607,5 +615,9 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="Link">{32, 32}</string>
+			<string key="Star">{32, 32}</string>
+		</dictionary>
 	</data>
 </archive>

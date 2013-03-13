@@ -101,6 +101,11 @@
     return [[self class] objectFromPlist:self.plist[key]];
 }
 
+- (BOOL)containsValueForKey:(NSString *)key
+{
+    return self.plist[key] != nil;
+}
+
 - (id)decodeObjectOfClass:(Class)class forKey:(NSString *)key
 {
     return [[self class] objectFromPlist:self.plist[key]

@@ -55,6 +55,7 @@
     for (WFViewController *app in [[WFAppLoader appLoader] loadedApps])
     {
         [app userDidLogin];
+        app.window = self;
     }
 }
 
@@ -119,7 +120,6 @@
         return;
     [self.detailViewController viewWillDisappear];
     self.detailViewController = viewController;
-    [self.detailViewController setWindow:self.window];
     [[self.detailViewController view] setFrame:self.rightSplitView.bounds];
     [[self.detailViewController view] setAutoresizingMask:18];
     [self.rightSplitView setSubviews:@[[self.detailViewController view]]];

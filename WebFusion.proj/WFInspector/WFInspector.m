@@ -40,6 +40,11 @@
     [self.sidebarItem.button setAction:@selector(reload:)];
 }
 
+- (BOOL)hasPreferences
+{
+    return YES;
+}
+
 - (void)applicationDidLoad
 {
     [super applicationDidLoad];

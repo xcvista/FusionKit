@@ -29,6 +29,11 @@
     return NO;
 }
 
+- (BOOL)canUnload
+{
+    return NO;
+}
+
 - (void)pollDidFinish:(NSNotification *)aNotification
 {
     NSNumber *noService = [aNotification userInfo][@"svrEmpty"];
