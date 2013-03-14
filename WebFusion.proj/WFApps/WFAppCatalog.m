@@ -54,7 +54,7 @@
 
 - (void)reload:(id)sender
 {
-    switch ([self.segmentedControl integerValue])
+    switch ([self.segmentedControl selectedSegment])
     {
         case 0:
         {
@@ -67,6 +67,7 @@
             [self.searchField setEnabled:NO];
             NSArray *modules = [[[WFAppLoader appLoader] loadedApps] sortedArrayUsingSelector:@selector(compare:)];
             [self.collectionView setContent:modules];
+            break;
         }
         case 2:
         {
