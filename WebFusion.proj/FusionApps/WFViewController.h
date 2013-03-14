@@ -29,6 +29,7 @@ extern NSString *const WFPollNotification;
 - (BOOL)isActive;
 - (BOOL)hasPreferences;
 - (void)showPreferences;
+- (id)executeMethod:(NSString *)method withArguments:(NSArray *)arguments;
 
 - (NSComparisonResult)compare:(WFViewController *)other;
 

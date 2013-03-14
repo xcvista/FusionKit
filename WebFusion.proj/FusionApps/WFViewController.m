@@ -182,4 +182,9 @@ NSString *const WFPollNotification = @"tk.maxius.webfusion.poll";
     // eh
 }
 
+- (id)executeMethod:(NSString *)method withArguments:(NSArray *)arguments
+{
+    return nil; // eh
+}
+
 @end

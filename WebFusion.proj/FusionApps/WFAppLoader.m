@@ -137,4 +137,20 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
     return YES;
 }
 
+- (id)invokeMethod:(NSString *)method onAppWithIdentifier:(NSString *)identifier withArgs:(NSArray *)args
+{
+    return [[self appWithIdentifier:identifier] executeMethod:method
+                                                withArguments:args];
+}
+
+- (WFViewController *)appWithIdentifier:(NSString *)identifier
+{
+    for (WFViewController *vc in [self loadedApps])
+    {
+        if ([[[vc appBundle] bundleIdentifier] isEqualToString:identifier])
+            return vc;
+    }
+    return nil;
+}
+
 @end

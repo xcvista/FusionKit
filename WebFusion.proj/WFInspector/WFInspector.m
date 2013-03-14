@@ -45,6 +45,12 @@
     return YES;
 }
 
+- (BOOL)showInSidebar
+{
+    // Depend on tk.maxius.webfusion.developer
+    return [[WFAppLoader appLoader] appWithIdentifier:@"tk.maxius.webfusion.developer"] != nil;
+}
+
 - (void)applicationDidLoad
 {
     [super applicationDidLoad];
