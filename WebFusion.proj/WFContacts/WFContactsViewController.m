@@ -19,12 +19,14 @@
 @property NSArray *contacts;
 @property NSUInteger currentLastPage;
 @property BOOL running;
+@property NSString *searchTerm;
 
 @property (weak) id oldTarget;
 @property SEL oldAction;
 
 - (IBAction)scrollerChanged:(id)sender;
 - (IBAction)reload:(id)sender;
+- (IBAction)search:(id)sender;
 
 @end
 
@@ -91,6 +93,24 @@
 
 - (void)reload:(id)sender
 {
+    self.searchTerm = nil;
+    [self.searchField setStringValue:@""];
+    self.searchField = nil;
+    [self reload2:sender];
+}
+
+- (void)search:(id)sender
+{
+    if ([sender isKindOfClass:[NSSearchField class]])
+    {
+        self.searchField = sender;
+        self.searchTerm = [self.searchField stringValue];
+    }
+    [self reload2:sender];
+}
+
+- (void)reload2:(id)sender
+{
     if (self.running)
         return;
     self.running = YES;
@@ -105,7 +125,7 @@
                        FKConnection *connection = [appServices connection];
                        
                        NSError *err = nil;
-                       NSArray *contacts = [connection searchContact:[self.searchField stringValue]
+                       NSArray *contacts = [connection searchContact:self.searchTerm
                                                              inGroup:@""
                                                                 page:self.currentLastPage
                                                                error:&err];
@@ -157,7 +177,7 @@
                            FKConnection *connection = [appServices connection];
                            
                            NSError *err = nil;
-                           NSArray *contacts = [connection searchContact:[self.searchField stringValue]
+                           NSArray *contacts = [connection searchContact:self.searchTerm
                                                                  inGroup:@""
                                                                     page:self.currentLastPage
                                                                    error:&err];

@@ -65,6 +65,12 @@
     }
 }
 
+- (void)search:(id)object
+{
+    if ([self.detailViewController respondsToSelector:@selector(search:)])
+        [self.detailViewController performSelector:@selector(search:) withObject:object];
+}
+
 - (void)poll:(id)object
 {
     @autoreleasepool
