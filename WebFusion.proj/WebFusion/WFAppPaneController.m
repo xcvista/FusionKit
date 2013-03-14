@@ -152,7 +152,11 @@
         WFViewController *vc = item;
         [[dataCell imageView] setImage:vc.appIcon];
         [[dataCell textField] setStringValue:vc.appName];
-        vc.sidebarItem = dataCell;
+        if (!vc.sidebarItem)
+        {
+            vc.sidebarItem = dataCell;
+            [vc userDidLogin];
+        }
         return dataCell;
     }
 }

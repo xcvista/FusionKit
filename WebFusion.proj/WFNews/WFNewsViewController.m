@@ -120,7 +120,23 @@
 - (void)userDidLogin
 {
     [self view];
-    [self reload:self];
+}
+
+- (void)setSidebarItem:(SidebarTableCellView *)sidebarItem
+{
+    [super setSidebarItem:sidebarItem];
+    if (self.running)
+        [self.sidebarItem beginLoading];
+    else if (![[self.sidebarItem badge] length])
+        [self.sidebarItem setBadgeAsRefreshButton];
+    else
+        ; // eh
+    
+    if (self.isActive)
+    {
+        [self.sidebarItem.button setTarget:self];
+        [self.sidebarItem.button setAction:@selector(reload:)];
+    }
 }
 
 - (void)viewWillAppear
@@ -132,6 +148,9 @@
         [self.sidebarItem setBadgeAsRefreshButton];
     else
         ; // eh
+    
+    if (![self.contents count])
+        [self reload:self];
     
     [self.sidebarItem.button setTarget:self];
     [self.sidebarItem.button setAction:@selector(reload:)];

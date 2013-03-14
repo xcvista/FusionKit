@@ -52,7 +52,6 @@
     [[NSApp delegate] startMainWindow];
     for (WFViewController *app in [[WFAppLoader appLoader] loadedApps])
     {
-        [app userDidLogin];
         app.window = self.window;
     }
 }
