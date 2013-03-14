@@ -8,13 +8,15 @@
 
 #import "WFContactsViewController.h"
 #import <FusionApps/FusionApps.h>
+#import "WFAsyncImageTableCellView.h"
 
-@interface WFContactsViewController () <NSTextFieldDelegate>
+@interface WFContactsViewController () <NSTableViewDataSource, NSTableViewDelegate>
 
 @property (weak) IBOutlet NSSearchField *searchField;
-@property (weak) IBOutlet NSCollectionView *collectionView;
+@property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSScrollView *scrollView;
 
+@property NSArray *contacts;
 @property NSUInteger currentLastPage;
 @property BOOL running;
 
@@ -50,8 +52,11 @@
 
 - (void)awakeFromNib
 {
-    self.oldTarget = self.scrollView.verticalScroller.target;
-    self.oldAction = self.scrollView.verticalScroller.action;
+    if (!self.oldTarget)
+    {
+        self.oldTarget = self.scrollView.verticalScroller.target;
+        self.oldAction = self.scrollView.verticalScroller.action;
+    }
     
     self.scrollView.verticalScroller.target = self;
     self.scrollView.verticalScroller.action = @selector(scrollerChanged:);
@@ -108,7 +113,8 @@
                                       ^{
                                           if (contacts)
                                           {
-                                              [self.collectionView setContent:contacts];
+                                              self.contacts = contacts;
+                                              [self.tableView reloadData];
                                           }
                                           else
                                           {
@@ -155,12 +161,13 @@
                                                                  inGroup:@""
                                                                     page:self.currentLastPage
                                                                    error:&err];
-                           NSArray *everything = [[self.collectionView content] arrayByAddingObjectsFromArray:contacts];
+                           NSArray *everything = [self.contacts arrayByAddingObjectsFromArray:contacts];
                            dispatch_async(dispatch_get_main_queue(),
                                           ^{
                                               if (contacts)
                                               {
-                                                  [self.collectionView setContent:everything];
+                                                  self.contacts = everything;
+                                                  [self.tableView reloadData];
                                               }
                                               else
                                               {
@@ -175,6 +182,22 @@
                        });
 
     }
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return [self.contacts count];
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    FKUserContact *userContact = self.contacts[row];
+    WFAsyncImageTableCellView *view = [tableView makeViewWithIdentifier:@"Contact"
+                                                                  owner:self];
+    [view.textField setStringValue:userContact.name];
+    view.imageURL = userContact.avatar.avatar;
+    [view asyncLoad];
+    return view;
 }
 
 @end

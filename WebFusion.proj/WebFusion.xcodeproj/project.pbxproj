@@ -87,8 +87,6 @@
 		1D30E42916F09BB2006315EA /* WFContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E42716F09BB2006315EA /* WFContactsViewController.m */; };
 		1D30E42A16F09BB2006315EA /* WFContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E42816F09BB2006315EA /* WFContactsViewController.xib */; };
 		1D30E42C16F09C30006315EA /* Contacts.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E42B16F09C30006315EA /* Contacts.pdf */; };
-		1D30E43316F09C7E006315EA /* WFContactNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E43116F09C7E006315EA /* WFContactNameViewController.m */; };
-		1D30E43416F09C7E006315EA /* WFContactNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E43216F09C7E006315EA /* WFContactNameViewController.xib */; };
 		1D30E43716F09D67006315EA /* WebFusion Contacts.wfapp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D30E41916F09B20006315EA /* WebFusion Contacts.wfapp */; };
 		1D30E43816F09DE3006315EA /* FusionApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
 		1D30E43916F09DE8006315EA /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
@@ -111,6 +109,7 @@
 		1D30E46616F1032A006315EA /* WFAppLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E46416F1032A006315EA /* WFAppLoader.m */; };
 		1D30E46916F1049A006315EA /* Link.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E46716F1049A006315EA /* Link.pdf */; };
 		1D30E46A16F1049A006315EA /* Star.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E46816F1049A006315EA /* Star.pdf */; };
+		1D30E47916F21B22006315EA /* WFAsyncImageTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E47816F21B21006315EA /* WFAsyncImageTableCellView.m */; };
 		1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */; };
 		1D58DC5616EE8270006D0401 /* wfapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DC5516EE8270006D0401 /* wfapp.icns */; };
 		1D58DC5C16EE829E006D0401 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
@@ -353,9 +352,6 @@
 		1D30E42716F09BB2006315EA /* WFContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFContactsViewController.m; sourceTree = "<group>"; };
 		1D30E42816F09BB2006315EA /* WFContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFContactsViewController.xib; sourceTree = "<group>"; };
 		1D30E42B16F09C30006315EA /* Contacts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Contacts.pdf; sourceTree = "<group>"; };
-		1D30E43016F09C7E006315EA /* WFContactNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFContactNameViewController.h; sourceTree = "<group>"; };
-		1D30E43116F09C7E006315EA /* WFContactNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFContactNameViewController.m; sourceTree = "<group>"; };
-		1D30E43216F09C7E006315EA /* WFContactNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFContactNameViewController.xib; sourceTree = "<group>"; };
 		1D30E43E16F0A481006315EA /* WebFusion Infrastructure.wfapp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WebFusion Infrastructure.wfapp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D30E44216F0A482006315EA /* WFInfrastructure-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WFInfrastructure-Info.plist"; sourceTree = "<group>"; };
 		1D30E44416F0A482006315EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -371,6 +367,8 @@
 		1D30E46416F1032A006315EA /* WFAppLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppLoader.m; sourceTree = "<group>"; };
 		1D30E46716F1049A006315EA /* Link.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Link.pdf; sourceTree = "<group>"; };
 		1D30E46816F1049A006315EA /* Star.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Star.pdf; sourceTree = "<group>"; };
+		1D30E47716F21B21006315EA /* WFAsyncImageTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAsyncImageTableCellView.h; sourceTree = "<group>"; };
+		1D30E47816F21B21006315EA /* WFAsyncImageTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAsyncImageTableCellView.m; sourceTree = "<group>"; };
 		1D58DC4E16EE4FC2006D0401 /* NSData+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cache.h"; sourceTree = "<group>"; };
 		1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cache.m"; sourceTree = "<group>"; };
 		1D58DC5516EE8270006D0401 /* wfapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = wfapp.icns; sourceTree = "<group>"; };
@@ -736,9 +734,8 @@
 				1D30E42616F09BB2006315EA /* WFContactsViewController.h */,
 				1D30E42716F09BB2006315EA /* WFContactsViewController.m */,
 				1D30E42816F09BB2006315EA /* WFContactsViewController.xib */,
-				1D30E43016F09C7E006315EA /* WFContactNameViewController.h */,
-				1D30E43116F09C7E006315EA /* WFContactNameViewController.m */,
-				1D30E43216F09C7E006315EA /* WFContactNameViewController.xib */,
+				1D30E47716F21B21006315EA /* WFAsyncImageTableCellView.h */,
+				1D30E47816F21B21006315EA /* WFAsyncImageTableCellView.m */,
 				1D30E41C16F09B21006315EA /* Supporting Files */,
 			);
 			path = WFContacts;
@@ -1153,7 +1150,6 @@
 				1D30E42016F09B21006315EA /* InfoPlist.strings in Resources */,
 				1D30E42A16F09BB2006315EA /* WFContactsViewController.xib in Resources */,
 				1D30E42C16F09C30006315EA /* Contacts.pdf in Resources */,
-				1D30E43416F09C7E006315EA /* WFContactNameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,8 +1266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D30E42916F09BB2006315EA /* WFContactsViewController.m in Sources */,
-				1D30E43316F09C7E006315EA /* WFContactNameViewController.m in Sources */,
 				1D30E45D16F0BF0C006315EA /* NSData+Cache.m in Sources */,
+				1D30E47916F21B22006315EA /* WFAsyncImageTableCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2105,6 +2101,7 @@
 				1D30E35316EF8C1E006315EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D30E39916EFB742006315EA /* Build configuration list for PBXNativeTarget "WFInspector" */ = {
 			isa = XCConfigurationList;
@@ -2113,6 +2110,7 @@
 				1D30E39B16EFB742006315EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D30E40016EFCAE0006315EA /* Build configuration list for PBXNativeTarget "WFApps" */ = {
 			isa = XCConfigurationList;
@@ -2121,6 +2119,7 @@
 				1D30E40216EFCAE0006315EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D30E42216F09B21006315EA /* Build configuration list for PBXNativeTarget "WFContacts" */ = {
 			isa = XCConfigurationList;
@@ -2129,6 +2128,7 @@
 				1D30E42416F09B21006315EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D30E44716F0A482006315EA /* Build configuration list for PBXNativeTarget "WFInfrastructure" */ = {
 			isa = XCConfigurationList;
@@ -2137,6 +2137,7 @@
 				1D30E44916F0A482006315EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D58DC6416EE829E006D0401 /* Build configuration list for PBXNativeTarget "WFDeveloper" */ = {
 			isa = XCConfigurationList;
