@@ -55,7 +55,7 @@
     for (WFViewController *app in [[WFAppLoader appLoader] loadedApps])
     {
         [app userDidLogin];
-        app.window = self;
+        app.window = self.window;
     }
 }
 

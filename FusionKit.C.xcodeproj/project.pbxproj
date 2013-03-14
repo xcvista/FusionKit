@@ -35,6 +35,27 @@
 			remoteGlobalIDString = 1D30E39016EFB742006315EA;
 			remoteInfo = WFInspector;
 		};
+		1D30E46E16F20B01006315EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D30E3F716EFCAE0006315EA;
+			remoteInfo = WFApps;
+		};
+		1D30E47016F20B01006315EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D30E41916F09B20006315EA;
+			remoteInfo = WFContacts;
+		};
+		1D30E47216F20B01006315EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D30E43E16F0A481006315EA;
+			remoteInfo = WFInfrastructure;
+		};
 		1DD3379316E6618600BD1E28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */;
@@ -121,34 +142,11 @@
 		1D20120016E65917006A87B1 /* iFusionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iFusionKit.xcodeproj; path = FusionKit.ios/iFusionKit.xcodeproj; sourceTree = "<group>"; };
 		1D20120A16E65924006A87B1 /* iWebFusion.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iWebFusion.xcodeproj; path = WebFusion.ios/iWebFusion.xcodeproj; sourceTree = "<group>"; };
 		1D20121416E65938006A87B1 /* iLibraries.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iLibraries.xcodeproj; path = Libraries.ios/iLibraries.xcodeproj; sourceTree = "<group>"; };
-		1D30E3CC16EFCAA4006315EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		1D30E3CF16EFCAA4006315EA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		1D30E3D016EFCAA4006315EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1D30E3D116EFCAA4006315EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.md; sourceTree = "<group>"; };
 		1D7CD17716E53FA300F5F3AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1D30E3CB16EFCAA4006315EA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1D30E3CC16EFCAA4006315EA /* Cocoa.framework */,
-				1D30E3CE16EFCAA4006315EA /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1D30E3CE16EFCAA4006315EA /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1D30E3CF16EFCAA4006315EA /* AppKit.framework */,
-				1D30E3D016EFCAA4006315EA /* CoreData.framework */,
-				1D30E3D116EFCAA4006315EA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		1D85891516D7C5820056DB48 = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +154,6 @@
 				1D7CD17716E53FA300F5F3AF /* README.md */,
 				1DA6DA4616E823C50004C7F7 /* iOS */,
 				1DA6DA5216E823CE0004C7F7 /* OS X */,
-				1D30E3CB16EFCAA4006315EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +211,9 @@
 				1D30E3ED16EFCAA4006315EA /* WebFusion Developer.wfapp */,
 				1D30E3EF16EFCAA4006315EA /* WebFusion News.wfapp */,
 				1D30E3F116EFCAA4006315EA /* WebFusion Inspector.wfapp */,
+				1D30E46F16F20B01006315EA /* WebFusion App Catalog.wfapp */,
+				1D30E47116F20B01006315EA /* WebFusion Contacts.wfapp */,
+				1D30E47316F20B01006315EA /* WebFusion Infrastructure.wfapp */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -314,6 +314,27 @@
 			fileType = wrapper.cfbundle;
 			path = "WebFusion Inspector.wfapp";
 			remoteRef = 1D30E3F016EFCAA4006315EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D30E46F16F20B01006315EA /* WebFusion App Catalog.wfapp */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "WebFusion App Catalog.wfapp";
+			remoteRef = 1D30E46E16F20B01006315EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D30E47116F20B01006315EA /* WebFusion Contacts.wfapp */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "WebFusion Contacts.wfapp";
+			remoteRef = 1D30E47016F20B01006315EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D30E47316F20B01006315EA /* WebFusion Infrastructure.wfapp */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "WebFusion Infrastructure.wfapp";
+			remoteRef = 1D30E47216F20B01006315EA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1DD3379416E6618600BD1E28 /* WebFusion.app */ = {

@@ -10,6 +10,7 @@
 
 WFAppLoader *appLoader;
 
+NSString *const WFAppLoaderDeadBundle = @"deadBundles";
 NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.loadbundle";
 
 @interface WFAppLoader ()
@@ -85,6 +86,14 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
         //NSString *installedRoot = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:[NSString stringWithFormat:@"PlugIns/%@", [[NSBundle mainBundle] bundleIdentifier]]];
         NSArray *paths = @[integratedRoot]; //, installedRoot];
         NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSArray *deadBundles = [defaults arrayForKey:WFAppLoaderDeadBundle];
+        for (NSString *path in deadBundles)
+        {
+            [fileManager removeItemAtPath:path
+                                    error:NULL];
+        }
+        [defaults removeObjectForKey:WFAppLoaderDeadBundle];
         for (NSString *dest in paths)
         {
             NSArray *paths = [fileManager contentsOfDirectoryAtPath:dest
@@ -111,6 +120,20 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
     [self.loadedBundles removeObjectForKey:app];
     [[NSNotificationCenter defaultCenter] postNotificationName:WFAppLoaderLoadedBundleNotification
                                                         object:self];
+    if (remove)
+    {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSArray *deadBundles = nil;
+        if (!(deadBundles = [defaults arrayForKey:WFAppLoaderDeadBundle]))
+        {
+            deadBundles = [deadBundles arrayByAddingObject:[deadBundle bundlePath]];
+        }
+        else
+        {
+            deadBundles = @[[deadBundle bundlePath]];
+        }
+        [defaults setObject:deadBundles forKey:WFAppLoaderDeadBundle];
+    }
     return YES;
 }
 
