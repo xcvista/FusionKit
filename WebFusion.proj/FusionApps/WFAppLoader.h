@@ -18,7 +18,7 @@ extern NSString *const WFAppLoaderLoadedBundleNotification;
 - (NSArray *)loadedApps;
 - (BOOL)loadAppBundle:(NSURL *)bundleURL;
 - (BOOL)loadAppBundle:(NSURL *)bundleURL replacingApp:(WFViewController *)app;
-- (BOOL)unloadApp:(WFViewController *)app;
+- (BOOL)unloadApp:(WFViewController *)app removing:(BOOL)remove;
 - (BOOL)unloadAllApps;
 
 @end

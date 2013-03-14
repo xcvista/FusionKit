@@ -63,7 +63,16 @@
 
 - (void)unloadButtonPressed:(id)sender
 {
-    [[WFAppLoader appLoader] unloadApp:[self representedObject]];
+    NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"Unloading app %@", @"ui", [NSBundle bundleForClass:[self class]], @""), [[self representedObject] longAppName]]
+                                     defaultButton:NSLocalizedStringFromTableInBundle(@"Yes", @"ui", [NSBundle bundleForClass:[self class]], @"")
+                                   alternateButton:NSLocalizedStringFromTableInBundle(@"No", @"ui", [NSBundle bundleForClass:[self class]], @"")
+                                       otherButton:nil
+                         informativeTextWithFormat:NSLocalizedStringFromTableInBundle(@"This operation is not reversable.", @"ui", [NSBundle bundleForClass:[self class]], @"")];
+    if ([alert runModal] == NSAlertDefaultReturn)
+    {
+        [[WFAppLoader appLoader] unloadApp:[self representedObject]
+                                  removing:YES];
+    }
 }
 
 @end

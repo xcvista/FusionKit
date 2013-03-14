@@ -104,7 +104,7 @@ NSString *const WFAppLoaderLoadedBundleNotification = @"tk.maxius.webfusion.load
     return self;
 }
 
-- (BOOL)unloadApp:(WFViewController *)app
+- (BOOL)unloadApp:(WFViewController *)app removing:(BOOL)remove
 {
     [app applicationWillUnload];
     NSBundle *deadBundle = self.loadedBundles[app];

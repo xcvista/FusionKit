@@ -58,20 +58,37 @@
     {
         case 0:
         {
-            [self.searchField setEnabled:YES];
             [self.collectionView setContent:@[]];
             break;
         }
         case 1:
         {
-            [self.searchField setEnabled:NO];
             NSArray *modules = [[[WFAppLoader appLoader] loadedApps] sortedArrayUsingSelector:@selector(compare:)];
+            if ([[self.searchField stringValue] length])
+            {
+                NSString *keyword = [self.searchField stringValue];
+                NSMutableArray *tmp = [NSMutableArray arrayWithCapacity:[modules count]];
+                for (WFViewController *app in modules)
+                {
+                    NSArray *keys = @[[app appName], [app longAppName], [app appCategory], [[app appBundle] bundleIdentifier]];
+                    BOOL check = NO;
+                    for (NSString *key in keys)
+                        if ([key rangeOfString:keyword
+                                       options:NSDiacriticInsensitiveSearch | NSCaseInsensitiveSearch].location != NSNotFound)
+                        {
+                            check = YES;
+                            break;
+                        }
+                    if (check)
+                        [tmp addObject:app];
+                }
+                modules = tmp;
+            }
             [self.collectionView setContent:modules];
             break;
         }
         case 2:
         {
-            [self.searchField setEnabled:YES];
             [self.collectionView setContent:@[]];
             break;
         }
