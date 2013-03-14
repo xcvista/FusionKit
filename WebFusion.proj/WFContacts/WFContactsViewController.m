@@ -10,7 +10,7 @@
 #import <FusionApps/FusionApps.h>
 #import "WFAsyncImageTableCellView.h"
 
-@interface WFContactsViewController () <NSTableViewDataSource, NSTableViewDelegate>
+@interface WFContactsViewController () <NSTableViewDataSource, NSTableViewDelegate, NSSplitViewDelegate>
 
 @property (weak) IBOutlet NSSearchField *searchField;
 @property (weak) IBOutlet NSTableView *tableView;
@@ -198,6 +198,11 @@
     view.imageURL = userContact.avatar.avatar;
     [view asyncLoad];
     return view;
+}
+
+- (BOOL)splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)view
+{
+    return [[splitView subviews] indexOfObject:view] != 0;
 }
 
 @end

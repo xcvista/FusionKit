@@ -63,6 +63,9 @@
         [self.contents[key] sortUsingSelector:@selector(compare:)];
     }
     [self.outlineView reloadData];
+    if ([self.outlineView selectedRow] < 0)
+        [self.outlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:1]
+                      byExtendingSelection:NO];
 }
 
 - (void)configureView

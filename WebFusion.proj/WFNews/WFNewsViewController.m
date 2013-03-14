@@ -10,14 +10,18 @@
 //#import <FusionBinding/FusionBinding.h>
 #import <objc/message.h>
 #import <FusionApps/FusionApps.h>
+#import "WFNewsListView.h"
+#import "FKNews+NwsDisplay.h"
+#import <WebKit/WebKit.h>
 
-@interface WFNewsViewController ()
+@interface WFNewsViewController () <NSTableViewDelegate, NSTableViewDataSource, NSSplitViewDelegate>
 
-@property (weak) IBOutlet NSCollectionView *collectionView;
-@property (weak) IBOutlet NSScroller *vertivalScroller;
+@property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSScrollView *scrollView;
+@property (weak) IBOutlet WebView *webView;
 
 @property BOOL running;
+@property NSArray *contents;
 
 @property (weak) id oldTarget;
 @property SEL oldAction;
@@ -80,9 +84,14 @@
                                           }
                                           else
                                           {
-                                              [self.collectionView setContent:news];
+                                              self.contents = news;
+                                              [self.tableView reloadData];
+                                              [self.tableView becomeFirstResponder];
+                                              if ([self.tableView selectedRow] < 0)
+                                                  [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0]
+                                                              byExtendingSelection:NO];
                                               [self.scrollView.contentView scrollToPoint:NSPointFromCGPoint(CGPointZero)];
-                                              [self.vertivalScroller setDoubleValue:0];
+                                              [self.scrollView.verticalScroller setDoubleValue:0];
                                               if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
                                                   [self.scrollView flashScrollers];
                                           }
@@ -98,11 +107,14 @@
 - (void)awakeFromNib
 {
     [self view];
-    self.oldTarget = self.vertivalScroller.target;
-    self.oldAction = self.vertivalScroller.action;
+    if (!self.oldTarget)
+    {
+        self.oldTarget = self.scrollView.verticalScroller.target;
+        self.oldAction = self.scrollView.verticalScroller.action;
+    }
     
-    self.vertivalScroller.target = self;
-    self.vertivalScroller.action = @selector(scrollerChanged:);
+    self.scrollView.verticalScroller.target = self;
+    self.scrollView.verticalScroller.action = @selector(scrollerChanged:);
 }
 
 - (void)userDidLogin
@@ -125,6 +137,70 @@
     [self.sidebarItem.button setAction:@selector(reload:)];
 }
 
+- (void)loadMore
+{
+    if (self.running)
+        return;
+    
+    self.running = YES;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger loadCount = [userDefaults integerForKey:@"historyBatchSize"];
+    WFApplicationServices *appServices = [WFApplicationServices applicationServices];
+    NSMutableArray *currentObjects = [self.contents mutableCopy];
+    NSString *currentBadge = [self.sidebarItem badge];
+    NSNumber *badgeIsRefresh = @([self.sidebarItem isRefreshBadge]);
+    if (![self.sidebarItem isLoading])
+        [self.sidebarItem beginLoading];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       NSError *err;
+                       NSArray *news = [appServices.connection newsBeforeEpoch:[[currentObjects lastObject] publishDate]
+                                                                         count:loadCount
+                                                                          type:nil
+                                                                         error:&err];
+                       
+                       if (news)
+                       {
+                           [currentObjects addObjectsFromArray:news];
+                       }
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^{
+                                          self.running = NO;
+                                          if (!news)
+                                          {
+                                              NSAlert *alert = [NSAlert alertWithError:err];
+                                              [alert beginSheetModalForWindow:self.window
+                                                                modalDelegate:nil
+                                                               didEndSelector:nil
+                                                                  contextInfo:nil];
+                                              return;
+                                          }
+                                          else
+                                          {
+                                              self.contents = currentObjects;
+                                              [self.tableView reloadData];
+                                              
+                                              if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
+                                                  [self.scrollView flashScrollers];
+                                          }
+                                          
+                                          if ([badgeIsRefresh boolValue])
+                                          {
+                                              if ([self isActive])
+                                                  [self.sidebarItem setBadgeAsRefreshButton];
+                                              else
+                                                  [self.sidebarItem setBadge:nil];
+                                          }
+                                          else
+                                              [self.sidebarItem setBadge:currentBadge];
+                                          
+                                      });
+                   });
+
+}
+
 - (void)scrollerChanged:(id)sender
 {
 #pragma clang diagnostic push
@@ -132,76 +208,17 @@
     [self.oldTarget performSelector:self.oldAction withObject:sender]; //Redispatch it.
 #pragma clang diagnostic pop
     
-    if ([self.vertivalScroller doubleValue] > 0.99)
+    if ([self.scrollView.verticalScroller doubleValue] > 0.99)
     {
-        if (self.running)
-            return;
-        
-        self.running = YES;
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        NSInteger loadCount = [userDefaults integerForKey:@"historyBatchSize"];
-        WFApplicationServices *appServices = [WFApplicationServices applicationServices];
-        NSMutableArray *currentObjects = [[self.collectionView content] mutableCopy];
-        NSString *currentBadge = [self.sidebarItem badge];
-        NSNumber *badgeIsRefresh = @([self.sidebarItem isRefreshBadge]);
-        if (![self.sidebarItem isLoading])
-            [self.sidebarItem beginLoading];
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                       ^{
-                           NSError *err;
-                           NSArray *news = [appServices.connection newsBeforeEpoch:[[currentObjects lastObject] publishDate]
-                                                                             count:loadCount
-                                                                              type:nil
-                                                                             error:&err];
-                           
-                           if (news)
-                           {
-                               [currentObjects addObjectsFromArray:news];
-                           }
-                           
-                           dispatch_async(dispatch_get_main_queue(),
-                                          ^{
-                                              self.running = NO;
-                                              if (!news)
-                                              {
-                                                  NSAlert *alert = [NSAlert alertWithError:err];
-                                                  [alert beginSheetModalForWindow:self.window
-                                                                    modalDelegate:nil
-                                                                   didEndSelector:nil
-                                                                      contextInfo:nil];
-                                                  return;
-                                              }
-                                              else
-                                              {
-                                                  [self.collectionView setContent:currentObjects];
-                                                  
-                                                  if ([self.scrollView respondsToSelector:@selector(flashScrollers)])
-                                                      [self.scrollView flashScrollers];
-                                              }
-                                              
-                                              if ([badgeIsRefresh boolValue])
-                                              {
-                                                  if ([self isActive])
-                                                      [self.sidebarItem setBadgeAsRefreshButton];
-                                                  else
-                                                      [self.sidebarItem setBadge:nil];
-                                              }
-                                              else
-                                                  [self.sidebarItem setBadge:currentBadge];
-                                              
-                                          });
-                       });
-        
-        
+        [self loadMore];
     }
 }
 
 - (NSDictionary *)registerPoll
 {
-    if (![[self.collectionView content] count])
+    if (![self.contents count])
         return nil;
-    NSNumber *timestamp = @(FKTimestampFromNSTimeInterval([[(FKNews *)[self.collectionView content][0] publishDate] timeIntervalSince1970]));
+    NSNumber *timestamp = @(FKTimestampFromNSTimeInterval([[(FKNews *)self.contents[0] publishDate] timeIntervalSince1970]));
     NSMutableDictionary *request = [@{@"dvt": @([[self.sidebarItem badge] integerValue]), @"exceptions": @"", @"lt": timestamp, @"type": @""} mutableCopy];;
     return @{@"newsc": request};
 }
@@ -213,7 +230,7 @@
     if (source)
     {
         NSTimeInterval reqTime = NSTimeIntervalFromFKTimestamp([source[@"lt"] longValue]);
-        NSTimeInterval curTime = [[(FKNews *)[self.collectionView content][0] publishDate] timeIntervalSince1970];
+        NSTimeInterval curTime = [[(FKNews *)self.contents[0] publishDate] timeIntervalSince1970];
         if (curTime - reqTime >= 1000)
             return;
     }
@@ -235,6 +252,52 @@
     [self.sidebarItem.button setAction:nil];
     
     [super viewWillDisappear];
+}
+
+#pragma mark Split View
+
+- (BOOL)splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)view
+{
+    return [[splitView subviews] indexOfObject:view] != 0;
+}
+
+#pragma mark Table View
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return [self.contents count];
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    FKNews *news = self.contents[row];
+    WFNewsListView *listView = [tableView makeViewWithIdentifier:@"News"
+                                                           owner:self];
+    
+    [listView.textField setStringValue:news.title];
+    [listView.authorField setStringValue:news.author.description];
+    [listView.timeField setStringValue:news.time];
+    listView.imageURL = news.author.avatar;
+    [listView asyncLoad];
+    return listView;
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification
+{
+    // Cancel previous load
+    if ([self.webView isLoading])
+        [self.webView stopLoading:self];
+    
+    if ([self.tableView selectedRow] >= 0)
+    {
+        FKNews *news = self.contents[[self.tableView selectedRow]];
+        [self.webView.mainFrame loadAlternateHTMLString:news.htmlString
+                                                baseURL:[[[NSBundle bundleForClass:[self class]] bundleURL] URLByAppendingPathComponent:@"Contents/Resources"]
+                                      forUnreachableURL:nil];
+    }
+    if ([self.tableView selectedRow] >= [self.contents count] - 1)
+        [self loadMore];
+    
 }
 
 @end

@@ -52,4 +52,13 @@
     }
 }
 
+- (id)executeMethod:(NSString *)method withArguments:(NSArray *)arguments
+{
+    if ([method isEqualToString:@"WFLocalizedGateway"])
+    {
+        return NSLocalizedStringFromTableInBundle(arguments[0], @"services", [self appBundle], @"");
+    }
+    return nil;
+}
+
 @end

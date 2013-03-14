@@ -48,8 +48,6 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     [self.appPaneController configureView];
-    [self.outlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:1]
-                  byExtendingSelection:NO];
     [self.window setExcludedFromWindowsMenu:YES];
     [[NSApp delegate] startMainWindow];
     for (WFViewController *app in [[WFAppLoader appLoader] loadedApps])

@@ -1,15 +1,15 @@
 //
-//  WFAsyncImageTableCellView.m
+//  WFNewsListView.m
 //  WebFusion
 //
-//  Created by Maxthon Chan on 13-3-14.
+//  Created by Maxthon Chan on 13-3-15.
 //
 //
 
-#import "WFAsyncImageTableCellView.h"
+#import "WFNewsListView.h"
 #import "NSData+Cache.h"
 
-@implementation WFAsyncImageTableCellView
+@implementation WFNewsListView
 
 - (id)initWithFrame:(NSRect)frame
 {

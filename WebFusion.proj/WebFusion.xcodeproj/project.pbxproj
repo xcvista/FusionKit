@@ -44,10 +44,6 @@
 		1D30E36116EF8F60006315EA /* WFApplicationServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D30E35F16EF8F60006315EA /* WFApplicationServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D30E36216EF8F60006315EA /* WFApplicationServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E36016EF8F60006315EA /* WFApplicationServices.m */; };
 		1D30E36D16EF90B2006315EA /* News.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E36316EF90B2006315EA /* News.pdf */; };
-		1D30E36E16EF90B2006315EA /* WFNewsInfoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E36516EF90B2006315EA /* WFNewsInfoWindowController.m */; };
-		1D30E36F16EF90B2006315EA /* WFNewsInfoWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E36616EF90B2006315EA /* WFNewsInfoWindowController.xib */; };
-		1D30E37016EF90B2006315EA /* WFNewsItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E36816EF90B2006315EA /* WFNewsItemViewController.m */; };
-		1D30E37116EF90B2006315EA /* WFNewsItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E36916EF90B2006315EA /* WFNewsItemViewController.xib */; };
 		1D30E37216EF90B2006315EA /* WFNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E36B16EF90B2006315EA /* WFNewsViewController.m */; };
 		1D30E37316EF90B2006315EA /* WFNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E36C16EF90B2006315EA /* WFNewsViewController.xib */; };
 		1D30E37416EF90FD006315EA /* FusionApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30E2B316EE8405006315EA /* FusionApps.framework */; };
@@ -110,6 +106,12 @@
 		1D30E46916F1049A006315EA /* Link.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E46716F1049A006315EA /* Link.pdf */; };
 		1D30E46A16F1049A006315EA /* Star.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E46816F1049A006315EA /* Star.pdf */; };
 		1D30E47916F21B22006315EA /* WFAsyncImageTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E47816F21B21006315EA /* WFAsyncImageTableCellView.m */; };
+		1D30E47C16F24664006315EA /* WFNewsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E47B16F24664006315EA /* WFNewsListView.m */; };
+		1D30E47F16F2492F006315EA /* FKNews+NwsDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E47E16F2492F006315EA /* FKNews+NwsDisplay.m */; };
+		1D30E48216F249AD006315EA /* FKContact+Display.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E48116F249AC006315EA /* FKContact+Display.m */; };
+		1D30E48316F2674B006315EA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
+		1D30E48416F26751006315EA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
+		1D30E48616F26EE5006315EA /* services.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E48516F26EE5006315EA /* services.strings */; };
 		1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */; };
 		1D58DC5616EE8270006D0401 /* wfapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DC5516EE8270006D0401 /* wfapp.icns */; };
 		1D58DC5C16EE829E006D0401 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
@@ -302,12 +304,6 @@
 		1D30E35F16EF8F60006315EA /* WFApplicationServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFApplicationServices.h; sourceTree = "<group>"; };
 		1D30E36016EF8F60006315EA /* WFApplicationServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFApplicationServices.m; sourceTree = "<group>"; };
 		1D30E36316EF90B2006315EA /* News.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = News.pdf; sourceTree = "<group>"; };
-		1D30E36416EF90B2006315EA /* WFNewsInfoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsInfoWindowController.h; sourceTree = "<group>"; };
-		1D30E36516EF90B2006315EA /* WFNewsInfoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsInfoWindowController.m; sourceTree = "<group>"; };
-		1D30E36616EF90B2006315EA /* WFNewsInfoWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsInfoWindowController.xib; sourceTree = "<group>"; };
-		1D30E36716EF90B2006315EA /* WFNewsItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsItemViewController.h; sourceTree = "<group>"; };
-		1D30E36816EF90B2006315EA /* WFNewsItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsItemViewController.m; sourceTree = "<group>"; };
-		1D30E36916EF90B2006315EA /* WFNewsItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsItemViewController.xib; sourceTree = "<group>"; };
 		1D30E36A16EF90B2006315EA /* WFNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsViewController.h; sourceTree = "<group>"; };
 		1D30E36B16EF90B2006315EA /* WFNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsViewController.m; sourceTree = "<group>"; };
 		1D30E36C16EF90B2006315EA /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
@@ -369,6 +365,13 @@
 		1D30E46816F1049A006315EA /* Star.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Star.pdf; sourceTree = "<group>"; };
 		1D30E47716F21B21006315EA /* WFAsyncImageTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAsyncImageTableCellView.h; sourceTree = "<group>"; };
 		1D30E47816F21B21006315EA /* WFAsyncImageTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAsyncImageTableCellView.m; sourceTree = "<group>"; };
+		1D30E47A16F24664006315EA /* WFNewsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNewsListView.h; sourceTree = "<group>"; };
+		1D30E47B16F24664006315EA /* WFNewsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNewsListView.m; sourceTree = "<group>"; };
+		1D30E47D16F2492F006315EA /* FKNews+NwsDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FKNews+NwsDisplay.h"; sourceTree = "<group>"; };
+		1D30E47E16F2492F006315EA /* FKNews+NwsDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FKNews+NwsDisplay.m"; sourceTree = "<group>"; };
+		1D30E48016F249AC006315EA /* FKContact+Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FKContact+Display.h"; sourceTree = "<group>"; };
+		1D30E48116F249AC006315EA /* FKContact+Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FKContact+Display.m"; sourceTree = "<group>"; };
+		1D30E48516F26EE5006315EA /* services.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = services.strings; sourceTree = "<group>"; };
 		1D58DC4E16EE4FC2006D0401 /* NSData+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cache.h"; sourceTree = "<group>"; };
 		1D58DC4F16EE4FC2006D0401 /* NSData+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cache.m"; sourceTree = "<group>"; };
 		1D58DC5516EE8270006D0401 /* wfapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = wfapp.icns; sourceTree = "<group>"; };
@@ -444,6 +447,7 @@
 				1D30E34916EF8C1D006315EA /* Cocoa.framework in Frameworks */,
 				1D30E37916EF910C006315EA /* FusionBinding.framework in Frameworks */,
 				1D30E37A16EF910C006315EA /* FusionKit.framework in Frameworks */,
+				1D30E48316F2674B006315EA /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +479,7 @@
 				1D30E41A16F09B20006315EA /* Cocoa.framework in Frameworks */,
 				1D30E43816F09DE3006315EA /* FusionApps.framework in Frameworks */,
 				1D30E43916F09DE8006315EA /* FusionKit.framework in Frameworks */,
+				1D30E48416F26751006315EA /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,15 +645,15 @@
 			children = (
 				1D30E38416EF9798006315EA /* NSData+Cache.h */,
 				1D30E38516EF9798006315EA /* NSData+Cache.m */,
-				1D30E36416EF90B2006315EA /* WFNewsInfoWindowController.h */,
-				1D30E36516EF90B2006315EA /* WFNewsInfoWindowController.m */,
-				1D30E36616EF90B2006315EA /* WFNewsInfoWindowController.xib */,
-				1D30E36716EF90B2006315EA /* WFNewsItemViewController.h */,
-				1D30E36816EF90B2006315EA /* WFNewsItemViewController.m */,
-				1D30E36916EF90B2006315EA /* WFNewsItemViewController.xib */,
+				1D30E47D16F2492F006315EA /* FKNews+NwsDisplay.h */,
+				1D30E47E16F2492F006315EA /* FKNews+NwsDisplay.m */,
+				1D30E48016F249AC006315EA /* FKContact+Display.h */,
+				1D30E48116F249AC006315EA /* FKContact+Display.m */,
 				1D30E36A16EF90B2006315EA /* WFNewsViewController.h */,
 				1D30E36B16EF90B2006315EA /* WFNewsViewController.m */,
 				1D30E36C16EF90B2006315EA /* WFNewsViewController.xib */,
+				1D30E47A16F24664006315EA /* WFNewsListView.h */,
+				1D30E47B16F24664006315EA /* WFNewsListView.m */,
 				1D30E34B16EF8C1E006315EA /* Supporting Files */,
 			);
 			path = WFNews;
@@ -765,6 +770,7 @@
 		1D30E44116F0A482006315EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D30E48516F26EE5006315EA /* services.strings */,
 				1D30E44216F0A482006315EA /* WFInfrastructure-Info.plist */,
 				1D30E44316F0A482006315EA /* InfoPlist.strings */,
 				1D30E44616F0A482006315EA /* WFInfrastructure-Prefix.pch */,
@@ -1112,8 +1118,6 @@
 			files = (
 				1D30E34F16EF8C1E006315EA /* InfoPlist.strings in Resources */,
 				1D30E36D16EF90B2006315EA /* News.pdf in Resources */,
-				1D30E36F16EF90B2006315EA /* WFNewsInfoWindowController.xib in Resources */,
-				1D30E37116EF90B2006315EA /* WFNewsItemViewController.xib in Resources */,
 				1D30E37316EF90B2006315EA /* WFNewsViewController.xib in Resources */,
 				1D30E46916F1049A006315EA /* Link.pdf in Resources */,
 				1D30E46A16F1049A006315EA /* Star.pdf in Resources */,
@@ -1158,6 +1162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D30E44516F0A482006315EA /* InfoPlist.strings in Resources */,
+				1D30E48616F26EE5006315EA /* services.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1232,10 +1237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D30E36E16EF90B2006315EA /* WFNewsInfoWindowController.m in Sources */,
-				1D30E37016EF90B2006315EA /* WFNewsItemViewController.m in Sources */,
 				1D30E37216EF90B2006315EA /* WFNewsViewController.m in Sources */,
 				1D30E38616EF9799006315EA /* NSData+Cache.m in Sources */,
+				1D30E47C16F24664006315EA /* WFNewsListView.m in Sources */,
+				1D30E47F16F2492F006315EA /* FKNews+NwsDisplay.m in Sources */,
+				1D30E48216F249AD006315EA /* FKContact+Display.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
