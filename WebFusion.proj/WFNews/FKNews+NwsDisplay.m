@@ -32,18 +32,21 @@
     @"<html><head><meta charset=\"utf-8\" />"
      "<style typr=\"text/css\">body{font-family:Helvetica;size:17px;}"
      ".hover{float:right;margin:3px;height:60px;}img{max-width:80%}"
-     "hr{border-style:none;background-color:grey;height:1px;}"
-     ".center{text-align:center}p{margin-top:3px;margin-bottom:3px;}</style></head>"
+     "hr{border-style:none;background-color:grey;height:1px;width:100%}"
+     ".center{text-align:center}p{margin-top:3px;margin-bottom:3px;}"
+     ".mediaImg{margin:20px}"
+     ".roundCorners{border-radius: 4px;}"
+     "</style></head>"
      "<body>TEMP</body></html>";
     NSString *postTemplate =
     @"<div style=\"min-height:65px;padding-left:10px;padding-right:10px;"
      "padding-top:10px;\">"
-     "<img class=\"hover\" src=\"AVATAR\" />"
+     "<img class=\"hover roundCorners\" src=\"AVATAR\" />"
      "<p style=\"font-weight:bold;\">AUTHOR</p>"
      "<p style=\"color:grey\">SERVICE - TIME</p>"
      "<p>TITLE</p></div>"
-     "<div class=\"center\" style=\"padding-left:20px;"
-     "padding-right:20px;\"><hr /></div>"
+     "<div class=\"center\" style=\"padding-left:10px;"
+     "padding-right:10px;padding-top:20px\"><hr /></div>"
      "<div style=\"padding-left:10px;padding-right:10px;padding-bottom:10px;\">CONTENT</div>";
     NSString *splitter =
     @"<div class=\"center\"><hr style=\"background-color:black;\" /></div>";
@@ -80,11 +83,11 @@
             [mediaURL addObject:avatarURL];
         }
         
-        NSMutableString *content = [NSMutableString stringWithFormat:@"<div>%@</div>", ([news.content length]) ? news.content : news.title];
+        NSMutableString *content = [NSMutableString stringWithFormat:@"<div>%@</div>", news.content];
         
         for (NSURL *url in mediaURL)
         {
-            [content appendFormat:@"<div class=\"center\"><img src=\"%@\" /></div>", [url absoluteString]];
+            [content appendFormat:@"<div class=\"center mediaImg\"><img src=\"%@\" /></div>", [url absoluteString]];
         }
         
         NSArray *keys = @[@"CONTENT",
@@ -110,7 +113,7 @@
                                    withString:values[i]];
         }
         
-        if (news.refer)
+        if (news.refer && ([news.content length]||[news.media count]))
             [current appendString:splitter];
         
         [body appendString:current];

@@ -176,26 +176,26 @@
 								<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 								<reference key="NSSuperview" ref="386135426"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="469035566"/>
+								<reference key="NSNextKeyView" ref="691876882"/>
 								<string key="NSReuseIdentifierKey">_NS:58</string>
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								<reference key="NSTarget" ref="386135426"/>
 								<string key="NSAction">_doScroller:</string>
-								<double key="NSPercent">0.99717514124293782</double>
+								<double key="NSPercent">0.52058823529411768</double>
 							</object>
 							<object class="NSScroller" id="691876882">
 								<reference key="NSNextResponder" ref="386135426"/>
 								<int key="NSvFlags">-2147483392</int>
-								<string key="NSFrame">{{1, 94}, {184, 16}}</string>
+								<string key="NSFrame">{{0, 367}, {727, 15}}</string>
 								<reference key="NSSuperview" ref="386135426"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="404600055"/>
+								<reference key="NSNextKeyView" ref="469035566"/>
 								<string key="NSReuseIdentifierKey">_NS:60</string>
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								<int key="NSsFlags">1</int>
 								<reference key="NSTarget" ref="386135426"/>
 								<string key="NSAction">_doScroller:</string>
-								<double key="NSPercent">0.9965397923875432</double>
+								<double key="NSPercent">0.91561712846347609</double>
 							</object>
 						</array>
 						<string key="NSFrameSize">{387, 355}</string>
@@ -244,7 +244,11 @@
 							<dictionary class="NSMutableDictionary" key="Values">
 								<integer value="12" key="WebKitDefaultFixedFontSize"/>
 								<integer value="12" key="WebKitDefaultFontSize"/>
+								<boolean value="YES" key="WebKitJavaEnabled"/>
+								<boolean value="YES" key="WebKitJavaScriptCanOpenWindowsAutomatically"/>
+								<boolean value="YES" key="WebKitJavaScriptEnabled"/>
 								<integer value="1" key="WebKitMinimumFontSize"/>
+								<boolean value="YES" key="WebKitPluginsEnabled"/>
 							</dictionary>
 						</object>
 						<bool key="UseBackForwardList">YES</bool>
@@ -258,6 +262,17 @@
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="NSIsVertical">YES</bool>
 				<int key="NSDividerStyle">2</int>
+				<object class="NSMutableDictionary" key="NSHoldingPriorities">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+					<array key="dict.sortedKeys">
+						<integer value="0"/>
+						<integer value="1"/>
+					</array>
+					<array key="dict.values">
+						<real value="250"/>
+						<real value="250"/>
+					</array>
+				</object>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -427,7 +442,7 @@
 									<int key="NSvFlags">274</int>
 									<string key="NSFrame">{{82, 3}, {302, 57}}</string>
 									<reference key="NSSuperview" ref="652361851"/>
-									<reference key="NSNextKeyView" ref="691876882"/>
+									<reference key="NSNextKeyView" ref="404600055"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSAntiCompressionPriority">{250, 750}</string>
 									<bool key="NSEnabled">YES</bool>
@@ -549,6 +564,11 @@
 						<reference key="parent" ref="386135426"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">285</int>
+						<reference key="object" ref="469035566"/>
+						<reference key="parent" ref="150211821"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">182</int>
 						<reference key="object" ref="575839846"/>
 						<array class="NSMutableArray" key="children">
@@ -556,6 +576,11 @@
 							<reference ref="419010663"/>
 						</array>
 						<reference key="parent" ref="553883043"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">185</int>
+						<reference key="object" ref="419010663"/>
+						<reference key="parent" ref="575839846"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">186</int>
@@ -566,11 +591,6 @@
 							<reference ref="111077210"/>
 							<reference ref="913675188"/>
 						</array>
-						<reference key="parent" ref="575839846"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">185</int>
-						<reference key="object" ref="419010663"/>
 						<reference key="parent" ref="575839846"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -600,19 +620,6 @@
 						<reference key="parent" ref="111077210"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">204</int>
-						<reference key="object" ref="328636324"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="820322015"/>
-						</array>
-						<reference key="parent" ref="652361851"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">205</int>
-						<reference key="object" ref="820322015"/>
-						<reference key="parent" ref="328636324"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">206</int>
 						<reference key="object" ref="567090209"/>
 						<array class="NSMutableArray" key="children">
@@ -626,9 +633,17 @@
 						<reference key="parent" ref="567090209"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">285</int>
-						<reference key="object" ref="469035566"/>
-						<reference key="parent" ref="150211821"/>
+						<int key="objectID">204</int>
+						<reference key="object" ref="328636324"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="820322015"/>
+						</array>
+						<reference key="parent" ref="652361851"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">205</int>
+						<reference key="object" ref="820322015"/>
+						<reference key="parent" ref="328636324"/>
 					</object>
 				</array>
 			</object>
@@ -664,7 +679,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">287</int>
+			<int key="maxID">401</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
