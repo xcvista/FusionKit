@@ -23,10 +23,8 @@
 - (IBAction)signOut:(id)sender;
 - (IBAction)clearSession:(id)sender;
 
-- (IBAction)tweet:(id)sender;
-- (IBAction)blog:(id)sender;
-- (IBAction)image:(id)sender;
-- (IBAction)link:(id)sender;
+- (IBAction)compose:(id)sender;
+- (IBAction)more:(id)sender;
 
 @end
 
@@ -149,24 +147,22 @@
     [[NSApp delegate] delegateClearSession:sender];
 }
 
-- (void)blog:(id)sender
+- (void)compose:(id)sender
 {
     
 }
 
-- (void)tweet:(id)sender
+- (void)more:(id)sender
 {
     
 }
 
-- (void)link:(id)sender
+- (void)add:(id)sender
 {
-    
-}
-
-- (void)image:(id)sender
-{
-    
+    if ([self.detailViewController respondsToSelector:@selector(add:)])
+    {
+        [self.detailViewController performSelector:@selector(add:) withObject:sender];
+    }
 }
 
 @end

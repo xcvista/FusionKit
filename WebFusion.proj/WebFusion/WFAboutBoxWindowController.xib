@@ -43,7 +43,7 @@
 				<int key="NSWindowStyleMask">3</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{120, 68}, {572, 386}}</string>
-				<int key="NSWTFlags">-1535638528</int>
+				<int key="NSWTFlags">611845120</int>
 				<string key="NSWindowTitle"/>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
@@ -65,6 +65,7 @@
 							</set>
 							<string key="NSFrame">{{20, 238}, {128, 128}}</string>
 							<reference key="NSSuperview" ref="335183972"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1014169441"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -89,6 +90,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{153, 291}, {214, 48}}</string>
 							<reference key="NSSuperview" ref="335183972"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1016422103"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -129,6 +131,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{153, 266}, {214, 17}}</string>
 							<reference key="NSSuperview" ref="335183972"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="836058849"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -159,9 +162,10 @@
 										<object class="NSTextView" id="981914728">
 											<reference key="NSNextResponder" ref="620089033"/>
 											<int key="NSvFlags">2322</int>
-											<string key="NSFrameSize">{530, 273}</string>
+											<string key="NSFrame">{{0, -21}, {530, 273}}</string>
 											<reference key="NSSuperview" ref="620089033"/>
-											<reference key="NSNextKeyView" ref="9978162"/>
+											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView" ref="507396421"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<object class="NSTextContainer" key="NSTextContainer" id="294260688">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -258,7 +262,9 @@ QURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuA</bytes>
 										</object>
 									</array>
 									<string key="NSFrame">{{1, 1}, {530, 148}}</string>
+									<string key="NSBounds">{{0, -14}, {530, 148}}</string>
 									<reference key="NSSuperview" ref="836058849"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="981914728"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<reference key="NSDocView" ref="981914728"/>
@@ -289,12 +295,13 @@ QURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuA</bytes>
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{515, 1}, {16, 148}}</string>
 									<reference key="NSSuperview" ref="836058849"/>
-									<reference key="NSNextKeyView"/>
+									<reference key="NSWindow"/>
 									<string key="NSReuseIdentifierKey">_NS:83</string>
 									<bool key="NSEnabled">YES</bool>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="836058849"/>
 									<string key="NSAction">_doScroller:</string>
+									<double key="NSCurValue">0.056000000000000001</double>
 									<double key="NSPercent">0.54212454212454209</double>
 								</object>
 								<object class="NSScroller" id="507396421">
@@ -302,6 +309,7 @@ QURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuA</bytes>
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{-100, -100}, {87, 18}}</string>
 									<reference key="NSSuperview" ref="836058849"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="620089033"/>
 									<string key="NSReuseIdentifierKey">_NS:33</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -314,7 +322,8 @@ QURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuA</bytes>
 							</array>
 							<string key="NSFrame">{{20, 20}, {532, 150}}</string>
 							<reference key="NSSuperview" ref="335183972"/>
-							<reference key="NSNextKeyView" ref="507396421"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="620089033"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133202</int>
 							<reference key="NSVScroller" ref="9978162"/>
@@ -327,6 +336,7 @@ QURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuA</bytes>
 					</array>
 					<string key="NSFrameSize">{572, 386}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="103054154"/>
 					<string key="NSReuseIdentifierKey">_NS:21</string>
 				</object>
@@ -499,7 +509,29 @@ QURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuA</bytes>
 			<nil key="sourceID"/>
 			<int key="maxID">27</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">WFAboutBoxWindowController</string>
+					<string key="superclassName">NSWindowController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">aboutTextField</string>
+						<string key="NS.object.0">NSTextField</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">aboutTextField</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">aboutTextField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/WFAboutBoxWindowController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

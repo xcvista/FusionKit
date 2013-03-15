@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0EA1A416F36E5D00016BA0 /* ComposeTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D0EA1A316F36E5D00016BA0 /* ComposeTemplate.pdf */; };
 		1D2013C616E65E77006A87B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
 		1D2013D016E65E78006A87B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D2013CE16E65E78006A87B1 /* InfoPlist.strings */; };
 		1D2013D216E65E78006A87B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2013D116E65E78006A87B1 /* main.m */; };
@@ -255,6 +256,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D0EA1A316F36E5D00016BA0 /* ComposeTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ComposeTemplate.pdf; sourceTree = "<group>"; };
 		1D2013C216E65E77006A87B1 /* WebFusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebFusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2013C516E65E77006A87B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D2013C816E65E77006A87B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -584,6 +586,7 @@
 		1D2013CC16E65E77006A87B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D0EA1A316F36E5D00016BA0 /* ComposeTemplate.pdf */,
 				1DA6DA3E16E7EC880004C7F7 /* defaults.plist */,
 				1DA6DA2216E7B5110004C7F7 /* icon-mac.icns */,
 				1D58DC5516EE8270006D0401 /* wfapp.icns */,
@@ -1099,6 +1102,7 @@
 				1DA6DA6216E826A30004C7F7 /* WFImageWindowController.xib in Resources */,
 				1D74A6C716E82A7C002132D4 /* WFLinkWindowController.xib in Resources */,
 				1D58DC5616EE8270006D0401 /* wfapp.icns in Resources */,
+				1D0EA1A416F36E5D00016BA0 /* ComposeTemplate.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

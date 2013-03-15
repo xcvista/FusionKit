@@ -31,8 +31,8 @@
     NSString *template =
     @"<html><head><meta charset=\"utf-8\" />"
      "<style typr=\"text/css\">body{font-family:Helvetica;size:17px;}"
-     ".hover{float:right;margin:3px;height:60px;}"
-     "hr{border-style:solid;border-color:grey;height:0px;}"
+     ".hover{float:right;margin:3px;height:60px;}img{max-width:80%}"
+     "hr{border-style:none;background-color:grey;height:1px;}"
      ".center{text-align:center}p{margin-top:3px;margin-bottom:3px;}</style></head>"
      "<body>TEMP</body></html>";
     NSString *postTemplate =
@@ -44,9 +44,9 @@
      "<p>TITLE</p></div>"
      "<div class=\"center\" style=\"padding-left:20px;"
      "padding-right:20px;\"><hr /></div>"
-     "<div>CONTENT</div>";
+     "<div style=\"padding-left:10px;padding-right:10px;padding-bottom:10px;\">CONTENT</div>";
     NSString *splitter =
-    @"<div class=\"center\"><hr style=\"border-color:black;\" /></div>";
+    @"<div class=\"center\"><hr style=\"background-color:black;\" /></div>";
     
     NSMutableString *body = [NSMutableString string];
     
