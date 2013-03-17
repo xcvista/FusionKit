@@ -36,11 +36,11 @@
 {
     NSString *template =
     @"<html><head><meta charset=\"utf-8\" />"
-     "<style typr=\"text/css\">body{font-family:Helvetica;size:17px;}"
+     "<style typr=\"text/css\">body{font-family:Helvetica;size:17px;max-width:100%}"
      ".hover{float:right;margin:3px;height:60px;}img{max-width:80%}"
      "hr{border-style:none;background-color:grey;height:1px;width:100%}"
      ".center{text-align:center}p{margin-top:3px;margin-bottom:3px;}"
-     ".mediaImg{margin:20px}"
+     ".mediaImg{margin:20px}div{max-width:100%}"
      ".roundCorners{border-radius: 4px;}"
      "</style></head>"
      "<body>TEMP</body></html>";
@@ -51,7 +51,7 @@
      "<p style=\"font-weight:bold;\">AUTHOR</p>"
      "<p style=\"color:grey\">SERVICE - TIME</p>"
      "<p>TITLE</p></div>"
-     "<div style=\"padding-left:10px;padding-right:10px;padding-bottom:10px;\">CONTENT</div>";
+     "<div style=\"padding-left:10px;padding-right:10px;\">CONTENT</div>";
     NSString *splitter =
     @"<div class=\"center\"><hr style=\"background-color:black;\" /></div>";
     
@@ -89,11 +89,14 @@
         
         NSMutableString *content = [NSMutableString string];
         
-        if ([news.content length])
+        if ([news.content length] || [news.media count])
         {
             [content appendString:
              @"<div class=\"center\" style=\"padding-left:10px;"
-              "padding-right:10px;padding-top:20px\"><hr /></div>"];
+              "padding-right:10px\"><hr /></div>"];
+        }
+        if ([news.content length])
+        {
             [content appendFormat:@"<div>%@</div>", news.content];
         }
         
