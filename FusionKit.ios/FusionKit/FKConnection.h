@@ -39,4 +39,9 @@
                         type:(NSString *)type
                        error:(NSError **)error;
 
+- (NSArray *)searchContact:(NSString *)query
+                   inGroup:(NSString *)group
+                      page:(NSUInteger)page
+                     error:(NSError *__autoreleasing *)error;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "FKUserContact.h"
 #import "FKUserContactLink.h"
+#import "FKContact.h"
 
 @implementation FKUserContact
 

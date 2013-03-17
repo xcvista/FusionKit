@@ -117,6 +117,8 @@
 		1D58DC5616EE8270006D0401 /* wfapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DC5516EE8270006D0401 /* wfapp.icns */; };
 		1D58DC5C16EE829E006D0401 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
 		1D58DC6216EE829E006D0401 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DC6016EE829E006D0401 /* InfoPlist.strings */; };
+		1D68354116F6630900357201 /* NSImage+Rounding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D68354016F6630900357201 /* NSImage+Rounding.m */; };
+		1D68354416F6675600357201 /* NSImage+Rounding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D68354316F6675600357201 /* NSImage+Rounding.m */; };
 		1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */; };
 		1D74A6C716E82A7C002132D4 /* WFLinkWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */; };
 		1DA6D9F616E774E80004C7F7 /* NSWindowController+Autoload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9F516E774E80004C7F7 /* NSWindowController+Autoload.m */; };
@@ -381,6 +383,10 @@
 		1D58DC5F16EE829E006D0401 /* WFDeveloper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WFDeveloper-Info.plist"; sourceTree = "<group>"; };
 		1D58DC6116EE829E006D0401 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D58DC6316EE829E006D0401 /* WFDeveloper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WFDeveloper-Prefix.pch"; sourceTree = "<group>"; };
+		1D68353F16F6630900357201 /* NSImage+Rounding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Rounding.h"; sourceTree = "<group>"; };
+		1D68354016F6630900357201 /* NSImage+Rounding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Rounding.m"; sourceTree = "<group>"; };
+		1D68354216F6675600357201 /* NSImage+Rounding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Rounding.h"; sourceTree = "<group>"; };
+		1D68354316F6675600357201 /* NSImage+Rounding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Rounding.m"; sourceTree = "<group>"; };
 		1D74A6C316E82A7C002132D4 /* WFLinkWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLinkWindowController.h; sourceTree = "<group>"; };
 		1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLinkWindowController.m; sourceTree = "<group>"; };
 		1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFLinkWindowController.xib; sourceTree = "<group>"; };
@@ -650,6 +656,8 @@
 				1D30E38516EF9798006315EA /* NSData+Cache.m */,
 				1D30E47D16F2492F006315EA /* FKNews+NwsDisplay.h */,
 				1D30E47E16F2492F006315EA /* FKNews+NwsDisplay.m */,
+				1D68353F16F6630900357201 /* NSImage+Rounding.h */,
+				1D68354016F6630900357201 /* NSImage+Rounding.m */,
 				1D30E48016F249AC006315EA /* FKContact+Display.h */,
 				1D30E48116F249AC006315EA /* FKContact+Display.m */,
 				1D30E36A16EF90B2006315EA /* WFNewsViewController.h */,
@@ -737,6 +745,8 @@
 		1D30E41B16F09B20006315EA /* WFContacts */ = {
 			isa = PBXGroup;
 			children = (
+				1D68354216F6675600357201 /* NSImage+Rounding.h */,
+				1D68354316F6675600357201 /* NSImage+Rounding.m */,
 				1D30E45B16F0BF0C006315EA /* NSData+Cache.h */,
 				1D30E45C16F0BF0C006315EA /* NSData+Cache.m */,
 				1D30E42616F09BB2006315EA /* WFContactsViewController.h */,
@@ -1246,6 +1256,7 @@
 				1D30E47C16F24664006315EA /* WFNewsListView.m in Sources */,
 				1D30E47F16F2492F006315EA /* FKNews+NwsDisplay.m in Sources */,
 				1D30E48216F249AD006315EA /* FKContact+Display.m in Sources */,
+				1D68354116F6630900357201 /* NSImage+Rounding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1278,6 +1289,7 @@
 				1D30E42916F09BB2006315EA /* WFContactsViewController.m in Sources */,
 				1D30E45D16F0BF0C006315EA /* NSData+Cache.m in Sources */,
 				1D30E47916F21B22006315EA /* WFAsyncImageTableCellView.m in Sources */,
+				1D68354416F6675600357201 /* NSImage+Rounding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

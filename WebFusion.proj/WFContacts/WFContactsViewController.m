@@ -7,8 +7,8 @@
 //
 
 #import "WFContactsViewController.h"
-#import <FusionApps/FusionApps.h>
 #import "WFAsyncImageTableCellView.h"
+#import <FusionKit/FKUserContact.h>
 
 @interface WFContactsViewController () <NSTableViewDataSource, NSTableViewDelegate, NSSplitViewDelegate>
 

@@ -10,6 +10,12 @@
 #import "NSData+Cache.h"
 #import <FusionApps/FusionApps.h>
 
+@interface FKNews ()
+
+- (FKNews *)refer; // I do have that, but the compiler is *still* complaining.
+
+@end
+
 @implementation FKNews (NwsDisplay)
 
 - (NSString *)time
@@ -45,8 +51,6 @@
      "<p style=\"font-weight:bold;\">AUTHOR</p>"
      "<p style=\"color:grey\">SERVICE - TIME</p>"
      "<p>TITLE</p></div>"
-     "<div class=\"center\" style=\"padding-left:10px;"
-     "padding-right:10px;padding-top:20px\"><hr /></div>"
      "<div style=\"padding-left:10px;padding-right:10px;padding-bottom:10px;\">CONTENT</div>";
     NSString *splitter =
     @"<div class=\"center\"><hr style=\"background-color:black;\" /></div>";
@@ -83,7 +87,15 @@
             [mediaURL addObject:avatarURL];
         }
         
-        NSMutableString *content = [NSMutableString stringWithFormat:@"<div>%@</div>", news.content];
+        NSMutableString *content = [NSMutableString string];
+        
+        if ([news.content length])
+        {
+            [content appendString:
+             @"<div class=\"center\" style=\"padding-left:10px;"
+              "padding-right:10px;padding-top:20px\"><hr /></div>"];
+            [content appendFormat:@"<div>%@</div>", news.content];
+        }
         
         for (NSURL *url in mediaURL)
         {
@@ -113,8 +125,7 @@
                                    withString:values[i]];
         }
         
-        if (news.refer && ([news.content length]||[news.media count]))
-            [current appendString:splitter];
+        [current appendString:splitter];
         
         [body appendString:current];
     }
