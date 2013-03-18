@@ -92,8 +92,7 @@
         if ([news.content length] || [news.media count])
         {
             [content appendString:
-             @"<div class=\"center\" style=\"padding-left:10px;"
-              "padding-right:10px\"><hr /></div>"];
+             @"<div class=\"center\"><hr /></div>"];
         }
         if ([news.content length])
         {
