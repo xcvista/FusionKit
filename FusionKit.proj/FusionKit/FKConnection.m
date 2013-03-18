@@ -293,6 +293,58 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
 
 }
 
+- (id)bookmark:(id)object readLater:(BOOL)readLater onService:(BOOL)onService inGroup:(id)group withNote:(NSString *)note error:(NSError *__autoreleasing *)error
+{
+    if ([object isKindOfClass:[FKNews class]])
+    {
+        FKNews *news = object;
+        NSDictionary *uplinkObject = @{@"group": [group length] ? group : @"",
+                                       @"id": news.ID,
+                                       @"later": readLater ? @"+" : @"-",
+                                       @"note": [note length] ? note : @"",
+                                       @"svrMark": onService ? @"+" : @"-",
+                                       @"type": @"0"};
+        NSData *uplinkData = [FKJSONKeyedArchiver archivedDataWithRootObject:uplinkObject];
+        
+        NSError *err = nil;
+        NSData *downlinkData = [self dataWithPostData:uplinkData
+                                             toMethod:@"GetContactNames"
+                                                error:&err];
+        
+        if (!downlinkData)
+        {
+            FKAssignError(error, err);
+            return nil;
+        }
+        
+        NSArray *result = [FKJSONKeyedUnarchiver unarchiveObjectWithData:downlinkData];
+        
+        if (!result)
+        {
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                           NSLocalizedStringFromTableInBundle(@"No data returned from bookmarking.", @"error", [NSBundle bundleForClass:[self class]], @""),
+                                       NSLocalizedRecoverySuggestionErrorKey:
+                                           NSLocalizedStringFromTableInBundle(@"Retry later", @"error", [NSBundle bundleForClass:[self class]], @"")};
+            FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
+                                                     code:404
+                                                 userInfo:userInfo]);
+            return nil;
+        }
+        return result;
+    }
+    else
+    {
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                       NSLocalizedStringFromTableInBundle(@"Invalid request object.", @"error", [NSBundle bundleForClass:[self class]], @""),
+                                   NSLocalizedRecoverySuggestionErrorKey:
+                                       NSLocalizedStringFromTableInBundle(@"Check your code implementation.", @"error", [NSBundle bundleForClass:[self class]], @"")};
+        FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
+                                                 code:500
+                                             userInfo:userInfo]);
+        return nil;
+    }
+}
+
 @end
 
 NSTimeInterval NSTimeIntervalFromFKTimestamp(FKTimestamp timestamp)

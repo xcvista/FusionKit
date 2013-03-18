@@ -54,4 +54,16 @@ FKExtern NSString *const FKDidReceivePackageNotification;
                       page:(NSUInteger)page
                      error:(NSError **)error;
 
+- (id)bookmark:(id)object
+     readLater:(BOOL)readLater
+     onService:(BOOL)onService
+       inGroup:(id)group
+      withNote:(NSString *)note
+         error:(NSError **)error;
+
+- (BOOL)replyTo:(id)object
+    withMessage:(NSString *)message
+          title:(NSString *)title
+          error:(NSError *)error;
+
 @end
