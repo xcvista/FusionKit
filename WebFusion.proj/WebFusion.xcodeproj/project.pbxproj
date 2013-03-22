@@ -119,8 +119,6 @@
 		1D58DC6216EE829E006D0401 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DC6016EE829E006D0401 /* InfoPlist.strings */; };
 		1D68354116F6630900357201 /* NSImage+Rounding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D68354016F6630900357201 /* NSImage+Rounding.m */; };
 		1D68354416F6675600357201 /* NSImage+Rounding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D68354316F6675600357201 /* NSImage+Rounding.m */; };
-		1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */; };
-		1D74A6C716E82A7C002132D4 /* WFLinkWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */; };
 		1DA6D9F616E774E80004C7F7 /* NSWindowController+Autoload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9F516E774E80004C7F7 /* NSWindowController+Autoload.m */; };
 		1DA6D9F916E775350004C7F7 /* NSViewController+Autoload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D9F816E775350004C7F7 /* NSViewController+Autoload.m */; };
 		1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA0816E78B2A0004C7F7 /* NSString+JSONSanitizer.m */; };
@@ -138,12 +136,6 @@
 		1DA6DA3F16E7EC880004C7F7 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3E16E7EC880004C7F7 /* defaults.plist */; };
 		1DA6DA4416E7EF3F0004C7F7 /* WFPreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA4216E7EF3F0004C7F7 /* WFPreferenceWindowController.m */; };
 		1DA6DA4516E7EF3F0004C7F7 /* WFPreferenceWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA4316E7EF3F0004C7F7 /* WFPreferenceWindowController.xib */; };
-		1DA6DA5716E823FE0004C7F7 /* WFTweetWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA5516E823FE0004C7F7 /* WFTweetWindowController.m */; };
-		1DA6DA5816E823FE0004C7F7 /* WFTweetWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA5616E823FE0004C7F7 /* WFTweetWindowController.xib */; };
-		1DA6DA5C16E825340004C7F7 /* WFPostWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA5A16E825340004C7F7 /* WFPostWindowController.m */; };
-		1DA6DA5D16E825340004C7F7 /* WFPostWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA5B16E825340004C7F7 /* WFPostWindowController.xib */; };
-		1DA6DA6116E826A30004C7F7 /* WFImageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA5F16E826A30004C7F7 /* WFImageWindowController.m */; };
-		1DA6DA6216E826A30004C7F7 /* WFImageWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA6016E826A30004C7F7 /* WFImageWindowController.xib */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
 		1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -387,9 +379,6 @@
 		1D68354016F6630900357201 /* NSImage+Rounding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Rounding.m"; sourceTree = "<group>"; };
 		1D68354216F6675600357201 /* NSImage+Rounding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Rounding.h"; sourceTree = "<group>"; };
 		1D68354316F6675600357201 /* NSImage+Rounding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Rounding.m"; sourceTree = "<group>"; };
-		1D74A6C316E82A7C002132D4 /* WFLinkWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLinkWindowController.h; sourceTree = "<group>"; };
-		1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLinkWindowController.m; sourceTree = "<group>"; };
-		1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFLinkWindowController.xib; sourceTree = "<group>"; };
 		1DA1DF3716E8A31D0074ABCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DA1DF4616E8A37A0074ABCB /* libreadline.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libreadline.dylib; sourceTree = DEVELOPER_DIR; };
 		1DA6D9F416E774E80004C7F7 /* NSWindowController+Autoload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindowController+Autoload.h"; sourceTree = "<group>"; };
@@ -410,15 +399,6 @@
 		1DA6DA4116E7EF3F0004C7F7 /* WFPreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPreferenceWindowController.h; sourceTree = "<group>"; };
 		1DA6DA4216E7EF3F0004C7F7 /* WFPreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPreferenceWindowController.m; sourceTree = "<group>"; };
 		1DA6DA4316E7EF3F0004C7F7 /* WFPreferenceWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPreferenceWindowController.xib; sourceTree = "<group>"; };
-		1DA6DA5416E823FE0004C7F7 /* WFTweetWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFTweetWindowController.h; sourceTree = "<group>"; };
-		1DA6DA5516E823FE0004C7F7 /* WFTweetWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFTweetWindowController.m; sourceTree = "<group>"; };
-		1DA6DA5616E823FE0004C7F7 /* WFTweetWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFTweetWindowController.xib; sourceTree = "<group>"; };
-		1DA6DA5916E825340004C7F7 /* WFPostWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPostWindowController.h; sourceTree = "<group>"; };
-		1DA6DA5A16E825340004C7F7 /* WFPostWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPostWindowController.m; sourceTree = "<group>"; };
-		1DA6DA5B16E825340004C7F7 /* WFPostWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPostWindowController.xib; sourceTree = "<group>"; };
-		1DA6DA5E16E826A30004C7F7 /* WFImageWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFImageWindowController.h; sourceTree = "<group>"; };
-		1DA6DA5F16E826A30004C7F7 /* WFImageWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFImageWindowController.m; sourceTree = "<group>"; };
-		1DA6DA6016E826A30004C7F7 /* WFImageWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFImageWindowController.xib; sourceTree = "<group>"; };
 		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1DD337E916E72ED100BD1E28 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -583,7 +563,6 @@
 				1DA6DA3816E7DAB90004C7F7 /* About box */,
 				1DA6DA0C16E7976B0004C7F7 /* Main Window */,
 				1DA6DA4016E7EF270004C7F7 /* Preference pane */,
-				1DA6DA5316E823E40004C7F7 /* Authoring */,
 				1D2013CC16E65E77006A87B1 /* Supporting Files */,
 			);
 			path = WebFusion;
@@ -872,25 +851,6 @@
 			name = "Preference pane";
 			sourceTree = "<group>";
 		};
-		1DA6DA5316E823E40004C7F7 /* Authoring */ = {
-			isa = PBXGroup;
-			children = (
-				1DA6DA5416E823FE0004C7F7 /* WFTweetWindowController.h */,
-				1DA6DA5516E823FE0004C7F7 /* WFTweetWindowController.m */,
-				1DA6DA5616E823FE0004C7F7 /* WFTweetWindowController.xib */,
-				1DA6DA5916E825340004C7F7 /* WFPostWindowController.h */,
-				1DA6DA5A16E825340004C7F7 /* WFPostWindowController.m */,
-				1DA6DA5B16E825340004C7F7 /* WFPostWindowController.xib */,
-				1DA6DA5E16E826A30004C7F7 /* WFImageWindowController.h */,
-				1DA6DA5F16E826A30004C7F7 /* WFImageWindowController.m */,
-				1DA6DA6016E826A30004C7F7 /* WFImageWindowController.xib */,
-				1D74A6C316E82A7C002132D4 /* WFLinkWindowController.h */,
-				1D74A6C416E82A7C002132D4 /* WFLinkWindowController.m */,
-				1D74A6C516E82A7C002132D4 /* WFLinkWindowController.xib */,
-			);
-			name = Authoring;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1107,10 +1067,6 @@
 				1DA6DA3D16E7DAD00004C7F7 /* WFAboutBoxWindowController.xib in Resources */,
 				1DA6DA3F16E7EC880004C7F7 /* defaults.plist in Resources */,
 				1DA6DA4516E7EF3F0004C7F7 /* WFPreferenceWindowController.xib in Resources */,
-				1DA6DA5816E823FE0004C7F7 /* WFTweetWindowController.xib in Resources */,
-				1DA6DA5D16E825340004C7F7 /* WFPostWindowController.xib in Resources */,
-				1DA6DA6216E826A30004C7F7 /* WFImageWindowController.xib in Resources */,
-				1D74A6C716E82A7C002132D4 /* WFLinkWindowController.xib in Resources */,
 				1D58DC5616EE8270006D0401 /* wfapp.icns in Resources */,
 				1D0EA1A416F36E5D00016BA0 /* ComposeTemplate.pdf in Resources */,
 			);
@@ -1224,10 +1180,6 @@
 				1DA6DA0916E78B2A0004C7F7 /* NSString+JSONSanitizer.m in Sources */,
 				1DA6DA3C16E7DAD00004C7F7 /* WFAboutBoxWindowController.m in Sources */,
 				1DA6DA4416E7EF3F0004C7F7 /* WFPreferenceWindowController.m in Sources */,
-				1DA6DA5716E823FE0004C7F7 /* WFTweetWindowController.m in Sources */,
-				1DA6DA5C16E825340004C7F7 /* WFPostWindowController.m in Sources */,
-				1DA6DA6116E826A30004C7F7 /* WFImageWindowController.m in Sources */,
-				1D74A6C616E82A7C002132D4 /* WFLinkWindowController.m in Sources */,
 				1D58DC5016EE4FC2006D0401 /* NSData+Cache.m in Sources */,
 				1D30E2FC16EE8601006315EA /* WFAppBundleInstaller.m in Sources */,
 			);
