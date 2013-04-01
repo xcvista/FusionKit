@@ -19,6 +19,7 @@
 		1DEC118817090A7E0049F5EB /* NSArray+pl2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC118717090A7E0049F5EB /* NSArray+pl2objc.m */; };
 		1DEC118B1709103A0049F5EB /* NSDictionary+pl2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC118A1709103A0049F5EB /* NSDictionary+pl2objc.m */; };
 		1DEC118F1709173E0049F5EB /* help.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC118E1709173E0049F5EB /* help.m */; };
+		1DEC119217092FC40049F5EB /* NSString+Sanitize.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC119117092FC40049F5EB /* NSString+Sanitize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,8 @@
 		1DEC118C170917090049F5EB /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		1DEC118D1709173E0049F5EB /* help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = help.h; sourceTree = "<group>"; };
 		1DEC118E1709173E0049F5EB /* help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = help.m; sourceTree = "<group>"; };
+		1DEC119017092FC40049F5EB /* NSString+Sanitize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Sanitize.h"; sourceTree = "<group>"; };
+		1DEC119117092FC40049F5EB /* NSString+Sanitize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sanitize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				1DEC118E1709173E0049F5EB /* help.m */,
 				1DEC117D170908BD0049F5EB /* NSString+pl2objc.h */,
 				1DEC117E170908BD0049F5EB /* NSString+pl2objc.m */,
+				1DEC119017092FC40049F5EB /* NSString+Sanitize.h */,
+				1DEC119117092FC40049F5EB /* NSString+Sanitize.m */,
 				1DEC1180170909220049F5EB /* NSNumber+pl2objc.h */,
 				1DEC1181170909220049F5EB /* NSNumber+pl2objc.m */,
 				1DEC118317090A130049F5EB /* NSDate+pl2objc.h */,
@@ -248,6 +253,7 @@
 				1DEC118817090A7E0049F5EB /* NSArray+pl2objc.m in Sources */,
 				1DEC118B1709103A0049F5EB /* NSDictionary+pl2objc.m in Sources */,
 				1DEC118F1709173E0049F5EB /* help.m in Sources */,
+				1DEC119217092FC40049F5EB /* NSString+Sanitize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
