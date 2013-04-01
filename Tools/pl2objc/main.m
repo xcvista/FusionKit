@@ -123,6 +123,7 @@ int main(int argc, const char * argv[])
             else // Inputs
             {
                 NSString *name = [arg hasSuffix:@".plist"] ? [arg stringByDeletingPathExtension] : arg;
+                name = [name lastPathComponent];
                 NSData *inputData = [NSData dataWithContentsOfFile:[arg stringByExpandingTildeInPath]];
                 if (!inputData)
                 {
@@ -176,9 +177,11 @@ int main(int argc, const char * argv[])
                     NSString *symbolType = @"id";
                     id object = inputFile[key];
                     if ([object isKindOfClass:[NSArray class]])
-                        symbolType = @"NSArray";
+                        symbolType = @"NSArray *";
                     else if ([object isKindOfClass:[NSDictionary class]])
-                        symbolType = @"NSDictionary";
+                        symbolType = @"NSDictionary *";
+                    else if ([object isKindOfClass:[NSString class]])
+                        symbolType = @"NSString *";
                     
                     [header appendFormat:@"%@ %@%@(void);\n", symbolType, prefix, symbol];
                     [content appendFormat:@"%@ %@%@(void) { return %@; }\n", symbolType, prefix, symbol, [object sourceRepresentation]];
@@ -201,9 +204,11 @@ int main(int argc, const char * argv[])
                     NSString *symbolType = @"id";
                     id object = inputFile[key];
                     if ([object isKindOfClass:[NSArray class]])
-                        symbolType = @"NSArray";
+                        symbolType = @"NSArray *";
                     else if ([object isKindOfClass:[NSDictionary class]])
-                        symbolType = @"NSDictionary";
+                        symbolType = @"NSDictionary *";
+                    else if ([object isKindOfClass:[NSString class]])
+                        symbolType = @"NSString *";
                     
                     [header appendFormat:@"+ (%@)%@;\n", symbolType, symbol];
                     [content appendFormat:@"+ (%@)%@ { return %@; }\n", symbolType, symbol, [object sourceRepresentation]];
@@ -231,9 +236,11 @@ int main(int argc, const char * argv[])
                     NSString *symbolType = @"id";
                     id object = inputFile[key];
                     if ([object isKindOfClass:[NSArray class]])
-                        symbolType = @"NSArray";
+                        symbolType = @"NSArray *";
                     else if ([object isKindOfClass:[NSDictionary class]])
-                        symbolType = @"NSDictionary";
+                        symbolType = @"NSDictionary *";
+                    else if ([object isKindOfClass:[NSString class]])
+                        symbolType = @"NSString *";
                     
                     [header appendFormat:@"+ (%@)%@;\n", symbolType, symbol];
                     [content appendFormat:@"+ (%@)%@ { return %@; }\n", symbolType, symbol, [object sourceRepresentation]];
@@ -266,9 +273,11 @@ int main(int argc, const char * argv[])
                         id object2 = object[key];
                         
                         if ([object2 isKindOfClass:[NSArray class]])
-                            symbolType = @"NSArray";
+                            symbolType = @"NSArray *";
                         else if ([object2 isKindOfClass:[NSDictionary class]])
-                            symbolType = @"NSDictionary";
+                            symbolType = @"NSDictionary *";
+                        else if ([object2 isKindOfClass:[NSString class]])
+                            symbolType = @"NSString *";
                         
                         [header appendFormat:@"%@ __%@%@(void);\n", symbolType, prefix, symbol];
                         [header appendFormat:@"#define %@%@ __%@%@()\n", prefix, symbol, prefix, symbol];

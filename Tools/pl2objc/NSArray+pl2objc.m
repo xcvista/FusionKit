@@ -17,7 +17,7 @@
     {
         [objects addObject:[object sourceRepresentation]];
     }
-    return [NSString stringWithFormat:@"@[%@]", [objects componentsJoinedByString:@", "]];
+    return [NSString stringWithFormat:@"@[%@]", [objects componentsJoinedByString:@", \n"]];
 }
 
 @end
