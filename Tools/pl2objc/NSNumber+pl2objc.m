@@ -12,7 +12,7 @@
 
 - (NSString *)sourceRepresentation
 {
-    return [NSString stringWithFormat:@"@(%g)", [self.doubleValue]];
+    return [NSString stringWithFormat:@"@(%g)", [self doubleValue]];
 }
 
 @end
