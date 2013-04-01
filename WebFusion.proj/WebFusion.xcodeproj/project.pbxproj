@@ -136,6 +136,8 @@
 		1DA6DA3F16E7EC880004C7F7 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA3E16E7EC880004C7F7 /* defaults.plist */; };
 		1DA6DA4416E7EF3F0004C7F7 /* WFPreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6DA4216E7EF3F0004C7F7 /* WFPreferenceWindowController.m */; };
 		1DA6DA4516E7EF3F0004C7F7 /* WFPreferenceWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA6DA4316E7EF3F0004C7F7 /* WFPreferenceWindowController.xib */; };
+		1DC7574416FDDD2000DEF32D /* WFReplyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7574216FDDD2000DEF32D /* WFReplyWindowController.m */; };
+		1DC7574516FDDD2000DEF32D /* WFReplyWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7574316FDDD2000DEF32D /* WFReplyWindowController.xib */; };
 		1DD337BE16E661B700BD1E28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD337BD16E661B700BD1E28 /* MainMenu.xib */; };
 		1DD337EA16E72ED100BD1E28 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD337E916E72ED100BD1E28 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -399,6 +401,9 @@
 		1DA6DA4116E7EF3F0004C7F7 /* WFPreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPreferenceWindowController.h; sourceTree = "<group>"; };
 		1DA6DA4216E7EF3F0004C7F7 /* WFPreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPreferenceWindowController.m; sourceTree = "<group>"; };
 		1DA6DA4316E7EF3F0004C7F7 /* WFPreferenceWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFPreferenceWindowController.xib; sourceTree = "<group>"; };
+		1DC7574116FDDD2000DEF32D /* WFReplyWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFReplyWindowController.h; sourceTree = "<group>"; };
+		1DC7574216FDDD2000DEF32D /* WFReplyWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFReplyWindowController.m; sourceTree = "<group>"; };
+		1DC7574316FDDD2000DEF32D /* WFReplyWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFReplyWindowController.xib; sourceTree = "<group>"; };
 		1DD337BD16E661B700BD1E28 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1DD337E916E72ED100BD1E28 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -644,6 +649,9 @@
 				1D30E36C16EF90B2006315EA /* WFNewsViewController.xib */,
 				1D30E47A16F24664006315EA /* WFNewsListView.h */,
 				1D30E47B16F24664006315EA /* WFNewsListView.m */,
+				1DC7574116FDDD2000DEF32D /* WFReplyWindowController.h */,
+				1DC7574216FDDD2000DEF32D /* WFReplyWindowController.m */,
+				1DC7574316FDDD2000DEF32D /* WFReplyWindowController.xib */,
 				1D30E34B16EF8C1E006315EA /* Supporting Files */,
 			);
 			path = WFNews;
@@ -1091,6 +1099,7 @@
 				1D30E37316EF90B2006315EA /* WFNewsViewController.xib in Resources */,
 				1D30E46916F1049A006315EA /* Link.pdf in Resources */,
 				1D30E46A16F1049A006315EA /* Star.pdf in Resources */,
+				1DC7574516FDDD2000DEF32D /* WFReplyWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,6 +1218,7 @@
 				1D30E47F16F2492F006315EA /* FKNews+NwsDisplay.m in Sources */,
 				1D30E48216F249AD006315EA /* FKContact+Display.m in Sources */,
 				1D68354116F6630900357201 /* NSImage+Rounding.m in Sources */,
+				1DC7574416FDDD2000DEF32D /* WFReplyWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

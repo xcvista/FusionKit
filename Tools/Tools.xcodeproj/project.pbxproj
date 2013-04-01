@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DEC1162170908160049F5EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC1161170908160049F5EB /* Foundation.framework */; };
+		1DEC1165170908160049F5EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC1164170908160049F5EB /* main.m */; };
+		1DEC1169170908160049F5EB /* classgen.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DEC1168170908160049F5EB /* classgen.1 */; };
+		1DEC1172170908490049F5EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC1161170908160049F5EB /* Foundation.framework */; };
+		1DEC1175170908490049F5EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC1174170908490049F5EB /* main.m */; };
+		1DEC1179170908490049F5EB /* pl2objc.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DEC1178170908490049F5EB /* pl2objc.1 */; };
+		1DEC117F170908BD0049F5EB /* NSString+pl2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC117E170908BD0049F5EB /* NSString+pl2objc.m */; };
+		1DEC1182170909220049F5EB /* NSNumber+pl2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC1181170909220049F5EB /* NSNumber+pl2objc.m */; };
+		1DEC118517090A130049F5EB /* NSDate+pl2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC118417090A130049F5EB /* NSDate+pl2objc.m */; };
+		1DEC118817090A7E0049F5EB /* NSArray+pl2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC118717090A7E0049F5EB /* NSArray+pl2objc.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DEC115C170908160049F5EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				1DEC1169170908160049F5EB /* classgen.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1DEC116F170908490049F5EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				1DEC1179170908490049F5EB /* pl2objc.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1DEC115E170908160049F5EB /* classgen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = classgen; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DEC1161170908160049F5EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DEC1164170908160049F5EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DEC1167170908160049F5EB /* classgen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "classgen-Prefix.pch"; sourceTree = "<group>"; };
+		1DEC1168170908160049F5EB /* classgen.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = classgen.1; sourceTree = "<group>"; };
+		1DEC1171170908490049F5EB /* pl2objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pl2objc; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DEC1174170908490049F5EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DEC1177170908490049F5EB /* pl2objc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pl2objc-Prefix.pch"; sourceTree = "<group>"; };
+		1DEC1178170908490049F5EB /* pl2objc.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = pl2objc.1; sourceTree = "<group>"; };
+		1DEC117D170908BD0049F5EB /* NSString+pl2objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+pl2objc.h"; sourceTree = "<group>"; };
+		1DEC117E170908BD0049F5EB /* NSString+pl2objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+pl2objc.m"; sourceTree = "<group>"; };
+		1DEC1180170909220049F5EB /* NSNumber+pl2objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+pl2objc.h"; sourceTree = "<group>"; };
+		1DEC1181170909220049F5EB /* NSNumber+pl2objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+pl2objc.m"; sourceTree = "<group>"; };
+		1DEC118317090A130049F5EB /* NSDate+pl2objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+pl2objc.h"; sourceTree = "<group>"; };
+		1DEC118417090A130049F5EB /* NSDate+pl2objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+pl2objc.m"; sourceTree = "<group>"; };
+		1DEC118617090A7E0049F5EB /* NSArray+pl2objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+pl2objc.h"; sourceTree = "<group>"; };
+		1DEC118717090A7E0049F5EB /* NSArray+pl2objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+pl2objc.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DEC115B170908160049F5EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEC1162170908160049F5EB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DEC116E170908490049F5EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEC1172170908490049F5EB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DEC113E170907FF0049F5EB = {
+			isa = PBXGroup;
+			children = (
+				1DEC1163170908160049F5EB /* classgen */,
+				1DEC1173170908490049F5EB /* pl2objc */,
+				1DEC1160170908160049F5EB /* Frameworks */,
+				1DEC115F170908160049F5EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DEC115F170908160049F5EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC115E170908160049F5EB /* classgen */,
+				1DEC1171170908490049F5EB /* pl2objc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DEC1160170908160049F5EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC1161170908160049F5EB /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DEC1163170908160049F5EB /* classgen */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC1164170908160049F5EB /* main.m */,
+				1DEC1168170908160049F5EB /* classgen.1 */,
+				1DEC1166170908160049F5EB /* Supporting Files */,
+			);
+			path = classgen;
+			sourceTree = "<group>";
+		};
+		1DEC1166170908160049F5EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC1167170908160049F5EB /* classgen-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DEC1173170908490049F5EB /* pl2objc */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC1174170908490049F5EB /* main.m */,
+				1DEC117D170908BD0049F5EB /* NSString+pl2objc.h */,
+				1DEC117E170908BD0049F5EB /* NSString+pl2objc.m */,
+				1DEC1180170909220049F5EB /* NSNumber+pl2objc.h */,
+				1DEC1181170909220049F5EB /* NSNumber+pl2objc.m */,
+				1DEC118317090A130049F5EB /* NSDate+pl2objc.h */,
+				1DEC118417090A130049F5EB /* NSDate+pl2objc.m */,
+				1DEC118617090A7E0049F5EB /* NSArray+pl2objc.h */,
+				1DEC118717090A7E0049F5EB /* NSArray+pl2objc.m */,
+				1DEC1178170908490049F5EB /* pl2objc.1 */,
+				1DEC1176170908490049F5EB /* Supporting Files */,
+			);
+			path = pl2objc;
+			sourceTree = "<group>";
+		};
+		1DEC1176170908490049F5EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC1177170908490049F5EB /* pl2objc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DEC115D170908160049F5EB /* classgen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEC116A170908160049F5EB /* Build configuration list for PBXNativeTarget "classgen" */;
+			buildPhases = (
+				1DEC115A170908160049F5EB /* Sources */,
+				1DEC115B170908160049F5EB /* Frameworks */,
+				1DEC115C170908160049F5EB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = classgen;
+			productName = classgen;
+			productReference = 1DEC115E170908160049F5EB /* classgen */;
+			productType = "com.apple.product-type.tool";
+		};
+		1DEC1170170908490049F5EB /* pl2objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEC117A170908490049F5EB /* Build configuration list for PBXNativeTarget "pl2objc" */;
+			buildPhases = (
+				1DEC116D170908490049F5EB /* Sources */,
+				1DEC116E170908490049F5EB /* Frameworks */,
+				1DEC116F170908490049F5EB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pl2objc;
+			productName = pl2objc;
+			productReference = 1DEC1171170908490049F5EB /* pl2objc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DEC113F170907FF0049F5EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 1DEC1142170907FF0049F5EB /* Build configuration list for PBXProject "Tools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1DEC113E170907FF0049F5EB;
+			productRefGroup = 1DEC115F170908160049F5EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DEC115D170908160049F5EB /* classgen */,
+				1DEC1170170908490049F5EB /* pl2objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DEC115A170908160049F5EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEC1165170908160049F5EB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DEC116D170908490049F5EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEC1175170908490049F5EB /* main.m in Sources */,
+				1DEC117F170908BD0049F5EB /* NSString+pl2objc.m in Sources */,
+				1DEC1182170909220049F5EB /* NSNumber+pl2objc.m in Sources */,
+				1DEC118517090A130049F5EB /* NSDate+pl2objc.m in Sources */,
+				1DEC118817090A7E0049F5EB /* NSArray+pl2objc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEC1143170907FF0049F5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1DEC1144170907FF0049F5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		1DEC116B170908160049F5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "classgen/classgen-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEC116C170908160049F5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "classgen/classgen-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1DEC117B170908490049F5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pl2objc/pl2objc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEC117C170908490049F5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pl2objc/pl2objc-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEC1142170907FF0049F5EB /* Build configuration list for PBXProject "Tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEC1143170907FF0049F5EB /* Debug */,
+				1DEC1144170907FF0049F5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEC116A170908160049F5EB /* Build configuration list for PBXNativeTarget "classgen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEC116B170908160049F5EB /* Debug */,
+				1DEC116C170908160049F5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1DEC117A170908490049F5EB /* Build configuration list for PBXNativeTarget "pl2objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEC117B170908490049F5EB /* Debug */,
+				1DEC117C170908490049F5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DEC113F170907FF0049F5EB /* Project object */;
+}

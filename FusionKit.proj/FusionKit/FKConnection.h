@@ -64,6 +64,7 @@ FKExtern NSString *const FKDidReceivePackageNotification;
 - (BOOL)replyTo:(id)object
     withMessage:(NSString *)message
           title:(NSString *)title
+           data:(id)data
           error:(NSError *)error;
 
 @end

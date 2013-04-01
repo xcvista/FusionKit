@@ -144,6 +144,7 @@
 		1D20121416E65938006A87B1 /* iLibraries.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iLibraries.xcodeproj; path = Libraries.ios/iLibraries.xcodeproj; sourceTree = "<group>"; };
 		1D7CD14116E52AF500F5F3AF /* COPYRIGHT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.md; sourceTree = "<group>"; };
 		1D7CD17716E53FA300F5F3AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1DEC1145170907FF0049F5EB /* Tools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tools.xcodeproj; path = Tools/Tools.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -173,6 +174,7 @@
 				1D20116316E657AB006A87B1 /* Libraries.xcodeproj */,
 				1D20113016E6577E006A87B1 /* FusionKit.xcodeproj */,
 				1D2010EB16E65739006A87B1 /* WebFusion.xcodeproj */,
+				1DEC1145170907FF0049F5EB /* Tools.xcodeproj */,
 			);
 			name = "OS X";
 			sourceTree = "<group>";
@@ -237,6 +239,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1DEC1146170907FF0049F5EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
@@ -275,6 +284,10 @@
 				{
 					ProductGroup = 1DD3379516E6618600BD1E28 /* Products */;
 					ProjectRef = 1D20116316E657AB006A87B1 /* Libraries.xcodeproj */;
+				},
+				{
+					ProductGroup = 1DEC1146170907FF0049F5EB /* Products */;
+					ProjectRef = 1DEC1145170907FF0049F5EB /* Tools.xcodeproj */;
 				},
 				{
 					ProductGroup = 1DD337A516E6618600BD1E28 /* Products */;
