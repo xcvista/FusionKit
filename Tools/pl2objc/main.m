@@ -121,8 +121,27 @@ int main(int argc, const char * argv[])
                                                                        error:&error];
                 if (!plist)
                 {
-                    eprintf("WARNING: Cannot parse file %s as property list.\n");
+                    eprintf("WARNING: Cannot parse file %s as property list.\n", [arg cStringUsingEncoding:[NSString defaultCStringEncoding]]);
+                    continue;
                 }
+                inputFile[name] = plist;
+            }
+        }
+        
+        if (![inputFile count] || ![outputFile length])
+        {
+            eprintf("ERROR: No input or output file indicated.\n\n");
+            showHelp(YES);
+        }
+        
+        if (![outputHeader length])
+            outputHeader = [[outputFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"h"];
+        
+        switch (type)
+        {
+            case plFunction:
+            {
+                
             }
         }
         
