@@ -102,9 +102,7 @@
     [self stopLoading];
     [self.button setHidden:NO];
     [self.button setTitle:nil];
-    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[self class]] URLForResource:@"Refresh" withExtension:@"pdf"]];
-    [image setTemplate:YES];
-    [self.button setImage:image];
+    [self.button setImage:[NSImage imageNamed:NSImageNameRefreshTemplate]];
     [self.button sizeToFit];
     // Make it appear as a normal label and not a button
     // [[self.button cell] setHighlightsBy:0];

@@ -13,6 +13,7 @@
 #import "WFNewsListView.h"
 #import "FKNews+NwsDisplay.h"
 #import <WebKit/WebKit.h>
+#import "WFReplyWindowController.h"
 
 @interface WFNewsViewController () <NSTableViewDelegate, NSTableViewDataSource, NSSplitViewDelegate>
 
@@ -27,6 +28,9 @@
 @property SEL oldAction;
 
 - (IBAction)scrollerChanged:(id)sender;
+
+- (IBAction)reply:(id)sender;
+- (IBAction)bookmark:(id)sender;
 
 @end
 
@@ -317,6 +321,13 @@
     if ([self.tableView selectedRow] >= [self.contents count] - 1)
         [self loadMore];
     
+}
+
+- (void)reply:(id)sender
+{
+    WFReplyWindowController *replyWindow = [[WFReplyWindowController alloc] init];
+    replyWindow.baseNews = self.contents[[self.tableView selectedRow]];
+    [[WFApplicationServices applicationServices] showWindowController:replyWindow];
 }
 
 @end

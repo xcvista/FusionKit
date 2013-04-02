@@ -7,7 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <FusionApps/FusionApps.h>
 
 @interface WFReplyWindowController : NSWindowController
+
+@property FKNews *baseNews;
 
 @end

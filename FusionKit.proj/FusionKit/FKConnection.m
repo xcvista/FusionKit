@@ -44,7 +44,9 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     return [NSString stringWithFormat:@"%@ (%@, Objective-C serialization)", appName, platform];
 }
 
-- (NSData *)dataWithPostData:(NSData *)data toMethod:(NSString *)method error:(NSError *__autoreleasing *)error
+- (NSData *)dataWithPostData:(NSData *)data
+                    toMethod:(NSString *)method
+                       error:(NSError *__autoreleasing *)error
 {
     NSURL *methodURL = [NSURL URLWithString:method relativeToURL:self.serverRoot];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:methodURL];
@@ -80,7 +82,8 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     return responseData;
 }
 
-- (NSData *)dataWithGetFromMethod:(NSString *)method error:(NSError *__autoreleasing *)error
+- (NSData *)dataWithGetFromMethod:(NSString *)method
+                            error:(NSError *__autoreleasing *)error
 {
     NSURL *methodURL = [NSURL URLWithString:method relativeToURL:self.serverRoot];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:methodURL];
@@ -113,7 +116,8 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     return responseData;
 }
 
-- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password error:(NSError *__autoreleasing *)error
+- (BOOL)loginWithUsername:(NSString *)username
+                 password:(NSString *)password error:(NSError *__autoreleasing *)error
 {
     NSDictionary *uplink = @{
                              @"user": username,
@@ -158,7 +162,10 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     return YES;
 }
 
-- (NSArray *)newsBeforeEpoch:(NSDate *)epoch count:(NSUInteger)count type:(NSString *)type error:(NSError *__autoreleasing *)error
+- (NSArray *)newsBeforeEpoch:(NSDate *)epoch
+                       count:(NSUInteger)count
+                        type:(NSString *)type
+                       error:(NSError *__autoreleasing *)error
 {
     if ([epoch isEqualToDate:[NSDate distantFuture]])
         epoch = [NSDate dateWithTimeIntervalSince1970:-1.0];
@@ -211,7 +218,10 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     }
 }
 
-- (NSDictionary *)poll:(NSDictionary *)request interval:(NSTimeInterval)interval wait:(NSTimeInterval)wait error:(NSError *__autoreleasing *)error
+- (NSDictionary *)poll:(NSDictionary *)request
+              interval:(NSTimeInterval)interval
+                  wait:(NSTimeInterval)wait
+                 error:(NSError *__autoreleasing *)error
 {
     NSMutableArray *pollData = [NSMutableArray arrayWithCapacity:[request count]];
     for (id key in request)
@@ -253,7 +263,10 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
     return result;
 }
 
-- (NSArray *)searchContact:(NSString *)query inGroup:(NSString *)group page:(NSUInteger)page error:(NSError *__autoreleasing *)error
+- (NSArray *)searchContact:(NSString *)query
+                   inGroup:(NSString *)group
+                      page:(NSUInteger)page
+                     error:(NSError *__autoreleasing *)error
 {
     if (!query)
         query = @"";
@@ -293,7 +306,12 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
 
 }
 
-- (id)bookmark:(id)object readLater:(BOOL)readLater onService:(BOOL)onService inGroup:(id)group withNote:(NSString *)note error:(NSError *__autoreleasing *)error
+- (id)bookmark:(id)object
+     readLater:(BOOL)readLater
+     onService:(BOOL)onService
+       inGroup:(id)group
+      withNote:(NSString *)note
+         error:(NSError *__autoreleasing *)error
 {
     if ([object isKindOfClass:[FKNews class]])
     {
@@ -342,6 +360,67 @@ NSString *const FKDidReceivePackageNotification = @"tk.maxius.fusionkit.packaged
                                                  code:500
                                              userInfo:userInfo]);
         return nil;
+    }
+}
+
+- (BOOL)replyTo:(id)object
+    withMessage:(NSString *)message
+          title:(NSString *)title
+           data:(id)data
+          error:(NSError *__autoreleasing *)error
+{
+    if ([object isKindOfClass:[FKNews class]])
+    {
+        FKNews *news = object;
+        
+        NSDictionary *uplink = @{
+                                 @"content": message,
+                                 @"id": news.ID
+                                 };
+        NSData *uplinkData = [FKJSONKeyedArchiver archivedDataWithRootObject:uplink];
+        NSError *err;
+        NSData *downlinkData = [self dataWithPostData:uplinkData
+                                             toMethod:@"QuickReply"
+                                                error:&err];
+        
+        if (!downlinkData)
+        {
+            FKAssignError(error, err);
+            return NO;
+        }
+        
+        NSString *result = [FKJSONKeyedUnarchiver unarchiveObjectWithData:downlinkData
+                                                                    class:[FKWrapper class]];
+        
+        if (![result isEqualToString:FKFalseValue])
+        {
+            return YES;
+        }
+        else
+        {
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                           NSLocalizedStringFromTableInBundle(@"Reply failed.", @"error", [NSBundle bundleForClass:[self class]], @""),
+                                       @"response":
+                                           (result) ? result : [NSNull null],
+                                       NSLocalizedRecoverySuggestionErrorKey:
+                                           NSLocalizedStringFromTableInBundle(@"You may need to retry.", @"error", [NSBundle bundleForClass:[self class]], @"")};
+            FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
+                                                     code:403
+                                                 userInfo:userInfo]);
+            return NO;
+        }
+
+    }
+    else
+    {
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
+                                       NSLocalizedStringFromTableInBundle(@"Invalid request object.", @"error", [NSBundle bundleForClass:[self class]], @""),
+                                   NSLocalizedRecoverySuggestionErrorKey:
+                                       NSLocalizedStringFromTableInBundle(@"Check your code implementation.", @"error", [NSBundle bundleForClass:[self class]], @"")};
+        FKAssignError(error, [NSError errorWithDomain:FKErrorDoamin
+                                                 code:500
+                                             userInfo:userInfo]);
+        return NO;
     }
 }
 

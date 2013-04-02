@@ -53,7 +53,6 @@
 		1D30E38116EF91E3006315EA /* FusionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
 		1D30E38316EF91EF006315EA /* FusionKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA6DA1816E7AA870004C7F7 /* FusionKit.framework */; };
 		1D30E38616EF9799006315EA /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30E38516EF9798006315EA /* NSData+Cache.m */; };
-		1D30E38816EFA43F006315EA /* Refresh.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E38716EFA43F006315EA /* Refresh.pdf */; };
 		1D30E38A16EFA75D006315EA /* Apps.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E38916EFA75D006315EA /* Apps.pdf */; };
 		1D30E39116EFB742006315EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2013C516E65E77006A87B1 /* Cocoa.framework */; };
 		1D30E39716EFB742006315EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D30E39516EFB742006315EA /* InfoPlist.strings */; };
@@ -307,7 +306,6 @@
 		1D30E36C16EF90B2006315EA /* WFNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFNewsViewController.xib; sourceTree = "<group>"; };
 		1D30E38416EF9798006315EA /* NSData+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cache.h"; sourceTree = "<group>"; };
 		1D30E38516EF9798006315EA /* NSData+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cache.m"; sourceTree = "<group>"; };
-		1D30E38716EFA43F006315EA /* Refresh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Refresh.pdf; sourceTree = "<group>"; };
 		1D30E38916EFA75D006315EA /* Apps.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Apps.pdf; sourceTree = "<group>"; };
 		1D30E39016EFB742006315EA /* WebFusion Inspector.wfapp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WebFusion Inspector.wfapp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D30E39416EFB742006315EA /* WFInspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WFInspector-Info.plist"; sourceTree = "<group>"; };
@@ -615,7 +613,6 @@
 		1D30E2B616EE8405006315EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D30E38716EFA43F006315EA /* Refresh.pdf */,
 				1D30E38916EFA75D006315EA /* Apps.pdf */,
 				1D30E2B716EE8405006315EA /* FusionApps-Info.plist */,
 				1D30E2B816EE8405006315EA /* InfoPlist.strings */,
@@ -1085,7 +1082,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D30E2BA16EE8405006315EA /* InfoPlist.strings in Resources */,
-				1D30E38816EFA43F006315EA /* Refresh.pdf in Resources */,
 				1D30E38A16EFA75D006315EA /* Apps.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
