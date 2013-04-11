@@ -1,3 +1,8 @@
+NOTICE
+======
+
+This project is now deprecated (sadly, deprecated even before anything can be released from it. :/) however a newer, better and simpler installment is set up and is under active development. We kept it secret for a while and now it is open to all of you. Please redirect your energies to <https://github.com/xcvista/WebFusion>. Thanks.
+
 FusionKit
 =========
 
